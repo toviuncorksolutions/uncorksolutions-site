@@ -1,0 +1,21 @@
+{
+  "name": "uncorksolutions-site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "next": "^15.3.4",
+    "next-sitemap": "^4.2.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
