@@ -1,33 +1,14 @@
-import { NextResponse } from 'next/server';
+// import { NextResponse } from 'next/server';
 
-export function middleware(req) {
-  const url = req.nextUrl.clone();
+// export function middleware(request) {
+//   // Example A/B test logic that has been disabled
+//   // if (Math.random() < 0.5) {
+//   //   return NextResponse.rewrite(new URL('/variant-a', request.url));
+//   // }
+//   // return NextResponse.rewrite(new URL('/variant-b', request.url));
+// }
 
-  // Skip API and static files
-  if (url.pathname.startsWith('/api') || url.pathname.includes('.')) {
-    return NextResponse.next();
-  }
-
-  const cookieName = 'ab-test-group';
-  let abGroup = req.cookies.get(cookieName)?.value;
-
-  // Randomly assign group if none
-  if (!abGroup) {
-    abGroup = Math.random() < 0.5 ? 'a' : 'b';
-    const res = NextResponse.next();
-    res.cookies.set(cookieName, abGroup, { path: '/' });
-    return res;
-  }
-
-  // Rewrite route based on group
-  if (url.pathname === '/') {
-    url.pathname = abGroup === 'a' ? '/variant-a' : '/variant-b';
-    return NextResponse.rewrite(url);
-  }
-
-  return NextResponse.next();
-}
-
+// Disable all middleware routes
 export const config = {
-  matcher: ['/'], // apply only to the root route
+  matcher: [],
 };
