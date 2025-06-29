@@ -313,7 +313,7 @@ export default function Home() {
             <p className="mb-4">
               Our team has guided 100+ organizations through large-scale transformation efforts
               across Amazon, Meta, finance, and healthcare. We&apos;ve seen what works&mdash;and what fails.
-              This assessment distills that insight into a tool that helps leaders take action, not
+              This scan distills that insight into a tool that helps leaders take action, not
               just reflect.
             </p>
             <button
@@ -331,7 +331,7 @@ export default function Home() {
         <section id="bonus" data-gtm="bonus-section" className="bg-white py-16 px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Bonus Offer 🎁</h2>
           <p className="mb-6 max-w-2xl mx-auto">
-            Answer 5 quick questions and claim your Readiness Assessment spot now. As a bonus,
+            Answer 5 quick questions and claim your Initiative Readiness Scan spot now. As a bonus,
             you&apos;ll get:
           </p>
           <ul className="list-disc list-inside max-w-xl mx-auto mb-6 text-left">
@@ -349,7 +349,7 @@ export default function Home() {
           </button>
           <p className="mb-6 max-w-2xl mx-auto">
             Ready to de-risk your next initiative — and avoid becoming the next cautionary tale?
-            Claim your Readiness Assessment spot before the next cohort fills.
+            Claim your Initiative Readiness Scan spot before the next cohort fills.
           </p>
         </section>
 
@@ -403,7 +403,7 @@ export default function Home() {
                 You&apos;re Almost There&mdash;Help Us Tailor Your Experience
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                We keep this confidential and use it only to deliver the best possible assessment
+                We keep this confidential and use it only to deliver the best possible scan
                 for your unique situation.
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
