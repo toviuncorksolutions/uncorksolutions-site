@@ -1,58 +1,58 @@
-import Head from "next/head";
-import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/router";
-import FREE_EMAIL_DOMAINS from "../utils/freeEmailDomains";
+import Head from 'next/head';
+import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import FREE_EMAIL_DOMAINS from '../utils/freeEmailDomains';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
 const REQUIRED_FIELDS = [
-  "firstName",
-  "lastName",
-  "email",
-  "challenge",
-  "outcome",
-  "obstacle",
-  "alternatives",
-  "lowPrice",
-  "highPrice",
-  "decisionAuthority",
-  "timeline",
+  'firstName',
+  'lastName',
+  'email',
+  'challenge',
+  'outcome',
+  'obstacle',
+  'alternatives',
+  'lowPrice',
+  'highPrice',
+  'decisionAuthority',
+  'timeline',
 ];
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    challenge: "",
-    outcome: "",
-    obstacle: "",
-    alternatives: "",
-    lowPrice: "",
-    highPrice: "",
-    decisionAuthority: "",
-    timeline: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    challenge: '',
+    outcome: '',
+    obstacle: '',
+    alternatives: '',
+    lowPrice: '',
+    highPrice: '',
+    decisionAuthority: '',
+    timeline: '',
   });
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const firstNameRef = useRef(null);
   const router = useRouter();
 
-  // Autofocus on modal open
   useEffect(() => {
     if (showModal && firstNameRef.current) {
       firstNameRef.current.focus();
     }
   }, [showModal]);
 
-  // Clear error on modal open
   useEffect(() => {
-    if (showModal) setError("");
+    if (showModal) setError('');
   }, [showModal]);
 
   function getDomain(email) {
-    return email.trim().split("@")[1]?.toLowerCase() || "";
+    return email.trim().split('@')[1]?.toLowerCase() || '';
   }
 
   function isFreeEmail(domain) {
@@ -66,36 +66,32 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (submitting) return;
-    setError("");
+    setError('');
 
     if (!WEBHOOK_URL) {
-      setError("Internal configuration error: missing webhook endpoint.");
+      setError('Internal configuration error: missing webhook endpoint.');
       return;
     }
 
     const normalizedEmail = formData.email.trim().toLowerCase();
 
-    // Required fields validation
     for (const key of REQUIRED_FIELDS) {
       if (!String(formData[key]).trim()) {
-        setError("Please complete all required fields.");
+        setError('Please complete all required fields.');
         return;
       }
     }
 
-    // Email format validation
     if (!normalizedEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      setError("Please enter a valid email address.");
+      setError('Please enter a valid email address.');
       return;
     }
 
-    // No free email providers
     if (isFreeEmail(getDomain(normalizedEmail))) {
-      setError("Please use your work email address (not a free email provider).");
+      setError('Please use your work email address (not a free email provider).');
       return;
     }
 
-    // Price: positive integers only
     const low = Number(formData.lowPrice);
     const high = Number(formData.highPrice);
 
@@ -107,7 +103,7 @@ export default function Home() {
       low < 0 ||
       high < 0
     ) {
-      setError("Please enter positive whole numbers for price fields.");
+      setError('Please enter positive whole numbers for price fields.');
       return;
     }
 
@@ -115,23 +111,22 @@ export default function Home() {
 
     try {
       const res = await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...formData, email: normalizedEmail }),
       });
 
       if (!res.ok) {
         const message = await res.text();
-        throw new Error(message || "Submission failed");
+        throw new Error(message || 'Submission failed');
       }
 
-      // GTM push (one object, not spread fields)
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
         window.dataLayer.push({
-          event: "initiativeReadinessScanWaitlistFormSubmitted",
-          category: "Initiative Readiness Scan Waitlist Form",
-          action: "Submit",
+          event: 'initiativeReadinessScanWaitlistFormSubmitted',
+          category: 'Initiative Readiness Scan Waitlist Form',
+          action: 'Submit',
           label: normalizedEmail,
           formData: { ...formData, email: normalizedEmail },
         });
@@ -139,27 +134,26 @@ export default function Home() {
 
       setShowModal(false);
       setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        challenge: "",
-        outcome: "",
-        obstacle: "",
-        alternatives: "",
-        lowPrice: "",
-        highPrice: "",
-        decisionAuthority: "",
-        timeline: "",
+        firstName: '',
+        lastName: '',
+        email: '',
+        challenge: '',
+        outcome: '',
+        obstacle: '',
+        alternatives: '',
+        lowPrice: '',
+        highPrice: '',
+        decisionAuthority: '',
+        timeline: '',
       });
-      await router.push("/initiative-readiness-scan-waitlist-confirmation");
+      await router.push('/initiative-readiness-scan-waitlist-confirmation');
     } catch (err) {
-      setError("There was a problem submitting the form. Please try again.");
+      console.error(err); // or log to a service, etc.
+      setError('There was a problem submitting the form. Please try again.');
     } finally {
       setSubmitting(false);
     }
   };
-
-  // ---- (Optional: true a11y, focus trap with focus-trap-react or similar) ----
 
   return (
     <>
@@ -174,42 +168,42 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://www.uncorksolutions.com#organization",
-              name: "Uncork Solutions",
-              url: "https://www.uncorksolutions.com",
-              logo: "https://www.uncorksolutions.com/uncork-solutions-logo.png",
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              '@id': 'https://www.uncorksolutions.com#organization',
+              name: 'Uncork Solutions',
+              url: 'https://www.uncorksolutions.com',
+              logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
               description:
-                "Technology strategy and digital transformation consulting for mid-market and enterprise businesses.",
-              sameAs: ["https://www.linkedin.com/company/uncorksolutions"],
+                'Technology strategy and digital transformation consulting for mid-market and enterprise businesses.',
+              sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
               areaServed: [
-                { "@type": "Country", name: "Canada" },
-                { "@type": "Country", name: "United States" },
-                { "@type": "Country", name: "United Kingdom" },
-                { "@type": "Country", name: "Mexico" },
-                { "@type": "AdministrativeArea", name: "European Union" },
-                { "@type": "AdministrativeArea", name: "Latin America" },
+                { '@type': 'Country', name: 'Canada' },
+                { '@type': 'Country', name: 'United States' },
+                { '@type': 'Country', name: 'United Kingdom' },
+                { '@type': 'Country', name: 'Mexico' },
+                { '@type': 'AdministrativeArea', name: 'European Union' },
+                { '@type': 'AdministrativeArea', name: 'Latin America' },
               ],
               founder: {
-                "@type": "Person",
-                name: "Tovi Heilbronn",
+                '@type': 'Person',
+                name: 'Tovi Heilbronn',
               },
               makesOffer: {
-                "@type": "Service",
-                name: "Initiative Readiness Scan",
-                serviceType: "Organizational Assessment",
+                '@type': 'Service',
+                name: 'Initiative Readiness Scan',
+                serviceType: 'Organizational Assessment',
                 provider: {
-                  "@type": "Organization",
-                  name: "Uncork Solutions",
+                  '@type': 'Organization',
+                  name: 'Uncork Solutions',
                 },
                 areaServed: [
-                  { "@type": "Country", name: "Canada" },
-                  { "@type": "Country", name: "United States" },
-                  { "@type": "Country", name: "United Kingdom" },
-                  { "@type": "Country", name: "Mexico" },
-                  { "@type": "AdministrativeArea", name: "European Union" },
-                  { "@type": "AdministrativeArea", name: "Latin America" },
+                  { '@type': 'Country', name: 'Canada' },
+                  { '@type': 'Country', name: 'United States' },
+                  { '@type': 'Country', name: 'United Kingdom' },
+                  { '@type': 'Country', name: 'Mexico' },
+                  { '@type': 'AdministrativeArea', name: 'European Union' },
+                  { '@type': 'AdministrativeArea', name: 'Latin America' },
                 ],
               },
             }),
@@ -219,18 +213,13 @@ export default function Home() {
 
       <main className="text-gray-800 font-sans">
         {/* HERO SECTION */}
-        <section
-          id="hero"
-          data-gtm="hero-section"
-          className="bg-uncork-img text-center py-16 px-6"
-        >
+        <section id="hero" data-gtm="hero-section" className="bg-uncork-img text-center py-16 px-6">
           <h1 className="text-4xl font-bold mb-4">
             Is Your Organization Actually Ready for Transformation?
           </h1>
           <p className="text-lg mb-6 max-w-3xl mx-auto">
-            Get early access to the Initiative Readiness Scan—a proven
-            tool to diagnose, de-risk, and accelerate your strategic change
-            initiatives in 2025.
+            Get early access to the Initiative Readiness Scan—a proven tool to diagnose, de-risk,
+            and accelerate your strategic change initiatives in 2025.
           </p>
           <button
             onClick={() => setShowModal(true)}
@@ -249,33 +238,24 @@ export default function Home() {
           className="bg-uncork-img grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 items-center"
         >
           <div>
-            <h2 className="text-2xl font-bold mb-4">
-              Claim My Initiative Readiness Scan Spot
-            </h2>
+            <h2 className="text-2xl font-bold mb-4">Claim My Initiative Readiness Scan Spot</h2>
             <p className="mb-4">
-              We’re building a powerful, data-backed framework to help leaders
-              like you answer the critical question:
+              We’re building a powerful, data-backed framework to help leaders like you answer the
+              critical question:
             </p>
             <blockquote className="italic mb-4 text-gray-700">
-              “Are we really ready for change—or are we about to waste 6 months
-              and millions of dollars?”
+              &ldquo;Are we really ready for change&mdash;or are we about to waste 6 months and millions of
+              dollars?&rdquo;
             </blockquote>
             <ul className="list-disc list-inside space-y-2">
+              <li>Benchmark your organization across 6 critical axes of change readiness</li>
+              <li>Get a custom radar chart with strengths, blind spots, and tactical next steps</li>
               <li>
-                Benchmark your organization across 6 critical axes of change
-                readiness
+                Access exclusive strategies and success patterns from tech, finance, and healthcare
+                transformations
               </li>
               <li>
-                Get a custom radar chart with strengths, blind spots, and
-                tactical next steps
-              </li>
-              <li>
-                Access exclusive strategies and success patterns from tech,
-                finance, and healthcare transformations
-              </li>
-              <li>
-                Participate in a limited beta with feedback from top operators
-                and executive coaches
+                Participate in a limited beta with feedback from top operators and executive coaches
               </li>
             </ul>
             <button
@@ -290,39 +270,33 @@ export default function Home() {
         </section>
 
         {/* OUTCOMES SECTION */}
-        <section
-          id="outcomes"
-          data-gtm="outcomes-section"
-          className="bg-white py-16 px-8"
-        >
+        <section id="outcomes" data-gtm="outcomes-section" className="bg-white py-16 px-8">
           <h2 className="text-2xl font-bold text-center mb-10">
-            Initiative Readiness Scan: What You’ll Gain
+            Initiative Readiness Scan: What You&apos;ll Gain
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="mb-2 text-3xl">🏁</div>
               <h3 className="font-semibold mb-2">Getting More Wins</h3>
               <p>
-                Learn how mastering transformation readiness can accelerate
-                adoption, reduce resistance, and unlock strategic wins faster.
+                Learn how mastering transformation readiness can accelerate adoption, reduce
+                resistance, and unlock strategic wins faster.
               </p>
             </div>
             <div>
               <div className="mb-2 text-3xl">🚫</div>
               <h3 className="font-semibold mb-2">Avoiding Costly Failure</h3>
               <p>
-                Avoid the #1 reason major change efforts fail—launching without
-                organizational readiness. Use this tool as your early-warning
-                system.
+                Avoid the #1 reason major change efforts fail&mdash;launching without organizational
+                readiness. Use this tool as your early-warning system.
               </p>
             </div>
             <div>
               <div className="mb-2 text-3xl">📈</div>
               <h3 className="font-semibold mb-2">Why It Matters</h3>
               <p>
-                In today’s environment, transformation is constant. But success
-                still depends on people, process, and trust. This tool helps you
-                assess—and address—all three.
+                In today&apos;s environment, transformation is constant. But success still depends on
+                people, process, and trust. This tool helps you assess&mdash;and address&mdash;all three.
               </p>
             </div>
           </div>
@@ -337,11 +311,10 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="mb-4">
-              Our team has guided 100+ organizations through large-scale
-              transformation efforts across Amazon, Meta, finance, and
-              healthcare. We’ve seen what works—and what fails. This assessment
-              distills that insight into a tool that helps leaders take action,
-              not just reflect.
+              Our team has guided 100+ organizations through large-scale transformation efforts
+              across Amazon, Meta, finance, and healthcare. We&apos;ve seen what works&mdash;and what fails.
+              This assessment distills that insight into a tool that helps leaders take action, not
+              just reflect.
             </p>
             <button
               onClick={() => setShowModal(true)}
@@ -355,23 +328,16 @@ export default function Home() {
         </section>
 
         {/* BONUS OFFER SECTION */}
-        <section
-          id="bonus"
-          data-gtm="bonus-section"
-          className="bg-white py-16 px-8 text-center"
-        >
+        <section id="bonus" data-gtm="bonus-section" className="bg-white py-16 px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Bonus Offer 🎁</h2>
           <p className="mb-6 max-w-2xl mx-auto">
             Answer 5 quick questions and claim your Readiness Assessment spot now. As a bonus,
-            you’ll get:
+            you&apos;ll get:
           </p>
           <ul className="list-disc list-inside max-w-xl mx-auto mb-6 text-left">
             <li>A free readiness radar chart template</li>
             <li>Priority access to the live beta cohort</li>
-            <li>
-              A chance to join our inner circle roundtable on transformation in
-              July
-            </li>
+            <li>A chance to join our inner circle roundtable on transformation in July</li>
           </ul>
           <button
             onClick={() => setShowModal(true)}
@@ -382,22 +348,32 @@ export default function Home() {
             Claim My Initiative Readiness Scan Spot
           </button>
           <p className="mb-6 max-w-2xl mx-auto">
-            Ready to de-risk your next initiative — and avoid becoming the next cautionary tale? Claim your Readiness Assessment spot before the next cohort fills.
+            Ready to de-risk your next initiative — and avoid becoming the next cautionary tale?
+            Claim your Readiness Assessment spot before the next cohort fills.
           </p>
         </section>
 
         {/* FOOTER SECTION */}
         <footer className="footer-bg">
           <div className="footer-container">
-            <img
+            <Image
               src="/uncork-solutions-logo.png"
               alt="Uncork Solutions logo"
               className="footer-logo"
+              width={180}
+              height={36}
+              priority
             />
             <div className="footer-policies">
-              <a href="/cookie-policy" className="footer-policy-link">Cookie Policy</a>
-              <a href="/privacy-policy" className="footer-policy-link">Privacy Policy</a>
-              <a href="/accessibility-policy" className="footer-policy-link">Accessibility Policy</a>
+              <Link href="/cookie-policy" className="footer-policy-link">
+                Cookie Policy
+              </Link>
+              <Link href="/privacy-policy" className="footer-policy-link">
+                Privacy Policy
+              </Link>
+              <Link href="/accessibility-policy" className="footer-policy-link">
+                Accessibility Policy
+              </Link>
             </div>
             <div className="footer-copyright">
               &copy; {new Date().getFullYear()} Uncork Solutions. All rights reserved.
@@ -415,22 +391,20 @@ export default function Home() {
             aria-labelledby="waitlist-modal-title"
             onClick={() => setShowModal(false)} // Closes modal if clicking the overlay
             tabIndex={-1}
-            onKeyDown={e => {
-              if (e.key === "Escape") setShowModal(false);
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') setShowModal(false);
             }}
           >
             <div
               className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
               onClick={(e) => e.stopPropagation()} // Prevents closing if clicking inside modal
             >
-              <h2
-                id="waitlist-modal-title"
-                className="text-xl font-semibold mb-4 text-center"
-              >
-                You’re Almost There—Help Us Tailor Your Experience
+              <h2 id="waitlist-modal-title" className="text-xl font-semibold mb-4 text-center">
+                You&apos;re Almost There&mdash;Help Us Tailor Your Experience
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                We keep this confidential and use it only to deliver the best possible assessment for your unique situation.
+                We keep this confidential and use it only to deliver the best possible assessment
+                for your unique situation.
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex gap-4">
@@ -491,7 +465,7 @@ export default function Home() {
                   <textarea
                     id="challenge"
                     name="challenge"
-                    placeholder="What’s the main pain point you're solving for right now?"
+                    placeholder="What’s the main pain point you&apos;re solving for right now?"
                     className="w-full p-2 border rounded"
                     rows="1"
                     value={formData.challenge}
@@ -598,7 +572,7 @@ export default function Home() {
                       Who will lead the decision for this? *
                     </option>
                     <option value="Myself">Myself</option>
-                    <option value="Part of a team">I’m part of a team</option>
+                    <option value="Part of a team">I&apos;m part of a team</option>
                     <option value="Someone else">Someone else</option>
                   </select>
                 </div>
@@ -632,7 +606,7 @@ export default function Home() {
                     aria-label="Register"
                     data-gtm="register-submit"
                   >
-                    {submitting ? "Registering..." : "Register"}
+                    {submitting ? 'Registering...' : 'Register'}
                   </button>
                   <button
                     type="button"

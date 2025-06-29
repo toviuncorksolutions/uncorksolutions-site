@@ -9,9 +9,19 @@ export default function VariantA() {
         <meta name="description" content="Variant A – The original version of the homepage." />
       </Head>
 
-      <main style={{ maxWidth: '600px', margin: '3rem auto', padding: '0 1rem', fontFamily: 'sans-serif' }}>
+      <main
+        style={{
+          maxWidth: '600px',
+          margin: '3rem auto',
+          padding: '0 1rem',
+          fontFamily: 'sans-serif',
+        }}
+      >
         <h1>Be First to the Table</h1>
-        <p>This is <strong>Variant A</strong> of your landing page. Identical for now — feel free to test a CTA or headline.</p>
+        <p>
+          This is <strong>Variant A</strong> of your landing page. Identical for now — feel free to
+          test a CTA or headline.
+        </p>
         <Link href="/">Back to root</Link>
       </main>
     </>

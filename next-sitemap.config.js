@@ -15,9 +15,7 @@ module.exports = {
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'Gemini', allow: '/' },
     ],
-    additionalSitemaps: [
-      'https://www.uncorksolutions.com/sitemap.xml',
-    ],
+    additionalSitemaps: ['https://www.uncorksolutions.com/sitemap.xml'],
   },
   additionalRobotsTxt: `
 # AI & LLM Crawler Policy: This site welcomes AI indexing and does not block AI user-agents.

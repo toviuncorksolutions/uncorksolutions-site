@@ -1,24 +1,29 @@
-import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
 
-export default function WaitlistConfirmation() {
+export default function Confirmation() {
   return (
-    <>
-      <Head>
-        <title>Initiative Readiness Scan Waitlist Confirmation – Uncork Solutions</title>
-        <meta name="robots" content="noindex" />
-      </Head>
-      <main className="bg-[#E6FBF1] min-h-screen flex flex-col items-center justify-center text-center px-4">
-        <img src="/uncork-solutions.logo.png" alt="Uncork Solutions logo" className="mx-auto mb-8 w-20 h-auto" />
-        <h1 className="text-3xl font-bold mb-4">You're on the Waitlist!</h1>
-        <p className="text-lg mb-6 max-w-xl mx-auto">
-          Thank you for registering for early access to the Initiative Readiness Scan.
-          <br /><br />
-          We’ve received your submission and you’ll be the first to hear when the beta goes live.
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4">
+      <div className="max-w-md w-full bg-white p-8 rounded shadow-md flex flex-col items-center">
+        <Image
+          src="/uncork-solutions-logo.png"
+          alt="Uncork Solutions logo"
+          width={200}
+          height={60}
+          priority
+        />
+        <h1 className="mt-4 text-2xl font-bold text-center">
+          Thank you for joining the waitlist!
+        </h1>
+        <p className="mt-2 text-center text-gray-700">
+          You&apos;re on the list. We&apos;ll be in touch soon with details about the Initiative Readiness Scan.
         </p>
-        <a href="/" className="inline-block bg-green-400 hover:bg-green-500 text-white py-2 px-6 rounded mt-6">
-          Back to Home
-        </a>
-      </main>
-    </>
+        <Link href="/" passHref legacyBehavior>
+          <a className="mt-6 inline-block text-blue-600 hover:underline font-medium">
+            Back to Home
+          </a>
+        </Link>
+      </div>
+    </main>
   );
 }

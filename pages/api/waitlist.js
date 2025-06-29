@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   // 📛 Domain blocklist (e.g. competitors)
   const blocklist = ['@deloitte.', '@accenture.', '@mckinsey.', '@slalom.', '@ibm.', '@bain.'];
-  if (blocklist.some(domain => email.toLowerCase().includes(domain))) {
+  if (blocklist.some((domain) => email.toLowerCase().includes(domain))) {
     return res.status(403).json({ message: 'Email domain is not permitted.' });
   }
 
