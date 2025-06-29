@@ -22,19 +22,6 @@ export default function App({ Component, pageProps }) {
           `,
         }}
       />
-
-      <header className="w-full py-4 bg-white shadow">
-        <div className="flex justify-center items-center">
-          <Image
-            src="/uncork-solutions-logo.png"
-            alt="Uncork Solutions logo"
-            width={180}
-            height={73}
-            priority={true}
-          />
-        </div>
-      </header>
-
       <Component {...pageProps} />
       <SpeedInsights />
     </>

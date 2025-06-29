@@ -213,23 +213,66 @@ export default function Home() {
 
       <main className="text-gray-800 font-sans">
         {/* HERO SECTION */}
-        <section id="hero" data-gtm="hero-section" className="bg-uncork-img text-center py-16 px-6">
-          <h1 className="text-4xl font-bold mb-4">
-            Is Your Organization Actually Ready for Transformation?
-          </h1>
-          <p className="text-lg mb-6 max-w-3xl mx-auto">
-            Get early access to the Initiative Readiness Scan—a proven tool to diagnose, de-risk,
-            and accelerate your strategic change initiatives in 2025.
-          </p>
-          <button
-            onClick={() => setShowModal(true)}
-            id="hero-cta"
-            data-gtm="cta-hero"
-            className="cta-btn"
-          >
-            Claim My Initiative Readiness Scan Spot
-          </button>
-        </section>
+<section
+  id="hero"
+  data-gtm="hero-section"
+  className="relative overflow-hidden py-24 px-4 flex flex-col md:flex-row items-center justify-center min-h-[700px]"
+  style={{
+    background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
+    // fallback background color for browsers while loading:
+    backgroundColor: '#f7fafd',
+  }}
+>
+  {/* Optional: Overlay for subtle fade (can remove or adjust opacity as desired) */}
+  <div
+    aria-hidden="true"
+    className="absolute inset-0 pointer-events-none z-0"
+    style={{
+      background:
+        'linear-gradient(90deg, rgba(245,248,255,0.55) 0%, rgba(255,255,255,0.35) 100%)',
+    }}
+  />
+  {/* Main Hero Content */}
+  <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-[1400px] mx-auto">
+    {/* Artifact Image */}
+    <div className="flex-shrink-0 w-[340px] sm:w-[420px] md:w-[520px] lg:w-[610px] xl:w-[670px] max-w-full mb-12 md:mb-0 md:mr-[-40px]">
+      <Image
+        src="/initiative-readiness-scan-sample-1-removebg-preview (1).png"
+        alt="Initiative Readiness Scan sample"
+        width={670}
+        height={900}
+        priority
+        className="w-full h-auto object-contain drop-shadow-2xl"
+      />
+    </div>
+    {/* Text Block */}
+    <div className="flex-1 max-w-xl md:ml-4 text-center md:text-left">
+      <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-8 text-gray-900 tracking-tight">
+        Is Your Organization Actually Ready for Transformation?
+      </h1>
+      <p className="text-xl lg:text-2xl text-gray-700 mb-8">
+        Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>
+        —a proven tool to diagnose, de-risk, and accelerate your strategic change initiatives in 2025.
+      </p>
+      <ul className="text-base lg:text-lg text-gray-700 mb-10 space-y-2 list-disc list-inside text-left">
+        <li>Boardroom-ready, unbiased assessment & action plan</li>
+        <li>Identify risks. Align teams. Accelerate your next big win.</li>
+        <li>Prepared for you—confidential & proprietary</li>
+      </ul>
+      <button
+        onClick={() => setShowModal(true)}
+        id="hero-cta"
+        data-gtm="cta-hero"
+        className="cta-btn px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transition"
+      >
+        Claim My Initiative Readiness Scan Spot
+      </button>
+      <div className="mt-6 text-sm text-gray-500">
+        Limited early access &ndash; priority to executive leaders
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* FEATURES SECTION */}
         <section
@@ -238,25 +281,20 @@ export default function Home() {
           className="bg-uncork-img grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 items-center"
         >
           <div>
-            <h2 className="text-2xl font-bold mb-4">Claim My Initiative Readiness Scan Spot</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Claim My Initiative Readiness Scan Spot
+            </h2>
             <p className="mb-4">
-              We’re building a powerful, data-backed framework to help leaders like you answer the
-              critical question:
+              We’re building a powerful, data-backed framework to help leaders like you answer the critical question:
             </p>
             <blockquote className="italic mb-4 text-gray-700">
-              &ldquo;Are we really ready for change&mdash;or are we about to waste 6 months and millions of
-              dollars?&rdquo;
+              &ldquo;Are we really ready for change&mdash;or are we about to waste 6 months and millions of dollars?&rdquo;
             </blockquote>
             <ul className="list-disc list-inside space-y-2">
               <li>Benchmark your organization across 6 critical axes of change readiness</li>
               <li>Get a custom radar chart with strengths, blind spots, and tactical next steps</li>
-              <li>
-                Access exclusive strategies and success patterns from tech, finance, and healthcare
-                transformations
-              </li>
-              <li>
-                Participate in a limited beta with feedback from top operators and executive coaches
-              </li>
+              <li>Access exclusive strategies and success patterns from tech, finance, and healthcare transformations</li>
+              <li>Participate in a limited beta with feedback from top operators and executive coaches</li>
             </ul>
             <button
               onClick={() => setShowModal(true)}
@@ -279,24 +317,21 @@ export default function Home() {
               <div className="mb-2 text-3xl">🏁</div>
               <h3 className="font-semibold mb-2">Getting More Wins</h3>
               <p>
-                Learn how mastering transformation readiness can accelerate adoption, reduce
-                resistance, and unlock strategic wins faster.
+                Learn how mastering transformation readiness can accelerate adoption, reduce resistance, and unlock strategic wins faster.
               </p>
             </div>
             <div>
               <div className="mb-2 text-3xl">🚫</div>
               <h3 className="font-semibold mb-2">Avoiding Costly Failure</h3>
               <p>
-                Avoid the #1 reason major change efforts fail&mdash;launching without organizational
-                readiness. Use this tool as your early-warning system.
+                Avoid the #1 reason major change efforts fail&mdash;launching without organizational readiness. Use this tool as your early-warning system.
               </p>
             </div>
             <div>
               <div className="mb-2 text-3xl">📈</div>
               <h3 className="font-semibold mb-2">Why It Matters</h3>
               <p>
-                In today&apos;s environment, transformation is constant. But success still depends on
-                people, process, and trust. This tool helps you assess&mdash;and address&mdash;all three.
+                In today&apos;s environment, transformation is constant. But success still depends on people, process, and trust. This tool helps you assess&mdash;and address&mdash;all three.
               </p>
             </div>
           </div>
@@ -311,10 +346,7 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="mb-4">
-              Our team has guided 100+ organizations through large-scale transformation efforts
-              across Amazon, Meta, finance, and healthcare. We&apos;ve seen what works&mdash;and what fails.
-              This scan distills that insight into a tool that helps leaders take action, not
-              just reflect.
+              Our team has guided 100+ organizations through large-scale transformation efforts across Amazon, Meta, finance, and healthcare. We&apos;ve seen what works&mdash;and what fails. This scan distills that insight into a tool that helps leaders take action, not just reflect.
             </p>
             <button
               onClick={() => setShowModal(true)}
@@ -331,8 +363,7 @@ export default function Home() {
         <section id="bonus" data-gtm="bonus-section" className="bg-white py-16 px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Bonus Offer 🎁</h2>
           <p className="mb-6 max-w-2xl mx-auto">
-            Answer 5 quick questions and claim your Initiative Readiness Scan spot now. As a bonus,
-            you&apos;ll get:
+            Answer 5 quick questions and claim your Initiative Readiness Scan spot now. As a bonus, you&apos;ll get:
           </p>
           <ul className="list-disc list-inside max-w-xl mx-auto mb-6 text-left">
             <li>A free readiness radar chart template</li>
@@ -348,8 +379,7 @@ export default function Home() {
             Claim My Initiative Readiness Scan Spot
           </button>
           <p className="mb-6 max-w-2xl mx-auto">
-            Ready to de-risk your next initiative — and avoid becoming the next cautionary tale?
-            Claim your Initiative Readiness Scan spot before the next cohort fills.
+            Ready to de-risk your next initiative — and avoid becoming the next cautionary tale? Claim your Initiative Readiness Scan spot before the next cohort fills.
           </p>
         </section>
 
@@ -403,8 +433,7 @@ export default function Home() {
                 You&apos;re Almost There&mdash;Help Us Tailor Your Experience
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                We keep this confidential and use it only to deliver the best possible scan
-                for your unique situation.
+                We keep this confidential and use it only to deliver the best possible scan for your unique situation.
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex gap-4">
