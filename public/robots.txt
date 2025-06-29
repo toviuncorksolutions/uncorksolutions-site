@@ -1,0 +1,41 @@
+# *
+User-agent: *
+Allow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Allow: /
+
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic-Bot
+User-agent: Anthropic-Bot
+Allow: /
+
+# PerplexityBot
+User-agent: PerplexityBot
+Allow: /
+
+# CCbot
+User-agent: CCbot
+Allow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Allow: /
+
+# Gemini
+User-agent: Gemini
+Allow: /
+
+# Host
+Host: https://www.uncorksolutions.com
+
+# Sitemaps
+Sitemap: https://www.uncorksolutions.com/sitemap.xml

@@ -1,0 +1,6 @@
+const FREE_EMAIL_DOMAINS = [
+  "gmail.com","yahoo.com","outlook.com","hotmail.com","icloud.com","aol.com","mail.com","msn.com","live.com","protonmail.com","yandex.com","zoho.com","gmx.com","tutanota.com","mail.ru","fastmail.com","hushmail.com","yahoo.fr","gmail.fr","outlook.fr","hotmail.fr","icloud.fr","aol.fr","mail.fr","msn.fr","live.fr","protonmail.fr","outlook.ca",
+  "yahoo.ca","gmail.ca","hotmail.ca","icloud.ca","aol.ca","mail.ca","msn.ca","live.ca","protonmail.ca","outlook.com.au","yahoo.com.au","gmail.com.au","hotmail.com.au","icloud.com.au","aol.com.au","mail.com.au","msn.com.au","live.com.au","protonmail.com.au","outlook.co.nz","yahoo.co.nz","gmail.co.nz","hotmail.co.nz","icloud.co.nz","aol.co.nz","mail.co.nz","msn.co.nz",
+  "live.co.nz","protonmail.co.nz","outlook.de","yahoo.de","gmail.de","hotmail.de","icloud.de","aol.de","mail.de","msn.de","live.de","protonmail.de","outlook.com.br","yahoo.com.br","gmail.com.br","hotmail.com.br","icloud.com.br","aol.com.br","mail.com.br","msn.com.br","live.com.br","protonmail.com.br","outlook.co.uk","yahoo.co.uk","gmail.co.uk","hotmail.co.uk","icloud.co.uk","mailinator.com","aol.co.uk","mail.co.uk","msn.co.uk","live.co.uk","protonmail.co.uk",
+];
+export default FREE_EMAIL_DOMAINS;

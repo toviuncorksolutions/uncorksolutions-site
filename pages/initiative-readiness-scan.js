@@ -1,14 +1,22 @@
 import Head from "next/head";
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/router";
+import FREE_EMAIL_DOMAINS from "../utils/freeEmailDomains";
 
-// ---- Begin Domain Lists and Webhook URL ----
-const FREE_EMAIL_DOMAINS = [
-  "gmail.com","yahoo.com","outlook.com","hotmail.com","icloud.com","aol.com","mail.com","msn.com","live.com","protonmail.com","outlook.co.uk","yahoo.co.uk","gmail.co.uk","yandex.com","zoho.com","gmx.com","tutanota.com","mail.ru","fastmail.com","hushmail.com","yahoo.fr","gmail.fr","outlook.fr","hotmail.fr","icloud.fr","aol.fr","mail.fr","msn.fr","live.fr","protonmail.fr","outlook.ca",
-  "yahoo.ca","gmail.ca","hotmail.ca","icloud.ca","aol.ca","mail.ca","msn.ca","live.ca","protonmail.ca","outlook.com.au","yahoo.com.au","gmail.com.au","hotmail.com.au","icloud.com.au","aol.com.au","mail.com.au","msn.com.au","live.com.au","protonmail.com.au","outlook.co.nz","yahoo.co.nz","gmail.co.nz","hotmail.co.nz","icloud.co.nz","aol.co.nz","mail.co.nz","msn.co.nz",
-  "live.co.nz","protonmail.co.nz","outlook.de","yahoo.de","gmail.de","hotmail.de","icloud.de","aol.de","mail.de","msn.de","live.de","protonmail.de","outlook.com.br","yahoo.com.br","gmail.com.br","hotmail.com.br","icloud.com.br","aol.com.br","mail.com.br","msn.com.br","live.com.br","protonmail.com.br","outlook.co.uk","yahoo.co.uk","gmail.co.uk","hotmail.co.uk","icloud.co.uk","mailinator.com","aol.co.uk","mail.co.uk","msn.co.uk","live.co.uk","protonmail.co.uk",
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+const REQUIRED_FIELDS = [
+  "firstName",
+  "lastName",
+  "email",
+  "challenge",
+  "outcome",
+  "obstacle",
+  "alternatives",
+  "lowPrice",
+  "highPrice",
+  "decisionAuthority",
+  "timeline",
 ];
-const WEBHOOK_URL = "https://hook.us2.make.com/srcw82skjuewj1skqnfrepvqwlbtgm2i";
-// ---- End Domain Lists and Webhook URL ----
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -22,17 +30,25 @@ export default function Home() {
     alternatives: "",
     lowPrice: "",
     highPrice: "",
-    decisionAuthority: '',
-    timeline: '', 
+    decisionAuthority: "",
+    timeline: "",
   });
 
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const firstNameRef = useRef(null);
+  const router = useRouter();
+
+  // Autofocus on modal open
   useEffect(() => {
     if (showModal && firstNameRef.current) {
       firstNameRef.current.focus();
     }
+  }, [showModal]);
+
+  // Clear error on modal open
+  useEffect(() => {
+    if (showModal) setError("");
   }, [showModal]);
 
   function getDomain(email) {
@@ -49,62 +65,77 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (submitting) return;
     setError("");
 
-  const normalizedEmail = formData.email.trim().toLowerCase();
-  // ...use normalizedEmail instead of formData.email in validations and in the payload
+    if (!WEBHOOK_URL) {
+      setError("Internal configuration error: missing webhook endpoint.");
+      return;
+    }
 
-    // Simple required field validation
-    for (const key of [
-      "firstName",
-      "lastName",
-      "email",
-      "challenge",
-      "outcome",
-      "obstacle",
-      "alternatives",
-      "lowPrice",
-      "highPrice",
-      "decisionAuthority",
-      "timeline",
-    ]) {
-      if (!formData[key].trim()) {
+    const normalizedEmail = formData.email.trim().toLowerCase();
+
+    // Required fields validation
+    for (const key of REQUIRED_FIELDS) {
+      if (!String(formData[key]).trim()) {
         setError("Please complete all required fields.");
         return;
       }
     }
 
-    // Email validation
-      if (!normalizedEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-        setError("Please enter a valid email address.");
-        return;
-      }
+    // Email format validation
+    if (!normalizedEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
 
-    // Free email provider validation
-      if (isFreeEmail(getDomain(normalizedEmail))) {
-        setError(
-          "Please use your work email address (not a free email provider).",
-        );
-        return;
-      }
-    // Price validation
-    if (!/^\d+$/.test(formData.lowPrice) || !/^\d+$/.test(formData.highPrice)) {
-      setError("Please enter numbers only for price fields.");
+    // No free email providers
+    if (isFreeEmail(getDomain(normalizedEmail))) {
+      setError("Please use your work email address (not a free email provider).");
+      return;
+    }
+
+    // Price: positive integers only
+    const low = Number(formData.lowPrice);
+    const high = Number(formData.highPrice);
+
+    if (
+      !Number.isFinite(low) ||
+      !Number.isFinite(high) ||
+      !Number.isInteger(low) ||
+      !Number.isInteger(high) ||
+      low < 0 ||
+      high < 0
+    ) {
+      setError("Please enter positive whole numbers for price fields.");
       return;
     }
 
     setSubmitting(true);
 
-    const webhook = WEBHOOK_URL;
-
     try {
-      const res = await fetch(webhook, {
+      const res = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, email: normalizedEmail }),
       });
 
-      if (!res.ok) throw new Error("Submission failed");
+      if (!res.ok) {
+        const message = await res.text();
+        throw new Error(message || "Submission failed");
+      }
+
+      // GTM push (one object, not spread fields)
+      if (typeof window !== "undefined") {
+        if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
+        window.dataLayer.push({
+          event: "initiativeReadinessScanWaitlistFormSubmitted",
+          category: "Initiative Readiness Scan Waitlist Form",
+          action: "Submit",
+          label: normalizedEmail,
+          formData: { ...formData, email: normalizedEmail },
+        });
+      }
 
       setShowModal(false);
       setFormData({
@@ -117,24 +148,26 @@ export default function Home() {
         alternatives: "",
         lowPrice: "",
         highPrice: "",
-        decisionAuthority: '',
-        timeline: '',
+        decisionAuthority: "",
+        timeline: "",
       });
-      // Redirect to confirmation page
-      setTimeout(() => window.location.href = "/waitlist-confirmation", 100);
+      await router.push("/initiative-readiness-scan-waitlist-confirmation");
     } catch (err) {
       setError("There was a problem submitting the form. Please try again.");
     } finally {
       setSubmitting(false);
     }
   };
+
+  // ---- (Optional: true a11y, focus trap with focus-trap-react or similar) ----
+
   return (
     <>
       <Head>
-        <title>Claim My Readiness Assessment Spot – Uncork Solutions</title>
+        <title>Claim My Initiative Readiness Scan Spot – Uncork Solutions</title>
         <meta
           name="description"
-          content="Claim my spot to get early access to the Transformation Readiness Assessment—a proven tool to de-risk and accelerate your change initiatives."
+          content="Claim my spot to get early access to the Initiative Readiness Scan—a proven tool to de-risk and accelerate your change initiatives."
         />
         <link rel="icon" href="/favicon.ico" />
         <script
@@ -164,7 +197,7 @@ export default function Home() {
               },
               makesOffer: {
                 "@type": "Service",
-                name: "Transformation Readiness Assessment",
+                name: "Initiative Readiness Scan",
                 serviceType: "Organizational Assessment",
                 provider: {
                   "@type": "Organization",
@@ -184,34 +217,40 @@ export default function Home() {
         />
       </Head>
 
-      <main className=" text-gray-800 font-sans">
+      <main className="text-gray-800 font-sans">
         {/* HERO SECTION */}
-        <section id="hero" className="bg-uncork-img text-center py-16 px-6">
+        <section
+          id="hero"
+          data-gtm="hero-section"
+          className="bg-uncork-img text-center py-16 px-6"
+        >
           <h1 className="text-4xl font-bold mb-4">
             Is Your Organization Actually Ready for Transformation?
           </h1>
           <p className="text-lg mb-6 max-w-3xl mx-auto">
-            Get early access to the Transformation Readiness Assessment—a proven
+            Get early access to the Initiative Readiness Scan—a proven
             tool to diagnose, de-risk, and accelerate your strategic change
             initiatives in 2025.
           </p>
           <button
             onClick={() => setShowModal(true)}
             id="hero-cta"
+            data-gtm="cta-hero"
             className="cta-btn"
           >
-            Claim My Readiness Assessment Spot
+            Claim My Initiative Readiness Scan Spot
           </button>
         </section>
 
-        {/* FEATURES / CORE PITCH SECTION */}
+        {/* FEATURES SECTION */}
         <section
           id="features"
+          data-gtm="features-section"
           className="bg-uncork-img grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 items-center"
         >
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              Claim My Transformation Readiness Assessment Spot
+              Claim My Initiative Readiness Scan Spot
             </h2>
             <p className="mb-4">
               We’re building a powerful, data-backed framework to help leaders
@@ -242,26 +281,22 @@ export default function Home() {
             <button
               onClick={() => setShowModal(true)}
               id="features-cta"
+              data-gtm="cta-features"
               className="cta-btn"
             >
-              Claim My Readiness Assessment Spot
+              Claim My Initiative Readiness Scan Spot
             </button>
           </div>
-          {/* 
-          <div>
-            <img
-              src="/mockup-ui.png"
-              alt="UI Preview"
-              className="rounded shadow-md"
-            />
-          </div>
-          */}
         </section>
 
         {/* OUTCOMES SECTION */}
-        <section id="outcomes" className="bg-white py-16 px-8">
+        <section
+          id="outcomes"
+          data-gtm="outcomes-section"
+          className="bg-white py-16 px-8"
+        >
           <h2 className="text-2xl font-bold text-center mb-10">
-            Transformation Readiness: What You’ll Gain
+            Initiative Readiness Scan: What You’ll Gain
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
@@ -296,11 +331,9 @@ export default function Home() {
         {/* ABOUT US SECTION */}
         <section
           id="about"
+          data-gtm="about-section"
           className="bg-uncork-img py-16 px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
         >
-          {/* 
-          <img src="/team-illustration.png" alt="Our team" className="w-full" />
-          */}
           <div>
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="mb-4">
@@ -313,15 +346,20 @@ export default function Home() {
             <button
               onClick={() => setShowModal(true)}
               id="about-cta"
+              data-gtm="cta-about"
               className="cta-btn"
             >
-              Claim My Readiness Assessment Spot
+              Claim My Initiative Readiness Scan Spot
             </button>
           </div>
         </section>
 
         {/* BONUS OFFER SECTION */}
-        <section id="bonus" className="bg-white py-16 px-8 text-center">
+        <section
+          id="bonus"
+          data-gtm="bonus-section"
+          className="bg-white py-16 px-8 text-center"
+        >
           <h2 className="text-2xl font-bold mb-4">Bonus Offer 🎁</h2>
           <p className="mb-6 max-w-2xl mx-auto">
             Answer 5 quick questions and claim your Readiness Assessment spot now. As a bonus,
@@ -338,9 +376,10 @@ export default function Home() {
           <button
             onClick={() => setShowModal(true)}
             id="bonus-cta"
+            data-gtm="cta-bonus"
             className="cta-btn"
           >
-            Claim My Readiness Assessment Spot
+            Claim My Initiative Readiness Scan Spot
           </button>
           <p className="mb-6 max-w-2xl mx-auto">
             Ready to de-risk your next initiative — and avoid becoming the next cautionary tale? Claim your Readiness Assessment spot before the next cohort fills.
@@ -352,7 +391,7 @@ export default function Home() {
           <div className="footer-container">
             <img
               src="/uncork-solutions-logo.png"
-              alt="Uncork Solutions"
+              alt="Uncork Solutions logo"
               className="footer-logo"
             />
             <div className="footer-policies">
@@ -370,6 +409,10 @@ export default function Home() {
         {showModal && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            data-gtm="waitlist-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="waitlist-modal-title"
             onClick={() => setShowModal(false)} // Closes modal if clicking the overlay
             tabIndex={-1}
             onKeyDown={e => {
@@ -380,11 +423,14 @@ export default function Home() {
               className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
               onClick={(e) => e.stopPropagation()} // Prevents closing if clicking inside modal
             >
-              <h2 className="text-xl font-semibold mb-4 text-center">
+              <h2
+                id="waitlist-modal-title"
+                className="text-xl font-semibold mb-4 text-center"
+              >
                 You’re Almost There—Help Us Tailor Your Experience
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                 We keep this confidential and use it only to deliver the best possible assessment for your unique situation.
+                We keep this confidential and use it only to deliver the best possible assessment for your unique situation.
               </h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex gap-4">
@@ -506,7 +552,7 @@ export default function Home() {
                     id="lowPrice"
                     type="number"
                     inputMode="numeric"
-                    pattern="\d*"                    
+                    pattern="\d*"
                     name="lowPrice"
                     placeholder="What price would make this a great deal? *"
                     className="w-full p-2 border rounded"
@@ -533,7 +579,7 @@ export default function Home() {
                     onChange={handleChange}
                     required
                     min="0"
-                    step="1"                    
+                    step="1"
                   />
                 </div>
                 <div>
@@ -556,7 +602,6 @@ export default function Home() {
                     <option value="Someone else">Someone else</option>
                   </select>
                 </div>
-
                 <div>
                   <label htmlFor="timeline" className="sr-only">
                     How soon will you move forward with a solution? *
@@ -585,14 +630,17 @@ export default function Home() {
                     className="w-full cta-btn"
                     disabled={submitting}
                     aria-label="Register"
+                    data-gtm="register-submit"
                   >
                     {submitting ? "Registering..." : "Register"}
                   </button>
                   <button
                     type="button"
                     onClick={() => setShowModal(false)}
+                    disabled={submitting}
                     className="w-full bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
                     aria-label="Cancel"
+                    data-gtm="modal-cancel"
                   >
                     Cancel
                   </button>
