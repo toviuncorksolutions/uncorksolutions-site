@@ -359,9 +359,9 @@ export default function Home() {
             <Image
               src="/uncork-solutions-logo.png"
               alt="Uncork Solutions logo"
-              className="footer-logo"
-              width={180}
-              height={36}
+              className="object-contain mx-auto w-32 sm:w-44 h-auto"
+              width={176}
+              height={72}
               priority
             />
             <div className="footer-policies">
