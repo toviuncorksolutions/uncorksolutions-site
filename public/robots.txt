@@ -1,6 +1,4 @@
-# robots.txt for uncorksolutions.com
-# For AI/LLM crawling rules, see: https://uncorksolutions.com/llms.txt
-
+# *
 User-agent: *
 Allow: /
 

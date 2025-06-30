@@ -1,11 +1,17 @@
 import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import FREE_EMAIL_DOMAINS from '../utils/freeEmailDomains';
 import Image from 'next/image';
-import Link from 'next/link';
+
+// Free email domains list (import from your utils if available)
+const FREE_EMAIL_DOMAINS = [
+  'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'msn.com'
+];
+
+const SOFT_GREY_BG = 'bg-[#f7fafd]';
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+
 const REQUIRED_FIELDS = [
   'firstName',
   'lastName',
@@ -20,7 +26,8 @@ const REQUIRED_FIELDS = [
   'timeline',
 ];
 
-export default function Home() {
+export default function InitiativeReadinessScan() {
+  const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -35,15 +42,17 @@ export default function Home() {
     decisionAuthority: '',
     timeline: '',
   });
-
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const modalRef = useRef(null);
   const firstNameRef = useRef(null);
-  const router = useRouter();
 
   useEffect(() => {
-    if (showModal && firstNameRef.current) {
-      firstNameRef.current.focus();
+    if (showModal) {
+      modalRef.current?.focus();
+      setTimeout(() => {
+        firstNameRef.current?.focus();
+      }, 100);
     }
   }, [showModal]);
 
@@ -147,8 +156,7 @@ export default function Home() {
         timeline: '',
       });
       await router.push('/initiative-readiness-scan-waitlist-confirmation');
-    } catch (err) {
-      console.error(err); // or log to a service, etc.
+    } catch {
       setError('There was a problem submitting the form. Please try again.');
     } finally {
       setSubmitting(false);
@@ -158,10 +166,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Claim My Initiative Readiness Scan Spot – Uncork Solutions</title>
+        <title>Initiative Readiness Scan – Uncork Solutions</title>
         <meta
           name="description"
-          content="Claim my spot to get early access to the Initiative Readiness Scan—a proven tool to de-risk and accelerate your change initiatives."
+          content="Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives."
         />
         <link rel="icon" href="/favicon.ico" />
         <script
@@ -211,202 +219,277 @@ export default function Home() {
         />
       </Head>
 
-      <main className="text-gray-800 font-sans">
+      <main className="font-sans text-gray-800">
         {/* HERO SECTION */}
-<section
-  id="hero"
-  data-gtm="hero-section"
-  className="relative overflow-hidden py-24 px-4 flex flex-col md:flex-row items-center justify-center min-h-[700px]"
-  style={{
-    background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
-    // fallback background color for browsers while loading:
-    backgroundColor: '#f7fafd',
-  }}
->
-  {/* Optional: Overlay for subtle fade (can remove or adjust opacity as desired) */}
-  <div
-    aria-hidden="true"
-    className="absolute inset-0 pointer-events-none z-0"
-    style={{
-      background:
-        'linear-gradient(90deg, rgba(245,248,255,0.55) 0%, rgba(255,255,255,0.35) 100%)',
-    }}
-  />
-  {/* Main Hero Content */}
-  <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-[1400px] mx-auto">
-    {/* Artifact Image */}
-    <div className="flex-shrink-0 w-[340px] sm:w-[420px] md:w-[520px] lg:w-[610px] xl:w-[670px] max-w-full mb-12 md:mb-0 md:mr-[-40px]">
-      <Image
-        src="/initiative-readiness-scan-sample-1-removebg-preview (1).png"
-        alt="Initiative Readiness Scan sample"
-        width={670}
-        height={900}
-        priority
-        className="w-full h-auto object-contain drop-shadow-2xl"
-      />
-    </div>
-    {/* Text Block */}
-    <div className="flex-1 max-w-xl md:ml-4 text-center md:text-left">
-      <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-8 text-gray-900 tracking-tight">
-        Is Your Organization Actually Ready for Transformation?
-      </h1>
-      <p className="text-xl lg:text-2xl text-gray-700 mb-8">
-        Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>
-        —a proven tool to diagnose, de-risk, and accelerate your strategic change initiatives in 2025.
-      </p>
-      <ul className="text-base lg:text-lg text-gray-700 mb-10 space-y-2 list-disc list-inside text-left">
-        <li>Boardroom-ready, unbiased assessment & action plan</li>
-        <li>Identify risks. Align teams. Accelerate your next big win.</li>
-        <li>Prepared for you—confidential & proprietary</li>
-      </ul>
-      <button
-        onClick={() => setShowModal(true)}
-        id="hero-cta"
-        data-gtm="cta-hero"
-        className="cta-btn px-8 py-4 text-lg font-semibold rounded-xl shadow-lg transition"
-      >
-        Claim My Initiative Readiness Scan Spot
-      </button>
-      <div className="mt-6 text-sm text-gray-500">
-        Limited early access &ndash; priority to executive leaders
-      </div>
-    </div>
-  </div>
-</section>
-
-        {/* FEATURES SECTION */}
         <section
-          id="features"
-          data-gtm="features-section"
-          className="bg-uncork-img grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 items-center"
+          id="irs-hero"
+          data-gtm="irs-section-hero"
+          aria-label="Initiative Readiness Scan Hero"
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-12"
+          style={{background: 'url("/dull-bg-compressed.png") center center / cover no-repeat', backgroundColor: '#f7fafd'}}
         >
-          <div>
-            <h2 className="text-2xl font-bold mb-4">
-              Claim My Initiative Readiness Scan Spot
-            </h2>
-            <p className="mb-4">
-              We’re building a powerful, data-backed framework to help leaders like you answer the critical question:
-            </p>
-            <blockquote className="italic mb-4 text-gray-700">
-              &ldquo;Are we really ready for change&mdash;or are we about to waste 6 months and millions of dollars?&rdquo;
-            </blockquote>
-            <ul className="list-disc list-inside space-y-2">
-              <li>Benchmark your organization across 6 critical axes of change readiness</li>
-              <li>Get a custom radar chart with strengths, blind spots, and tactical next steps</li>
-              <li>Access exclusive strategies and success patterns from tech, finance, and healthcare transformations</li>
-              <li>Participate in a limited beta with feedback from top operators and executive coaches</li>
-            </ul>
-            <button
-              onClick={() => setShowModal(true)}
-              id="features-cta"
-              data-gtm="cta-features"
-              className="cta-btn"
-            >
-              Claim My Initiative Readiness Scan Spot
-            </button>
-          </div>
-        </section>
-
-        {/* OUTCOMES SECTION */}
-        <section id="outcomes" data-gtm="outcomes-section" className="bg-white py-16 px-8">
-          <h2 className="text-2xl font-bold text-center mb-10">
-            Initiative Readiness Scan: What You&apos;ll Gain
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="mb-2 text-3xl">🏁</div>
-              <h3 className="font-semibold mb-2">Getting More Wins</h3>
-              <p>
-                Learn how mastering transformation readiness can accelerate adoption, reduce resistance, and unlock strategic wins faster.
-              </p>
-            </div>
-            <div>
-              <div className="mb-2 text-3xl">🚫</div>
-              <h3 className="font-semibold mb-2">Avoiding Costly Failure</h3>
-              <p>
-                Avoid the #1 reason major change efforts fail&mdash;launching without organizational readiness. Use this tool as your early-warning system.
-              </p>
-            </div>
-            <div>
-              <div className="mb-2 text-3xl">📈</div>
-              <h3 className="font-semibold mb-2">Why It Matters</h3>
-              <p>
-                In today&apos;s environment, transformation is constant. But success still depends on people, process, and trust. This tool helps you assess&mdash;and address&mdash;all three.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ABOUT US SECTION */}
-        <section
-          id="about"
-          data-gtm="about-section"
-          className="bg-uncork-img py-16 px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-        >
-          <div>
-            <h3 className="text-xl font-bold mb-4">About Us</h3>
-            <p className="mb-4">
-              Our team has guided 100+ organizations through large-scale transformation efforts across Amazon, Meta, finance, and healthcare. We&apos;ve seen what works&mdash;and what fails. This scan distills that insight into a tool that helps leaders take action, not just reflect.
-            </p>
-            <button
-              onClick={() => setShowModal(true)}
-              id="about-cta"
-              data-gtm="cta-about"
-              className="cta-btn"
-            >
-              Claim My Initiative Readiness Scan Spot
-            </button>
-          </div>
-        </section>
-
-        {/* BONUS OFFER SECTION */}
-        <section id="bonus" data-gtm="bonus-section" className="bg-white py-16 px-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Bonus Offer 🎁</h2>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Answer 5 quick questions and claim your Initiative Readiness Scan spot now. As a bonus, you&apos;ll get:
-          </p>
-          <ul className="list-disc list-inside max-w-xl mx-auto mb-6 text-left">
-            <li>A free readiness radar chart template</li>
-            <li>Priority access to the live beta cohort</li>
-            <li>A chance to join our inner circle roundtable on transformation in July</li>
-          </ul>
-          <button
-            onClick={() => setShowModal(true)}
-            id="bonus-cta"
-            data-gtm="cta-bonus"
-            className="cta-btn"
-          >
-            Claim My Initiative Readiness Scan Spot
-          </button>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Ready to de-risk your next initiative — and avoid becoming the next cautionary tale? Claim your Initiative Readiness Scan spot before the next cohort fills.
-          </p>
-        </section>
-
-        {/* FOOTER SECTION */}
-        <footer className="footer-bg">
-          <div className="footer-container">
+          {/* Booklet image, left */}
+          <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
             <Image
+              id="irs-hero-image"
+              src="/initiative-readiness-scan-1.png"
+              alt="Initiative Readiness Scan sample booklet"
+              width={924}
+              height={970}
+              priority
+              className="w-[260px] sm:w-[380px] md:w-[520px] lg:w-[650px] xl:w-[820px] 2xl:w-[924px] max-w-full h-auto drop-shadow-xl"
+            />
+          </div>
+          {/* Hero text, right */}
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
+            <div className="uppercase text-sm tracking-wide text-gray-700 mb-2" id="irs-free-tool-label">
+              Free Digital Strategy Evaluation Tool
+            </div>
+            <h1 id="irs-hero-title" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+              Is Your Organization Actually <span className="text-blue-700">Ready for Transformation?</span>
+            </h1>
+            <p id="irs-hero-subtitle" className="text-lg md:text-xl text-gray-700 mb-6">
+              Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;a proven tool to diagnose, de-risk, and accelerate your strategic change initiatives.
+            </p>
+            <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
+                <span id="irs-benefit-1">Boardroom-ready, unbiased assessment &amp; action plan</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
+                <span id="irs-benefit-2">Identify risks. Align teams. Accelerate your next big win.</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
+                <span id="irs-benefit-3">Prepared for you&mdash;confidential &amp; proprietary</span>
+              </li>
+            </ul>
+            {/* Side-by-side CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4">
+              <button
+                id="irs-hero-cta-primary"
+                ref={firstNameRef}
+                aria-label="Claim my spot in the Initiative Readiness Scan"
+                data-gtm="cta-hero-primary"
+                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+                onClick={() => setShowModal(true)}
+              >
+                Claim My Spot
+              </button>
+              <button
+                id="irs-hero-cta-secondary"
+                aria-label="Learn how the Initiative Readiness Scan works"
+                data-gtm="cta-hero-secondary"
+                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-white border-2 border-blue-700 text-blue-700 font-semibold text-lg shadow hover:bg-blue-50 transition"
+                onClick={() => {
+                  document.getElementById('irs-about')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                How It Works
+              </button>
+            </div>
+            <div className="text-sm text-gray-500 mt-2" id="irs-early-access-label">
+              Limited early access &ndash; priority to executive leaders
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT SECTION */}
+        <section
+          id="irs-about"
+          data-gtm="section-about"
+          aria-label="About the Initiative Readiness Scan"
+          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 id="irs-about-title" className="text-2xl md:text-3xl font-bold mb-6">
+              4 Minutes is All You Need
+            </h2>
+            <p id="irs-about-desc" className="mb-5 text-gray-700 text-lg">
+              Every major transformation starts with a single question: <span className="font-semibold">Are we really ready for change&mdash;or about to waste 6 months and millions?</span>
+              <br /><br />
+              The Initiative Readiness Scan distills 100+ real-world lessons into a focused, board-ready assessment. In just four minutes, you&apos;ll see strengths, gaps, and your next best move&mdash;plus a tailored report you can act on.
+            </p>
+            <button
+              id="irs-about-cta"
+              aria-label="Get my readiness score"
+              data-gtm="cta-about"
+              className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+              onClick={() => setShowModal(true)}
+            >
+              Get My Readiness Score
+            </button>
+          </div>
+        </section>
+
+        {/* WILL IT HELP YOU NOW SECTION */}
+        <section
+          id="irs-help"
+          data-gtm="section-help"
+          aria-label="Will the Initiative Readiness Scan Help You Now"
+          className="bg-white py-16 px-6 md:px-16"
+        >
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <h2 id="irs-help-title" className="text-2xl font-bold mb-4">
+                Will It Help You Now?
+              </h2>
+              <p id="irs-help-desc" className="mb-6 text-gray-700">
+                The Readiness Scan is built for leaders under real pressure. It benchmarks your organization across 6 axes, gives you a custom radar chart, and provides battle-tested strategies for next steps.
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6" aria-label="Scan Outcomes">
+                <li id="irs-help-li-1">Benchmark your team on the axes that drive transformation</li>
+                <li id="irs-help-li-2">Spot blind spots and address them before you commit major spend</li>
+                <li id="irs-help-li-3">Confidential, actionable, and boardroom-ready</li>
+              </ul>
+              <button
+                id="irs-help-cta"
+                aria-label="Claim my spot"
+                data-gtm="cta-help"
+                className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+                onClick={() => setShowModal(true)}
+              >
+                Claim My Spot
+              </button>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <Image
+                id="irs-help-image"
+                src="/initiative-readiness-scan-cover.png"
+                alt="Initiative Readiness Scan sample booklet"
+                width={270}
+                height={284}
+                className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* BONUS SECTION */}
+        <section
+          id="irs-bonus"
+          data-gtm="section-bonus"
+          aria-label="Bonus for Early Access"
+          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 id="irs-bonus-title" className="text-2xl font-bold mb-4">
+              Bonus for Early Access
+            </h2>
+            <p id="irs-bonus-desc" className="mb-6 text-gray-700 text-lg">
+              Get your custom radar chart and board-ready assessment before anyone else&mdash;plus priority access to our live beta cohort and exclusive leadership roundtables.
+            </p>
+            <button
+              id="irs-bonus-cta"
+              aria-label="Claim my early access"
+              data-gtm="cta-bonus"
+              className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+              onClick={() => setShowModal(true)}
+            >
+              Claim My Early Access
+            </button>
+          </div>
+        </section>
+
+        {/* HOW IT WORKS SECTION */}
+        <section
+          id="irs-how"
+          data-gtm="section-how"
+          aria-label="How Initiative Readiness Scan Works"
+          className="bg-white py-16 px-6 md:px-16"
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 id="irs-how-title" className="text-2xl font-bold mb-4">
+              How It Works
+            </h2>
+            <ol className="list-decimal list-inside text-gray-700 text-lg mb-6 space-y-2" aria-label="Scan Steps">
+              <li id="irs-how-step-1">Take the scan&mdash;complete a few questions about your current state.</li>
+              <li id="irs-how-step-2">Get your readiness radar and next-step action plan.</li>
+              <li id="irs-how-step-3">Access leadership tips and real-world examples based on your score.</li>
+            </ol>
+          </div>
+        </section>
+
+        {/* WHY US SECTION */}
+        <section
+          id="irs-why"
+          data-gtm="section-why"
+          aria-label="Why Uncork Solutions"
+          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 id="irs-why-title" className="text-2xl font-bold mb-4">
+              Why Uncork Solutions?
+            </h2>
+            <p id="irs-why-desc" className="mb-5 text-gray-700 text-lg">
+              Our team has guided 100+ organizations through complex transformations across tech, finance, healthcare, and more. We know where the traps are&mdash;and how to help you avoid them.
+              <br /><br />
+              The Initiative Readiness Scan is your shortcut to insight, alignment, and risk reduction&mdash;designed for executives, by experts.
+            </p>
+          </div>
+        </section>
+
+        {/* FINAL CTA SECTION */}
+        <section
+          id="irs-final"
+          data-gtm="section-final"
+          aria-label="Final Call to Action"
+          className="bg-white py-16 px-6 md:px-16"
+        >
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
+            <div className="flex-1">
+              <h2 id="irs-final-title" className="text-2xl font-bold mb-4">
+                Ready to Accelerate Your Next Initiative?
+              </h2>
+              <p id="irs-final-desc" className="mb-6 text-gray-700 text-lg">
+                Don&apos;t risk your next big transformation on guesswork. Get a proven, actionable plan&mdash;built for decision-makers who want results, not just reports.
+              </p>
+              <button
+                id="irs-final-cta"
+                aria-label="Claim my spot now"
+                data-gtm="cta-final"
+                className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+                onClick={() => setShowModal(true)}
+              >
+                Claim My Spot Now
+              </button>
+            </div>
+            <div className="flex-1 flex justify-center">
+              <Image
+                id="irs-final-image"
+                src="/initiative-readiness-scan-cover.png"
+                alt="Initiative Readiness Scan sample booklet"
+                width={270}
+                height={284}
+                className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer
+          id="irs-footer"
+          data-gtm="footer"
+          aria-label="Site Footer"
+          className="bg-[#f7fafd] py-8 px-6 md:px-16 mt-4"
+        >
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <Image
+              id="irs-footer-logo"
               src="/uncork-solutions-logo.png"
               alt="Uncork Solutions logo"
-              className="object-contain mx-auto w-32 sm:w-44 h-auto"
-              width={176}
-              height={72}
-              priority
+              width={160}
+              height={60}
+              className="object-contain mb-4 md:mb-0"
             />
-            <div className="footer-policies">
-              <Link href="/cookie-policy" className="footer-policy-link">
-                Cookie Policy
-              </Link>
-              <Link href="/privacy-policy" className="footer-policy-link">
-                Privacy Policy
-              </Link>
-              <Link href="/accessibility-policy" className="footer-policy-link">
-                Accessibility Policy
-              </Link>
-            </div>
-            <div className="footer-copyright">
+            <div className="text-gray-500 text-sm text-center md:text-right">
               &copy; {new Date().getFullYear()} Uncork Solutions. All rights reserved.
+              <br />
+              <a href="/privacy-policy" className="underline hover:text-blue-700">Privacy Policy</a>
+              <span aria-hidden="true" className="text-gray-400"> | </span>
+              <a href="/accessibility-policy" className="underline hover:text-blue-700">Accessibility Policy</a>
             </div>
           </div>
         </footer>
@@ -414,33 +497,42 @@ export default function Home() {
         {/* MODAL FORM POPUP */}
         {showModal && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            id="irs-modal"
             data-gtm="waitlist-modal"
             role="dialog"
             aria-modal="true"
             aria-labelledby="waitlist-modal-title"
-            onClick={() => setShowModal(false)} // Closes modal if clicking the overlay
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
             tabIndex={-1}
+            ref={modalRef}
+            onClick={() => setShowModal(false)}
             onKeyDown={(e) => {
               if (e.key === 'Escape') setShowModal(false);
             }}
           >
             <div
               className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
-              onClick={(e) => e.stopPropagation()} // Prevents closing if clicking inside modal
+              onClick={e => e.stopPropagation()}
             >
-              <h2 id="waitlist-modal-title" className="text-xl font-semibold mb-4 text-center">
+              <h2
+                id="waitlist-modal-title"
+                className="text-xl font-semibold mb-4 text-center"
+              >
                 You&apos;re Almost There&mdash;Help Us Tailor Your Experience
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
                 We keep this confidential and use it only to deliver the best possible scan for your unique situation.
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                id="waitlist-form"
+                aria-label="Initiative Readiness Scan Waitlist"
+                autoComplete="on"
+                onSubmit={handleSubmit}
+                className="space-y-4"
+              >
                 <div className="flex gap-4">
                   <div className="flex-1">
-                    <label htmlFor="firstName" className="sr-only">
-                      First Name
-                    </label>
+                    <label htmlFor="firstName" className="sr-only">First Name</label>
                     <input
                       ref={firstNameRef}
                       id="firstName"
@@ -452,12 +544,12 @@ export default function Home() {
                       onChange={handleChange}
                       required
                       autoComplete="given-name"
+                      aria-label="First Name"
+                      data-gtm="input-firstname"
                     />
                   </div>
                   <div className="flex-1">
-                    <label htmlFor="lastName" className="sr-only">
-                      Last Name
-                    </label>
+                    <label htmlFor="lastName" className="sr-only">Last Name</label>
                     <input
                       id="lastName"
                       type="text"
@@ -468,13 +560,13 @@ export default function Home() {
                       onChange={handleChange}
                       required
                       autoComplete="family-name"
+                      aria-label="Last Name"
+                      data-gtm="input-lastname"
                     />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
+                  <label htmlFor="email" className="sr-only">Email</label>
                   <input
                     id="email"
                     type="email"
@@ -485,72 +577,72 @@ export default function Home() {
                     onChange={handleChange}
                     required
                     autoComplete="email"
+                    aria-label="Work Email"
+                    data-gtm="input-email"
                   />
                 </div>
                 <div>
-                  <label htmlFor="challenge" className="sr-only">
-                    Main Challenge
-                  </label>
+                  <label htmlFor="challenge" className="sr-only">Main Challenge</label>
                   <textarea
                     id="challenge"
                     name="challenge"
                     placeholder="What’s the main pain point you&apos;re solving for right now?"
                     className="w-full p-2 border rounded"
-                    rows="1"
+                    rows={1}
                     value={formData.challenge}
                     onChange={handleChange}
                     required
+                    aria-label="Main Challenge"
+                    data-gtm="input-challenge"
                   />
                 </div>
                 <div>
-                  <label htmlFor="outcome" className="sr-only">
-                    Desired Outcome
-                  </label>
+                  <label htmlFor="outcome" className="sr-only">Desired Outcome</label>
                   <textarea
                     id="outcome"
                     name="outcome"
                     placeholder="What outcome are you trying to achieve?"
                     className="w-full p-2 border rounded"
-                    rows="1"
+                    rows={1}
                     value={formData.outcome}
                     onChange={handleChange}
                     required
+                    aria-label="Desired Outcome"
+                    data-gtm="input-outcome"
                   />
                 </div>
                 <div>
-                  <label htmlFor="obstacle" className="sr-only">
-                    Obstacles
-                  </label>
+                  <label htmlFor="obstacle" className="sr-only">Obstacles</label>
                   <textarea
                     id="obstacle"
                     name="obstacle"
                     placeholder="What obstacles are in the way?"
                     className="w-full p-2 border rounded"
-                    rows="1"
+                    rows={1}
                     value={formData.obstacle}
                     onChange={handleChange}
                     required
+                    aria-label="Obstacles"
+                    data-gtm="input-obstacle"
                   />
                 </div>
                 <div>
-                  <label htmlFor="alternatives" className="sr-only">
-                    Alternatives
-                  </label>
+                  <label htmlFor="alternatives" className="sr-only">Alternatives</label>
                   <textarea
                     id="alternatives"
                     name="alternatives"
                     placeholder="What other solutions or options are you considering?"
                     className="w-full p-2 border rounded"
-                    rows="1"
+                    rows={1}
                     value={formData.alternatives}
                     onChange={handleChange}
                     required
+                    aria-label="Alternatives"
+                    data-gtm="input-alternatives"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lowPrice" className="sr-only">
-                    Lowest Price
-                  </label>
+                  <label htmlFor="lowPrice" className="sr-only">Lowest Price</label>
                   <input
                     id="lowPrice"
                     type="number"
@@ -564,12 +656,12 @@ export default function Home() {
                     required
                     min="0"
                     step="1"
+                    aria-label="Lowest Price"
+                    data-gtm="input-lowprice"
                   />
                 </div>
                 <div>
-                  <label htmlFor="highPrice" className="sr-only">
-                    Highest Price
-                  </label>
+                  <label htmlFor="highPrice" className="sr-only">Highest Price</label>
                   <input
                     id="highPrice"
                     type="number"
@@ -583,12 +675,12 @@ export default function Home() {
                     required
                     min="0"
                     step="1"
+                    aria-label="Highest Price"
+                    data-gtm="input-highprice"
                   />
                 </div>
                 <div>
-                  <label htmlFor="decisionAuthority" className="sr-only">
-                    Who will lead the decision for this?
-                  </label>
+                  <label htmlFor="decisionAuthority" className="sr-only">Who will lead the decision for this?</label>
                   <select
                     id="decisionAuthority"
                     name="decisionAuthority"
@@ -596,6 +688,8 @@ export default function Home() {
                     value={formData.decisionAuthority}
                     onChange={handleChange}
                     required
+                    aria-label="Decision Authority"
+                    data-gtm="input-decisionauthority"
                   >
                     <option value="" disabled>
                       Who will lead the decision for this? *
@@ -606,9 +700,7 @@ export default function Home() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="timeline" className="sr-only">
-                    How soon will you move forward with a solution? *
-                  </label>
+                  <label htmlFor="timeline" className="sr-only">How soon will you move forward with a solution? *</label>
                   <select
                     id="timeline"
                     name="timeline"
@@ -616,6 +708,8 @@ export default function Home() {
                     value={formData.timeline}
                     onChange={handleChange}
                     required
+                    aria-label="Decision Timeline"
+                    data-gtm="input-timeline"
                   >
                     <option value="" disabled>
                       How soon will you move forward with a solution? *
@@ -626,11 +720,16 @@ export default function Home() {
                     <option value="Just exploring">Just exploring</option>
                   </select>
                 </div>
-                {error && <div className="text-red-600 text-sm">{error}</div>}
+                {error && (
+                  <div className="text-red-600 text-sm" role="alert" id="waitlist-form-error">
+                    {error}
+                  </div>
+                )}
                 <div className="flex justify-between gap-4">
                   <button
+                    id="waitlist-submit"
                     type="submit"
-                    className="w-full cta-btn"
+                    className="w-full cta-btn bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 transition"
                     disabled={submitting}
                     aria-label="Register"
                     data-gtm="register-submit"
@@ -638,6 +737,7 @@ export default function Home() {
                     {submitting ? 'Registering...' : 'Register'}
                   </button>
                   <button
+                    id="waitlist-cancel"
                     type="button"
                     onClick={() => setShowModal(false)}
                     disabled={submitting}
