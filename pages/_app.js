@@ -1,7 +1,6 @@
 import '../styles/globals.css';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
-import Image from 'next/image';
 
 const GTM_ID = 'GTM-NFSGDSH8';
 
