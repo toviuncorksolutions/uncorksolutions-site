@@ -242,9 +242,11 @@ export default function InitiativeReadinessScan() {
           </div>
           {/* Hero text, right */}
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
+            {/* 
             <div className="uppercase text-sm tracking-wide text-gray-700 mb-2" id="irs-free-tool-label">
               Free Digital Strategy Evaluation Tool
             </div>
+            */}
             <h1 id="irs-hero-title" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
               Is Your Organization Actually <span className="text-blue-700">Ready for Transformation?</span>
             </h1>
@@ -295,32 +297,53 @@ export default function InitiativeReadinessScan() {
           </div>
         </section>
 
-        {/* ABOUT SECTION */}
+        {/* OUTCOMES SECTION */}
         <section
-          id="irs-about"
-          data-gtm="section-about"
-          aria-label="About the Initiative Readiness Scan"
-          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
+        id="irs-outcomes"
+        data-gtm="section-outcomes"
+        aria-label="What You Get from the Initiative Readiness Scan"
+        className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
         >
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="irs-about-title" className="text-2xl md:text-3xl font-bold mb-6">
-              4 Minutes is All You Need
+        <div className="max-w-3xl mx-auto text-center">
+            <h2 id="irs-outcomes-title" className="text-2xl md:text-3xl font-bold mb-6">
+            From Uncertainty to Credible Action—in Days, Not Quarters.
             </h2>
-            <p id="irs-about-desc" className="mb-5 text-gray-700 text-lg">
-              Every major transformation starts with a single question: <span className="font-semibold">Are we really ready for change&mdash;or about to waste 6 months and millions?</span>
-              <br /><br />
-              The Initiative Readiness Scan distills 100+ real-world lessons into a focused, board-ready assessment. In just four minutes, you&apos;ll see strengths, gaps, and your next best move&mdash;plus a tailored report you can act on.
+            <p className="text-gray-700">
+            Look and feel clear, credible, proactive, and in control
             </p>
-            <button
-              id="irs-about-cta"
-              aria-label="Get my readiness score"
-              data-gtm="cta-about"
-              className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
-              onClick={() => setShowModal(true)}
-            >
-              Get My Readiness Score
-            </button>
-          </div>
+            <ul className="space-y-8 text-left max-w-2xl mx-auto">
+            <li>
+                <h3 className="font-semibold text-lg mb-1">1. Boardroom-Ready Confidence</h3>
+                <p className="text-gray-700">
+                You’ll walk into your next executive meeting with clarity on what needs to happen—able to answer tough questions and proactively surface (and solve) issues before they become problems.
+                </p>
+            </li>
+            <li>
+                <h3 className="font-semibold text-lg mb-1">2. Trusted Leadership</h3>
+                <p className="text-gray-700">
+                Instead of being caught off guard, you’ll be the leader who already has the roadmap, knows where the blind spots are, and brings the team together with a concrete plan.
+                </p>
+            </li>
+            <li>
+                <h3 className="font-semibold text-lg mb-1">3. Proactive Risk Management</h3>
+                <p className="text-gray-700">
+                You’ll move forward with the confidence of knowing you’ve stress-tested your plan—and can show the board, with evidence, where you’re ready and how you’ll close any gaps.
+                </p>
+            </li>
+            <li>
+                <h3 className="font-semibold text-lg mb-1">4. Accelerated Alignment</h3>
+                <p className="text-gray-700">
+                You’ll have immediate, visual clarity—so business and tech are finally rowing in the same direction, and your initiative moves from talk to traction.
+                </p>
+            </li>
+            <li>
+                <h3 className="font-semibold text-lg mb-1">5. Credible Execution, Not Just Talk</h3>
+                <p className="text-gray-700">
+                No more vague promises. You’ll have a prioritized, actionable plan that shows the organization (and your stakeholders) you’re prepared, realistic, and ready to deliver.
+                </p>
+            </li>
+            </ul>
+        </div>
         </section>
 
         {/* WILL IT HELP YOU NOW SECTION */}
@@ -345,12 +368,12 @@ export default function InitiativeReadinessScan() {
               </ul>
               <button
                 id="irs-help-cta"
-                aria-label="Claim my spot"
+                aria-label="Get My Initiative Readiness Scan"
                 data-gtm="cta-help"
                 className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
                 onClick={() => setShowModal(true)}
               >
-                Claim My Spot
+                Get My Initiative Readiness Scan
               </button>
             </div>
             <div className="flex-1 flex justify-center">
@@ -366,30 +389,48 @@ export default function InitiativeReadinessScan() {
           </div>
         </section>
 
-        {/* BONUS SECTION */}
+        {/* WHO WE SERVE SECTION */}
         <section
-          id="irs-bonus"
-          data-gtm="section-bonus"
-          aria-label="Bonus for Early Access"
-          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
+        id='irs-who'
+        data-gtm='section-who'
+        aria-label='Who We Serve'
+        className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
         >
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="irs-bonus-title" className="text-2xl font-bold mb-4">
-              Bonus for Early Access
+        <div className='max-w-3xl mx-auto text-center'>
+            <h2 id='irs-who-title' className='text-2xl font-bold mb-4'>
+            Who We Serve
             </h2>
-            <p id="irs-bonus-desc" className="mb-6 text-gray-700 text-lg">
-              Get your custom radar chart and board-ready assessment before anyone else&mdash;plus priority access to our live beta cohort and exclusive leadership roundtables.
+            <p className='mb-8 text-gray-700 text-lg'>
+            This is for leaders who carry the weight of real business outcomes—typically:
+            </p>
+            <ul className='text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none'>
+            <li>
+                <span className='font-semibold text-blue-700'>CIOs, CTOs, and CDOs:</span>
+                {' '}Tech executives driving modernization, platform, or digital change. They&#39;ve been burned by past initiatives that missed the mark or failed to launch
+            </li>
+            <li>
+                <span className='font-semibold text-blue-700'>Business and Digital Executives:</span>
+                {' '}VPs and Chiefs tasked with tying digital to true P&amp;L impact. They&#39;re struggling to bridge the gap between bold boardroom promises and the practical realities of technology
+            </li>
+            <li>
+                <span className='font-semibold text-blue-700'>Product, Engineering &amp; Ops Leaders:</span>
+                {' '}They need clarity, alignment, and results — not another layer of consulting jargon. They&#39;re tired of strategy decks that never translate to action
+            </li>
+            </ul>
+            <p className='text-gray-600 italic text-base md:text-lg mt-6'>
+            My best-fit clients have either the battle scars of past failed change, or are &#39;caught in the middle&#39; of business ambition and technical constraints.<br />
+            They want an <span className='font-semibold text-blue-700'>operator</span>, not a theorist; an <span className='font-semibold text-blue-700'>ally</span>, not just another advisor.
             </p>
             <button
-              id="irs-bonus-cta"
-              aria-label="Claim my early access"
-              data-gtm="cta-bonus"
-              className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
-              onClick={() => setShowModal(true)}
+            id='irs-who-cta'
+            aria-label='Get My Initiative Readiness Scan'
+            data-gtm='cta-who'
+            className='mt-8 px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition'
+            onClick={() => setShowModal(true)}
             >
-              Claim My Early Access
+            Get My Initiative Readiness Scan
             </button>
-          </div>
+        </div>
         </section>
 
         {/* HOW IT WORKS SECTION */}
@@ -443,16 +484,16 @@ export default function InitiativeReadinessScan() {
                 Ready to Accelerate Your Next Initiative?
               </h2>
               <p id="irs-final-desc" className="mb-6 text-gray-700 text-lg">
-                Don&apos;t risk your next big transformation on guesswork. Get a proven, actionable plan&mdash;built for decision-makers who want results, not just reports.
+                This is a comprehensive, operator-built scan that surfaces hidden risks, aligns business and tech, and delivers a prioritized, board-ready action plan—so you know exactly where you stand and what to do next.
               </p>
               <button
                 id="irs-final-cta"
-                aria-label="Claim my spot now"
+                aria-label="Get My Initiative Readiness Scan"
                 data-gtm="cta-final"
                 className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
                 onClick={() => setShowModal(true)}
               >
-                Claim My Spot Now
+                Get My Initiative Readiness Scan
               </button>
             </div>
             <div className="flex-1 flex justify-center">
