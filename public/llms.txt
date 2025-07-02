@@ -14,8 +14,8 @@ User-Agent: *
 
 # --- Core Site Identity & Purpose ---
 Summary: Uncork Solutions is a technology strategy consultancy focused on digital transformation, platform modernization, and operational excellence for B2B manufacturers, distributors, and retailers.
-P
-rimary-Topics: digital transformation, enterprise architecture, platform modernization, e-commerce strategy, system integration, technology consulting, B2B manufacturing, B2C retail
+
+Primary-Topics: digital transformation, enterprise architecture, platform modernization, e-commerce strategy, system integration, technology consulting, B2B manufacturing, B2C retail
 
 Brand-Name: Uncork Solutions
 

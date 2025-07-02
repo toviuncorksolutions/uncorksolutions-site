@@ -8,7 +8,7 @@ const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'msn.com'
 ];
 
-const SOFT_GREY_BG = 'bg-[#f7fafd]';
+const SOFT_GREY_BG = 'bg-[#f1f2f4]';
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
 
@@ -226,7 +226,7 @@ export default function InitiativeReadinessScan() {
           data-gtm="irs-section-hero"
           aria-label="Initiative Readiness Scan Hero"
           className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-12"
-          style={{background: 'url("/dull-bg-compressed.png") center center / cover no-repeat', backgroundColor: '#f7fafd'}}
+          style={{background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',backgroundColor: SOFT_GREY_BG }}
         >
           {/* Booklet image, left */}
           <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
@@ -356,7 +356,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-help-image"
-                src="/initiative-readiness-scan-cover.png"
+                src="/initiative-readiness-scan-sample-3.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
@@ -458,7 +458,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-final-image"
-                src="/initiative-readiness-scan-cover.png"
+                src="/initiative-readiness-scan-sample-3.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
@@ -467,13 +467,46 @@ export default function InitiativeReadinessScan() {
             </div>
           </div>
         </section>
+        
+        {/* FOUNDER SECTION */}
+        <section
+        id="irs-founder"
+        aria-label="Founder Highlight"
+        className={`${SOFT_GREY_BG} py-12 px-6 md:px-16`}
+        >
+        <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
+            {/* Headshot */}
+            <div className="flex-shrink-0 w-44">
+            <div className="rounded-xl overflow-hidden border-b-4" style={{ borderColor: '#2364e0' /* CTA Blue */ }}>
+                <Image
+                src="/tovi-headshot.png"
+                alt="Tovi Heilbronn, Founder, Uncork Solutions"
+                width={305}
+                height={305}
+                className="w-full h-auto object-cover"
+                />
+            </div>
+            </div>
+            {/* Founder Text */}
+            <div>
+            <h3 className="text-lg font-semibold mb-2">Tovi Heilbronn</h3>
+            <div className="text-sm text-gray-600 mb-1">Founder, Uncork Solutions</div>
+            <p className="text-gray-700 leading-relaxed">
+                Placeholder bio copy here. Share your expertise, approach, or a personal note on why you help leaders succeed with transformation.<br />
+                <span className="block mt-2 text-gray-500 italic">
+                &quot;I believe every organization deserves a clear, data-backed path to confident execution.&quot;
+                </span>
+            </p>
+            </div>
+        </div>
+        </section>
 
         {/* FOOTER */}
         <footer
           id="irs-footer"
           data-gtm="footer"
           aria-label="Site Footer"
-          className="bg-[#f7fafd] py-8 px-6 md:px-16 mt-4"
+          className="py-8 px-6 md:px-16 mt-4"
         >
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <Image
@@ -668,7 +701,7 @@ export default function InitiativeReadinessScan() {
                     inputMode="numeric"
                     pattern="\d*"
                     name="highPrice"
-                    placeholder="What price is too expensive for high value? *"
+                    placeholder="What's the max you'd pay for high value? *"
                     className="w-full p-2 border rounded"
                     value={formData.highPrice}
                     onChange={handleChange}
