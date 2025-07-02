@@ -219,13 +219,13 @@ export default function InitiativeReadinessScan() {
         />
       </Head>
 
-      <main className="font-sans text-gray-800">
+      <main className="font-sans text-gray-800 w-full overflow-x-hidden">
         {/* HERO SECTION */}
         <section
           id="irs-hero"
           data-gtm="irs-section-hero"
           aria-label="Initiative Readiness Scan Hero"
-          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-12"
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-12 w-full max-w-screen-2xl mx-auto"
           style={{background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',backgroundColor: SOFT_GREY_BG }}
         >
           {/* Booklet image, left */}
