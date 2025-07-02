@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 .bg-uncork-img {
   background-image: url('/dull-bg-compressed.png');
   background-size: cover;

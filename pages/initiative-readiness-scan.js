@@ -225,7 +225,7 @@ export default function InitiativeReadinessScan() {
           id="irs-hero"
           data-gtm="irs-section-hero"
           aria-label="Initiative Readiness Scan Hero"
-          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-12 w-full max-w-screen-2xl mx-auto"
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto"
           style={{background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',backgroundColor: SOFT_GREY_BG }}
         >
           {/* Booklet image, left */}
@@ -237,7 +237,7 @@ export default function InitiativeReadinessScan() {
               width={924}
               height={970}
               priority
-              className="w-[260px] sm:w-[380px] md:w-[520px] lg:w-[650px] xl:w-[820px] 2xl:w-[924px] max-w-full h-auto drop-shadow-xl"
+              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[820px] 2xl:max-w-[924px] h-auto drop-shadow-xl"
             />
           </div>
           {/* Hero text, right */}
