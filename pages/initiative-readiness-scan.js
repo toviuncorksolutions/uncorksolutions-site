@@ -290,7 +290,7 @@ export default function InitiativeReadinessScan() {
                 data-gtm="cta-hero-secondary"
                 className="w-full sm:w-auto px-8 py-3 rounded-xl bg-white border-2 border-blue-700 text-blue-700 font-semibold text-lg shadow hover:bg-blue-50 transition"
                 onClick={() => {
-                  document.getElementById('irs-outcomes')?.scrollIntoView({ behavior: 'smooth' });
+                  document.getElementById('irs-how')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 How It Works
@@ -508,7 +508,7 @@ export default function InitiativeReadinessScan() {
                 What You Get
             </div>
             <ul className="space-y-2 text-gray-700 pl-1">
-                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Visual readiness dashboard (7-axis radar)</li>
+                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Visual readiness dashboard (6-axis radar)</li>
                 <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Clear, prioritized gap list and benchmarks</li>
                 <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Immediate, actionable next steps—no waiting, no fluff</li>
                 <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Boardroom-ready summary for leadership buy-in</li>
