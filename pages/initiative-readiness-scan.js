@@ -463,7 +463,7 @@ export default function InitiativeReadinessScan() {
                 <div>
                 <div className="font-semibold text-lg mb-1">Step 1: Deep-Dive Online Readiness Survey</div>
                 <div className="text-gray-700">
-                    ~60 targeted questions, covering the 7 axes of transformation<br />
+                    ~60 targeted questions, covering the 6 axes of transformation<br />
                     <span className="text-gray-500 text-sm">30–45 minutes, completed at your convenience</span>
                 </div>
                 </div>
@@ -596,7 +596,7 @@ export default function InitiativeReadinessScan() {
             <h3 className="text-lg font-semibold mb-2">Tovi Heilbronn</h3>
             <div className="text-sm text-gray-600 mb-1">Founder, Uncork Solutions</div>
             <p className="text-gray-700 leading-relaxed">
-                16+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes and delivering real-world results across digital, product, and platform modernization.<br />
+                17+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes and delivering real-world results across digital, product, and platform modernization.<br />
                 <span className="block mt-2 text-gray-500 italic">
                 &quot;I believe clients deserve clear answers and practical direction—without the drag of drawn-out consulting engagements.&quot;
                 </span>
