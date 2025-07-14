@@ -251,9 +251,9 @@ export default function InitiativeReadinessScan() {
               Most transformations fail. <span className="text-blue-700">Will yours be different?</span>
             </h1>
             <p id="irs-hero-subtitle" className="text-lg md:text-xl text-gray-700 mb-6">
-              You’re betting millions—and your reputation—on this initiative. Are you certain you’re not missing the risks that kill most strategic programs before they deliver?
+              You’re betting millions—and your reputation—on this initiative. Are you certain you’re not missing the risks that kill most strategic initiatives before they deliver?
               <br /><br />
-              Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;a proven tool to diagnose, de-risk, and accelerate your strategic change initiatives.
+              Don’t be surprised. Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;your operator-built, boardroom-ready tool to diagnose, de-risk, and accelerate strategic change.
             </p>
             <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
               <li className="flex items-center gap-2">
@@ -266,12 +266,9 @@ export default function InitiativeReadinessScan() {
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-3">Prepared for you&mdash;confidential &amp; proprietary</span>
+                <span id="irs-benefit-3">Objective, confidential assessment&mdash;no consulting fluff</span>
               </li>
-            </ul>
-            <p id="irs-hero-question" className="text-lg md:text-xl text-gray-700 mb-6">
-              You’re investing millions—how soon would you like to know if you’re on the right track?
-            </p>            
+            </ul>           
             {/* Side-by-side CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4">
               <button
