@@ -248,10 +248,10 @@ export default function InitiativeReadinessScan() {
             </div>
             */}
             <h1 id="irs-hero-title" className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-              Is Your Organization Actually <span className="text-blue-700">Ready for Transformation?</span>
+              Most transformations fail. <span className="text-blue-700">Will yours be different?</span>
             </h1>
             <p id="irs-hero-subtitle" className="text-lg md:text-xl text-gray-700 mb-6">
-              How certain are you your initiative will succeed?
+              You’re betting millions—and your reputation—on this initiative. Are you certain you’re not missing the risks that kill most strategic programs before they deliver?
               <br /><br />
               Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;a proven tool to diagnose, de-risk, and accelerate your strategic change initiatives.
             </p>
@@ -366,7 +366,7 @@ export default function InitiativeReadinessScan() {
                 Will It Help You Now?
               </h2>
               <p id="irs-help-desc" className="mb-6 text-gray-700">
-                How certain are you this initiative will succeed—and how soon do you want the evidence?
+                Most companies only see failure coming after the spend is committed. How certain are you this initiative will succeed—and how soon do you want the evidence?
                 <br /><br />
                 The Readiness Scan is built for leaders under real pressure. It benchmarks your organization across 6 axes, gives you a custom radar chart, and provides battle-tested strategies for next steps.
               </p>
