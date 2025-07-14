@@ -514,6 +514,15 @@ export default function InitiativeReadinessScan() {
                 <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Boardroom-ready summary for leadership buy-in</li>
             </ul>
             </div>
+            <button
+                id="irs-how-cta"
+                aria-label="Get My Initiative Readiness Scan"
+                data-gtm="cta-how"
+                className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
+                onClick={() => setShowModal(true)}
+              >
+                Get My Initiative Readiness Scan
+            </button>
         </div>
         </section>
 
