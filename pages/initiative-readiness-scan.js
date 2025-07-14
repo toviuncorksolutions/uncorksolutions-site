@@ -258,16 +258,20 @@ export default function InitiativeReadinessScan() {
             <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-1">Boardroom-ready, unbiased assessment &amp; action plan</span>
+                <span id="irs-benefit-1">Objective, confidential assessment&mdash;no consulting fluff</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-2">Identify risks. Align teams. Accelerate your next big win.</span>
+                <span id="irs-benefit-2">Rapid radar chart of your real risks, alignment, and readiness</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-3">Objective, confidential assessment&mdash;no consulting fluff</span>
+                <span id="irs-benefit-3">Actionable plan in days&mdash;not quarters</span>
               </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
+                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, Chiefs, and Product Leaders</span>
+              </li>              
             </ul>           
             {/* Side-by-side CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4">
