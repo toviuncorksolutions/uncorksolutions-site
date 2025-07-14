@@ -605,7 +605,7 @@ export default function InitiativeReadinessScan() {
             <h3 className="text-lg font-semibold mb-2">Tovi Heilbronn</h3>
             <div className="text-sm text-gray-600 mb-1">Founder, Uncork Solutions</div>
             <p className="text-gray-700 leading-relaxed">
-                17+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes and delivering real-world results across digital, product, and platform modernization.<br />
+                17+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes across digital, product, and platform modernization.<br />
                 <span className="block mt-2 text-gray-500 italic">
                 &quot;I believe clients deserve clear answers and practical direction—without the drag of drawn-out consulting engagements.&quot;
                 </span>
