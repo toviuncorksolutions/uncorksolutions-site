@@ -270,7 +270,7 @@ export default function InitiativeReadinessScan() {
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, Chiefs, and Product Leaders</span>
+                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, CPOs</span>
               </li>              
             </ul>           
             {/* Side-by-side CTAs */}
