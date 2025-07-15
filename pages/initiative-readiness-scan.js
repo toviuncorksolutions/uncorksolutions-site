@@ -19,9 +19,8 @@ const REQUIRED_FIELDS = [
   'challenge',
   'outcome',
   'obstacle',
-  'alternatives',
-  'lowPrice',
-  'highPrice',
+  // 'lowPrice',
+  // 'highPrice',
   'decisionAuthority',
   'timeline',
 ];
@@ -36,9 +35,8 @@ export default function InitiativeReadinessScan() {
     challenge: '',
     outcome: '',
     obstacle: '',
-    alternatives: '',
-    lowPrice: '',
-    highPrice: '',
+    // lowPrice: '',
+    // highPrice: '',
     decisionAuthority: '',
     timeline: '',
   });
@@ -101,8 +99,8 @@ export default function InitiativeReadinessScan() {
       return;
     }
 
-    const low = Number(formData.lowPrice);
-    const high = Number(formData.highPrice);
+    // const low = Number(formData.lowPrice);
+    // const high = Number(formData.highPrice);
 
     if (
       !Number.isFinite(low) ||
@@ -149,9 +147,8 @@ export default function InitiativeReadinessScan() {
         challenge: '',
         outcome: '',
         obstacle: '',
-        alternatives: '',
-        lowPrice: '',
-        highPrice: '',
+        // lowPrice: '',
+        // highPrice: '',
         decisionAuthority: '',
         timeline: '',
       });
@@ -270,7 +267,7 @@ export default function InitiativeReadinessScan() {
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, CPOs</span>
+                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
               </li>              
             </ul>           
             {/* Side-by-side CTAs */}
@@ -773,21 +770,7 @@ export default function InitiativeReadinessScan() {
                     data-gtm="input-obstacle"
                   />
                 </div>
-                <div>
-                  <label htmlFor="alternatives" className="sr-only">Alternatives</label>
-                  <textarea
-                    id="alternatives"
-                    name="alternatives"
-                    placeholder="What other solutions or options are you considering?"
-                    className="w-full p-2 border rounded"
-                    rows={1}
-                    value={formData.alternatives}
-                    onChange={handleChange}
-                    required
-                    aria-label="Alternatives"
-                    data-gtm="input-alternatives"
-                  />
-                </div>
+                {/*
                 <div>
                   <label htmlFor="lowPrice" className="sr-only">Lowest Price</label>
                   <input
@@ -826,6 +809,7 @@ export default function InitiativeReadinessScan() {
                     data-gtm="input-highprice"
                   />
                 </div>
+                */}
                 <div>
                   <label htmlFor="decisionAuthority" className="sr-only">Who will lead the decision for this?</label>
                   <select
