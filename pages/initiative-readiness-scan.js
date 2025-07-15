@@ -662,10 +662,10 @@ export default function InitiativeReadinessScan() {
                 id="waitlist-modal-title"
                 className="text-xl font-semibold mb-4 text-center"
               >
-                You&apos;re Almost There&mdash;Help Us Tailor Your Experience
+                Reserve Your Spot&mdash;Serious Leaders Only
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                We keep this confidential and use it only to deliver the best possible scan for your unique situation.
+                We prioritize organizations ready to move. Your responses remain 100% confidential and help us deliver a scan that’s sharply focused on your goals&mdash;so you get actionable insights, not just generic advice.
               </h3>
               <form
                 id="waitlist-form"
