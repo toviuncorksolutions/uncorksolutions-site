@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link'
 
 // Free email domains list (import from your utils if available)
 const FREE_EMAIL_DOMAINS = [
@@ -631,9 +632,9 @@ export default function InitiativeReadinessScan() {
             <div className="text-gray-500 text-sm text-center md:text-right">
               &copy; {new Date().getFullYear()} Uncork Solutions. All rights reserved.
               <br />
-              <a href="/privacy-policy" className="underline hover:text-blue-700">Privacy Policy</a>
+              <Link href="/privacy-policy" className="underline hover:text-blue-700">Privacy Policy</Link>
               <span aria-hidden="true" className="text-gray-400"> | </span>
-              <a href="/accessibility-policy" className="underline hover:text-blue-700">Accessibility Policy</a>
+              <Link href="/accessibility-policy" className="underline hover:text-blue-700">Accessibility Policy</Link>
             </div>
           </div>
         </footer>
