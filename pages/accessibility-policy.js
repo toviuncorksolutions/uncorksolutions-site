@@ -41,7 +41,7 @@ export default function AccessibilityPolicy() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-2">Our Commitment</h2>
           <p>
-            This website is designed to meet or exceed the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA—the current global standard for accessibility. We review our site regularly to maintain and improve accessibility for all users.
+            This website meets or exceeds the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA—the current global standard for accessibility. However, we still review our site regularly to maintain and improve accessibility for all users.
           </p>
         </section>
 

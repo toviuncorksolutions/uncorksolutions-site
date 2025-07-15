@@ -4,9 +4,8 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Free email domains list (import from your utils if available)
 const FREE_EMAIL_DOMAINS = [
-  'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'msn.com'
+  'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
 ];
 
 const SOFT_GREY_BG = 'bg-[#f1f2f4]';
@@ -20,8 +19,6 @@ const REQUIRED_FIELDS = [
   'challenge',
   'outcome',
   'obstacle',
-  // 'lowPrice',
-  // 'highPrice',
   'decisionAuthority',
   'timeline',
 ];
@@ -36,8 +33,6 @@ export default function InitiativeReadinessScan() {
     challenge: '',
     outcome: '',
     obstacle: '',
-    // lowPrice: '',
-    // highPrice: '',
     decisionAuthority: '',
     timeline: '',
   });
@@ -45,13 +40,39 @@ export default function InitiativeReadinessScan() {
   const [submitting, setSubmitting] = useState(false);
   const modalRef = useRef(null);
   const firstNameRef = useRef(null);
+  const lastActiveElement = useRef(null);
 
+  // Focus management for modal
   useEffect(() => {
     if (showModal) {
+      lastActiveElement.current = document.activeElement;
       modalRef.current?.focus();
       setTimeout(() => {
         firstNameRef.current?.focus();
       }, 100);
+      const handleFocusTrap = (e) => {
+        if (e.key === "Tab") {
+          const focusable = modalRef.current.querySelectorAll(
+            'input, textarea, select, button, [tabindex]:not([tabindex="-1"])'
+          );
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+          }
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+          }
+        }
+      };
+      modalRef.current?.addEventListener('keydown', handleFocusTrap);
+      return () => {
+        modalRef.current?.removeEventListener('keydown', handleFocusTrap);
+      };
+    } else if (lastActiveElement.current) {
+      lastActiveElement.current.focus();
     }
   }, [showModal]);
 
@@ -100,21 +121,6 @@ export default function InitiativeReadinessScan() {
       return;
     }
 
-    // const low = Number(formData.lowPrice);
-    // const high = Number(formData.highPrice);
-
-     // if (
-     //   !Number.isFinite(low) ||
-     //   !Number.isFinite(high) ||
-     //   !Number.isInteger(low) ||
-     //   !Number.isInteger(high) ||
-     //   low < 0 ||
-     //   high < 0
-     // ) {
-     //   setError('Please enter positive whole numbers for price fields.');
-     //   return;
-     // }
-
     setSubmitting(true);
 
     try {
@@ -148,8 +154,6 @@ export default function InitiativeReadinessScan() {
         challenge: '',
         outcome: '',
         obstacle: '',
-        // lowPrice: '',
-        // highPrice: '',
         decisionAuthority: '',
         timeline: '',
       });
@@ -217,7 +221,15 @@ export default function InitiativeReadinessScan() {
         />
       </Head>
 
-      <main className="font-sans text-gray-800 w-full overflow-x-hidden">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
+        tabIndex={0}
+      >
+        Skip to main content
+      </a>
+
+      <main id="main-content" role="main" className="font-sans text-gray-800 w-full overflow-x-hidden">
         {/* HERO SECTION */}
         <section
           id="irs-hero"
@@ -774,46 +786,6 @@ export default function InitiativeReadinessScan() {
                     data-gtm="input-obstacle"
                   />
                 </div>
-                {/*
-                <div>
-                  <label htmlFor="lowPrice" className="sr-only">Lowest Price</label>
-                  <input
-                    id="lowPrice"
-                    type="number"
-                    inputMode="numeric"
-                    pattern="\d*"
-                    name="lowPrice"
-                    placeholder="What price would make this a great deal? *"
-                    className="w-full p-2 border rounded"
-                    value={formData.lowPrice}
-                    onChange={handleChange}
-                    required
-                    min="0"
-                    step="1"
-                    aria-label="Lowest Price"
-                    data-gtm="input-lowprice"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="highPrice" className="sr-only">Highest Price</label>
-                  <input
-                    id="highPrice"
-                    type="number"
-                    inputMode="numeric"
-                    pattern="\d*"
-                    name="highPrice"
-                    placeholder="What's the max you'd pay for high value? *"
-                    className="w-full p-2 border rounded"
-                    value={formData.highPrice}
-                    onChange={handleChange}
-                    required
-                    min="0"
-                    step="1"
-                    aria-label="Highest Price"
-                    data-gtm="input-highprice"
-                  />
-                </div>
-                */}
                 <div>
                   <label htmlFor="decisionAuthority" className="sr-only">Who will lead the decision for this?</label>
                   <select
