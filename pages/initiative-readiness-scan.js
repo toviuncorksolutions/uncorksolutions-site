@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 
 // Free email domains list (import from your utils if available)
 const FREE_EMAIL_DOMAINS = [
