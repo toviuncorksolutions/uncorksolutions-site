@@ -665,7 +665,7 @@ export default function InitiativeReadinessScan() {
                 Reserve Your Spot&mdash;Serious Leaders Only
               </h2>
               <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                We prioritize organizations ready to move. Your responses remain 100% confidential and help us deliver a scan that’s sharply focused on your goals&mdash;so you get actionable insights, not just generic advice.
+                We prioritize organizations ready to move. Your responses remain 100% confidential and help us deliver a scan that’s sharply focused on <em>your</em> goals&mdash;so you get actionable insights, not just generic advice.
               </h3>
               <form
                 id="waitlist-form"
