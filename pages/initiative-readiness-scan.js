@@ -51,7 +51,7 @@ export default function InitiativeReadinessScan() {
         firstNameRef.current?.focus();
       }, 100);
       const handleFocusTrap = (e) => {
-        if (e.key === "Tab") {
+        if (e.key === 'Tab') {
           const focusable = modalRef.current.querySelectorAll(
             'input, textarea, select, button, [tabindex]:not([tabindex="-1"])'
           );
@@ -170,12 +170,12 @@ export default function InitiativeReadinessScan() {
       <Head>
         <title>Initiative Readiness Scan – Uncork Solutions</title>
         <meta
-          name="description"
-          content="Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives."
+          name='description'
+          content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.'
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
         <script
-          type="application/ld+json"
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -222,8 +222,8 @@ export default function InitiativeReadinessScan() {
       </Head>
 
       <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
+        href='#main-content'
+        className='sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50'
         tabIndex={0}
       >
         Skip to main content
