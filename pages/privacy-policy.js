@@ -11,7 +11,20 @@ export default function PrivacyPolicy() {
         />
       </Head>
 
-      <main className="font-sans text-gray-800 w-full min-h-screen px-4 py-16 max-w-2xl mx-auto">
+      {/* Skip to main content link for keyboard and screen reader users */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
+        tabIndex={0}
+      >
+        Skip to main content
+      </a>
+
+      <main
+        id="main-content"
+        role="main"
+        className="font-sans text-gray-800 w-full min-h-screen px-4 py-16 max-w-2xl mx-auto"
+      >
         <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-blue-700">Privacy Policy</h1>
         <div className="text-sm text-gray-500 mb-6">Last updated: July 2025</div>
 
@@ -77,7 +90,12 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-bold mb-2">6. Your Rights</h2>
           <p>
             You may request access to, correction of, or deletion of your personal information at any time by contacting us at{' '}
-            <a href="mailto:hello@uncorksolutions.com" className="text-blue-700 underline">hello@uncorksolutions.com</a>.
+            <a
+              href="mailto:hello@uncorksolutions.com"
+              className="text-blue-700 underline focus:outline-2 focus:outline-blue-700"
+            >
+              hello@uncorksolutions.com
+            </a>.
           </p>
         </section>
 
@@ -92,11 +110,18 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-bold mb-2">Questions?</h2>
           <p>
             If you have questions or concerns about how your information is handled, contact us at{' '}
-            <a href="mailto:hello@uncorksolutions.com" className="text-blue-700 underline">hello@uncorksolutions.com</a>.
+            <a
+              href="mailto:hello@uncorksolutions.com"
+              className="text-blue-700 underline focus:outline-2 focus:outline-blue-700"
+            >
+              hello@uncorksolutions.com
+            </a>.
           </p>
         </section>
 
-        <div className="text-gray-400 text-xs mt-12">Copyright &copy; {new Date().getFullYear()} Uncork Solutions.</div>
+        <div className="text-gray-400 text-xs mt-12">
+          Copyright &copy; {new Date().getFullYear()} Uncork Solutions.
+        </div>
       </main>
     </>
   );
