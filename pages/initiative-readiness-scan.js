@@ -102,17 +102,17 @@ export default function InitiativeReadinessScan() {
     // const low = Number(formData.lowPrice);
     // const high = Number(formData.highPrice);
 
-    if (
-      !Number.isFinite(low) ||
-      !Number.isFinite(high) ||
-      !Number.isInteger(low) ||
-      !Number.isInteger(high) ||
-      low < 0 ||
-      high < 0
-    ) {
-      setError('Please enter positive whole numbers for price fields.');
-      return;
-    }
+     // if (
+     //   !Number.isFinite(low) ||
+     //   !Number.isFinite(high) ||
+     //   !Number.isInteger(low) ||
+     //   !Number.isInteger(high) ||
+     //   low < 0 ||
+     //   high < 0
+     // ) {
+     //   setError('Please enter positive whole numbers for price fields.');
+     //   return;
+     // }
 
     setSubmitting(true);
 
