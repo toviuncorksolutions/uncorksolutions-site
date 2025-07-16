@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
+import Footer from '../components/footer';
 
 const GTM_ID = 'GTM-NFSGDSH8';
 
@@ -23,6 +24,7 @@ export default function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
       <SpeedInsights />
+      <Footer />
     </>
   );
 }
