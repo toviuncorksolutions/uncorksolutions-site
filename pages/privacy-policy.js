@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function PrivacyPolicy() {
   return (
@@ -127,15 +128,15 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-bold mb-2">8. AI Usage</h2>
           <p>
             Uncork Solutions uses artificial intelligence (AI) tools in select services to enhance efficiency and quality. 
-            We are committed to the responsible and ethical use of AI.
+            In doing so, we are committed to the responsible and ethical use of AI.
             To learn more about how we use AI, protect your data, and maintain transparency,
             please see our{' '}
-            <a
+            <Link
                 href="/ai-policy"
                 className="text-blue-700 underline focus:outline-2 focus:outline-blue-700"
             >
             AI Usage Policy
-            </a>.
+            </Link>.
           </p>
         </section>
 
