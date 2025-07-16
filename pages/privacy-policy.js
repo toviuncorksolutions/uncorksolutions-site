@@ -124,6 +124,22 @@ export default function PrivacyPolicy() {
         </section>
 
         <section className="mb-8">
+          <h2 className="text-xl font-bold mb-2">8. AI Usage</h2>
+          <p>
+            Uncork Solutions uses artificial intelligence (AI) tools in select services to enhance efficiency and quality. 
+            We are committed to the responsible and ethical use of AI.
+            To learn more about how we use AI, protect your data, and maintain transparency,
+            please see our{' '}
+            <a
+                href="/ai-policy"
+                className="text-blue-700 underline focus:outline-2 focus:outline-blue-700"
+            >
+            AI Usage Policy
+            </a>.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-xl font-bold mb-2">7. Changes to This Policy</h2>
           <p>
             Any updates to our privacy practices will be posted on this page. Please check back periodically for the latest information.

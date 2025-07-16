@@ -26,6 +26,8 @@ export default function Footer() {
           <br />
           <Link href="/privacy-policy" className="underline hover:text-blue-700">Privacy Policy</Link>
           <span aria-hidden="true" className="text-gray-400"> | </span>
+          <Link href="/ai-policy" className="underline hover:text-blue-700">AI Usage Policy</Link>
+          <span aria-hidden="true" className="text-gray-400"> | </span>
           <Link href="/accessibility-policy" className="underline hover:text-blue-700">Accessibility Policy</Link>
         </div>
       </div>
