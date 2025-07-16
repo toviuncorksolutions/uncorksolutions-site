@@ -38,7 +38,7 @@ Sitemap: https://uncorksolutions.com/sitemap.xml
 
 # --- Contact & Policy ---
 Contact: hello@uncorksolutions.com
-Policy: https://uncorksolutions.com/ai-content-policy
+Policy: https://uncorksolutions.com/ai-policy
 License: https://uncorksolutions.com/license
 
 # --- LLM Metadata Pointer ---
