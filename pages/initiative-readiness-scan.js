@@ -2,8 +2,6 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Link from 'next/link';
-import Footer from '../components/Footer';
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -68,9 +66,10 @@ export default function InitiativeReadinessScan() {
           }
         }
       };
-      modalRef.current?.addEventListener('keydown', handleFocusTrap);
+      const modal = modalRef.current; // <--- Capture in variable
+      modal?.addEventListener('keydown', handleFocusTrap);
       return () => {
-        modalRef.current?.removeEventListener('keydown', handleFocusTrap);
+        modal?.removeEventListener('keydown', handleFocusTrap);
       };
     } else if (lastActiveElement.current) {
       lastActiveElement.current.focus();

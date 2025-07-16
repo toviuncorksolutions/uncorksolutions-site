@@ -118,10 +118,6 @@ export default function PrivacyPolicy() {
             </a>.
           </p>
         </section>
-
-        <div className="text-gray-400 text-xs mt-12">
-          Copyright &copy; {new Date().getFullYear()} Uncork Solutions.
-        </div>
       </main>
     </>
   );

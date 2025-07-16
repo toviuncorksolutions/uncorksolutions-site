@@ -75,10 +75,6 @@ export default function AccessibilityPolicy() {
             . We value your feedback and will do our best to address any issues promptly.
           </p>
         </section>
-
-        <div className="text-gray-400 text-xs mt-12">
-          Copyright &copy; {new Date().getFullYear()} Uncork Solutions.
-        </div>
       </main>
     </>
   );
