@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import IrsModal from '../components/IrsModal';
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -39,46 +40,6 @@ export default function InitiativeReadinessScan() {
   const [submitting, setSubmitting] = useState(false);
   const modalRef = useRef(null);
   const firstNameRef = useRef(null);
-  const lastActiveElement = useRef(null);
-
-  // Focus management for modal
-  useEffect(() => {
-    if (showModal) {
-      lastActiveElement.current = document.activeElement;
-      modalRef.current?.focus();
-      setTimeout(() => {
-        firstNameRef.current?.focus();
-      }, 100);
-      const handleFocusTrap = (e) => {
-        if (e.key === 'Tab') {
-          const focusable = modalRef.current.querySelectorAll(
-            'input, textarea, select, button, [tabindex]:not([tabindex="-1"])'
-          );
-          const first = focusable[0];
-          const last = focusable[focusable.length - 1];
-          if (!e.shiftKey && document.activeElement === last) {
-            e.preventDefault();
-            first.focus();
-          }
-          if (e.shiftKey && document.activeElement === first) {
-            e.preventDefault();
-            last.focus();
-          }
-        }
-      };
-      const modal = modalRef.current; // <--- Capture in variable
-      modal?.addEventListener('keydown', handleFocusTrap);
-      return () => {
-        modal?.removeEventListener('keydown', handleFocusTrap);
-      };
-    } else if (lastActiveElement.current) {
-      lastActiveElement.current.focus();
-    }
-  }, [showModal]);
-
-  useEffect(() => {
-    if (showModal) setError('');
-  }, [showModal]);
 
   function getDomain(email) {
     return email.trim().split('@')[1]?.toLowerCase() || '';
@@ -625,214 +586,18 @@ export default function InitiativeReadinessScan() {
         </div>
         </section>
 
-        {/* MODAL FORM POPUP */}
-        {showModal && (
-          <div
-            id="irs-modal"
-            data-gtm="waitlist-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="waitlist-modal-title"
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-            tabIndex={-1}
-            ref={modalRef}
-            onClick={() => setShowModal(false)}
-            onKeyDown={(e) => {
-              if (e.key === 'Escape') setShowModal(false);
-            }}
-          >
-            <div
-              className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
-              onClick={e => e.stopPropagation()}
-            >
-              <h2
-                id="waitlist-modal-title"
-                className="text-xl font-semibold mb-4 text-center"
-              >
-                Reserve Your Spot&mdash;Serious Leaders Only
-              </h2>
-              <div className="text-sm text-gray-400 italic mb-2 text-center">
-                (Takes less than 2 minutes to complete)
-              </div>
-              <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
-                Early access is prioritized for organizations ready to move. Your responses remain 100% confidential and help us deliver a scan that’s sharply focused on <em>your</em> goals&mdash;so you get a clear action plan, not just generic advice.
-              </h3>
-              <form
-                id="waitlist-form"
-                aria-label="Initiative Readiness Scan Waitlist"
-                autoComplete="on"
-                onSubmit={handleSubmit}
-                className="space-y-4"
-              >
-                <div className="flex gap-4">
-                  <div className="flex-1">
-                    <label htmlFor="firstName" className="sr-only">First Name</label>
-                    <input
-                      ref={firstNameRef}
-                      id="firstName"
-                      type="text"
-                      name="firstName"
-                      placeholder="First name *"
-                      className="p-2 border rounded w-full"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      required
-                      autoComplete="given-name"
-                      aria-label="First Name"
-                      data-gtm="input-firstname"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <label htmlFor="lastName" className="sr-only">Last Name</label>
-                    <input
-                      id="lastName"
-                      type="text"
-                      name="lastName"
-                      placeholder="Last name *"
-                      className="p-2 border rounded w-full"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      autoComplete="family-name"
-                      aria-label="Last Name"
-                      data-gtm="input-lastname"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="sr-only">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Email *"
-                    className="w-full p-2 border rounded"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    autoComplete="email"
-                    aria-label="Work Email"
-                    data-gtm="input-email"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="challenge" className="sr-only">Main Challenge</label>
-                  <textarea
-                    id="challenge"
-                    name="challenge"
-                    placeholder="What’s the main pain point you&apos;re solving for right now?"
-                    className="w-full p-2 border rounded"
-                    rows={1}
-                    value={formData.challenge}
-                    onChange={handleChange}
-                    required
-                    aria-label="Main Challenge"
-                    data-gtm="input-challenge"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="outcome" className="sr-only">Desired Outcome</label>
-                  <textarea
-                    id="outcome"
-                    name="outcome"
-                    placeholder="What outcome are you trying to achieve?"
-                    className="w-full p-2 border rounded"
-                    rows={1}
-                    value={formData.outcome}
-                    onChange={handleChange}
-                    required
-                    aria-label="Desired Outcome"
-                    data-gtm="input-outcome"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="obstacle" className="sr-only">Obstacles</label>
-                  <textarea
-                    id="obstacle"
-                    name="obstacle"
-                    placeholder="What obstacles are in the way?"
-                    className="w-full p-2 border rounded"
-                    rows={1}
-                    value={formData.obstacle}
-                    onChange={handleChange}
-                    required
-                    aria-label="Obstacles"
-                    data-gtm="input-obstacle"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="decisionAuthority" className="sr-only">Who will lead the decision for this?</label>
-                  <select
-                    id="decisionAuthority"
-                    name="decisionAuthority"
-                    className="w-full p-2 border rounded"
-                    value={formData.decisionAuthority}
-                    onChange={handleChange}
-                    required
-                    aria-label="Decision Authority"
-                    data-gtm="input-decisionauthority"
-                  >
-                    <option value="" disabled>
-                      Who will lead the decision for this? *
-                    </option>
-                    <option value="Myself">Myself</option>
-                    <option value="Part of a team">I&apos;m part of a team</option>
-                    <option value="Someone else">Someone else</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="timeline" className="sr-only">How soon will you move forward with a solution? *</label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    className="w-full p-2 border rounded"
-                    value={formData.timeline}
-                    onChange={handleChange}
-                    required
-                    aria-label="Decision Timeline"
-                    data-gtm="input-timeline"
-                  >
-                    <option value="" disabled>
-                      How soon will you move forward with a solution? *
-                    </option>
-                    <option value="ASAP">ASAP</option>
-                    <option value="1-3 months">1–3 months</option>
-                    <option value="3-6 months">3–6 months</option>
-                    <option value="Just exploring">Just exploring</option>
-                  </select>
-                </div>
-                {error && (
-                  <div className="text-red-600 text-sm" role="alert" id="waitlist-form-error">
-                    {error}
-                  </div>
-                )}
-                <div className="flex justify-between gap-4">
-                  <button
-                    id="waitlist-submit"
-                    type="submit"
-                    className="w-full cta-btn bg-blue-700 text-white font-bold py-2 px-4 rounded hover:bg-blue-800 transition"
-                    disabled={submitting}
-                    aria-label="Register"
-                    data-gtm="register-submit"
-                  >
-                    {submitting ? 'Registering...' : 'Register'}
-                  </button>
-                  <button
-                    id="waitlist-cancel"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                    disabled={submitting}
-                    className="w-full bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
-                    aria-label="Cancel"
-                    data-gtm="modal-cancel"
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        )}
+        <IrsModal
+          show={showModal}
+          onClose={() => setShowModal(false)}
+          onSubmit={handleSubmit}
+          formData={formData}
+          onChange={handleChange}
+          error={error}
+          setError={setError}
+          submitting={submitting}
+          firstNameRef={firstNameRef}
+          modalRef={modalRef}
+        />
       </main>
     </>
   );
