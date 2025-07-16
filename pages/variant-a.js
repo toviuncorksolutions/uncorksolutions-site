@@ -7,6 +7,7 @@ export default function VariantA() {
       <Head>
         <title>Uncork Solutions | Strategy Simplified</title>
         <meta name="description" content="Variant A – The original version of the homepage." />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
 
       <main

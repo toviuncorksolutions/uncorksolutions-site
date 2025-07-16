@@ -6,10 +6,34 @@ export default function AccessibilityPolicy() {
       <Head>
         <title>Accessibility Policy – Uncork Solutions</title>
         <meta
-          name="description"
-          content="Uncork Solutions is committed to accessibility. Learn how we design our website to meet or exceed global accessibility standards."
+            name='description'
+            content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.'
         />
-      </Head>
+        <link rel='canonical' href='https://www.uncorksolutions.com/accessibility-policy' />
+        <link rel='icon' href='/favicon.ico' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Accessibility Policy – Uncork Solutions' />
+        <meta property='og:description' content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.' />
+        <meta property='og:url' content='https://www.uncorksolutions.com/accessibility-policy' />
+        <meta property='og:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Accessibility Policy – Uncork Solutions' />
+        <meta name='twitter:description' content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.' />
+        <meta name='twitter:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                'name': 'Uncork Solutions',
+                'url': 'https://www.uncorksolutions.com',
+                'logo': 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                'sameAs': ['https://www.linkedin.com/company/uncorksolutions']
+            })
+            }}
+        />
+        </Head>
 
       {/* Skip to main content link for keyboard users */}
       <a

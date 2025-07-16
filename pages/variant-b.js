@@ -7,6 +7,7 @@ export default function VariantB() {
       <Head>
         <title>Uncork Solutions | Architect Your Advantage</title>
         <meta name="description" content="Variant B – Alternate messaging for homepage testing." />
+        <meta name="robots" content="noindex, nofollow" />
       </Head>
 
       <main

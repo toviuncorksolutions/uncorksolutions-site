@@ -134,19 +134,30 @@ export default function InitiativeReadinessScan() {
           name='description'
           content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.'
         />
+        <link rel='canonical' href='https://www.uncorksolutions.com/initiative-readiness-scan' />
         <link rel='icon' href='/favicon.ico' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Initiative Readiness Scan – Uncork Solutions' />
+        <meta property='og:description' content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.' />
+        <meta property='og:url' content='https://www.uncorksolutions.com/initiative-readiness-scan' />
+        <meta property='og:image' content='https://www.uncorksolutions.com/initiative-readiness-scan-1.png' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content='Initiative Readiness Scan – Uncork Solutions' />
+        <meta name='twitter:description' content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.' />
+        <meta name='twitter:image' content='https://www.uncorksolutions.com/initiative-readiness-scan-1.png' />
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
+              '@type': 'ProfessionalService',
               '@id': 'https://www.uncorksolutions.com#organization',
               name: 'Uncork Solutions',
+              legalName: 'Uncork Solutions',
               url: 'https://www.uncorksolutions.com',
               logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
               description:
-                'Technology strategy and digital transformation consulting for mid-market and enterprise businesses.',
+                'Technology strategy and digital transformation consulting for mid-market and enterprise businesses in B2C retail or B2B manufacturing.',
               sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
               areaServed: [
                 { '@type': 'Country', name: 'Canada' },
@@ -160,12 +171,13 @@ export default function InitiativeReadinessScan() {
                 '@type': 'Person',
                 name: 'Tovi Heilbronn',
               },
+              foundingDate: '2025-06-25',
               makesOffer: {
-                '@type': 'Service',
+                '@type': 'ConsultingService',
                 name: 'Initiative Readiness Scan',
-                serviceType: 'Organizational Assessment',
+                serviceType: 'Digital Transformation Consulting, Organizational Assessment',
                 provider: {
-                  '@type': 'Organization',
+                  '@type': 'ProfessionalService',
                   name: 'Uncork Solutions',
                 },
                 areaServed: [

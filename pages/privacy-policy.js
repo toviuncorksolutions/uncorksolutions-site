@@ -7,7 +7,31 @@ export default function PrivacyPolicy() {
         <title>Privacy Policy – Uncork Solutions</title>
         <meta
           name="description"
-          content="How Uncork Solutions protects your privacy, including details on analytics and information submitted via our website."
+          content="Learn how Uncork Solutions collects, uses, and protects your data. Read our Privacy Policy to understand your rights."
+        />
+        <link rel='canonical' href='https://www.uncorksolutions.com/privacy-policy' />
+        <link rel='icon' href='/favicon.ico' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Privacy Policy – Uncork Solutions' />
+        <meta property='og:description' content='Read the privacy practices and your rights regarding data at Uncork Solutions.' />
+        <meta property='og:url' content='https://www.uncorksolutions.com/privacy-policy' />
+        <meta property='og:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:title' content='Privacy Policy – Uncork Solutions' />
+        <meta name='twitter:description' content='Learn how Uncork Solutions collects, uses, and protects your data.' />
+        <meta name='twitter:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <script
+            type='application/ld+json'
+            dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'Uncork Solutions',
+                url: 'https://www.uncorksolutions.com',
+                logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
+            }),
+            }}
         />
       </Head>
 
