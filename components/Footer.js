@@ -10,14 +10,17 @@ export default function Footer() {
       className="py-8 px-6 md:px-16 mt-4"
     >
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <Image
-          id="irs-footer-logo"
-          src="/uncork-solutions-logo.png"
-          alt="Uncork Solutions logo"
-          width={160}
-          height={60}
-          className="object-contain mb-4 md:mb-0"
-        />
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            id="irs-footer-logo"
+            src="/uncork-solutions-logo.png"
+            alt="Uncork Solutions logo"
+            width={160}
+            height={60}
+            className="object-contain mb-4 md:mb-0 cursor-pointer"
+            priority
+          />
+        </Link>
         <div className="text-gray-500 text-sm text-center md:text-right">
           &copy; {new Date().getFullYear()} Uncork Solutions. All rights reserved.
           <br />
