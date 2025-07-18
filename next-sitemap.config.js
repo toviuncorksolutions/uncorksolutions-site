@@ -10,6 +10,7 @@ module.exports = {
     policies: [
       { userAgent: '*', allow: '/' },
       // Explicit AI bots below
+      { userAgent: 'OAI-SearchBot', allow: '/' },
       { userAgent: 'ChatGPT-User', allow: '/' },
       { userAgent: 'GPTBot', allow: '/' },
       { userAgent: 'Google-Extended', allow: '/' },
