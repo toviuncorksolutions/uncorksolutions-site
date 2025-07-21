@@ -239,19 +239,19 @@ export default function InitiativeReadinessScan() {
               Don’t be surprised. Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;your operator-built, boardroom-ready tool to diagnose, de-risk, and accelerate strategic change.
             </p>
             <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
                 <span id="irs-benefit-1">Objective, confidential assessment&mdash;no consulting fluff</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
                 <span id="irs-benefit-2">Rapid radar chart of your real risks, alignment, and readiness</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
                 <span id="irs-benefit-3">Actionable plan in days&mdash;not quarters</span>
               </li>
-              <li className="flex items-center gap-2">
+              <li className="flex items-start gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
                 <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
               </li>              

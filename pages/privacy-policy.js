@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-2">2. No Marketing or Advertising Trackers</h2>
           <p>
-            We do <span className="font-semibold">not</span> use any marketing or advertising trackers, remarketing tools, or social media pixels on this site. 
+            We do <span className="font-semibold">not</span> use any marketing or advertising trackers, remarketing tools, or social media pixels on this site.
             No information is shared with advertisers or third-party marketers.
           </p>
         </section>
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-2">4. Data Sharing</h2>
           <p>
-            We do <span className="font-semibold">not</span> sell, rent, or otherwise share your personal information with anyone outside of Uncork Solutions. 
+            We do <span className="font-semibold">not</span> sell, rent, or otherwise share your personal information with anyone outside of Uncork Solutions.
             Data submitted through forms is never used for marketing purposes or shared with third parties.
           </p>
         </section>
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
         <section className="mb-8">
           <h2 className="text-xl font-bold mb-2">5. Data Security & Retention</h2>
           <p>
-            We take reasonable steps to protect your information from unauthorized access or disclosure. 
+            We take reasonable steps to protect your information from unauthorized access or disclosure.
             We retain your information only as long as necessary to fulfill your request or comply with legal requirements.
           </p>
         </section>
