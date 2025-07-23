@@ -10,31 +10,17 @@ const FREE_EMAIL_DOMAINS = [
 
 const SOFT_GREY_BG = 'bg-[#f1f2f4]';
 
-const WEBHOOK_URL = process.env.NEXT_PUBLIC_WEBHOOK_URL;
+const WEBHOOK_URL = process.env.NEXT_PUBLIC_INITIATIVE_READINESS_SCAN_WAITLIST_WEBHOOK_URL;
 
 const REQUIRED_FIELDS = [
-  'firstName',
-  'lastName',
-  'email',
-  'challenge',
-  'outcome',
-  'obstacle',
-  'decisionAuthority',
-  'timeline',
+  'firstName', 'lastName', 'email', 'challenge', 'outcome', 'obstacle', 'decisionAuthority', 'timeline',
 ];
 
 export default function InitiativeReadinessScan() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    challenge: '',
-    outcome: '',
-    obstacle: '',
-    decisionAuthority: '',
-    timeline: '',
+    firstName: '',  lastName: '',  email: '',  challenge: '',  outcome: '',  obstacle: '',  decisionAuthority: '', timeline: '',
   });
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -372,7 +358,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-help-image"
-                src="/initiative-readiness-scan-sample-3.png"
+                src="/initiative-readiness-scan-3.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
@@ -555,7 +541,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-final-image"
-                src="/initiative-readiness-scan-sample-3.png"
+                src="/initiative-readiness-scan-3.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
@@ -591,7 +577,7 @@ export default function InitiativeReadinessScan() {
             <p className="text-gray-700 leading-relaxed">
                 17+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes across digital, product, and platform modernization.<br />
                 <span className="block mt-2 text-gray-500 italic">
-                &quot;I believe clients deserve clear answers and practical direction—without the drag of drawn-out consulting engagements.&quot;
+                &quot;I believe every client deserves clear answers and practical direction—without the drag of drawn-out consulting engagements.&quot;
                 </span>
             </p>
             </div>
