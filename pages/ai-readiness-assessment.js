@@ -246,28 +246,50 @@ export default function AIReadinessAssessment() {
           </div>
         </section>
 
-        {/* OUTCOMES */}
+        {/* WHY THIS MATTERS */}
+        <section className="bg-white py-14 px-6 md:px-16" id="ai-why-matters" aria-labelledby="why-title">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">Why This Matters</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              AI isn’t a bolt-on tool—it’s rewriting business models, shifting markets, and redrawing the competitive landscape.
+                <br /><br />
+              While everyone else is busy plugging in chatbots or dabbling with point-solution automations, you’ll have the first enterprise-holistic assessment that defines what ‘AI-ready’ means for your entire company.
+              </p>
+              <div className="flex justify-center">
+                <ul className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6" aria-label="Why Outcomes">
+                    <li id="ara-why-matters-li-1">Win the board’s confidence (and budget)</li>
+                    <li id="ara-why-matters-li-2">Prove real readiness—not just intent</li>
+                    <li id="ara-why-matters-li-3">Unlock millions in value and future-proof your business</li>
+                </ul>
+              </div>
+              <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
+          </div>
+        </section>
+        
+        {/* WHAT SETS THIS APART */}
         <section id='ai-outcomes' data-gtm="section-outcomes" aria-labelledby="outcomes-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
           <div className="max-w-3xl mx-auto text-center">
             <h2 id="outcomes-title" className="text-2xl md:text-3xl font-bold mb-7">What Sets This Apart</h2>
+            <div className="text-lg text-gray-700 mb-8">
+                A Category of One: Boardroom-Level, Enterprise-First
+            </div>
             <ul className="space-y-8 text-left max-w-2xl mx-auto">
               <li>
-                <h3 className="font-semibold text-lg mb-1">1. A Custom, Boardroom-Ready Dashboard</h3>
+                <h3 className="font-semibold text-lg mb-1">1. A 16-Page Custom Playbook—Not a &quot;Scorecard&quot;</h3>
                 <p className="text-gray-700">Instantly see your AI strengths, critical gaps, and &quot;unknown unknowns&quot;—across 8 axes that matter.</p>
               </li>
               <li>
-                <h3 className="font-semibold text-lg mb-1">2. A Tailored, Actionable Playbook</h3>
-                <p className="text-gray-700">For each pillar, you get clear next steps, named owners, deadlines, and “quick wins” you can activate immediately. <em>(No more &quot;nice slides,&quot; real change happens.)</em></p>
+                <h3 className="font-semibold text-lg mb-1">2. Operator-Level Insight, Not Vendor Hype</h3>
+                <p className="text-gray-700">Each section includes the real questions top operators ask—challenging blind spots and driving momentum.</p>
               </li>
               <li>
-                <h3 className="font-semibold text-lg mb-1">3. Operator-Level Insight, Not Vendor Hype</h3>
-                <p className="text-gray-700">Every section includes a custom coaching question—used by real operators—to challenge your blind spots and unlock progress.</p>
+                <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness, Not Promises</h3>
+                <p className="text-gray-700">Evidence for your board, your auditors, and your shareholders—delivered in a format built to impress and to activate.</p>
               </li>
               <li>
-                <h3 className="font-semibold text-lg mb-1">4. Proof of Readiness</h3>
-                <p className="text-gray-700">Show your board and auditors evidence that you know exactly where you stand and how you’ll close the gaps to win—not just “progress reports.”</p>
-              </li>
-            </ul>
+                <h3 className="font-semibold text-lg mb-1">4. Enterprise-HOLISTIC, Not IT-SILOED</h3>
+                <p className="text-gray-700">Designed for the entire business: From product and compliance to data and operations.</p>
+              </li>            </ul>
             <div className="my-10 mx-auto max-w-2xl p-6 bg-white rounded-xl shadow border" aria-label="Testimonial">
               <div className="italic text-gray-700 text-lg mb-2">
                 “That’s different, and that’s worth it. We’ve seen enough AI maturity models. This is the first one that names owners, sets deadlines, and delivers a playbook we can actually execute—no fluff, no hype.”
@@ -276,188 +298,33 @@ export default function AIReadinessAssessment() {
           </div>
         </section>
 
-        {/* WHY THIS MATTERS */}
-        <section className="bg-white py-14 px-6 md:px-16" id="ai-why-matters" aria-labelledby="why-title">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">Why This Matters</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              AI is rewriting the rules of business—fast. This isn’t about buying the latest tool. 
-              It’s about reshaping how your company thinks, acts, and competes.
-              The stakes? Millions in spend, your reputation, and the future of your business.
-              <br /><br />
-              <span className="font-semibold">Here’s what top leaders know:</span>
-              <br /><br />
-              Most companies only discover they’ve failed <em>after</em> the money’s spent, the results are missing, and the board starts asking the tough questions.
-              <br /><br />
-              <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
-            </p>
-          </div>
-        </section>
-
-        {/* WHY BOARDROOM-GRADE */}
-        <section className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`} id='ai-boardroom-grade' aria-labelledby="boardroom-title">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="boardroom-title" className="text-2xl font-bold mb-5">Why Boardroom-Grade?</h2>
-            <p className="text-lg text-gray-700 mb-5">
-              <b>While others stall out in ‘AI theatre,’ you’ll deliver what actually moves the needle: clarity, credibility, and boardroom-level outcomes.</b>
-              <br />
-              This is the only assessment built to diagnose your whole business for AI transformation—not just score your IT tools.
-              <br /><br />
-              <em>It’s about winning the next era of business—not ticking another box for compliance or “innovation theatre.”</em>
-            </p>
-          </div>
-        </section>
-
-        {/* HOW IT WORKS */}
-        <section id='ai-how' data-gtm="section-how" aria-labelledby="how-title" className="bg-white py-16 px-6 md:px-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="how-title" className="text-2xl font-bold mb-8">How It Works</h2>
-                <div className="text-lg text-gray-700 mb-8">
-                    From Confusion to Credible Leadership—in Minutes, Not Quarters
-                </div>
-            <ol className="text-left space-y-8 max-w-2xl mx-auto">
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">📝</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Take the Assessment</div>
-                  <div className="text-gray-700">
-                    30 minutes, fully confidential, enterprise-wide lens.
-                  </div>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">📊</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Get Your Instant Analysis</div>
-                  <div className="text-gray-700">
-                    Immediate radar chart, executive summary, risk profile.
-                  </div>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">🗺️</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Activate Your Playbook</div>
-                  <div className="text-gray-700">
-                    16 pages of action—mapped to owners, deadlines and operator tips.
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </section>
-
         {/* WHAT'S INSIDE */}
-        <section id="ai-whats-inside" aria-labelledby="whats-inside-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
+        <section id="ai-whats-inside" aria-labelledby="whats-inside-title" className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
             <h2 id="whats-inside-title" className="text-2xl font-bold mb-6">
             What’s Inside Your Assessment
             </h2>
             <p className="text-lg text-gray-700 mb-10">
-            This isn&#39;t a survey, nor a quiz. It&#39;s your full boardroom playbook, delivered in minutes.<br />
+            This isn&#39;t a survey, nor a quiz. It&#39;s your 16-page boardroom playbook, delivered in minutes.<br />
             <span className="block mt-2 font-semibold">Here’s exactly what you get:</span>
             </p>
-            <div className="grid gap-8 md:gap-10" aria-label="What You Get - Details">
-            {/* 1. Executive Summary */}
-            <article
-                id="ai-exec-summary"
-                className="bg-white rounded-2xl shadow p-6 text-left"
-                tabIndex={0}
-                aria-labelledby="exec-summary-title"
-            >
-                <h3 id="exec-summary-title" className="text-xl font-semibold mb-2">1. Executive Summary</h3>
-                <ul className="list-disc ml-6 text-base space-y-1">
-                <li>
-                    <span className="font-semibold">Why this matters:</span> Board-level framing on the value and risk of AI readiness.
-                </li>
-                <li>
-                    <span className="font-semibold">Where you stand:</span> At-a-glance strengths, biggest opportunities, widest opinion gaps, and “quick win” opportunities—so you know what’s urgent, and what will give you leverage in the boardroom.
-                </li>
+            <div className="flex justify-center" aria-label="What You Get - Details">
+                <ul className="list-disc text-left ml-6 text-base space-y-1">
+                    <li>Executive summary for immediate board alignment</li>
+                    <li>Eight-pillar deep dive: Strengths, critical risks, and “unknown unknowns”</li>
+                    <li>Action plan: Owners, deadlines, quick wins, and “what’s at stake”</li>
+                    <li>Exportable summaries for board, audit, and compliance</li>
+                    <li>Confidential, immediate delivery—ready for your next leadership meeting</li>
                 </ul>
-            </article>
-            {/* 2. Eight-Pillar Deep Dive */}
-            <article
-                id="ai-eight-pillar"
-                className="bg-white rounded-2xl shadow p-6 text-left"
-                tabIndex={0}
-                aria-labelledby="eight-pillar-title"
-            >
-                <h3 id="eight-pillar-title" className="text-xl font-semibold mb-2">2. Eight-Pillar Deep Dive</h3>
-                <ul className="list-disc ml-6 text-base space-y-1">
-                <li>
-                    <span className="font-semibold">What’s measured:</span> Plain-English summary of what this pillar means for your business.
-                </li>
-                <li>
-                    <span className="font-semibold">Why it matters:</span> Directly tied to business value, risk, and real outcomes.
-                </li>
-                <li>
-                    <span className="font-semibold">Your current status:</span> Customized summary of strengths and gaps.
-                </li>
-                <li>
-                    <span className="font-semibold">What’s at stake:</span> Specific risks and opportunities if this area isn’t addressed.
-                </li>
-                <li>
-                    <span className="font-semibold">What to do next:</span> Your single highest-leverage next move.
-                </li>
-                <li className="mt-2">
-                    <span className="font-semibold">Detailed action plan includes:</span>
-                    <ul className="ml-5 list-[circle] space-y-1">
-                    <li>Named owner (who is responsible)</li>
-                    <li>Specific action (what they must do)</li>
-                    <li>Deadline (by when)</li>
-                    <li>Support needed (resources or sponsorship required)</li>
-                    </ul>
-                </li>
-                <li className="mt-2">
-                    <span className="font-semibold">Best practice tips:</span> Battle-tested strategies and pitfalls to avoid.
-                </li>
-                <li>
-                    <span className="font-semibold">Coaching question:</span> Open-ended prompt designed to challenge thinking, surface blind spots, and unlock progress.
-                </li>
-                </ul>
-            </article>
-            {/* 3. Quick Wins & Priorities */}
-            <article
-                id="ai-quick-wins"
-                className="bg-white rounded-2xl shadow p-6 text-left"
-                tabIndex={0}
-                aria-labelledby="quick-wins-title"
-            >
-                <h3 id="quick-wins-title" className="text-xl font-semibold mb-2">3. Quick Wins &amp; Priorities</h3>
-                <p className="text-base mb-0">
-                A shortlist of high-impact actions you can activate immediately—mapped to the owners who can make them real.
-                </p>
-            </article>
-            {/* 4. Boardroom-Ready Deliverables */}
-            <article
-                id="ai-boardroom-deliverables"
-                className="bg-white rounded-2xl shadow p-6 text-left"
-                tabIndex={0}
-                aria-labelledby="boardroom-deliverables-title"
-            >
-                <h3 id="boardroom-deliverables-title" className="text-xl font-semibold mb-2">4. Boardroom-Ready Deliverables</h3>
-                <p className="text-base mb-0">
-                Exportable summaries designed to impress the board, satisfy compliance and audit, and signal true executive leadership.
-                </p>
-            </article>
-            {/* 5. Immediate, Private Delivery */}
-            <article
-                id="ai-private-delivery"
-                className="bg-white rounded-2xl shadow p-6 text-left"
-                tabIndex={0}
-                aria-labelledby="private-delivery-title"
-            >
-                <h3 id="private-delivery-title" className="text-xl font-semibold mb-2">5. Immediate, Private Delivery</h3>
-                <p className="text-base mb-0">
-                Results in your inbox—confidential, actionable, and ready for tomorrow’s meeting.
-                </p>
-            </article>
             </div>
+            <p className="text-lg text-gray-700 my-10">
+            While everyone else is guessing, you’ll have the only assessment that shows exactly where you stand, what to do, and who owns the next move.<br />
+            </p>            
         </div>
         </section>
 
         {/* DIFFERENCE TABLE */}
-        <section id="ai-difference" aria-labelledby="diff-title" className="bg-white py-16 px-6 md:px-16">
+        <section id="ai-difference" aria-labelledby="diff-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
@@ -502,7 +369,7 @@ export default function AIReadinessAssessment() {
         </section>
 
         {/* WHO THIS IS FOR */}
-        <section id="ai-who" aria-labelledby="who-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
+        <section id="ai-who" aria-labelledby="who-title" className="bg-white py-16 px-6 md:px-16">
           <div className="max-w-3xl mx-auto text-center">
             <h2 id="who-title" className="text-2xl font-bold mb-4">Who This Is For</h2>
             <p className="mb-8 text-gray-700 text-lg">
@@ -539,6 +406,45 @@ export default function AIReadinessAssessment() {
           </div>
         </section>
 
+        {/* HOW IT WORKS */}
+        <section id='ai-how' data-gtm="section-how" aria-labelledby="how-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 id="how-title" className="text-2xl font-bold mb-8">How It Works</h2>
+                <div className="text-lg text-gray-700 mb-8">
+                    From Confusion to Credible Leadership—in Minutes, Not Quarters
+                </div>
+            <ol className="text-left space-y-8 max-w-2xl mx-auto">
+              <li className="flex gap-4 items-start">
+                <span className="text-3xl mt-1" aria-hidden="true">📝</span>
+                <div>
+                  <div className="font-semibold text-lg mb-1">Take the Assessment</div>
+                  <div className="text-gray-700">
+                    30 minutes, fully confidential, enterprise-wide lens.
+                  </div>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <span className="text-3xl mt-1" aria-hidden="true">📊</span>
+                <div>
+                  <div className="font-semibold text-lg mb-1">Get Your Instant Analysis</div>
+                  <div className="text-gray-700">
+                    Immediate radar chart, executive summary, risk profile.
+                  </div>
+                </div>
+              </li>
+              <li className="flex gap-4 items-start">
+                <span className="text-3xl mt-1" aria-hidden="true">🗺️</span>
+                <div>
+                  <div className="font-semibold text-lg mb-1">Activate Your Playbook</div>
+                  <div className="text-gray-700">
+                    16 pages of action—mapped to owners, deadlines and operator tips.
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </section>         
+
         {/* FAQ */}
         <section id='ai-faq-section' aria-labelledby="faq-title" className="bg-white py-16 px-6 md:px-16">
           <div className="max-w-4xl mx-auto">
@@ -567,6 +473,8 @@ export default function AIReadinessAssessment() {
             </ul>
           </div>
         </section>
+
+        <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
 
         {/* FINAL CTA */}
         <section id="ai-final-cta" aria-labelledby="final-cta-title" className="bg-white py-16 px-6 md:px-16">
