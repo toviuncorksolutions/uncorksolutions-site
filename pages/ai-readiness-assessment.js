@@ -211,7 +211,7 @@ export default function AIReadinessAssessment() {
             <h1 id='hero-title' className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight'>
               Be the Boardroom Hero Who <span className="text-blue-700">Delivers Enterprise AI Results</span>, Not Just Point Solutions.
             </h1>
-            <p className='text-lg md:text-xl text-gray-700 mb-5 font-semibold'>
+            <p className='text-lg md:text-xl text-gray-700 mb-6'>
               Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little action. The <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into the market leader for enterprise-wide AI transformation.
             </p>
             <p className='text-base md:text-lg text-gray-700 mb-6'>
