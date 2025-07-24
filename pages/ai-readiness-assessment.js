@@ -209,27 +209,13 @@ export default function AIReadinessAssessment() {
           </div>
           <div className='flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl'>
             <h1 id='hero-title' className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight'>
-              Be the Boardroom Hero Who <span className="text-blue-700">Delivers AI Results</span>
+              Be the Boardroom Hero Who <span className="text-blue-700">Delivers Enterprise AI Results</span>, Not Just Point Solutions.
             </h1>
             <p className='text-lg md:text-xl text-gray-700 mb-5 font-semibold'>
-              Right now, most companies are stuck in AI theatre&#8212;talking a big game but delivering little. This <span className="font-semibold text-blue-700">AI Readiness Assessment</span> will prove your leadership while others stall out. This is how you become the executive who:
+              Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little action. The <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into the market leader for enterprise-wide AI transformation.
             </p>
-            <ul className='text-base text-gray-700 mb-7 space-y-2 list-none' aria-label="AI Readiness Assessment outcomes">
-              <li className='flex items-center gap-2'>
-                <span aria-hidden="true" className='text-blue-700 text-lg'>&#10003;</span>
-                <span id='ai-outcomes-1'>Wins the board&#8217;s confidence (and funding)</span>
-              </li>
-              <li className='flex items-center gap-2'>
-                <span aria-hidden="true" className='text-blue-700 text-lg'>&#10003;</span>
-                <span id='ai-outcomes-2'>Delivers results while others get lost in &#8220;initiatives&#8221; and &#8220;planning&#8221;</span>
-              </li>
-              <li className='flex items-center gap-2'>
-                <span aria-hidden="true" className='text-blue-700 text-lg'>&#10003;</span>
-                <span id='ai-outcomes-3'>Turns uncertainty into a step-by-step action plan&#8212;customized, credible, and built for <em>your</em> context</span>
-              </li>             
-            </ul>
             <p className='text-base md:text-lg text-gray-700 mb-6'>
-              It&#8217;s not about tools, hype, or theory. It&#8217;s about proof, action, and results your board can see&#8212;and your competitors will envy.
+              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>—the first and only assessment designed to treat AI as a new era of business, not just another IT project.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4' role='group' aria-label='Primary actions'>
               <button
@@ -263,7 +249,7 @@ export default function AIReadinessAssessment() {
         {/* OUTCOMES */}
         <section id='ai-outcomes' data-gtm="section-outcomes" aria-labelledby="outcomes-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
           <div className="max-w-3xl mx-auto text-center">
-            <h2 id="outcomes-title" className="text-2xl md:text-3xl font-bold mb-7">What Sets This Assessment Apart</h2>
+            <h2 id="outcomes-title" className="text-2xl md:text-3xl font-bold mb-7">What Sets This Apart</h2>
             <ul className="space-y-8 text-left max-w-2xl mx-auto">
               <li>
                 <h3 className="font-semibold text-lg mb-1">1. A Custom, Boardroom-Ready Dashboard</h3>
@@ -327,7 +313,7 @@ export default function AIReadinessAssessment() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="how-title" className="text-2xl font-bold mb-8">How It Works</h2>
                 <div className="text-lg text-gray-700 mb-8">
-                    From Confusion to Credible Leadership—in Minutes, Not Months
+                    From Confusion to Credible Leadership—in Minutes, Not Quarters
                 </div>
             <ol className="text-left space-y-8 max-w-2xl mx-auto">
               <li className="flex gap-4 items-start">
@@ -335,16 +321,16 @@ export default function AIReadinessAssessment() {
                 <div>
                   <div className="font-semibold text-lg mb-1">Take the Assessment</div>
                   <div className="text-gray-700">
-                    30 minutes, fully confidential, focused on the 8 critical axes of enterprise AI readiness.
+                    30 minutes, fully confidential, enterprise-wide lens.
                   </div>
                 </div>
               </li>
               <li className="flex gap-4 items-start">
                 <span className="text-3xl mt-1" aria-hidden="true">📊</span>
                 <div>
-                  <div className="font-semibold text-lg mb-1">Get Instant Analysis</div>
+                  <div className="font-semibold text-lg mb-1">Get Your Instant Analysis</div>
                   <div className="text-gray-700">
-                    See your custom radar chart, executive summary, and risk profile immediately.
+                    Immediate radar chart, executive summary, risk profile.
                   </div>
                 </div>
               </li>
@@ -353,7 +339,7 @@ export default function AIReadinessAssessment() {
                 <div>
                   <div className="font-semibold text-lg mb-1">Activate Your Playbook</div>
                   <div className="text-gray-700">
-                    Each gap, each opportunity, and each quick win mapped to an owner, action, and deadline—plus best practices and operator tips.
+                    16 pages of action—mapped to owners, deadlines and operator tips.
                   </div>
                 </div>
               </li>
@@ -473,26 +459,31 @@ export default function AIReadinessAssessment() {
         {/* DIFFERENCE TABLE */}
         <section id="ai-difference" aria-labelledby="diff-title" className="bg-white py-16 px-6 md:px-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. Boardroom-Ready</h2>
+            <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
               <table className="min-w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
                 <thead className="bg-[#f7fafc]">
                   <tr>
                     <th className="py-3 px-4" scope="col"></th>
                     <th className="py-3 px-4 font-semibold" scope="col">Typical AI Assessment</th>
-                    <th className="py-3 px-4 font-semibold" scope="col">Boardroom-Ready AI Readiness</th>
+                    <th className="py-3 px-4 font-semibold" scope="col">Uncork’s Boardroom-Ready Playbook</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th className="py-3 px-4" scope="row">Approach</th>
                     <td className="py-3 px-4">Generic, high-level, and vague</td>
-                    <td className="py-3 px-4">Specific, practical, and defensible</td>
+                    <td className="py-3 px-4">Enterprise-holistic, specific, practical, and defensible</td>
                   </tr>
                   <tr>
                     <th className="py-3 px-4" scope="row">Output</th>
                     <td className="py-3 px-4">No actions, just “scores”</td>
-                    <td className="py-3 px-4">Owners, deadlines, real playbook</td>
+                    <td className="py-3 px-4">16-page playbook, owners, real next steps</td>
+                  </tr>
+                  <tr>
+                    <th className="py-3 px-4" scope="row">Value</th>
+                    <td className="py-3 px-4">Theoretical, IT-only</td>
+                    <td className="py-3 px-4">Whole-business transformation</td>
                   </tr>
                   <tr>
                     <th className="py-3 px-4" scope="row">Accountability</th>
@@ -502,7 +493,7 @@ export default function AIReadinessAssessment() {
                   <tr>
                     <th className="py-3 px-4" scope="row">Credibility</th>
                     <td className="py-3 px-4">Vendor slides</td>
-                    <td className="py-3 px-4">Boardroom-ready summary you can use <em>tomorrow</em></td>
+                    <td className="py-3 px-4">Boardroom weapon you can use <em>tomorrow</em></td>
                   </tr>
                 </tbody>
               </table>
@@ -515,20 +506,20 @@ export default function AIReadinessAssessment() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 id="who-title" className="text-2xl font-bold mb-4">Who This Is For</h2>
             <p className="mb-8 text-gray-700 text-lg">
-              This is for leaders accountable for outcomes, not just talk.
+              For senior leaders who want to set the industry standard—while others settle for &quot;AI theatre.&quot;
             </p>
             <ul className='text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none'>
             <li>
                 <span className='font-semibold text-blue-700'>CIOs, CTOs, CDOs:</span>
-                {' '}Responsible for turning investment into impact, not just experiments of &quot;innovation theatre&quot;.
+                {' '}Accountable for turning investment into impact; delivering, not just discussing.
             </li>
             <li>
                 <span className='font-semibold text-blue-700'>Product, Data, Ops, and Compliance Leaders:</span>
                 {' '}Need clarity, alignment, and an exact actionable plan.
             </li>
             <li>
-                <span className='font-semibold text-blue-700'>Executives who know &quot;good&quot; isn’t good enough:</span>
-                {' '}You want evidence, accountability, and confidence <em>before</em> you go big.
+                <span className='font-semibold text-blue-700'>Board-facing execs who know &quot;good&quot; isn’t good enough:</span>
+                {' '}You want to confidently prove readiness and unlock the next era.
             </li>
             </ul>
             <p className="mb-8 text-gray-700 text-lg">
@@ -555,15 +546,19 @@ export default function AIReadinessAssessment() {
             <ul className="space-y-6 text-lg">
               <li>
                 <strong>Is this confidential?</strong><br />
-                Absolutely. Your answers and your report are never shared—period.
+                Absolutely. Your answers and your report are never shared—no exceptions.
               </li>
               <li>
                 <strong>How long does it take?</strong><br />
-                30 minutes to complete. Results in your inbox—often same day.
+                30 minutes to complete. 
               </li>
               <li>
-                <strong>Who should participate?</strong><br />
-                Typically, executives and their direct reports with responsibility for AI, product, tech, and compliance.
+                <strong>How and when do I get results?</strong><br />
+                Playbook is delivered to your inbox—often same day.
+              </li>              
+              <li>
+                <strong>Who participates?</strong><br />
+                Executives and their direct reports with responsibility for AI, product, tech, data, compliance.
               </li>
               <li>
                 <strong>Is this vendor-neutral?</strong><br />
@@ -578,7 +573,7 @@ export default function AIReadinessAssessment() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="final-cta-title" className="text-2xl font-bold mb-4">Don’t Leave Your Credibility (or Investment) to Chance</h2>
             <p className="mb-6 text-gray-700 text-lg">
-              This is the assessment your peers will wish they’d done when AI hits the boardroom agenda.
+              This is the assessment your competitors will wish they’d done when AI hits the boardroom agenda.
               <br /><br />
               Priority access is limited to executives ready to deliver, not just discuss. If that’s you—claim your boardroom-ready plan and join the leaders actually moving the needle with AI.
             </p>
