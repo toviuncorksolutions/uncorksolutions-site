@@ -86,7 +86,7 @@ export default function AIReadinessAssessment() {
   return (
     <>
       <Head>
-        <title>AI Readiness Assessment & Executive Action Plan – Uncork Solutions</title>
+        <title>AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions</title>
         <meta
           name='description'
           content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment.'
@@ -94,12 +94,12 @@ export default function AIReadinessAssessment() {
         <link rel='canonical' href='https://www.uncorksolutions.com/ai-readiness-assessment' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='AI Readiness Assessment & Executive Action Plan – Uncork Solutions' />
+        <meta property='og:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
         <meta property='og:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/ai-readiness-assessment' />
         <meta property='og:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='AI Readiness Assessment & Executive Action Plan – Uncork Solutions' />
+        <meta name='twitter:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
         <meta name='twitter:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
         <meta name='twitter:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
 
