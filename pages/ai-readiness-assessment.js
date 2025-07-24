@@ -190,7 +190,7 @@ export default function AIReadinessAssessment() {
       <main id='main-content' role='main' className='font-sans text-gray-800 w-full overflow-x-hidden'>
 
         {/* HERO */}
-        <section aria-labelledby='hero-title' className='relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-14 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto'
+        <section aria-labelledby='hero-title' className='relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto'
           style={{
             background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
             backgroundColor: SOFT_GREY_BG,
