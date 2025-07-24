@@ -220,9 +220,9 @@ export default function InitiativeReadinessScan() {
               Most transformations fail. <span className="text-blue-700">Will yours be different?</span>
             </h1>
             <p id="irs-hero-subtitle" className="text-lg md:text-xl text-gray-700 mb-6">
-              You’re betting millions—and your reputation—on this initiative. Are you certain you’re not missing the risks that kill most strategic initiatives before they deliver?
+              Don’t Gamble. Get Clarity.
               <br /><br />
-              Don’t be surprised. Get early access to the <span className="font-semibold text-blue-700">Initiative Readiness Scan</span>&mdash;your operator-built, boardroom-ready tool to diagnose, de-risk, and accelerate strategic change.
+              Unlock Early Access: The <span className="font-semibold text-blue-700">Initiative Readiness Scan</span> is your operator-built, boardroom-ready instrument to diagnose, de-risk, and accelerate high-stakes change—before momentum is lost and before reputations are on the line.
             </p>
             <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
               <li className="flex items-center gap-2">
@@ -231,7 +231,7 @@ export default function InitiativeReadinessScan() {
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-2">Rapid radar chart of your real risks, alignment, and readiness</span>
+                <span id="irs-benefit-2">Rapid radar chart revealing real risks, alignment, and readiness</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
@@ -239,7 +239,7 @@ export default function InitiativeReadinessScan() {
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-4">Built for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
+                <span id="irs-benefit-4">Made for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
               </li>              
             </ul>           
             {/* Side-by-side CTAs */}
@@ -271,6 +271,14 @@ export default function InitiativeReadinessScan() {
             </div>
           </div>
         </section>
+        
+        {/*  Dramatic Section Break */}        
+        <div className="text-center text-xl md:text-2xl italic text-slate-800 my-9">
+          The graveyard of failed transformations is littered with good intentions, big budgets, and even bigger surprises.
+        </div>
+        <div className="text-center text-base md:text-lg text-slate-700 mb-8">
+          Are you certain you’re not missing the risks that quietly kill most strategic initiatives before they deliver?
+        </div>
 
         {/* OUTCOMES SECTION */}
         <section
@@ -284,7 +292,7 @@ export default function InitiativeReadinessScan() {
             From Uncertainty to Credible Action—in Days, Not Quarters.
             </h2>
             <p className="text-gray-700">
-            Become the leader your organization turns to—clear, credible, proactive, and in control
+            Be the leader your organization turns to—clear, credible, proactive, and in control
             <br /><br />
             </p>
             <p> </p>
@@ -292,31 +300,31 @@ export default function InitiativeReadinessScan() {
             <li>
                 <h3 className="font-semibold text-lg mb-1">1. Boardroom-Ready Confidence</h3>
                 <p className="text-gray-700">
-                You’ll walk into your next executive meeting with clarity on what needs to happen—able to answer tough questions and proactively surface (and solve) issues before they become problems.
+                Walk into your next executive meeting with a blueprint for success—ready to answer the tough questions, spotlight blind spots, and inspire confidence from the boardroom down.
                 </p>
             </li>
             <li>
                 <h3 className="font-semibold text-lg mb-1">2. Trusted Leadership</h3>
                 <p className="text-gray-700">
-                Instead of being caught off guard, you’ll be the leader who already has the roadmap, knows where the blind spots are, and brings the team together with a concrete plan.
+                No surprises. You’ll own the roadmap, know the pitfalls, and bring your team together with a credible plan—before the risks become headlines.
                 </p>
             </li>
             <li>
                 <h3 className="font-semibold text-lg mb-1">3. Proactive Risk Management</h3>
                 <p className="text-gray-700">
-                You’ll move forward with the confidence of knowing you’ve stress-tested your plan—and can show the board, with evidence, where you’re ready and how you’ll close any gaps.
+                Move forward with the confidence that your plan has been stress-tested—backed by real evidence you can share with the board and stakeholders.
                 </p>
             </li>
             <li>
                 <h3 className="font-semibold text-lg mb-1">4. Accelerated Alignment</h3>
                 <p className="text-gray-700">
-                You’ll have immediate, visual clarity—so business and tech are finally rowing in the same direction, and your initiative moves from talk to traction.
+                Bring business and technology into immediate, visual clarity. No more siloed thinking—just momentum, traction, and execution.
                 </p>
             </li>
             <li>
                 <h3 className="font-semibold text-lg mb-1">5. Credible Execution, Not Just Talk</h3>
                 <p className="text-gray-700">
-                No more vague promises. You’ll have a prioritized, actionable plan that shows the organization (and your stakeholders) you’re prepared, realistic, and ready to deliver.
+                Turn ambition into action. Replace vague promises with a prioritized, actionable playbook—proving you’re ready, realistic, and already moving.
                 </p>
             </li>
             </ul>
@@ -333,17 +341,17 @@ export default function InitiativeReadinessScan() {
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1">
               <h2 id="irs-help-title" className="text-2xl font-bold mb-4">
-                Will It Help You Now?
+                Will This Help You, Right Now?
               </h2>
               <p id="irs-help-desc" className="mb-6 text-gray-700">
-                Most companies only see failure coming after the spend is committed. How certain are you this initiative will succeed—and how soon do you want the evidence?
+                Most companies only see failure coming <em>after</em> the spend is committed. How certain are you this initiative will succeed—and how soon do you want the evidence? What would it cost if you found out too late?
                 <br /><br />
-                The Readiness Scan is built for leaders under real pressure. It benchmarks your organization across 6 axes, gives you a custom radar chart, and provides battle-tested strategies for next steps.
+                The Initiative Readiness Scan is built for leaders under real pressure. It benchmarks your organization across 6 axes, delivers a custom radar chart, and equips you with an operator’s battle-tested action plan to move forward with confidence.
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6" aria-label="Scan Outcomes">
-                <li id="irs-help-li-1">Benchmark your team on the axes that drive transformation</li>
-                <li id="irs-help-li-2">Address blind spots before you commit major spend</li>
-                <li id="irs-help-li-3">Confidential, actionable, and boardroom-ready</li>
+                <li id="irs-help-li-1">Benchmark your team on the metrics that drive transformation</li>
+                <li id="irs-help-li-2">Address blind spots <em>before</em> you commit major resources</li>
+                <li id="irs-help-li-3">Confidential, actionable, and designed for boardroom impact</li>
               </ul>
               <button
                 id="irs-help-cta"
@@ -358,7 +366,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-help-image"
-                src="/initiative-readiness-scan-3.png"
+                src="/initiative-readiness-scan-2.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
@@ -377,28 +385,28 @@ export default function InitiativeReadinessScan() {
         >
         <div className='max-w-3xl mx-auto text-center'>
             <h2 id='irs-who-title' className='text-2xl font-bold mb-4'>
-            This Is For You If:
+            Who Is This For?
             </h2>
             <p className='mb-8 text-gray-700 text-lg'>
-            This is for leaders who carry the weight of real business outcomes—typically:
+            This isn’t for spectators or theorists. This is for leaders who carry the weight of real business outcomes:
             </p>
             <ul className='text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none'>
             <li>
                 <span className='font-semibold text-blue-700'>CIOs, CTOs, and CDOs:</span>
-                {' '}Tech executives driving modernization, platform, or digital change. They&#39;ve been burned by past initiatives that missed the mark or failed to launch
+                {' '}Tech execs leading modernization, platform, or digital change. You&#39;ve felt the pain of past misses—and refuse to repeat them.
             </li>
             <li>
                 <span className='font-semibold text-blue-700'>Business and Digital Executives:</span>
-                {' '}VPs and Chiefs tasked with tying digital to true P&amp;L impact. They&#39;re struggling to bridge the gap between bold boardroom promises and the practical realities of technology
+                {' '}VPs and Chiefs tasked with tying digital to real P&amp;L impact. You&#39;re bridging the gap between bold boardroom promises and operational realities.
             </li>
             <li>
                 <span className='font-semibold text-blue-700'>Product, Engineering &amp; Ops Leaders:</span>
-                {' '}They need clarity, alignment, and results — not another layer of consulting jargon. They&#39;re tired of strategy decks that never translate to action
+                {' '}You demand clarity, alignment, and results. Enough with consulting decks that never translate to action.
             </li>
             </ul>
             <p className='text-gray-600 italic text-base md:text-lg mt-6'>
-            My best-fit clients have either the battle scars of past failed change, or are &#39;caught in the middle&#39; of business ambition and technical constraints.<br /><br />
-            They want an <span className='font-semibold text-blue-700'>operator</span>, not a theorist; an <span className='font-semibold text-blue-700'>ally</span>, not just another advisor.
+            Our best-fit clients bear battle scars from past failed change, or are &#39;caught in the middle&#39; of bold ambition and real-world constraints.<br /><br />
+            You want an <span className='font-semibold text-blue-700'>operator</span>, not a theorist. An <span className='font-semibold text-blue-700'>ally</span>, not just an advisor.
             </p>
             <button
             id='irs-who-cta'
@@ -434,7 +442,7 @@ export default function InitiativeReadinessScan() {
                 <div className="font-semibold text-lg mb-1">Step 1: Deep-Dive Online Readiness Survey</div>
                 <div className="text-gray-700">
                     ~60 targeted questions, covering the 6 axes of transformation<br />
-                    <span className="text-gray-500 text-sm">30–45 minutes, completed at your convenience</span>
+                    <span className="text-gray-500 text-sm">30–45 minutes, done at your convenience</span>
                 </div>
                 </div>
             </li>
@@ -445,7 +453,7 @@ export default function InitiativeReadinessScan() {
                 <div className="font-semibold text-lg mb-1">Step 2: Quantitative &amp; Qualitative Assessment</div>
                 <div className="text-gray-700">
                     Auto-generated radar chart benchmarking your readiness vs. peers<br />
-                    <span className="text-gray-500 text-sm">6-page RAG (Red-Amber-Green) scorecard highlighting your top 5 risk areas</span>
+                    <span className="text-gray-500 text-sm">6-page RAG (Red-Amber-Green) scorecard spotlighting top risks</span>
                 </div>
                 </div>
             </li>
@@ -455,8 +463,8 @@ export default function InitiativeReadinessScan() {
                 <div>
                 <div className="font-semibold text-lg mb-1">Step 3: Prioritized Action Roadmap</div>
                 <div className="text-gray-700">
-                    Templated, 8–10-page action plan with tactical next steps<br />
-                    <span className="text-gray-500 text-sm">“Next 3 Moves” one-pager—your shortcut to immediate progress</span>
+                    8–10-page action plan with tactical next steps<br />
+                    <span className="text-gray-500 text-sm">“Next 3 Moves” one-pager for immediate traction</span>
                 </div>
                 </div>
             </li>
@@ -466,7 +474,7 @@ export default function InitiativeReadinessScan() {
                 <div>
                 <div className="font-semibold text-lg mb-1">Step 4: Executive Debrief &amp; Alignment</div>
                 <div className="text-gray-700">
-                    60-minute virtual session to review findings, align stakeholders, and set next steps
+                    60-minute virtual session to align your team and kickstart execution
                 </div>
                 </div>
             </li>
@@ -479,9 +487,9 @@ export default function InitiativeReadinessScan() {
             </div>
             <ul className="space-y-2 text-gray-700 pl-1">
                 <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Visual readiness dashboard (6-axis radar)</li>
-                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Clear, prioritized gap list and benchmarks</li>
-                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Immediate, actionable next steps—no waiting, no fluff</li>
-                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Boardroom-ready summary for leadership buy-in</li>
+                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Clear, prioritized gap list and peer benchmarks</li>
+                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Immediate, actionable next steps—no jargon, no fluff</li>
+                <li className="flex gap-2 items-start"><span className="text-blue-700 mt-[2px]">&#10003;</span>Boardroom-ready summary for fast leadership buy-in</li>
             </ul>
             </div>
         </div>
@@ -508,7 +516,7 @@ export default function InitiativeReadinessScan() {
               Why Uncork Solutions?
             </h2>
             <p id="irs-why-desc" className="mb-5 text-gray-700 text-lg">
-              We know the traps—and how to avoid them. Uncork Solutions delivers the clarity, alignment, and risk reduction leaders need to move confidently from intent to action. The Initiative Readiness Scan is your shortcut to real insight, built for executives by transformation experts.
+              We know the traps—and how to avoid them. Uncork Solutions delivers the clarity, alignment, and risk reduction leaders need to move decisively from intent to action. The Initiative Readiness Scan is your shortcut to real insight, built for executives by transformation experts.
             </p>
           </div>
         </section>
@@ -541,7 +549,7 @@ export default function InitiativeReadinessScan() {
             <div className="flex-1 flex justify-center">
               <Image
                 id="irs-final-image"
-                src="/initiative-readiness-scan-3.png"
+                src="/initiative-readiness-scan-2.png"
                 alt="Initiative Readiness Scan sample booklet"
                 width={270}
                 height={284}
