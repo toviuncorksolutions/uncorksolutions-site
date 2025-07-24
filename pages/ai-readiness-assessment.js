@@ -103,7 +103,7 @@ export default function AIReadinessAssessment() {
         <meta name='twitter:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
         <meta name='twitter:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
 
-        {/* SCHEMA MARKUP */}
+        {/* SCHEMA MARKUP: Organization & Service */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
@@ -171,6 +171,91 @@ export default function AIReadinessAssessment() {
               ],
             }),
           }}
+        />
+
+        {/* SCHEMA MARKUP: FAQPage */}
+        <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                "@type": "Question",
+                "name": "What exactly is the AI Readiness Assessment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI Readiness Assessment is a 16-page, boardroom-grade diagnostic playbook that evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "How is this different from other AI assessments or maturity models?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most AI assessments are generic, IT-focused, or provide only a “score.” The AI Readiness Assessment is built for decision-makers. It’s enterprise-holistic, covers eight key business pillars, and provides a tailored action plan with deadlines and accountability—not just a checkbox exercise."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "How long does the assessment take to complete?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The assessment takes approximately 30 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Who should participate in the assessment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The assessment is intended for senior executives and their direct reports who are responsible for AI, technology, product, data, operations, or compliance. It’s ideal for CIOs, CTOs, CDOs, and other board-facing leaders."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Is the assessment confidential?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, absolutely. All answers and the resulting report are strictly confidential. Your information is never shared with any third parties—no exceptions."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "How and when do I receive my results?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your personalized, 16-page playbook is typically delivered to your inbox the same day you complete the assessment. It’s ready to share with your board or leadership team immediately."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Is this a vendor pitch or truly neutral?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI Readiness Assessment is 100% vendor-neutral. There are no sales pitches or hidden agendas—just a clear-eyed, operator-grade assessment of your organization’s AI readiness."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "What does the final deliverable include?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You receive a 16-page PDF report featuring an executive summary, a radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "How much does the assessment cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Early access to the AI Readiness Assessment is free for qualifying executives in enterprise or mid-market organizations. If you’re leading AI transformation at scale, request priority access to secure your complimentary assessment."
+                }
+                }
+            ]
+            })
+        }}
         />
       </Head>
 
@@ -329,7 +414,7 @@ export default function AIReadinessAssessment() {
             <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
-                <thead className="bg-[#f7fafc]">
+                <thead className="bg-[#e5eaf3]">
                   <tr>
                     <th className="py-3 px-4" scope="col"></th>
                     <th className="py-3 px-4 font-semibold" scope="col">Typical AI Assessment</th>
