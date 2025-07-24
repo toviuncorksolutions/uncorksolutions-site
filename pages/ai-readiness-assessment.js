@@ -267,11 +267,11 @@ export default function AIReadinessAssessment() {
             <ul className="space-y-8 text-left max-w-2xl mx-auto">
               <li>
                 <h3 className="font-semibold text-lg mb-1">1. A Custom, Boardroom-Ready Dashboard</h3>
-                <p className="text-gray-700">Instantly see your AI strengths, critical gaps, and hidden risks—across 8 axes that matter.</p>
+                <p className="text-gray-700">Instantly see your AI strengths, critical gaps, and &quot;unknown unknowns&quot;—across 8 axes that matter.</p>
               </li>
               <li>
-                <h3 className="font-semibold text-lg mb-1">2. A Tailored, Actionable Roadmap</h3>
-                <p className="text-gray-700">For each pillar, you get clear next steps, named owners, deadlines, and “quick wins” you can activate immediately.</p>
+                <h3 className="font-semibold text-lg mb-1">2. A Tailored, Actionable Playbook</h3>
+                <p className="text-gray-700">For each pillar, you get clear next steps, named owners, deadlines, and “quick wins” you can activate immediately. <em>(No more &quot;nice slides,&quot; real change happens.)</em></p>
               </li>
               <li>
                 <h3 className="font-semibold text-lg mb-1">3. Operator-Level Insight, Not Vendor Hype</h3>
@@ -279,7 +279,7 @@ export default function AIReadinessAssessment() {
               </li>
               <li>
                 <h3 className="font-semibold text-lg mb-1">4. Proof of Readiness</h3>
-                <p className="text-gray-700">Show your board and auditors evidence that you know exactly where you stand and how you’ll close the gaps—not just “progress reports.”</p>
+                <p className="text-gray-700">Show your board and auditors evidence that you know exactly where you stand and how you’ll close the gaps to win—not just “progress reports.”</p>
               </li>
             </ul>
             <div className="my-10 mx-auto max-w-2xl p-6 bg-white rounded-xl shadow border" aria-label="Testimonial">
@@ -520,11 +520,11 @@ export default function AIReadinessAssessment() {
             <ul className='text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none'>
             <li>
                 <span className='font-semibold text-blue-700'>CIOs, CTOs, CDOs:</span>
-                {' '}Responsible for turning investment into impact, not just &quot;innovation theatre&quot;.
+                {' '}Responsible for turning investment into impact, not just experiments of &quot;innovation theatre&quot;.
             </li>
             <li>
                 <span className='font-semibold text-blue-700'>Product, Data, Ops, and Compliance Leaders:</span>
-                {' '}Need clarity, alignment, and an actionable plan.
+                {' '}Need clarity, alignment, and an exact actionable plan.
             </li>
             <li>
                 <span className='font-semibold text-blue-700'>Executives who know &quot;good&quot; isn’t good enough:</span>
