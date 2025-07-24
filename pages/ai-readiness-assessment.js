@@ -328,7 +328,7 @@ export default function AIReadinessAssessment() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
-              <table className="min-w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
+              <table className="w-full text-left text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
                 <thead className="bg-[#f7fafc]">
                   <tr>
                     <th className="py-3 px-4" scope="col"></th>
