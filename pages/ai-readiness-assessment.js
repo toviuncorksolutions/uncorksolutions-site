@@ -202,7 +202,7 @@ export default function AIReadinessAssessment() {
                 name: 'How long does the assessment take to complete?',
                 acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The assessment takes approximately 30 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness.'
+                    text: 'The assessment takes approximately 20 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness.'
                 }
                 },
                 {
@@ -521,7 +521,7 @@ export default function AIReadinessAssessment() {
                 <div>
                   <div className="font-semibold text-lg mb-1">Take the Assessment</div>
                   <div className="text-gray-700">
-                    30 minutes, fully confidential, enterprise-wide lens.
+                    20 minutes, fully confidential, enterprise-wide lens.
                   </div>
                 </div>
               </li>
@@ -558,7 +558,7 @@ export default function AIReadinessAssessment() {
               </li>
               <li>
                 <strong>How long does it take?</strong><br />
-                30 minutes to complete. 
+                20 minutes to complete. 
               </li>
               <li>
                 <strong>How and when do I get results?</strong><br />
