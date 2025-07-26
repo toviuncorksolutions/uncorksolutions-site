@@ -12,15 +12,11 @@ export default function IrsModal({
   firstNameRef,
   modalRef
 }) {
-  // Focus management, escape key, and trap tab
+  // Focus trap and Escape key
   useEffect(() => {
     if (!show) return;
+    setTimeout(() => firstNameRef.current?.focus(), 50);
 
-    // Focus modal and first input
-    modalRef.current?.focus();
-    setTimeout(() => firstNameRef.current?.focus(), 100);
-
-    // Trap tab
     const handleFocusTrap = (e) => {
       if (e.key === 'Tab') {
         const focusable = modalRef.current.querySelectorAll(
@@ -37,17 +33,16 @@ export default function IrsModal({
           last.focus();
         }
       }
+      if (e.key === 'Escape') onClose();
     };
 
     const modal = modalRef.current;
     modal?.addEventListener('keydown', handleFocusTrap);
-
     return () => {
       modal?.removeEventListener('keydown', handleFocusTrap);
     };
-  }, [show, modalRef, firstNameRef]);
+  }, [show, modalRef, firstNameRef, onClose]);
 
-  // Clear error every time modal is opened
   useEffect(() => {
     if (show && typeof setError === 'function') setError('');
   }, [show, setError]);
@@ -61,13 +56,11 @@ export default function IrsModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="waitlist-modal-title"
+      aria-describedby="waitlist-modal-desc"
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       tabIndex={-1}
       ref={modalRef}
       onClick={onClose}
-      onKeyDown={(e) => {
-        if (e.key === 'Escape') onClose();
-      }}
     >
       <div
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
@@ -82,7 +75,10 @@ export default function IrsModal({
         <div className="text-sm text-gray-400 italic mb-2 text-center">
           (Takes less than 2 minutes to complete)
         </div>
-        <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
+        <h3
+          id="waitlist-modal-desc"
+          className="text-base font-normal text-gray-600 mb-6 text-center"
+        >
           Early access is prioritized for organizations ready to move. Your responses remain 100% confidential and help us deliver a scan that’s sharply focused on <em>your</em> goals&mdash;so you get a clear action plan, not just generic advice.
         </h3>
         <form
@@ -106,7 +102,6 @@ export default function IrsModal({
                 onChange={onChange}
                 required
                 autoComplete="given-name"
-                aria-label="First Name"
                 data-gtm="input-firstname"
               />
             </div>
@@ -122,7 +117,6 @@ export default function IrsModal({
                 onChange={onChange}
                 required
                 autoComplete="family-name"
-                aria-label="Last Name"
                 data-gtm="input-lastname"
               />
             </div>
@@ -133,13 +127,15 @@ export default function IrsModal({
               id="email"
               type="email"
               name="email"
-              placeholder="Email *"
+              placeholder="Work Email *"
               className="w-full p-2 border rounded"
               value={formData.email}
               onChange={onChange}
               required
               autoComplete="email"
-              aria-label="Work Email"
+              aria-required="true"
+              aria-invalid={!!error}
+              aria-describedby={error ? "email-error" : undefined}
               data-gtm="input-email"
             />
           </div>
@@ -148,13 +144,12 @@ export default function IrsModal({
             <textarea
               id="challenge"
               name="challenge"
-              placeholder="What’s the main pain point you&apos;re solving for right now?"
+              placeholder="What’s the main pain point you’re solving for right now?"
               className="w-full p-2 border rounded"
               rows={1}
               value={formData.challenge}
               onChange={onChange}
               required
-              aria-label="Main Challenge"
               data-gtm="input-challenge"
             />
           </div>
@@ -169,7 +164,6 @@ export default function IrsModal({
               value={formData.outcome}
               onChange={onChange}
               required
-              aria-label="Desired Outcome"
               data-gtm="input-outcome"
             />
           </div>
@@ -184,7 +178,6 @@ export default function IrsModal({
               value={formData.obstacle}
               onChange={onChange}
               required
-              aria-label="Obstacles"
               data-gtm="input-obstacle"
             />
           </div>
@@ -197,7 +190,6 @@ export default function IrsModal({
               value={formData.decisionAuthority}
               onChange={onChange}
               required
-              aria-label="Decision Authority"
               data-gtm="input-decisionauthority"
             >
               <option value="" disabled>
@@ -217,7 +209,6 @@ export default function IrsModal({
               value={formData.timeline}
               onChange={onChange}
               required
-              aria-label="Decision Timeline"
               data-gtm="input-timeline"
             >
               <option value="" disabled>
@@ -230,11 +221,11 @@ export default function IrsModal({
             </select>
           </div>
           {error && (
-            <div className="text-red-600 text-sm" role="alert" id="waitlist-form-error">
+            <div className="text-red-600 text-sm" role="alert" id="email-error">
               {error}
             </div>
           )}
-          <div className="flex justify-between gap-4">
+          <div className="flex justify-between gap-4" role="group" aria-label="Modal actions">
             <button
               id="waitlist-submit"
               type="submit"

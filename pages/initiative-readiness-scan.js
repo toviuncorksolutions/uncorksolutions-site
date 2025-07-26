@@ -182,13 +182,31 @@ export default function InitiativeReadinessScan() {
 
       <a
         href='#main-content'
+        id='skip-link'
         className='sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50'
         tabIndex={0}
+        style={{
+          outline: '2px solid #2364e0',
+          outlineOffset: '2px',
+        }}
+        onClick={e => {
+          // Move focus to main content after skip link is activated
+          e.preventDefault();
+          const main = document.getElementById('main-content');
+          if (main) main.focus();
+        }}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const main = document.getElementById('main-content');
+            if (main) main.focus();
+          }
+        }}
       >
         Skip to main content
       </a>
 
-      <main id="main-content" role="main" className="font-sans text-gray-800 w-full overflow-x-hidden">
+      <main id="main-content" tabIndex={-1} role="main" className="font-sans text-gray-800 w-full overflow-x-hidden">
         {/* HERO SECTION */}
         <section
           id="irs-hero"

@@ -12,11 +12,9 @@ export default function AraModal({
   emailRef,
   modalRef
 }) {
-  // Focus management, escape key, and trap tab
   useEffect(() => {
     if (!show) return;
-    modalRef.current?.focus();
-    setTimeout(() => emailRef.current?.focus(), 100);
+    setTimeout(() => emailRef.current?.focus(), 50);
 
     const handleFocusTrap = (e) => {
       if (e.key === 'Tab') {
@@ -34,17 +32,16 @@ export default function AraModal({
           last.focus();
         }
       }
+      if (e.key === 'Escape') onClose();
     };
 
     const modal = modalRef.current;
     modal?.addEventListener('keydown', handleFocusTrap);
-
     return () => {
       modal?.removeEventListener('keydown', handleFocusTrap);
     };
-  }, [show, modalRef, emailRef]);
+  }, [show, modalRef, emailRef, onClose]);
 
-  // Clear error every time modal is opened
   useEffect(() => {
     if (show && typeof setError === 'function') setError('');
   }, [show, setError]);
@@ -58,13 +55,11 @@ export default function AraModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="waitlist-modal-title"
+      aria-describedby="waitlist-modal-desc"
       className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
       tabIndex={-1}
       ref={modalRef}
       onClick={onClose}
-      onKeyDown={(e) => {
-        if (e.key === 'Escape') onClose();
-      }}
     >
       <div
         className="bg-white p-8 rounded-lg shadow-lg w-full max-w-xl overflow-y-auto max-h-[90vh]"
@@ -76,7 +71,10 @@ export default function AraModal({
         >
           Reserve Your Spot&mdash;Serious Leaders Only
         </h2>
-        <h3 className="text-base font-normal text-gray-600 mb-6 text-center">
+        <h3
+          id="waitlist-modal-desc"
+          className="text-base font-normal text-gray-600 mb-6 text-center"
+        >
           Early access is prioritized for organizations ready to move. Your responses remain 100% confidential and help us deliver an assessment that’s sharply focused on <em>your</em> goals&mdash;so you get a clear action plan, not just generic advice.
         </h3>
         <form
@@ -87,28 +85,30 @@ export default function AraModal({
           className="space-y-4"
         >
           <div>
-            <label htmlFor="email" className="sr-only">Work Email</label>
+            <label htmlFor="email" className="block font-semibold">Work Email <span aria-hidden="true" className="text-red-600">*</span></label>
             <input
               ref={emailRef}
               id="email"
               type="email"
               name="email"
-              placeholder="Work Email *"
+              placeholder="Work Email"
               className="w-full p-2 border rounded"
               value={formData.email}
               onChange={onChange}
               required
               autoComplete="email"
-              aria-label="Work Email"
+              aria-required="true"
+              aria-invalid={!!error}
+              aria-describedby={error ? "email-error" : undefined}
               data-gtm="input-email"
             />
+            {error && (
+              <div className="text-red-600 text-sm mt-2" role="alert" id="email-error">
+                {error}
+              </div>
+            )}
           </div>
-          {error && (
-            <div className="text-red-600 text-sm" role="alert" id="waitlist-form-error">
-              {error}
-            </div>
-          )}
-          <div className="flex justify-between gap-4">
+          <div className="flex justify-between gap-4" role="group" aria-label="Modal actions">
             <button
               id="waitlist-submit"
               type="submit"
@@ -117,7 +117,7 @@ export default function AraModal({
               aria-label="Register"
               data-gtm="register-submit"
             >
-              {submitting ? 'Registering...' : 'Register'}
+              {submitting ? 'Submitting…' : 'Submit'}
             </button>
             <button
               id="waitlist-cancel"

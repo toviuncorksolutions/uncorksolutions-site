@@ -269,11 +269,24 @@ export default function AIReadinessAssessment() {
           outline: '2px solid #2364e0',
           outlineOffset: '2px',
         }}
+        onClick={e => {
+          // Move focus to main content after skip link is activated
+          e.preventDefault();
+          const main = document.getElementById('main-content');
+          if (main) main.focus();
+        }}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const main = document.getElementById('main-content');
+            if (main) main.focus();
+          }
+        }}
       >
         Skip to main content
       </a>
 
-      <main id='main-content' role='main' className='font-sans text-gray-800 w-full overflow-x-hidden'>
+      <main id='main-content' tabIndex={-1} role='main' className='font-sans text-gray-800 w-full overflow-x-hidden'>
 
         {/* HERO */}
         <section aria-labelledby='hero-title' className='relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto'
@@ -308,6 +321,7 @@ export default function AIReadinessAssessment() {
                 id='hero-cta-primary'
                 ref={emailRef}
                 aria-label='Get My AI Readiness Assessment'
+                aria-haspopup='dialog'
                 data-gtm='cta-hero-primary'
                 className='w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400'
                 onClick={() => setShowModal(true)}
@@ -415,6 +429,7 @@ export default function AIReadinessAssessment() {
             <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-left text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
+                <caption className="sr-only">Comparison of typical AI assessment vs. boardroom-ready playbook</caption>
                 <thead className="bg-[#e5eaf3]">
                   <tr>
                     <th className="py-3 px-4" scope="col"></th>
@@ -482,6 +497,7 @@ export default function AIReadinessAssessment() {
                 id='hero-cta-who'
                 ref={emailRef}
                 aria-label='Get My AI Readiness Assessment'
+                aria-haspopup='dialog'
                 data-gtm='cta-who-primary'
                 className='w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400'
                 onClick={() => setShowModal(true)}
@@ -574,6 +590,7 @@ export default function AIReadinessAssessment() {
             <button
               id="final-cta-button"
               aria-label="Get My Boardroom Assessment – Priority Access"
+              aria-haspopup="dialog"
               data-gtm="cta-final"
               className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
               onClick={() => setShowModal(true)}

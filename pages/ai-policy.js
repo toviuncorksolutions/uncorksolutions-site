@@ -39,6 +39,22 @@ export default function AiPolicy() {
         href="#main-content"
         className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
         tabIndex={0}
+        style={{
+          outline: '2px solid #2364e0',
+          outlineOffset: '2px',
+        }}
+        onClick={e => {
+          e.preventDefault();
+          const main = document.getElementById('main-content');
+          if (main) main.focus();
+        }}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const main = document.getElementById('main-content');
+            if (main) main.focus();
+          }
+        }}
       >
         Skip to main content
       </a>
@@ -46,6 +62,7 @@ export default function AiPolicy() {
       <main
         id="main-content"
         role="main"
+        tabIndex={-1}
         className="font-sans text-gray-800 w-full min-h-screen px-4 py-16 max-w-2xl mx-auto"
       >
         <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-blue-700">AI Usage Policy</h1>
