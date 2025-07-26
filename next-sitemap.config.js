@@ -8,8 +8,6 @@ module.exports = {
   ],
   robotsTxtOptions: {
     policies: [
-      { userAgent: '*', allow: '/' },
-      // Explicit AI bots below
       { userAgent: 'OAI-SearchBot', allow: '/' },
       { userAgent: 'ChatGPT-User', allow: '/' },
       { userAgent: 'GPTBot', allow: '/' },
@@ -19,6 +17,7 @@ module.exports = {
       { userAgent: 'CCbot', allow: '/' },
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'Gemini', allow: '/' },
+      { userAgent: '*', allow: '/' },
     ],
     additionalSitemaps: ['https://www.uncorksolutions.com/sitemap.xml'],
   },
