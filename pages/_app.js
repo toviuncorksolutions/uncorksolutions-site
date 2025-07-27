@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import { Wix_Madefor_Text } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import Footer from '../components/Footer';
@@ -22,9 +23,11 @@ export default function App({ Component, pageProps }) {
           `,
         }}
       />
-      <Component {...pageProps} />
-      <SpeedInsights />
-      <Footer />
+      <div className={wixFont.className}>
+        <Component {...pageProps} />
+        <SpeedInsights />
+        <Footer />
+      </div>
     </>
   );
 }
