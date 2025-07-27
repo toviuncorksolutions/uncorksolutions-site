@@ -115,18 +115,24 @@ export default function InitiativeReadinessScan() {
   return (
     <>
       <Head>
-        <title>Initiative Readiness Scan – Uncork Solutions</title>
-        <meta
-          name='description'
-          content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.'
-        />
+        <title>Initiative Readiness Scan: De-Risk Transformation | Solutions</title>
+        <meta name='description' content='Expose hidden risks, benchmark 6 axes and get a boardroom-ready action plan in days—not quarters. Claim early access to the Initiative Readiness Scan.' />
         <link rel='canonical' href='https://www.uncorksolutions.com/initiative-readiness-scan' />
+        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <link rel='preload' as='image' fetchpriority='high' href='/ai-readiness-scan-1.png' />        
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
+        <meta property='og:locale' content='en_CA' />
+        <meta property='og:locale:alternate' content='en_US' />
+        <meta property='og:site_name' content='Uncork Solutions' />
         <meta property='og:title' content='Initiative Readiness Scan – Uncork Solutions' />
         <meta property='og:description' content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/initiative-readiness-scan' />
         <meta property='og:image' content='https://www.uncorksolutions.com/initiative-readiness-scan-1.png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:alt' content='Front cover of Uncork Solutions’ Initiative Readiness Scan booklet' />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Initiative Readiness Scan – Uncork Solutions' />
         <meta name='twitter:description' content='Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives.' />

@@ -2,7 +2,6 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
 const faqs = [
-  // (Your original newer Q&As)
   {
     question: 'What is the AI Readiness Assessment?',
     answer:
@@ -43,7 +42,9 @@ const faqs = [
 export default function AiReadinessAssessmentFaq() {
   return (
     <div className='w-full max-w-2xl mx-auto'>
-      <h2 id="faq-title" className='text-2xl md:text-3xl font-bold mb-8 text-center'>FAQ</h2>
+      <h2 id="faq-title" className='text-2xl md:text-3xl font-bold mb-8 text-center'>
+        Frequently Asked Questions
+      </h2>
       <div className='space-y-0'>
         {faqs.map((faq, idx) => (
           <div
@@ -53,16 +54,18 @@ export default function AiReadinessAssessmentFaq() {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <DisclosureButton
-                    className='flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition'
-                  >
-                    <span>{faq.question}</span>
-                    <ChevronUpIcon
-                      className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
-                        open ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </DisclosureButton>
+                  <h3 className="m-0">
+                    <DisclosureButton
+                      className='flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition'
+                    >
+                      <span>{faq.question}</span>
+                      <ChevronUpIcon
+                        className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
+                          open ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </DisclosureButton>
+                  </h3>
                   <DisclosurePanel className='pb-5 pr-8 pl-1 text-gray-900 text-lg'>
                     {faq.answer}
                   </DisclosurePanel>

@@ -87,18 +87,24 @@ export default function AIReadinessAssessment() {
   return (
     <>
       <Head>
-        <title>AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions</title>
-        <meta
-          name='description'
-          content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment.'
-        />
+        <title>AI Readiness Assessment – Boardroom-Ready Enterprise AI Plan | Uncork Solutions</title>
+        <meta name='description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment.' />
         <link rel='canonical' href='https://www.uncorksolutions.com/ai-readiness-assessment' />
+        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
+        <link rel='preload' as='image' fetchpriority='high' href='/ai-readiness-scan-1.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
+        <meta property='og:locale' content='en_CA' />
+        <meta property='og:locale:alternate' content='en_US' />
+        <meta property='og:site_name' content='Uncork Solutions' />
         <meta property='og:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
         <meta property='og:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/ai-readiness-assessment' />
         <meta property='og:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='630' />
+        <meta property='og:image:alt' content='Front cover of Uncork Solutions’ AI Readiness Assessment booklet' />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
         <meta name='twitter:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
