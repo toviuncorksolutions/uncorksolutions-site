@@ -6,6 +6,12 @@ import Footer from '../components/Footer';
 
 const GTM_ID = 'GTM-NFSGDSH8';
 
+const wixFont = Wix_Madefor_Text({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
 export default function App({ Component, pageProps }) {
   return (
     <>
