@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import IrsModal from '../components/IrsModal';
+import InitiativeReadinessScanModal from '../components/InitiativeReadinessScanModal';
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -276,7 +276,7 @@ export default function InitiativeReadinessScan() {
                 id="irs-hero-cta-secondary"
                 aria-label="Learn how the Initiative Readiness Scan works"
                 data-gtm="cta-hero-secondary"
-                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-white border-2 border-blue-700 text-blue-700 font-semibold text-lg shadow hover:bg-blue-50 transition"
+                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-gray-50 border border-gray-300 text-gray-700 font-medium text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-gray-200"
                 onClick={() => {
                   document.getElementById('irs-how')?.scrollIntoView({ behavior: 'smooth' });
                 }}
@@ -610,7 +610,7 @@ export default function InitiativeReadinessScan() {
         </div>
         </section>
 
-        <IrsModal
+        <InitiativeReadinessScanModal
           show={showModal}
           onClose={() => setShowModal(false)}
           onSubmit={handleSubmit}

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer
-      id="irs-footer"
+      id="footer"
       data-gtm="footer"
       aria-label="Site Footer"
       className="py-8 px-6 md:px-16 mt-4"
@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex justify-center md:justify-start">
           <Link href="/" aria-label="Go to homepage">
             <Image
-              id="irs-footer-logo"
+              id="footer-logo"
               src="/uncork-solutions-logo.png"
               alt="Uncork Solutions logo"
               width={160}

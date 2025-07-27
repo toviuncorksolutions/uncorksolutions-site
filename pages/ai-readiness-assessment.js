@@ -2,7 +2,8 @@ import Head from 'next/head';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import AraModal from '../components/AraModal';
+import AiReadinessAssessmentModal from '../components/AiReadinessAssessmentModal';
+import AiReadinessAssessmentFaq from '../components/AiReadinessAssessmentFaq';
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -308,13 +309,13 @@ export default function AIReadinessAssessment() {
           </div>
           <div className='flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl'>
             <h1 id='hero-title' className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight'>
-              Be the Boardroom Hero Who <span className="text-blue-700">Delivers Enterprise AI Results</span>, Not Just Point Solutions.
+              Be the Boardroom Hero Who <span className="text-blue-700">Delivers Enterprise AI</span>, Not Just Point Solutions.
             </h1>
             <p className='text-lg md:text-xl text-gray-700 mb-6'>
               Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little action. The <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into the market leader for enterprise-wide AI transformation.
             </p>
             <p className='text-base md:text-lg text-gray-700 mb-6'>
-              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>—the first and only assessment designed to treat AI as a new era of business, not just another IT project.
+              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>—the first and only assessment treating AI as the next era of business model innovation, not just another IT project.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4' role='group' aria-label='Primary actions'>
               <button
@@ -333,7 +334,7 @@ export default function AIReadinessAssessment() {
                 id='hero-cta-secondary'
                 aria-label='Learn how the AI Readiness Assessment works'
                 data-gtm='cta-hero-secondary'
-                className='w-full sm:w-auto px-8 py-3 rounded-xl bg-white border-2 border-blue-700 text-blue-700 font-semibold text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-4 focus:ring-blue-400'
+                className='w-full sm:w-auto px-8 py-3 rounded-xl bg-gray-50 border border-gray-300 text-gray-700 font-medium text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-gray-200'
                 onClick={() => { document.getElementById('ai-how')?.scrollIntoView({ behavior: 'smooth' }); }}
                 tabIndex={0}
               >
@@ -548,32 +549,8 @@ export default function AIReadinessAssessment() {
         </section>         
 
         {/* FAQ */}
-        <section id='ai-faq-section' aria-labelledby="faq-title" className="bg-white py-16 px-6 md:px-16">
-          <div className="max-w-4xl mx-auto">
-            <h2 id="faq-title" className="text-2xl font-bold mb-8 text-center">FAQ</h2>
-            <ul className="space-y-6 text-lg">
-              <li>
-                <strong>Is this confidential?</strong><br />
-                Absolutely. Your answers and your report are never shared—no exceptions.
-              </li>
-              <li>
-                <strong>How long does it take?</strong><br />
-                20 minutes to complete. 
-              </li>
-              <li>
-                <strong>How and when do I get results?</strong><br />
-                Playbook is delivered to your inbox—often same day.
-              </li>              
-              <li>
-                <strong>Who participates?</strong><br />
-                Executives and their direct reports with responsibility for AI, product, tech, data, compliance.
-              </li>
-              <li>
-                <strong>Is this vendor-neutral?</strong><br />
-                100%. There’s no pitch—just the truth about your real readiness.
-              </li>
-            </ul>
-          </div>
+        <section id="ai-faq-section" aria-labelledby="faq-title" className="bg-white py-16 px-6 md:px-16">
+          <AiReadinessAssessmentFaq />
         </section>
 
         <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
@@ -635,7 +612,7 @@ export default function AIReadinessAssessment() {
         </section>
 
         {/* Modal */}
-        <AraModal
+        <AiReadinessAssessmentModal
           show={showModal}
           onClose={() => setShowModal(false)}
           onSubmit={handleSubmit}

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function AraModal({
+export default function AiReadinessAssessmentModal({
   show,
   onClose,
   onSubmit,
@@ -85,13 +85,12 @@ export default function AraModal({
           className='space-y-4'
         >
           <div>
-            <label htmlFor='email' className='block font-semibold'>Work Email <span aria-hidden='true' className='text-red-600'>*</span></label>
             <input
               ref={emailRef}
               id='email'
               type='email'
               name='email'
-              placeholder='Work Email'
+              placeholder='Work Email *'
               className='w-full p-2 border rounded'
               value={formData.email}
               onChange={onChange}

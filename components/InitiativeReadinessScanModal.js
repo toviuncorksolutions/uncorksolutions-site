@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function IrsModal({
+export default function InitiativeReadinessScanModal({
   show,
   onClose,
   onSubmit,
