@@ -120,7 +120,7 @@ export default function InitiativeReadinessScan() {
         <link rel='canonical' href='https://www.uncorksolutions.com/initiative-readiness-scan' />
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='preload' as='image' fetchpriority='high' href='/ai-readiness-scan-1.png' />        
+        <link rel='preload' as='image' fetchpriority='high' href='/initiative-readiness-scan-1.png' />        
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />

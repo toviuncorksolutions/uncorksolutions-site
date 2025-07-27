@@ -5,34 +5,89 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy – Uncork Solutions</title>
-        <meta
-          name="description"
-          content="Learn how Uncork Solutions collects, uses, and protects your data. Read our Privacy Policy to understand your rights."
-        />
+        <title>Privacy Policy | GDPR- & CPRA-Ready Data Practices | Uncork Solutions</title>
+        <meta name='description' content='See how Uncork Solutions collects, uses and protects your data. GDPR- & CPRA-ready, no marketing pixels, full user rights explained.' />
+        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link rel='canonical' href='https://www.uncorksolutions.com/privacy-policy' />
+        <link rel='preload' as='image' fetchpriority='high' href='/uncork-solutions-logo.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Privacy Policy – Uncork Solutions' />
-        <meta property='og:description' content='Read the privacy practices and your rights regarding data at Uncork Solutions.' />
+        <meta property='og:locale' content='en_CA' />
+        <meta property='og:locale:alternate' content='en_US' />
+        <meta property='og:site_name' content='Uncork Solutions' />
+        <meta property='og:title' content='Privacy Policy | GDPR- & CPRA-Ready Data Practices | Uncork Solutions' />
+        <meta property='og:description' content='Learn exactly how we protect your data: no marketing trackers, GA4 only, full user rights. Updated July 2025.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/privacy-policy' />
         <meta property='og:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <meta property='og:image:alt' content='Uncork Solutions logo' />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:title' content='Privacy Policy – Uncork Solutions' />
-        <meta name='twitter:description' content='Learn how Uncork Solutions collects, uses, and protects your data.' />
+        <meta name='twitter:description' content='GDPR- & CPRA-compliant privacy practices. No ads, no pixels, your rights explained.' />
         <meta name='twitter:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+
         <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'Organization',
-                name: 'Uncork Solutions',
-                url: 'https://www.uncorksolutions.com',
-                logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
-                sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
-            }),
-            }}
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.uncorksolutions.com#org",
+                  "name": "Uncork Solutions",
+                  "url": "https://www.uncorksolutions.com",
+                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
+                  "sameAs": [
+                    "https://www.linkedin.com/company/uncorksolutions"
+                  ]
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://www.uncorksolutions.com/privacy-policy#web",
+                  "url": "https://www.uncorksolutions.com/privacy-policy",
+                  "name": "Privacy Policy | GDPR- & CPRA-Ready Data Practices",
+                  "description": "How Uncork Solutions collects, uses and protects data—no marketing pixels, GA4 only, full user rights.",
+                  "dateModified": "2025-07-01",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@id": "https://www.uncorksolutions.com#org"
+                  },
+                  "accessibilitySummary": "Policy page describing data collection, analytics and user rights."
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://www.uncorksolutions.com/privacy-policy#faq",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "Do you share my data with advertisers?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. We do not run ads, remarketing pixels or sell personal data to third-party marketers."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Which analytics tool do you use?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We use Google Analytics 4 in anonymous, aggregated mode to understand site usage. No personal identifiers are stored."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How can I request data deletion?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Email hello@uncorksolutions.com. We respond within 30 days to access, correction or deletion requests."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }`,
+          }}
         />
       </Head>
 

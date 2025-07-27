@@ -4,36 +4,86 @@ export default function AccessibilityPolicy() {
   return (
     <>
       <Head>
-        <title>Accessibility Policy – Uncork Solutions</title>
-        <meta
-            name='description'
-            content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.'
-        />
+        <title>Accessibility Policy & WCAG-AA Commitment | Uncork Solutions</title>
+        <meta name='description' content='See how Uncork Solutions meets WCAG 2.1 AA and supports screen-readers, keyboard nav and more. Contact us if you encounter barriers.' />
+        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link rel='canonical' href='https://www.uncorksolutions.com/accessibility-policy' />
+        <link rel='preload' as='image' fetchpriority='high' href='/uncork-solutions-logo.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Accessibility Policy – Uncork Solutions' />
-        <meta property='og:description' content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.' />
+        <meta property='og:locale' content='en_CA' />
+        <meta property='og:locale:alternate' content='en_US' />
+        <meta property='og:site_name' content='Uncork Solutions' />
+        <meta property='og:title' content='Accessibility Policy & WCAG-AA Commitment | Uncork Solutions' />
+        <meta property='og:description' content='See how Uncork Solutions meets WCAG 2.1 AA and supports screen-readers, keyboard nav and more.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/accessibility-policy' />
         <meta property='og:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <meta property='og:image:alt' content='Uncork Solutions logo' />
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Accessibility Policy – Uncork Solutions' />
         <meta name='twitter:description' content='Uncork Solutions is committed to accessibility for all users. Read our accessibility policy and learn about the steps we take to ensure an inclusive experience.' />
         <meta name='twitter:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+
         <script
-            type='application/ld+json'
-            dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'Organization',
-                'name': 'Uncork Solutions',
-                'url': 'https://www.uncorksolutions.com',
-                'logo': 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
-                'sameAs': ['https://www.linkedin.com/company/uncorksolutions']
-            })
-            }}
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: `{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.uncorksolutions.com#org",
+                  "name": "Uncork Solutions",
+                  "url": "https://www.uncorksolutions.com",
+                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
+                  "sameAs": ["https://www.linkedin.com/company/uncorksolutions"]
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://www.uncorksolutions.com/accessibility-policy#web",
+                  "url": "https://www.uncorksolutions.com/accessibility-policy",
+                  "name": "Accessibility Policy & WCAG-AA Commitment",
+                  "description": "Uncork Solutions’ commitment to WCAG 2.1 AA compliance and ongoing accessibility improvement.",
+                  "inLanguage": "en",
+                  "isPartOf": { "@id": "https://www.uncorksolutions.com#org" },
+                  "accessibilitySummary": "The site supports screen-readers, keyboard navigation, alt-text and high-contrast modes."
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://www.uncorksolutions.com/accessibility-policy#faq",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "Which accessibility standard does Uncork Solutions follow?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We aim for WCAG 2.1 Level AA compliance across all pages and continually monitor for improvements."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How can I report an accessibility barrier?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Email hello@uncorksolutions.com or call +1-555-123-4567. We respond within two business days."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Does your site support screen readers?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Landmarks, ARIA labels and semantic HTML are implemented site-wide for NVDA, JAWS and VoiceOver compatibility."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }`,
+          }}
         />
-        </Head>
+      </Head>
 
       {/* Skip to main content link for keyboard users */}
       <a

@@ -4,33 +4,88 @@ export default function AiPolicy() {
   return (
     <>
       <Head>
-        <title>AI Usage Policy – Uncork Solutions</title>
-        <meta
-          name="description"
-          content="Read Uncork Solutions' policy for responsible, secure, and ethical use of AI tools. Learn how we safeguard client data and maintain transparency."
-        />
+        <title>AI Usage Policy & Responsible-AI Commitment | Uncork Solutions</title>
+        <meta name='description' content='Learn how Uncork Solutions uses AI responsibly—protecting client data, ensuring human oversight and transparency.' />
+        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
+        <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link rel='canonical' href='https://www.uncorksolutions.com/ai-policy' />
+        <link rel='preload' as='image' fetchpriority='high' href='/uncork-solutions-logo.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='AI Usage Policy – Uncork Solutions' />
-        <meta property='og:description' content='How Uncork Solutions uses AI responsibly and safeguards your data.' />
+        <meta property='og:locale' content='en_CA' />
+        <meta property='og:locale:alternate' content='en_US' />
+        <meta property='og:site_name' content='Uncork Solutions' />
+        <meta property='og:title' content='AI Usage Policy & Responsible-AI Commitment | Uncork Solutions' />
+        <meta property='og:description' content='How Uncork Solutions deploys AI securely, ethically and transparently.' />
         <meta property='og:url' content='https://www.uncorksolutions.com/ai-policy' />
         <meta property='og:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+        <meta property='og:image:alt' content='Uncork Solutions logo' />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:title' content='AI Usage Policy – Uncork Solutions' />
-        <meta name='twitter:description' content='Read about responsible and transparent use of AI at Uncork Solutions.' />
+        <meta name='twitter:description' content='Our promise of responsible, secure and transparent AI.' />
         <meta name='twitter:image' content='https://www.uncorksolutions.com/uncork-solutions-logo.png' />
+
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Uncork Solutions',
-              url: 'https://www.uncorksolutions.com',
-              logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
-              sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
-            }),
+            __html: `{
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.uncorksolutions.com#org",
+                  "name": "Uncork Solutions",
+                  "url": "https://www.uncorksolutions.com",
+                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
+                  "sameAs": [
+                    "https://www.linkedin.com/company/uncorksolutions"
+                  ]
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://www.uncorksolutions.com/ai-policy#web",
+                  "url": "https://www.uncorksolutions.com/ai-policy",
+                  "name": "AI Usage Policy & Responsible-AI Commitment",
+                  "description": "Uncork Solutions’ principles for ethical, secure and transparent use of AI tools.",
+                  "inLanguage": "en",
+                  "isPartOf": {
+                    "@id": "https://www.uncorksolutions.com#org"
+                  },
+                  "dateModified": "2025-07-01",
+                  "accessibilitySummary": "Policy page outlining responsible and transparent use of AI."
+                },
+                {
+                  "@type": "FAQPage",
+                  "@id": "https://www.uncorksolutions.com/ai-policy#faq",
+                  "mainEntity": [
+                    {
+                      "@type": "Question",
+                      "name": "Which AI tools does Uncork Solutions use?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We use leading models such as OpenAI GPT-4-o, Gemini 2 and Microsoft Copilot for research, code generation and content drafting—always under human review."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "How do you protect client data when using AI?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No confidential client data is fed into public models. We use private, SOC-2 compliant endpoints or internal deployments and enforce strict access controls."
+                      }
+                    },
+                    {
+                      "@type": "Question",
+                      "name": "Do you disclose AI-generated content to clients?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We flag AI-assisted sections in deliverables and remain accountable for accuracy, bias checks and human validation."
+                      }
+                    }
+                  ]
+                }
+              ]
+            }`,
           }}
         />
       </Head>
