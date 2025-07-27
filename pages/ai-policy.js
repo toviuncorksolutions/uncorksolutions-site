@@ -61,8 +61,8 @@ export default function AiPolicy() {
 
       <main
         id="main-content"
-        role="main"
         tabIndex={-1}
+        role="main"
         className="font-sans text-gray-800 w-full min-h-screen px-4 py-16 max-w-2xl mx-auto"
       >
         <h1 className="text-3xl md:text-4xl font-extrabold mb-6 text-blue-700">AI Usage Policy</h1>

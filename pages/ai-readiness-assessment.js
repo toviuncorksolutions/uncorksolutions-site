@@ -402,7 +402,7 @@ export default function AIReadinessAssessment() {
         {/* WHAT'S INSIDE */}
         <section id="ai-whats-inside" aria-labelledby="whats-inside-title" className="bg-white py-16 px-6 md:px-16">
         <div className="max-w-4xl mx-auto text-center">
-            <h2 id="whats-inside-title" className="text-2xl font-bold mb-6">
+            <h2 id="whats-inside-title" className="text-2xl md:text-3xl font-bold mb-6">
             What’s Inside Your Assessment
             </h2>
             <p className="text-lg text-gray-700 mb-10">
@@ -427,9 +427,9 @@ export default function AIReadinessAssessment() {
         {/* DIFFERENCE TABLE */}
         <section id="ai-difference" aria-labelledby="diff-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 id="diff-title" className="text-2xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
+            <h2 id="diff-title" className="text-2xl md:text-3xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
+              <table className="w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
                 <caption className="sr-only">Comparison of typical AI assessment vs. boardroom-ready playbook</caption>
                 <thead className="bg-[#e5eaf3]">
                   <tr>
@@ -473,7 +473,7 @@ export default function AIReadinessAssessment() {
         {/* WHO THIS IS FOR */}
         <section id="ai-who" aria-labelledby="who-title" className="bg-white py-16 px-6 md:px-16">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 id="who-title" className="text-2xl font-bold mb-4">Who This Is For</h2>
+            <h2 id="who-title" className="text-2xl md:text-3xl font-bold mb-4">Who This Is For</h2>
             <p className="mb-8 text-gray-700 text-lg">
               For senior leaders who want to set the industry standard—while others settle for &quot;AI theatre.&quot;
             </p>
@@ -512,7 +512,7 @@ export default function AIReadinessAssessment() {
         {/* HOW IT WORKS */}
         <section id='ai-how' data-gtm="section-how" aria-labelledby="how-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
           <div className="max-w-4xl mx-auto text-center">
-            <h2 id="how-title" className="text-2xl font-bold mb-8">How It Works</h2>
+            <h2 id="how-title" className="text-2xl md:text-3xl font-bold mb-8">How It Works</h2>
                 <div className="text-lg text-gray-700 mb-8">
                     From Confusion to Credible Leadership—in Minutes, Not Quarters
                 </div>
