@@ -55,21 +55,21 @@ export default function Footer() {
           <nav aria-label="Footer Policies" className="inline">
             <Link
               href="/privacy-policy"
-              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
             >
               Privacy Policy
             </Link>
             <span aria-hidden="true" className="text-gray-500"> | </span>
             <Link
               href="/ai-policy"
-              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
             >
               AI Usage Policy
             </Link>
             <span aria-hidden="true" className="text-gray-500"> | </span>
             <Link
               href="/accessibility-policy"
-              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
             >
               Accessibility Policy
             </Link>
