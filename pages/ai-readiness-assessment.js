@@ -520,7 +520,7 @@ export default function AIReadinessAssessment() {
               <li className="flex gap-4 items-start">
                 <span className="text-3xl mt-1" aria-hidden="true">📝</span>
                 <div>
-                  <div className="font-semibold text-lg mb-1">Take the Assessment</div>
+                  <div className="font-semibold text-lg mb-1">Step 1: Take the Assessment</div>
                   <div className="text-gray-700">
                     20 minutes, fully confidential, enterprise-wide lens.
                   </div>
@@ -529,7 +529,7 @@ export default function AIReadinessAssessment() {
               <li className="flex gap-4 items-start">
                 <span className="text-3xl mt-1" aria-hidden="true">📊</span>
                 <div>
-                  <div className="font-semibold text-lg mb-1">Get Your Instant Analysis</div>
+                  <div className="font-semibold text-lg mb-1">Step 2: Get Your Instant Analysis</div>
                   <div className="text-gray-700">
                     Immediate radar chart, executive summary, risk profile.
                   </div>
@@ -538,7 +538,7 @@ export default function AIReadinessAssessment() {
               <li className="flex gap-4 items-start">
                 <span className="text-3xl mt-1" aria-hidden="true">🗺️</span>
                 <div>
-                  <div className="font-semibold text-lg mb-1">Activate Your Playbook</div>
+                  <div className="font-semibold text-lg mb-1">Step 3: Activate Your Playbook</div>
                   <div className="text-gray-700">
                     16 pages of action—mapped to owners, deadlines and operator tips.
                   </div>
