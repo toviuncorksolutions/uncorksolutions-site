@@ -358,9 +358,9 @@ export default function AIReadinessAssessment() {
               </p>
               <div className="flex justify-center">
                 <ul className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6" aria-label="Why Outcomes">
-                    <li id="ara-why-matters-li-1">Win the board’s confidence (and budget)</li>
-                    <li id="ara-why-matters-li-2">Prove real readiness—not just intent</li>
-                    <li id="ara-why-matters-li-3">Unlock millions in value and future-proof your business</li>
+                    <li>Win the board’s confidence (and budget)</li>
+                    <li>Prove real readiness—not just intent</li>
+                    <li>Unlock millions in value and future-proof your business</li>
                 </ul>
               </div>
               <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
@@ -580,7 +580,7 @@ export default function AIReadinessAssessment() {
 
         {/* FOUNDER SECTION */}
         <section
-          id='irs-founder'
+          id='ai-founder'
           aria-label='Founder Highlight'
           className={`${SOFT_GREY_BG} py-12 px-6 md:px-16`}
         >

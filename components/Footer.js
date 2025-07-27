@@ -16,7 +16,7 @@ export default function Footer() {
             <Image
               id="footer-logo"
               src="/uncork-solutions-logo.png"
-              alt="Uncork Solutions logo"
+              alt="Uncork Solutions homepage"
               width={160}
               height={60}
               className="object-contain mb-4 md:mb-0 cursor-pointer"
@@ -26,29 +26,54 @@ export default function Footer() {
         </div>
         {/* Products Column */}
         <div className="text-center md:text-left">
-          <div className="font-semibold mb-2 text-gray-500">Products</div>
-          <ul className="space-y-1">
+          <h2 className="font-semibold mb-2 text-gray-700 text-base" id="footer-products-heading">
+            Products
+          </h2>
+          <ul className="space-y-1" aria-labelledby="footer-products-heading">
             <li>
-              <Link href="/initiative-readiness-scan" className="hover:underline hover:text-blue-700">
+              <Link
+                href="/initiative-readiness-scan"
+                className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              >
                 Initiative Readiness Scan
               </Link>
             </li>
             <li>
-              <Link href="/ai-readiness-assessment" className="hover:underline hover:text-blue-700">
+              <Link
+                href="/ai-readiness-assessment"
+                className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+              >
                 AI Readiness Assessment
               </Link>
             </li>
           </ul>
         </div>
         {/* Policies and Copyright */}
-        <div className="text-gray-500 text-sm text-center md:text-left">
+        <div className="text-gray-700 text-sm text-center md:text-left">
           &copy; {new Date().getFullYear()} Uncork Solutions. All rights reserved.
           <br />
-          <Link href="/privacy-policy" className="underline hover:text-blue-700">Privacy Policy</Link>
-          <span aria-hidden="true" className="text-gray-500"> | </span>
-          <Link href="/ai-policy" className="underline hover:text-blue-700">AI Usage Policy</Link>
-          <span aria-hidden="true" className="text-gray-500"> | </span>
-          <Link href="/accessibility-policy" className="underline hover:text-blue-700">Accessibility Policy</Link>
+          <nav aria-label="Footer Policies" className="inline">
+            <Link
+              href="/privacy-policy"
+              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+            >
+              Privacy Policy
+            </Link>
+            <span aria-hidden="true" className="text-gray-500"> | </span>
+            <Link
+              href="/ai-policy"
+              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+            >
+              AI Usage Policy
+            </Link>
+            <span aria-hidden="true" className="text-gray-500"> | </span>
+            <Link
+              href="/accessibility-policy"
+              className="underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
+            >
+              Accessibility Policy
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

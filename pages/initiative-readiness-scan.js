@@ -245,19 +245,19 @@ export default function InitiativeReadinessScan() {
             <ul className="text-base text-gray-700 mb-7 space-y-2 list-none" aria-label="Initiative Readiness Scan Benefits">
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-1">Objective, confidential assessment&mdash;no consulting fluff</span>
+                <span>Objective, confidential assessment&mdash;no consulting fluff</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-2">Rapid radar chart revealing real risks, alignment, and readiness</span>
+                <span>Rapid radar chart revealing real risks, alignment, and readiness</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-3">Actionable plan in days&mdash;not quarters</span>
+                <span>Actionable plan in days&mdash;not quarters</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">&#10003;</span>
-                <span id="irs-benefit-4">Made for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
+                <span>Made for decision-makers: CIOs, CTOs, CDOs, Product Leaders</span>
               </li>              
             </ul>           
             {/* Side-by-side CTAs */}

@@ -43,7 +43,7 @@ const faqs = [
 export default function AiReadinessAssessmentFaq() {
   return (
     <div className='w-full max-w-2xl mx-auto'>
-      <h2 className='text-2xl font-bold mb-8 text-center'>FAQ</h2>
+      <h2 id="faq-title" className='text-2xl font-bold mb-8 text-center'>FAQ</h2>
       <div className='space-y-0'>
         {faqs.map((faq, idx) => (
           <div
