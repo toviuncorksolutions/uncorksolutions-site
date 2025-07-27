@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
                   "url": "https://www.uncorksolutions.com/privacy-policy",
                   "name": "Privacy Policy | GDPR- & CPRA-Ready Data Practices",
                   "description": "How Uncork Solutions collects, uses and protects data—no marketing pixels, GA4 only, full user rights.",
-                  "dateModified": "2025-07-01",
+                  "dateModified": "2025-07-27",
                   "inLanguage": "en",
                   "isPartOf": {
                     "@id": "https://www.uncorksolutions.com#org"

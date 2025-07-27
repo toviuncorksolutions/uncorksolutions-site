@@ -45,6 +45,7 @@ export default function AccessibilityPolicy() {
                   "url": "https://www.uncorksolutions.com/accessibility-policy",
                   "name": "Accessibility Policy & WCAG-AA Commitment",
                   "description": "Uncork Solutions’ commitment to WCAG 2.1 AA compliance and ongoing accessibility improvement.",
+                  "dateModified": "2025-07-27",
                   "inLanguage": "en",
                   "isPartOf": { "@id": "https://www.uncorksolutions.com#org" },
                   "accessibilitySummary": "The site supports screen-readers, keyboard navigation, alt-text and high-contrast modes."

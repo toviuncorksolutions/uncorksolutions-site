@@ -47,11 +47,11 @@ export default function AiPolicy() {
                   "url": "https://www.uncorksolutions.com/ai-policy",
                   "name": "AI Usage Policy & Responsible-AI Commitment",
                   "description": "Uncork Solutions’ principles for ethical, secure and transparent use of AI tools.",
+                  "dateModified": "2025-07-27",
                   "inLanguage": "en",
                   "isPartOf": {
                     "@id": "https://www.uncorksolutions.com#org"
                   },
-                  "dateModified": "2025-07-01",
                   "accessibilitySummary": "Policy page outlining responsible and transparent use of AI."
                 },
                 {
