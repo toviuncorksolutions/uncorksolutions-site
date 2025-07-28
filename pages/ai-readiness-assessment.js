@@ -4,18 +4,45 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-const AiReadinessAssessmentModal = dynamic(
-  () => import('../components/AiReadinessAssessmentModal'),
-  { ssr: false }
+const Placeholder = ({ label, height = 300 }) => (
+  <div
+    className={`w-full bg-gray-100 animate-pulse rounded-xl mb-4 flex items-center justify-center text-sm text-gray-500`}
+    style={{ height }}
+    role="status"
+    aria-label={`Loading ${label} section`}
+  >
+    Loading {label} section…
+  </div>
 );
-
-const AiReadinessAssessmentFaq = dynamic(
-  () => import('../components/AiReadinessAssessmentFaq'),
-  {
-    ssr: false,
-    loading: () => <p>Loading FAQ…</p>,
-  }
-);
+const AiReadinessAssessmentModal = dynamic(() => import('../components/AiReadinessAssessmentModal'), { ssr: false });
+const AiReadinessAssessmentOutcomesSection = dynamic(() => import('../components/AiReadinessAssessmentOutcomesSection'), { 
+  ssr: false,
+  loading: () => <Placeholder label="Outcomes" />
+});
+const AiReadinessAssessmentWhatsInsideSection = dynamic(() => import('../components/AiReadinessAssessmentWhatsInsideSection'), { 
+  ssr: false,
+  loading: () => <Placeholder label="What's Inside" />
+});
+const AiReadinessAssessmentDifferenceTableSection = dynamic(() => import('../components/AiReadinessAssessmentDifferenceTableSection'), { 
+  ssr: false,
+  loading: () => <Placeholder label="Comparison Table" />
+});
+const AiReadinessAssessmentWhoThisIsForSection = dynamic(() => import('../components/AiReadinessAssessmentWhoThisIsForSection'), { 
+  ssr: false,
+  loading: () => <Placeholder label="Who This Is For" />
+});
+const AiReadinessAssessmentHowItWorksSection = dynamic(() => import('../components/AiReadinessAssessmentHowItWorksSection'), { 
+  ssr: false,
+  loading: () => <Placeholder label="How It Works" />
+});
+const AiReadinessAssessmentFaq = dynamic(() => import('../components/AiReadinessAssessmentFaq'), {
+  ssr: false,
+  loading: () => <Placeholder label="Frequently Asked Questions" />
+});
+const AiReadinessAssessmentFounderSection = dynamic(() => import('../components/AiReadinessAssessmentFounderSection'), {
+  ssr: false,
+  loading: () => <Placeholder label="Founder" />
+});
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -321,7 +348,6 @@ export default function AIReadinessAssessment() {
               width={760}
               height={846}
               sizes='(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px'
-              placeholder='blur'
               priority
               fetchPriority='high'
               className='w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl'
@@ -388,185 +414,19 @@ export default function AIReadinessAssessment() {
         </section>
         
         {/* WHAT SETS THIS APART */}
-        <section id='ai-outcomes' data-gtm="section-outcomes" aria-labelledby="outcomes-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="outcomes-title" className="text-2xl md:text-3xl font-bold mb-7">What Sets This Apart</h2>
-            <div className="text-lg text-gray-700 mb-8">
-                A Category of One: Boardroom-Level, Enterprise-First
-            </div>
-            <ul className="space-y-8 text-left max-w-2xl mx-auto">
-              <li>
-                <h3 className="font-semibold text-lg mb-1">1. A 16-Page Custom Playbook—Not a &quot;Scorecard&quot;</h3>
-                <p className="text-gray-700">Instantly see your AI strengths, critical gaps, and &quot;unknown unknowns&quot;—across 8 axes that matter.</p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">2. Operator-Level Insight, Not Vendor Hype</h3>
-                <p className="text-gray-700">Each section includes the real questions top operators ask—challenging blind spots and driving momentum.</p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness, Not Promises</h3>
-                <p className="text-gray-700">Evidence for your board, your auditors, and your shareholders—delivered in a format built to impress and to activate.</p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">4. Enterprise-HOLISTIC, Not IT-SILOED</h3>
-                <p className="text-gray-700">Designed for the entire business: From product and compliance to data and operations.</p>
-              </li>            </ul>
-            <div className="my-10 mx-auto max-w-2xl p-6 bg-white rounded-xl shadow border" aria-label="Testimonial">
-              <div className="italic text-gray-700 text-lg mb-2">
-                “That’s different, and that’s worth it. We’ve seen enough AI maturity models. This is the first one that names owners, sets deadlines, and delivers a playbook we can actually execute—no fluff, no hype.”
-              </div>
-            </div>
-          </div>
-        </section>
+        <AiReadinessAssessmentOutcomesSection />
 
         {/* WHAT'S INSIDE */}
-        <section id="ai-whats-inside" aria-labelledby="whats-inside-title" className="bg-white py-16 px-6 md:px-16">
-        <div className="max-w-4xl mx-auto text-center">
-            <h2 id="whats-inside-title" className="text-2xl md:text-3xl font-bold mb-6">
-            What’s Inside Your Assessment
-            </h2>
-            <p className="text-lg text-gray-700 mb-10">
-            This isn&#39;t a survey, nor a quiz. It&#39;s your 16-page boardroom playbook, delivered in minutes.<br />
-            <span className="block mt-2 font-semibold">Here’s exactly what you get:</span>
-            </p>
-            <div className="flex justify-center" aria-label="What You Get - Details">
-                <ul className="list-disc text-left ml-6 text-base space-y-1">
-                    <li>Executive summary for immediate board alignment</li>
-                    <li>Eight-pillar deep dive: Strengths, critical risks, and “unknown unknowns”</li>
-                    <li>Action plan: Owners, deadlines, quick wins, and “what’s at stake”</li>
-                    <li>Exportable summaries for board, audit, and compliance</li>
-                    <li>Confidential, immediate delivery—ready for your next leadership meeting</li>
-                </ul>
-            </div>
-            <p className="text-lg text-gray-700 my-10">
-            While everyone else is guessing, you’ll have the only assessment that shows exactly where you stand, what to do, and who owns the next move.<br />
-            </p>            
-        </div>
-        </section>
+        <AiReadinessAssessmentWhatsInsideSection />
 
         {/* DIFFERENCE TABLE */}
-        <section id="ai-difference" aria-labelledby="diff-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="diff-title" className="text-2xl md:text-3xl font-bold mb-8">Typical Assessment vs. The Boardroom-Ready Standard</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden" aria-labelledby="diff-title">
-                <caption className="sr-only">Comparison of typical AI assessment vs. boardroom-ready playbook</caption>
-                <thead className="bg-[#e5eaf3]">
-                  <tr>
-                    <th className="py-3 px-4" scope="col"></th>
-                    <th className="py-3 px-4 font-semibold" scope="col">Typical AI Assessment</th>
-                    <th className="py-3 px-4 font-semibold" scope="col">Uncork’s Boardroom-Ready Playbook</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th className="py-3 px-4" scope="row">Approach</th>
-                    <td className="py-3 px-4">Generic, high-level, and vague</td>
-                    <td className="py-3 px-4">Enterprise-holistic, specific, practical, and defensible</td>
-                  </tr>
-                  <tr>
-                    <th className="py-3 px-4" scope="row">Output</th>
-                    <td className="py-3 px-4">No actions, just “scores”</td>
-                    <td className="py-3 px-4">16-page playbook, owners, real next steps</td>
-                  </tr>
-                  <tr>
-                    <th className="py-3 px-4" scope="row">Value</th>
-                    <td className="py-3 px-4">Theoretical, IT-only</td>
-                    <td className="py-3 px-4">Whole-business transformation</td>
-                  </tr>
-                  <tr>
-                    <th className="py-3 px-4" scope="row">Accountability</th>
-                    <td className="py-3 px-4">None</td>
-                    <td className="py-3 px-4">Named owners, deadlines, clear support</td>
-                  </tr>
-                  <tr>
-                    <th className="py-3 px-4" scope="row">Credibility</th>
-                    <td className="py-3 px-4">Vendor slides</td>
-                    <td className="py-3 px-4">Boardroom weapon you can use <em>tomorrow</em></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+        <AiReadinessAssessmentDifferenceTableSection />
 
         {/* WHO THIS IS FOR */}
-        <section id="ai-who" aria-labelledby="who-title" className="bg-white py-16 px-6 md:px-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="who-title" className="text-2xl md:text-3xl font-bold mb-4">Who This Is For</h2>
-            <p className="mb-8 text-gray-700 text-lg">
-              For senior leaders who want to set the industry standard—while others settle for &quot;AI theatre.&quot;
-            </p>
-            <ul className='text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none'>
-            <li>
-                <span className='font-semibold text-blue-700'>CIOs, CTOs, CDOs:</span>
-                {' '}Accountable for turning investment into impact; delivering, not just discussing.
-            </li>
-            <li>
-                <span className='font-semibold text-blue-700'>Product, Data, Ops, and Compliance Leaders:</span>
-                {' '}Need clarity, alignment, and an exact actionable plan.
-            </li>
-            <li>
-                <span className='font-semibold text-blue-700'>Board-facing execs who know &quot;good&quot; isn’t good enough:</span>
-                {' '}You want to confidently prove readiness and unlock the next era.
-            </li>
-            </ul>
-            <p className="mb-8 text-gray-700 text-lg">
-              If you’re ready to move—not just research—priority access is open.
-            </p>
-            <button
-                id='hero-cta-who'
-                ref={emailRef}
-                aria-label='Get My AI Readiness Assessment'
-                aria-haspopup='dialog'
-                data-gtm='cta-who-primary'
-                className='w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400'
-                onClick={() => setShowModal(true)}
-                tabIndex={0}
-              >
-                Get My AI Readiness Assessment
-            </button>          
-          </div>
-        </section>
+        <AiReadinessAssessmentWhoThisIsForSection />
 
         {/* HOW IT WORKS */}
-        <section id='ai-how' data-gtm="section-how" aria-labelledby="how-title" className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="how-title" className="text-2xl md:text-3xl font-bold mb-8">How It Works</h2>
-                <div className="text-lg text-gray-700 mb-8">
-                    From Confusion to Credible Leadership—in Minutes, Not Quarters
-                </div>
-            <ol className="text-left space-y-8 max-w-2xl mx-auto">
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">📝</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Step 1: Take the Assessment</div>
-                  <div className="text-gray-700">
-                    20 minutes, fully confidential, enterprise-wide lens.
-                  </div>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">📊</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Step 2: Get Your Instant Analysis</div>
-                  <div className="text-gray-700">
-                    Immediate radar chart, executive summary, risk profile.
-                  </div>
-                </div>
-              </li>
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">🗺️</span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">Step 3: Activate Your Playbook</div>
-                  <div className="text-gray-700">
-                    16 pages of action—mapped to owners, deadlines and operator tips.
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </section>         
+        <AiReadinessAssessmentHowItWorksSection />       
 
         {/* FAQ */}
         <section id="ai-faq-section" aria-labelledby="faq-title" className="bg-white py-16 px-6 md:px-16">
@@ -599,37 +459,7 @@ export default function AIReadinessAssessment() {
         </section>
 
         {/* FOUNDER SECTION */}
-        <section
-          id='ai-founder'
-          aria-label='Founder Highlight'
-          className={`${SOFT_GREY_BG} py-12 px-6 md:px-16`}
-        >
-          <div className='max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8'>
-            {/* Headshot */}
-            <div className='flex-shrink-0 w-44'>
-              <div className='rounded-xl overflow-hidden border-b-4' style={{ borderColor: '#2364e0' }}>
-                <Image
-                  src='/tovi-headshot.png'
-                  alt='Tovi Heilbronn, Founder, Uncork Solutions'
-                  width={305}
-                  height={305}
-                  className='w-full h-auto object-cover'
-                />
-              </div>
-            </div>
-            {/* Founder Text */}
-            <div>
-              <h3 className='text-lg font-semibold mb-2'>Tovi Heilbronn</h3>
-              <div className='text-sm text-gray-600 mb-1'>Founder, Uncork Solutions</div>
-              <p className='text-gray-700 leading-relaxed'>
-                17+ years driving digital transformation and technology strategy for enterprise clients&#8212;turning complexity into measurable business outcomes across digital, product, and platform modernization.<br />
-                <span className='block mt-2 text-gray-500 italic'>
-                  &quot;I believe every client deserves clear answers and practical direction&#8212;without the drag of drawn-out consulting engagements.&quot;
-                </span>
-              </p>
-            </div>
-          </div>
-        </section>
+        <AiReadinessAssessmentFounderSection />
 
         {/* Modal */}
         <AiReadinessAssessmentModal
