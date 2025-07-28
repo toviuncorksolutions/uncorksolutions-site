@@ -316,16 +316,15 @@ export default function AIReadinessAssessment() {
           <div className='flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12'>
             <Image
               id='hero-ai-booklet-img'
-              src='/ai-readiness-scan-1.png'
+              src='/ai-readiness-scan-1a.png'
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
-              width={924}
-              height={970}
-              sizes='(max-width: 640px) 420px, (max-width: 768px) 520px, (max-width: 1024px) 650px, (max-width: 1280px) 820px, 924px'
+              width={760}
+              height={846}
+              sizes='(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px'
               placeholder='blur'
-              style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority='high'
-              className='w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[820px] 2xl:max-w-[924px] h-auto drop-shadow-xl'
+              className='w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl'
             />
           </div>
           <div className='flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl'>
