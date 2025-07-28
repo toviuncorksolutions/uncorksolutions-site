@@ -42,36 +42,32 @@ const faqs = [
 
 export default function AiReadinessAssessmentFaq() {
   return (
-    <div className="w-full max-w-2xl mx-auto">
+    <section id="faq" aria-labelledby="faq-title" className="w-full max-w-2xl mx-auto py-16 px-4">
       <h2 id="faq-title" className="text-2xl md:text-3xl font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>
-      <div className="space-y-0">
-        {faqs.map((faq, idx) => (
-          <div
-            key={faq.question}
-            className={idx !== faqs.length - 1 ? 'border-b border-dotted border-gray-300' : ''}
-          >
-            <Disclosure>
-              {({ open }) => (
-                <>
-                  <DisclosureButton className="flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition">
-                    <span>{faq.question}</span>
-                    <ChevronUpIcon
-                      className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
-                        open ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </DisclosureButton>
-                  <DisclosurePanel className="pb-5 pr-8 pl-1 text-gray-900 text-lg">
-                    {faq.answer}
-                  </DisclosurePanel>
-                </>
-              )}
-            </Disclosure>
-          </div>
+      <div className="space-y-0 divide-y divide-gray-200">
+        {faqs.map((faq) => (
+          <Disclosure key={faq.question}>
+            {({ open }) => (
+              <div className="py-4">
+                <DisclosureButton className="flex justify-between items-center w-full text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 px-1 py-3 transition rounded-md">
+                  <span>{faq.question}</span>
+                  <ChevronUpIcon
+                    className={`h-5 w-5 text-blue-700 transform transition-transform duration-200 ${
+                      open ? 'rotate-180' : ''
+                    }`}
+                    aria-hidden="true"
+                  />
+                </DisclosureButton>
+                <DisclosurePanel className="pt-2 pl-1 pr-4 text-gray-800 text-base">
+                  {faq.answer}
+                </DisclosurePanel>
+              </div>
+            )}
+          </Disclosure>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
@@ -13,6 +13,48 @@ const Placeholder = ({ label, height = 300 }) => (
   >
     Loading {label} section…
   </div>
+);
+const InitiativeReadinessScanOutcomesSection = dynamic(
+  () => import('../components/InitiativeReadinessScanOutcomesSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Outcomes" />,
+  },
+);
+const InitiativeReadinessScanHelpSection = dynamic(
+  () => import('../components/InitiativeReadinessScanHelpSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Help" />,
+  },
+);
+const InitiativeReadinessScanWhoWeServeSection = dynamic(
+  () => import('../components/InitiativeReadinessScanWhoWeServeSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Who We Serve" />,
+  },
+);
+const InitiativeReadinessScanHowItWorksSection = dynamic(
+  () => import('../components/InitiativeReadinessScanHowItWorksSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="How It Works" />,
+  },
+);
+const InitiativeReadinessScanWhyUsSection = dynamic(
+  () => import('../components/InitiativeReadinessScanWhyUsSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Why Us" />,
+  },
+);
+const InitiativeReadinessScanFinalCTASection = dynamic(
+  () => import('../components/InitiativeReadinessScanFinalCTASection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Final CTA" />,
+  },
 );
 const FounderSection = dynamic(() => import('../components/FounderSection'), {
   ssr: false,
@@ -67,6 +109,12 @@ export default function InitiativeReadinessScan() {
   const [submitting, setSubmitting] = useState(false);
   const modalRef = useRef(null);
   const firstNameRef = useRef(null);
+
+  useEffect(() => {
+    const openModal = () => setShowModal(true);
+    document.addEventListener('openModal', openModal);
+    return () => document.removeEventListener('openModal', openModal);
+  }, []);
 
   function getDomain(email) {
     return email.trim().split('@')[1]?.toLowerCase() || '';
@@ -401,366 +449,12 @@ export default function InitiativeReadinessScan() {
           before they deliver?
         </div>
 
-        {/* OUTCOMES SECTION */}
-        <section
-          id="irs-outcomes"
-          data-gtm="section-outcomes"
-          aria-label="What You Get from the Initiative Readiness Scan"
-          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="irs-outcomes-title" className="text-2xl md:text-3xl font-bold mb-6">
-              From Uncertainty to Credible Action—in Days, Not Quarters.
-            </h2>
-            <p className="text-gray-700">
-              Be the leader your organization turns to—clear, credible, proactive, and in control
-              <br />
-              <br />
-            </p>
-            <p> </p>
-            <ul className="space-y-8 text-left max-w-2xl mx-auto">
-              <li>
-                <h3 className="font-semibold text-lg mb-1">1. Boardroom-Ready Confidence</h3>
-                <p className="text-gray-700">
-                  Walk into your next executive meeting with a blueprint for success—ready to answer
-                  the tough questions, spotlight blind spots, and inspire confidence from the
-                  boardroom down.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">2. Trusted Leadership</h3>
-                <p className="text-gray-700">
-                  No surprises. You’ll own the roadmap, know the pitfalls, and bring your team
-                  together with a credible plan—before the risks become headlines.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">3. Proactive Risk Management</h3>
-                <p className="text-gray-700">
-                  Move forward with the confidence that your plan has been stress-tested—backed by
-                  real evidence you can share with the board and stakeholders.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">4. Accelerated Alignment</h3>
-                <p className="text-gray-700">
-                  Bring business and technology into immediate, visual clarity. No more siloed
-                  thinking—just momentum, traction, and execution.
-                </p>
-              </li>
-              <li>
-                <h3 className="font-semibold text-lg mb-1">5. Credible Execution, Not Just Talk</h3>
-                <p className="text-gray-700">
-                  Turn ambition into action. Replace vague promises with a prioritized, actionable
-                  playbook—proving you’re ready, realistic, and already moving.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        {/* WILL IT HELP YOU NOW SECTION */}
-        <section
-          id="irs-help"
-          data-gtm="section-help"
-          aria-label="Will the Initiative Readiness Scan Help You Now"
-          className="bg-white py-16 px-6 md:px-16"
-        >
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1">
-              <h2 id="irs-help-title" className="text-2xl font-bold mb-4">
-                Will This Help You, Right Now?
-              </h2>
-              <p id="irs-help-desc" className="mb-6 text-gray-700">
-                Most companies only see failure coming <em>after</em> the spend is committed. How
-                certain are you this initiative will succeed—and how soon do you want the evidence?
-                What would it cost if you found out too late?
-                <br />
-                <br />
-                The Initiative Readiness Scan is built for leaders under real pressure. It
-                benchmarks your organization across 6 axes, delivers a custom radar chart, and
-                equips you with an operator’s battle-tested action plan to move forward with
-                confidence.
-              </p>
-              <ul
-                className="list-disc list-inside space-y-2 text-gray-700 mb-6"
-                aria-label="Scan Outcomes"
-              >
-                <li id="irs-help-li-1">
-                  Benchmark your team on the metrics that drive transformation
-                </li>
-                <li id="irs-help-li-2">
-                  Address blind spots <em>before</em> you commit major resources
-                </li>
-                <li id="irs-help-li-3">
-                  Confidential, actionable, and designed for boardroom impact
-                </li>
-              </ul>
-              <button
-                id="irs-help-cta"
-                aria-label="Get My Initiative Readiness Scan"
-                data-gtm="cta-help"
-                className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
-                onClick={() => setShowModal(true)}
-              >
-                Get My Initiative Readiness Scan
-              </button>
-            </div>
-            <div className="flex-1 flex justify-center">
-              <Image
-                id="irs-help-image"
-                src="/initiative-readiness-scan-2.png"
-                alt="Initiative Readiness Scan sample booklet"
-                width={270}
-                height={284}
-                className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* WHO WE SERVE SECTION */}
-        <section
-          id="irs-who"
-          data-gtm="section-who"
-          aria-label="This Is For You If:"
-          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="irs-who-title" className="text-2xl font-bold mb-4">
-              Who Is This For?
-            </h2>
-            <p className="mb-8 text-gray-700 text-lg">
-              This isn’t for spectators or theorists. This is for leaders who carry the weight of
-              real business outcomes:
-            </p>
-            <ul className="text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none">
-              <li>
-                <span className="font-semibold text-blue-700">CIOs, CTOs, and CDOs:</span> Tech
-                execs leading modernization, platform, or digital change. You&#39;ve felt the pain
-                of past misses—and refuse to repeat them.
-              </li>
-              <li>
-                <span className="font-semibold text-blue-700">
-                  Business and Digital Executives:
-                </span>{' '}
-                VPs and Chiefs tasked with tying digital to real P&amp;L impact. You&#39;re bridging
-                the gap between bold boardroom promises and operational realities.
-              </li>
-              <li>
-                <span className="font-semibold text-blue-700">
-                  Product, Engineering &amp; Ops Leaders:
-                </span>{' '}
-                You demand clarity, alignment, and results. Enough with consulting decks that never
-                translate to action.
-              </li>
-            </ul>
-            <p className="text-gray-600 italic text-base md:text-lg mt-6">
-              Our best-fit clients bear battle scars from past failed change, or are &#39;caught in
-              the middle&#39; of bold ambition and real-world constraints.
-              <br />
-              <br />
-              You want an <span className="font-semibold text-blue-700">operator</span>, not a
-              theorist. An <span className="font-semibold text-blue-700">ally</span>, not just an
-              advisor.
-            </p>
-            <button
-              id="irs-who-cta"
-              aria-label="Get My Initiative Readiness Scan"
-              data-gtm="cta-who"
-              className="mt-8 px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
-              onClick={() => setShowModal(true)}
-            >
-              Get My Initiative Readiness Scan
-            </button>
-          </div>
-        </section>
-
-        {/* HOW IT WORKS SECTION */}
-        <section
-          id="irs-how"
-          data-gtm="section-how"
-          aria-label="How Initiative Readiness Scan Works"
-          className="bg-white py-16 px-6 md:px-16"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="irs-how-title" className="text-2xl font-bold mb-8">
-              How the Initiative Readiness Scan Works
-            </h2>
-            <p className="text-gray-700 text-lg mb-10">
-              A methodical, operator-built process designed for clarity and action—delivered in
-              days, not months.
-            </p>
-            <ol className="text-left space-y-8 max-w-2xl mx-auto">
-              {/* Step 1 */}
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">
-                  📝
-                </span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">
-                    Step 1: Deep-Dive Online Readiness Survey
-                  </div>
-                  <div className="text-gray-700">
-                    ~60 targeted questions, covering the 6 axes of transformation
-                    <br />
-                    <span className="text-gray-500 text-sm">
-                      30–45 minutes, done at your convenience
-                    </span>
-                  </div>
-                </div>
-              </li>
-              {/* Step 2 */}
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">
-                  📊
-                </span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">
-                    Step 2: Quantitative &amp; Qualitative Assessment
-                  </div>
-                  <div className="text-gray-700">
-                    Auto-generated radar chart benchmarking your readiness vs. peers
-                    <br />
-                    <span className="text-gray-500 text-sm">
-                      6-page RAG (Red-Amber-Green) scorecard spotlighting top risks
-                    </span>
-                  </div>
-                </div>
-              </li>
-              {/* Step 3 */}
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">
-                  🗺️
-                </span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">
-                    Step 3: Prioritized Action Roadmap
-                  </div>
-                  <div className="text-gray-700">
-                    8–10-page action plan with tactical next steps
-                    <br />
-                    <span className="text-gray-500 text-sm">
-                      “Next 3 Moves” one-pager for immediate traction
-                    </span>
-                  </div>
-                </div>
-              </li>
-              {/* Step 4 */}
-              <li className="flex gap-4 items-start">
-                <span className="text-3xl mt-1" aria-hidden="true">
-                  🤝
-                </span>
-                <div>
-                  <div className="font-semibold text-lg mb-1">
-                    Step 4: Executive Debrief &amp; Alignment
-                  </div>
-                  <div className="text-gray-700">
-                    60-minute virtual session to align your team and kickstart execution
-                  </div>
-                </div>
-              </li>
-            </ol>
-            {/* What You Get Section */}
-            <div className="mt-14 max-w-2xl mx-auto rounded-2xl bg-[#f1f2f4] p-8 shadow text-left">
-              <div className="font-semibold text-lg mb-3 flex items-center gap-2">
-                <span className="text-2xl" aria-hidden="true">
-                  🎯
-                </span>
-                What You Get
-              </div>
-              <ul className="space-y-2 text-gray-700 pl-1">
-                <li className="flex gap-2 items-start">
-                  <span className="text-blue-700 mt-[2px]">&#10003;</span>Visual readiness dashboard
-                  (6-axis radar)
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-blue-700 mt-[2px]">&#10003;</span>Clear, prioritized gap
-                  list and peer benchmarks
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-blue-700 mt-[2px]">&#10003;</span>Immediate, actionable next
-                  steps—no jargon, no fluff
-                </li>
-                <li className="flex gap-2 items-start">
-                  <span className="text-blue-700 mt-[2px]">&#10003;</span>Boardroom-ready summary
-                  for fast leadership buy-in
-                </li>
-              </ul>
-            </div>
-          </div>
-          <button
-            id="irs-how-cta"
-            aria-label="Get My Initiative Readiness Scan"
-            data-gtm="cta-how"
-            className="mt-10 mb-2 px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition block mx-auto"
-            onClick={() => setShowModal(true)}
-          >
-            Get My Initiative Readiness Scan
-          </button>
-        </section>
-
-        {/* WHY US SECTION */}
-        <section
-          id="irs-why"
-          data-gtm="section-why"
-          aria-label="Why Uncork Solutions"
-          className={`${SOFT_GREY_BG} py-16 px-6 md:px-16`}
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 id="irs-why-title" className="text-2xl font-bold mb-4">
-              Why Uncork Solutions?
-            </h2>
-            <p id="irs-why-desc" className="mb-5 text-gray-700 text-lg">
-              We know the traps—and how to avoid them. Uncork Solutions delivers the clarity,
-              alignment, and risk reduction leaders need to move decisively from intent to action.
-              The Initiative Readiness Scan is your shortcut to real insight, built for executives
-              by transformation experts.
-            </p>
-          </div>
-        </section>
-
-        {/* FINAL CTA SECTION */}
-        <section
-          id="irs-final"
-          data-gtm="section-final"
-          aria-label="Final Call to Action"
-          className="bg-white py-16 px-6 md:px-16"
-        >
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row gap-8 items-center">
-            <div className="flex-1">
-              <h2 id="irs-final-title" className="text-2xl font-bold mb-4">
-                Ready to Accelerate Your Next Initiative?
-              </h2>
-              <p id="irs-final-desc" className="mb-6 text-gray-700 text-lg">
-                This comprehensive, operator-built scan surfaces hidden risks, aligns business and
-                tech, and delivers a prioritized, board-ready action plan—so you know exactly where
-                you stand and what to do next.
-              </p>
-              <button
-                id="irs-final-cta"
-                aria-label="Get My Initiative Readiness Scan"
-                data-gtm="cta-final"
-                className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition"
-                onClick={() => setShowModal(true)}
-              >
-                Get My Initiative Readiness Scan
-              </button>
-            </div>
-            <div className="flex-1 flex justify-center">
-              <Image
-                id="irs-final-image"
-                src="/initiative-readiness-scan-2.png"
-                alt="Initiative Readiness Scan sample booklet"
-                width={270}
-                height={284}
-                className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* FOUNDER SECTION */}
+        <InitiativeReadinessScanOutcomesSection />
+        <InitiativeReadinessScanHelpSection />
+        <InitiativeReadinessScanWhoWeServeSection />
+        <InitiativeReadinessScanHowItWorksSection />
+        <InitiativeReadinessScanWhyUsSection />
+        <InitiativeReadinessScanFinalCTASection />
         <FounderSection />
 
         <InitiativeReadinessScanModal
