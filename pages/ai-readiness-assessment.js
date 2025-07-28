@@ -402,6 +402,7 @@ export default function AIReadinessAssessment() {
           }}
         >
           <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
+            style={{ minHeight: '420px' }}
             <Image
               id="hero-ai-booklet-img"
               src="/ai-readiness-scan-1a.png"
@@ -417,7 +418,7 @@ export default function AIReadinessAssessment() {
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
             <h1
               id="hero-title"
-              className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
+              className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight min-h-[128px]"
             >
               Be the Boardroom Hero Who{' '}
               <span className="text-blue-700">Delivers Enterprise AI</span>, Not Just Point

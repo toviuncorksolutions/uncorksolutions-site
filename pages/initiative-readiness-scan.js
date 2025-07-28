@@ -343,6 +343,7 @@ export default function InitiativeReadinessScan() {
         >
           {/* Booklet image, left */}
           <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
+            style={{ minHeight: '420px' }}
             <Image
               id="irs-hero-image"
               src="/initiative-readiness-scan-1.png"
@@ -365,7 +366,7 @@ export default function InitiativeReadinessScan() {
             */}
             <h1
               id="irs-hero-title"
-              className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
+              className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight min-h-[128px]"
             >
               Most transformations fail.{' '}
               <span className="text-blue-700">Will yours be different?</span>
