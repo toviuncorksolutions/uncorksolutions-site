@@ -8,7 +8,8 @@
     "start": "next start",
     "postbuild": "next-sitemap",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build:analyze": "ANALYZE=true next build"    
   },
   "keywords": [],
   "author": "",
@@ -21,8 +22,7 @@
     "next": "^15.3.4",
     "next-sitemap": "^4.2.3",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "build:analyze": "ANALYZE=true next build"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^15.4.4",
