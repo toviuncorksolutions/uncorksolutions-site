@@ -5,7 +5,7 @@
     "react/react-in-jsx-scope": "off", // Next.js does not require React import
     "semi": ["error", "always"],
     "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-    "jsx-quotes": ["error", "prefer-double"],
+    "jsx-quotes": ["error", "prefer-single"],
     "no-unused-vars": "warn"
   }
 }
