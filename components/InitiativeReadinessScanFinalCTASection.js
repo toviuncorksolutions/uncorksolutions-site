@@ -30,13 +30,13 @@ export default function InitiativeReadinessScanFinalCTASection() {
         </div>
         <div className="flex-1 flex justify-center">
           <Image
-            id="irs-final-image"
+            id="irs-help-image"
             src="/initiative-readiness-scan-2.png"
             alt="Initiative Readiness Scan sample booklet"
             width={270}
-            height={284}
+            height={340}
+            sizes="(max-width: 640px) 90vw, (max-width: 768px) 220px, 270px"
             className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
-            priority={false}
           />
         </div>
       </div>
