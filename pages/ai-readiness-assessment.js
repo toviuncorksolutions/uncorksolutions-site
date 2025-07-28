@@ -14,38 +14,67 @@ const Placeholder = ({ label, height = 300 }) => (
     Loading {label} section…
   </div>
 );
-const AiReadinessAssessmentModal = dynamic(() => import('../components/AiReadinessAssessmentModal'), { ssr: false });
-const AiReadinessAssessmentOutcomesSection = dynamic(() => import('../components/AiReadinessAssessmentOutcomesSection'), { 
-  ssr: false,
-  loading: () => <Placeholder label='Outcomes' />
-});
-const AiReadinessAssessmentWhatsInsideSection = dynamic(() => import('../components/AiReadinessAssessmentWhatsInsideSection'), { 
-  ssr: false,
-  loading: () => <Placeholder label="What's Inside" />
-});
-const AiReadinessAssessmentDifferenceTableSection = dynamic(() => import('../components/AiReadinessAssessmentDifferenceTableSection'), { 
-  ssr: false,
-  loading: () => <Placeholder label="Comparison Table" />
-});
-const AiReadinessAssessmentWhoThisIsForSection = dynamic(() => import('../components/AiReadinessAssessmentWhoThisIsForSection'), { 
-  ssr: false,
-  loading: () => <Placeholder label="Who This Is For" />
-});
-const AiReadinessAssessmentHowItWorksSection = dynamic(() => import('../components/AiReadinessAssessmentHowItWorksSection'), { 
-  ssr: false,
-  loading: () => <Placeholder label="How It Works" />
-});
+const AiReadinessAssessmentModal = dynamic(
+  () => import('../components/AiReadinessAssessmentModal'),
+  { ssr: false },
+);
+const AiReadinessAssessmentOutcomesSection = dynamic(
+  () => import('../components/AiReadinessAssessmentOutcomesSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Outcomes" />,
+  },
+);
+const AiReadinessAssessmentWhatsInsideSection = dynamic(
+  () => import('../components/AiReadinessAssessmentWhatsInsideSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="What's Inside" />,
+  },
+);
+const AiReadinessAssessmentDifferenceTableSection = dynamic(
+  () => import('../components/AiReadinessAssessmentDifferenceTableSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Comparison Table" />,
+  },
+);
+const AiReadinessAssessmentWhoThisIsForSection = dynamic(
+  () => import('../components/AiReadinessAssessmentWhoThisIsForSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Who This Is For" />,
+  },
+);
+const AiReadinessAssessmentHowItWorksSection = dynamic(
+  () => import('../components/AiReadinessAssessmentHowItWorksSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="How It Works" />,
+  },
+);
 const AiReadinessAssessmentFaq = dynamic(() => import('../components/AiReadinessAssessmentFaq'), {
   ssr: false,
-  loading: () => <Placeholder label="Frequently Asked Questions" />
+  loading: () => <Placeholder label="Frequently Asked Questions" />,
 });
-const AiReadinessAssessmentFounderSection = dynamic(() => import('../components/AiReadinessAssessmentFounderSection'), {
-  ssr: false,
-  loading: () => <Placeholder label="Founder" />
-});
+const AiReadinessAssessmentFounderSection = dynamic(
+  () => import('../components/AiReadinessAssessmentFounderSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Founder" />,
+  },
+);
 
 const FREE_EMAIL_DOMAINS = [
-  'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
+  'gmail.com',
+  'yahoo.com',
+  'hotmail.com',
+  'aol.com',
+  'outlook.com',
+  'icloud.com',
+  'mail.com',
+  'mailinator.com',
+  'msn.com',
 ];
 
 const SOFT_GREY_BG = 'bg-[#f1f2f4]';
@@ -126,31 +155,60 @@ export default function AIReadinessAssessment() {
   return (
     <>
       <Head>
-        <title>AI Readiness Assessment – Boardroom-Ready Enterprise AI Plan | Uncork Solutions</title>
-        <meta name='description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment.' />
-        <link rel='canonical' href='https://www.uncorksolutions.com/ai-readiness-assessment' />
-        <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
-        <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-        <meta property='og:type' content='website' />
-        <meta property='og:locale' content='en_CA' />
-        <meta property='og:locale:alternate' content='en_US' />
-        <meta property='og:site_name' content='Uncork Solutions' />
-        <meta property='og:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
-        <meta property='og:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
-        <meta property='og:url' content='https://www.uncorksolutions.com/ai-readiness-assessment' />
-        <meta property='og:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
-        <meta property='og:image:width' content='1200' />
-        <meta property='og:image:height' content='630' />
-        <meta property='og:image:alt' content='Front cover of Uncork Solutions’ AI Readiness Assessment booklet' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions' />
-        <meta name='twitter:description' content='Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation.' />
-        <meta name='twitter:image' content='https://www.uncorksolutions.com/ai-readiness-scan-1.png' />
+        <title>
+          AI Readiness Assessment – Boardroom-Ready Enterprise AI Plan | Uncork Solutions
+        </title>
+        <meta
+          name="description"
+          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment."
+        />
+        <link rel="canonical" href="https://www.uncorksolutions.com/ai-readiness-assessment" />
+        <meta
+          name="robots"
+          content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+        />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_CA" />
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:site_name" content="Uncork Solutions" />
+        <meta
+          property="og:title"
+          content="AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation."
+        />
+        <meta property="og:url" content="https://www.uncorksolutions.com/ai-readiness-assessment" />
+        <meta
+          property="og:image"
+          content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+          property="og:image:alt"
+          content="Front cover of Uncork Solutions’ AI Readiness Assessment booklet"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
+        />
 
         {/* SCHEMA MARKUP: Organization & Service */}
         <script
-          type='application/ld+json'
+          type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
@@ -180,7 +238,8 @@ export default function AIReadinessAssessment() {
                 {
                   '@type': 'ConsultingService',
                   name: 'AI Readiness Assessment',
-                  serviceType: 'AI Transformation, Boardroom AI Assessment, Digital Transformation Consulting, Organizational Assessment',
+                  serviceType:
+                    'AI Transformation, Boardroom AI Assessment, Digital Transformation Consulting, Organizational Assessment',
                   description:
                     'Boardroom-grade, enterprise-wide AI Readiness Assessment. Diagnose your entire business for AI transformation. Clear, actionable roadmap for leaders. Exportable, audit-ready results. Confidential, vendor-neutral.',
                   provider: {
@@ -220,107 +279,106 @@ export default function AIReadinessAssessment() {
 
         {/* SCHEMA MARKUP: FAQPage */}
         <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
                 {
-                '@type': 'Question',
-                name: 'What exactly is the AI Readiness Assessment?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'What exactly is the AI Readiness Assessment?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The AI Readiness Assessment is a 16-page, boardroom-grade diagnostic playbook that evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.'
-                }
+                    text: 'The AI Readiness Assessment is a 16-page, boardroom-grade diagnostic playbook that evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'How is this different from other AI assessments or maturity models?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'How is this different from other AI assessments or maturity models?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Most AI assessments are generic, IT-focused, or provide only a “score.” The AI Readiness Assessment is built for decision-makers. It’s enterprise-holistic, covers eight key business pillars, and provides a tailored action plan with deadlines and accountability—not just a checkbox exercise.'
-                }
+                    text: 'Most AI assessments are generic, IT-focused, or provide only a “score.” The AI Readiness Assessment is built for decision-makers. It’s enterprise-holistic, covers eight key business pillars, and provides a tailored action plan with deadlines and accountability—not just a checkbox exercise.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'How long does the assessment take to complete?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'How long does the assessment take to complete?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The assessment takes approximately 20 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness.'
-                }
+                    text: 'The assessment takes approximately 20 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'Who should participate in the assessment?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'Who should participate in the assessment?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The assessment is intended for senior executives and their direct reports who are responsible for AI, technology, product, data, operations, or compliance. It’s ideal for CIOs, CTOs, CDOs, and other board-facing leaders.'
-                }
+                    text: 'The assessment is intended for senior executives and their direct reports who are responsible for AI, technology, product, data, operations, or compliance. It’s ideal for CIOs, CTOs, CDOs, and other board-facing leaders.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'Is the assessment confidential?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'Is the assessment confidential?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Yes, absolutely. All answers and the resulting report are strictly confidential. Your information is never shared with any third parties—no exceptions.'
-                }
+                    text: 'Yes, absolutely. All answers and the resulting report are strictly confidential. Your information is never shared with any third parties—no exceptions.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'How and when do I receive my results?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'How and when do I receive my results?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Your personalized, 16-page playbook is typically delivered to your inbox the same day you complete the assessment. It’s ready to share with your board or leadership team immediately.'
-                }
+                    text: 'Your personalized, 16-page playbook is typically delivered to your inbox the same day you complete the assessment. It’s ready to share with your board or leadership team immediately.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'Is this a vendor pitch or truly neutral?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'Is this a vendor pitch or truly neutral?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The AI Readiness Assessment is 100% vendor-neutral. There are no sales pitches or hidden agendas—just a clear-eyed, operator-grade assessment of your organization’s AI readiness.'
-                }
+                    text: 'The AI Readiness Assessment is 100% vendor-neutral. There are no sales pitches or hidden agendas—just a clear-eyed, operator-grade assessment of your organization’s AI readiness.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'What does the final deliverable include?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'What does the final deliverable include?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'You receive a 16-page PDF report featuring an executive summary, a radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.'
-                }
+                    text: 'You receive a 16-page PDF report featuring an executive summary, a radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.',
+                  },
                 },
                 {
-                '@type': 'Question',
-                name: 'How much does the assessment cost?',
-                acceptedAnswer: {
+                  '@type': 'Question',
+                  name: 'How much does the assessment cost?',
+                  acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'Early access to the AI Readiness Assessment is free for qualifying executives in enterprise or mid-market organizations. If you’re leading AI transformation at scale, request priority access to secure your complimentary assessment.'
-                }
-                }
-            ]
-            })
-        }}
+                    text: 'Early access to the AI Readiness Assessment is free for qualifying executives in enterprise or mid-market organizations. If you’re leading AI transformation at scale, request priority access to secure your complimentary assessment.',
+                  },
+                },
+              ],
+            }),
+          }}
         />
-
       </Head>
 
       <a
-        href='#main-content'
-        id='skip-link'
-        className='sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50'
+        href="#main-content"
+        id="skip-link"
+        className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
         tabIndex={0}
         style={{
           outline: '2px solid #2364e0',
           outlineOffset: '2px',
         }}
-        onClick={e => {
+        onClick={(e) => {
           // Move focus to main content after skip link is activated
           e.preventDefault();
           const main = document.getElementById('main-content');
           if (main) main.focus();
         }}
-        onKeyDown={e => {
+        onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             const main = document.getElementById('main-content');
@@ -331,88 +389,126 @@ export default function AIReadinessAssessment() {
         Skip to main content
       </a>
 
-      <main id='main-content' tabIndex={-1} role='main' className='font-sans text-gray-800 w-full overflow-x-hidden'>
-
+      <main
+        id="main-content"
+        tabIndex={-1}
+        role="main"
+        className="font-sans text-gray-800 w-full overflow-x-hidden"
+      >
         {/* HERO */}
-        <section aria-labelledby='hero-title' className='relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto'
+        <section
+          aria-labelledby="hero-title"
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto"
           style={{
             background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
             backgroundColor: SOFT_GREY_BG,
           }}
         >
-          <div className='flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12'>
+          <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
             <Image
-              id='hero-ai-booklet-img'
-              src='/ai-readiness-scan-1a.png'
+              id="hero-ai-booklet-img"
+              src="/ai-readiness-scan-1a.png"
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
               width={760}
               height={846}
-              sizes='(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px'
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               priority
-              fetchPriority='high'
-              className='w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl'
+              fetchPriority="high"
+              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
-          <div className='flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl'>
-            <h1 id='hero-title' className='text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight'>
-              Be the Boardroom Hero Who <span className="text-blue-700">Delivers Enterprise AI</span>, Not Just Point Solutions.
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
+            <h1
+              id="hero-title"
+              className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight"
+            >
+              Be the Boardroom Hero Who{' '}
+              <span className="text-blue-700">Delivers Enterprise AI</span>, Not Just Point
+              Solutions.
             </h1>
-            <p className='text-lg md:text-xl text-gray-700 mb-6'>
-              Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little action. The <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into the market leader for enterprise-wide AI transformation.
+            <p className="text-lg md:text-xl text-gray-700 mb-6">
+              Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little
+              action. The{' '}
+              <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your
+              unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into
+              the market leader for enterprise-wide AI transformation.
             </p>
-            <p className='text-base md:text-lg text-gray-700 mb-6'>
-              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>—the first and only assessment treating AI as the next era of business model innovation, not just another IT project.
+            <p className="text-base md:text-lg text-gray-700 mb-6">
+              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>
+              —the first and only assessment treating AI as the next era of business model
+              innovation, not just another IT project.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4' role='group' aria-label='Primary actions'>
+            <div
+              className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4"
+              role="group"
+              aria-label="Primary actions"
+            >
               <button
-                id='hero-cta-primary'
+                id="hero-cta-primary"
                 ref={emailRef}
-                aria-label='Get My AI Readiness Assessment'
-                aria-haspopup='dialog'
-                data-gtm='cta-hero-primary'
-                className='w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400'
+                aria-label="Get My AI Readiness Assessment"
+                aria-haspopup="dialog"
+                data-gtm="cta-hero-primary"
+                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
                 onClick={() => setShowModal(true)}
                 tabIndex={0}
               >
                 Get My AI Readiness Assessment
               </button>
               <button
-                id='hero-cta-secondary'
-                aria-label='Learn how the AI Readiness Assessment works'
-                data-gtm='cta-hero-secondary'
-                className='w-full sm:w-auto px-8 py-3 rounded-xl bg-gray-50 border border-gray-300 text-gray-700 font-medium text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-gray-200'
-                onClick={() => { document.getElementById('ai-how')?.scrollIntoView({ behavior: 'smooth' }); }}
+                id="hero-cta-secondary"
+                aria-label="Learn how the AI Readiness Assessment works"
+                data-gtm="cta-hero-secondary"
+                className="w-full sm:w-auto px-8 py-3 rounded-xl bg-gray-50 border border-gray-300 text-gray-700 font-medium text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-gray-200"
+                onClick={() => {
+                  document.getElementById('ai-how')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 tabIndex={0}
               >
                 How It Works
               </button>
             </div>
-            <div className='text-sm text-gray-500 mt-2' id='ai-early-access-label'>
-              Priority access is limited to executives ready to deliver, not just discuss. If that&#8217;s you&#8212;get your boardroom-ready plan and join the ranks of leaders who are actually moving the needle with AI.
+            <div className="text-sm text-gray-500 mt-2" id="ai-early-access-label">
+              Priority access is limited to executives ready to deliver, not just discuss. If
+              that&#8217;s you&#8212;get your boardroom-ready plan and join the ranks of leaders who
+              are actually moving the needle with AI.
             </div>
           </div>
         </section>
 
         {/* WHY THIS MATTERS */}
-        <section className="bg-white py-14 px-6 md:px-16" id="ai-why-matters" aria-labelledby="why-title">
+        <section
+          className="bg-white py-14 px-6 md:px-16"
+          id="ai-why-matters"
+          aria-labelledby="why-title"
+        >
           <div className="max-w-4xl mx-auto text-center">
-            <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">Why This Matters</h2>
+            <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">
+              Why This Matters
+            </h2>
             <p className="text-lg text-gray-700 mb-8">
-              AI isn’t a bolt-on tool—it’s rewriting business models, shifting markets, and redrawing the competitive landscape.
-                <br /><br />
-              While everyone else is busy plugging in chatbots or dabbling with point-solution automations, you’ll have the first enterprise-holistic assessment that defines what ‘AI-ready’ means for your entire company.
-              </p>
-              <div className="flex justify-center">
-                <ul className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6" aria-label="Why Outcomes">
-                    <li>Win the board’s confidence (and budget)</li>
-                    <li>Prove real readiness—not just intent</li>
-                    <li>Unlock millions in value and future-proof your business</li>
-                </ul>
-              </div>
-              <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
+              AI isn’t a bolt-on tool—it’s rewriting business models, shifting markets, and
+              redrawing the competitive landscape.
+              <br />
+              <br />
+              While everyone else is busy plugging in chatbots or dabbling with point-solution
+              automations, you’ll have the first enterprise-holistic assessment that defines what
+              ‘AI-ready’ means for your entire company.
+            </p>
+            <div className="flex justify-center">
+              <ul
+                className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6"
+                aria-label="Why Outcomes"
+              >
+                <li>Win the board’s confidence (and budget)</li>
+                <li>Prove real readiness—not just intent</li>
+                <li>Unlock millions in value and future-proof your business</li>
+              </ul>
+            </div>
+            <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
           </div>
         </section>
-        
+
         {/* WHAT SETS THIS APART */}
         <AiReadinessAssessmentOutcomesSection />
 
@@ -426,23 +522,37 @@ export default function AIReadinessAssessment() {
         <AiReadinessAssessmentWhoThisIsForSection />
 
         {/* HOW IT WORKS */}
-        <AiReadinessAssessmentHowItWorksSection />       
+        <AiReadinessAssessmentHowItWorksSection />
 
         {/* FAQ */}
-        <section id="ai-faq-section" aria-labelledby="faq-title" className="bg-white py-16 px-6 md:px-16">
+        <section
+          id="ai-faq-section"
+          aria-labelledby="faq-title"
+          className="bg-white py-16 px-6 md:px-16"
+        >
           <AiReadinessAssessmentFaq />
         </section>
 
         <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
 
         {/* FINAL CTA */}
-        <section id="ai-final-cta" aria-labelledby="final-cta-title" className="bg-white py-16 px-6 md:px-16">
+        <section
+          id="ai-final-cta"
+          aria-labelledby="final-cta-title"
+          className="bg-white py-16 px-6 md:px-16"
+        >
           <div className="max-w-4xl mx-auto text-center">
-            <h2 id="final-cta-title" className="text-2xl font-bold mb-4">Don’t Leave Your Credibility (or Investment) to Chance</h2>
+            <h2 id="final-cta-title" className="text-2xl font-bold mb-4">
+              Don’t Leave Your Credibility (or Investment) to Chance
+            </h2>
             <p className="mb-6 text-gray-700 text-lg">
-              This is the assessment your competitors will wish they’d done when AI hits the boardroom agenda.
-              <br /><br />
-              Priority access is limited to executives ready to deliver, not just discuss. If that’s you—claim your boardroom-ready plan and join the leaders actually moving the needle with AI.
+              This is the assessment your competitors will wish they’d done when AI hits the
+              boardroom agenda.
+              <br />
+              <br />
+              Priority access is limited to executives ready to deliver, not just discuss. If that’s
+              you—claim your boardroom-ready plan and join the leaders actually moving the needle
+              with AI.
             </p>
             <button
               id="final-cta-button"
@@ -473,7 +583,7 @@ export default function AIReadinessAssessment() {
           submitting={submitting}
           emailRef={emailRef}
           modalRef={modalRef}
-          ariaLabel='AI Readiness Assessment Signup Modal'
+          ariaLabel="AI Readiness Assessment Signup Modal"
         />
       </main>
     </>

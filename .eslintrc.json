@@ -1,11 +1,10 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
-  "plugins": [],
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "plugin:prettier/recommended"],
   "rules": {
-    "react/react-in-jsx-scope": "off", // Next.js does not require React import
+    "react/react-in-jsx-scope": "off",
     "semi": ["error", "always"],
     "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
-    "jsx-quotes": ["error", "prefer-single"],
+    "jsx-quotes": ["error", "prefer-double"],
     "no-unused-vars": "warn"
   }
 }

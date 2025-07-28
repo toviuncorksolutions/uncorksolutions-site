@@ -9,7 +9,7 @@
     "postbuild": "next-sitemap",
     "lint": "next lint",
     "format": "prettier --write .",
-    "build:analyze": "ANALYZE=true next build"    
+    "build:analyze": "ANALYZE=true next build"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +29,8 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^9.30.0",
     "eslint-config-next": "^15.3.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "source-map-explorer": "^2.5.3",

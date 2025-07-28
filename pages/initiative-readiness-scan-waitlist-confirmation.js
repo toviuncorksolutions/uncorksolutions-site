@@ -29,7 +29,8 @@ export default function Confirmation() {
             Thank you for joining the waitlist!
           </h1>
           <p className="mt-2 text-center text-gray-700">
-            You&apos;re on the list. We&apos;ll be in touch soon with details about the Initiative Readiness Scan.
+            You&apos;re on the list. We&apos;ll be in touch soon with details about the Initiative
+            Readiness Scan.
           </p>
           <Link href="/" passHref legacyBehavior>
             <a

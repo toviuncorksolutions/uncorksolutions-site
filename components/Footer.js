@@ -59,14 +59,20 @@ export default function Footer() {
             >
               Privacy Policy
             </Link>
-            <span aria-hidden="true" className="text-gray-500"> | </span>
+            <span aria-hidden="true" className="text-gray-500">
+              {' '}
+              |{' '}
+            </span>
             <Link
               href="/ai-policy"
               className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
             >
               AI Usage Policy
             </Link>
-            <span aria-hidden="true" className="text-gray-500"> | </span>
+            <span aria-hidden="true" className="text-gray-500">
+              {' '}
+              |{' '}
+            </span>
             <Link
               href="/accessibility-policy"
               className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"

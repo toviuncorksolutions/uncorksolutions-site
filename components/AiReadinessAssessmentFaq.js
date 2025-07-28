@@ -31,7 +31,8 @@ const faqs = [
   },
   {
     question: 'Who participates?',
-    answer: 'Executives and their direct reports with responsibility for AI, product, tech, data, compliance.',
+    answer:
+      'Executives and their direct reports with responsibility for AI, product, tech, data, compliance.',
   },
   {
     question: 'Is this vendor-neutral?',
@@ -41,11 +42,11 @@ const faqs = [
 
 export default function AiReadinessAssessmentFaq() {
   return (
-    <div className='w-full max-w-2xl mx-auto'>
-      <h2 id="faq-title" className='text-2xl md:text-3xl font-bold mb-8 text-center'>
+    <div className="w-full max-w-2xl mx-auto">
+      <h2 id="faq-title" className="text-2xl md:text-3xl font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>
-      <div className='space-y-0'>
+      <div className="space-y-0">
         {faqs.map((faq, idx) => (
           <div
             key={faq.question}
@@ -54,9 +55,7 @@ export default function AiReadinessAssessmentFaq() {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <DisclosureButton
-                    className='flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition'
-                  >
+                  <DisclosureButton className="flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition">
                     <span>{faq.question}</span>
                     <ChevronUpIcon
                       className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
@@ -64,7 +63,7 @@ export default function AiReadinessAssessmentFaq() {
                       }`}
                     />
                   </DisclosureButton>
-                  <DisclosurePanel className='pb-5 pr-8 pl-1 text-gray-900 text-lg'>
+                  <DisclosurePanel className="pb-5 pr-8 pl-1 text-gray-900 text-lg">
                     {faq.answer}
                   </DisclosurePanel>
                 </>

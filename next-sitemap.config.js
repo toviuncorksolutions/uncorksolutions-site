@@ -2,10 +2,7 @@
 module.exports = {
   siteUrl: 'https://www.uncorksolutions.com',
   generateRobotsTxt: true,
-  exclude: [
-    '/variant-a',
-    '/variant-b',
-  ],
+  exclude: ['/variant-a', '/variant-b'],
   robotsTxtOptions: {
     policies: [
       { userAgent: 'OAI-SearchBot', allow: '/' },
