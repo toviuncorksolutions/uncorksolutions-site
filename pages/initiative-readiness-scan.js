@@ -4,6 +4,20 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
+const Placeholder = ({ label, height = 300 }) => (
+  <div
+    className={`w-full bg-gray-100 animate-pulse rounded-xl mb-4 flex items-center justify-center text-sm text-gray-500`}
+    style={{ height }}
+    role="status"
+    aria-label={`Loading ${label} section`}
+  >
+    Loading {label} section…
+  </div>
+);
+const FounderSection = dynamic(() => import('../components/FounderSection'), {
+  ssr: false,
+  loading: () => <Placeholder label="Founder" />,
+});
 const InitiativeReadinessScanModal = dynamic(
   () => import('../components/InitiativeReadinessScanModal'),
   { ssr: false },
@@ -747,44 +761,7 @@ export default function InitiativeReadinessScan() {
         </section>
 
         {/* FOUNDER SECTION */}
-        <section
-          id="irs-founder"
-          aria-label="Founder Highlight"
-          className={`${SOFT_GREY_BG} py-12 px-6 md:px-16`}
-        >
-          <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
-            {/* Headshot */}
-            <div className="flex-shrink-0 w-44">
-              <div
-                className="rounded-xl overflow-hidden border-b-4"
-                style={{ borderColor: '#2364e0' /* CTA Blue */ }}
-              >
-                <Image
-                  src="/tovi-headshot.png"
-                  alt="Tovi Heilbronn, Founder, Uncork Solutions"
-                  width={305}
-                  height={305}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
-            {/* Founder Text */}
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Tovi Heilbronn</h3>
-              <div className="text-sm text-gray-600 mb-1">Founder, Uncork Solutions</div>
-              <p className="text-gray-700 leading-relaxed">
-                17+ years driving digital transformation and technology strategy for enterprise
-                clients—turning complexity into measurable business outcomes across digital,
-                product, and platform modernization.
-                <br />
-                <span className="block mt-2 text-gray-500 italic">
-                  &quot;I believe every client deserves clear answers and practical
-                  direction—without the drag of drawn-out consulting engagements.&quot;
-                </span>
-              </p>
-            </div>
-          </div>
-        </section>
+        <FounderSection />
 
         <InitiativeReadinessScanModal
           show={showModal}

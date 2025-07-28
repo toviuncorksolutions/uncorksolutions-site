@@ -57,13 +57,10 @@ const AiReadinessAssessmentFaq = dynamic(() => import('../components/AiReadiness
   ssr: false,
   loading: () => <Placeholder label="Frequently Asked Questions" />,
 });
-const AiReadinessAssessmentFounderSection = dynamic(
-  () => import('../components/AiReadinessAssessmentFounderSection'),
-  {
-    ssr: false,
-    loading: () => <Placeholder label="Founder" />,
-  },
-);
+const FounderSection = dynamic(() => import('../components/FounderSection'), {
+  ssr: false,
+  loading: () => <Placeholder label="Founder" />,
+});
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com',
@@ -569,7 +566,7 @@ export default function AIReadinessAssessment() {
         </section>
 
         {/* FOUNDER SECTION */}
-        <AiReadinessAssessmentFounderSection />
+        <FounderSection />
 
         {/* Modal */}
         <AiReadinessAssessmentModal

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function AiReadinessAssessmentFounderSection() {
+export default function FounderSection() {
   return (
     <section
       id="ai-founder"
