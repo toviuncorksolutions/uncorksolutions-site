@@ -54,18 +54,16 @@ export default function AiReadinessAssessmentFaq() {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <h3 className="m-0">
-                    <DisclosureButton
-                      className='flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition'
-                    >
-                      <span>{faq.question}</span>
-                      <ChevronUpIcon
-                        className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
-                          open ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </DisclosureButton>
-                  </h3>
+                  <DisclosureButton
+                    className='flex justify-between items-center w-full py-5 text-left text-lg font-semibold text-gray-900 focus:outline-none hover:bg-gray-50 transition'
+                  >
+                    <span>{faq.question}</span>
+                    <ChevronUpIcon
+                      className={`h-5 w-5 ml-2 text-blue-700 transition-transform duration-200 ${
+                        open ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </DisclosureButton>
                   <DisclosurePanel className='pb-5 pr-8 pl-1 text-gray-900 text-lg'>
                     {faq.answer}
                   </DisclosurePanel>

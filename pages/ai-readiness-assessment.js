@@ -2,8 +2,20 @@ import Head from 'next/head';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import AiReadinessAssessmentModal from '../components/AiReadinessAssessmentModal';
-import AiReadinessAssessmentFaq from '../components/AiReadinessAssessmentFaq';
+import dynamic from 'next/dynamic';
+
+const AiReadinessAssessmentModal = dynamic(
+  () => import('../components/AiReadinessAssessmentModal'),
+  { ssr: false }
+);
+
+const AiReadinessAssessmentFaq = dynamic(
+  () => import('../components/AiReadinessAssessmentFaq'),
+  {
+    ssr: false,
+    loading: () => <p>Loading FAQ…</p>,
+  }
+);
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -92,7 +104,7 @@ export default function AIReadinessAssessment() {
         <link rel='canonical' href='https://www.uncorksolutions.com/ai-readiness-assessment' />
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='preload' as='image' fetchpriority='high' href='/ai-readiness-scan-1.png' />
+        <link rel='preload' as='image' fetchPriority='high' href='/ai-readiness-scan-1.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />
@@ -310,6 +322,7 @@ export default function AIReadinessAssessment() {
               width={924}
               height={970}
               priority
+              fetchPriority='high'
               className='w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[820px] 2xl:max-w-[924px] h-auto drop-shadow-xl'
             />
           </div>

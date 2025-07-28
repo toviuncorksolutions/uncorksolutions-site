@@ -2,7 +2,12 @@ import Head from 'next/head';
 import { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import InitiativeReadinessScanModal from '../components/InitiativeReadinessScanModal';
+import dynamic from 'next/dynamic';
+
+const InitiativeReadinessScanModal = dynamic(
+  () => import('../components/InitiativeReadinessScanModal'),
+  { ssr: false }
+);
 
 const FREE_EMAIL_DOMAINS = [
   'gmail.com', 'yahoo.com', 'hotmail.com', 'aol.com', 'outlook.com', 'icloud.com', 'mail.com', 'mailinator.com', 'msn.com'
@@ -120,7 +125,7 @@ export default function InitiativeReadinessScan() {
         <link rel='canonical' href='https://www.uncorksolutions.com/initiative-readiness-scan' />
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='preload' as='image' fetchpriority='high' href='/initiative-readiness-scan-1.png' />        
+        <link rel='preload' as='image' fetchPriority='high' href='/initiative-readiness-scan-1.png' />        
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />
@@ -230,6 +235,7 @@ export default function InitiativeReadinessScan() {
               width={924}
               height={970}
               priority
+              fetchPriority="high"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[820px] 2xl:max-w-[924px] h-auto drop-shadow-xl"
             />
           </div>

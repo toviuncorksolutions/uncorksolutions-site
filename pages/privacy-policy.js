@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
         <link rel='canonical' href='https://www.uncorksolutions.com/privacy-policy' />
-        <link rel='preload' as='image' fetchpriority='high' href='/uncork-solutions-logo.png' />
+        <link rel='preload' as='image' fetchPriority='high' href='/uncork-solutions-logo.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />
