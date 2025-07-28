@@ -19,8 +19,8 @@ export default function Footer() {
               alt="Uncork Solutions homepage"
               width={160}
               height={60}
+              sizes="160px"
               className="object-contain mb-4 md:mb-0 cursor-pointer"
-              priority
             />
           </Link>
         </div>
