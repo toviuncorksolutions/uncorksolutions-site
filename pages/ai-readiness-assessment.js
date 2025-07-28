@@ -401,8 +401,10 @@ export default function AIReadinessAssessment() {
             backgroundColor: SOFT_GREY_BG,
           }}
         >
-          <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
+          <div
+            className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12"
             style={{ minHeight: '420px' }}
+          >
             <Image
               id="hero-ai-booklet-img"
               src="/ai-readiness-scan-1a.png"

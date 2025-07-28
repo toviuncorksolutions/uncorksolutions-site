@@ -342,8 +342,10 @@ export default function InitiativeReadinessScan() {
           }}
         >
           {/* Booklet image, left */}
-          <div className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12">
+          <div
+            className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12"
             style={{ minHeight: '420px' }}
+          >
             <Image
               id="irs-hero-image"
               src="/initiative-readiness-scan-1.png"
