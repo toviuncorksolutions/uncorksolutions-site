@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
@@ -94,6 +94,12 @@ export default function AIReadinessAssessment() {
   const [submitting, setSubmitting] = useState(false);
   const modalRef = useRef(null);
   const emailRef = useRef(null);
+
+  useEffect(() => {
+    const openModal = () => setShowModal(true);
+    document.addEventListener('openModal', openModal);
+    return () => document.removeEventListener('openModal', openModal);
+  }, []);
 
   function getDomain(email) {
     return email.trim().split('@')[1]?.toLowerCase() || '';
