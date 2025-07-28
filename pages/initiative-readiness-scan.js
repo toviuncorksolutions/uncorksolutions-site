@@ -346,15 +346,14 @@ export default function InitiativeReadinessScan() {
             <Image
               id="irs-hero-image"
               src="/initiative-readiness-scan-1.png"
-              alt="Initiative Readiness Scan sample booklet"
-              width={924}
-              height={970}
-              sizes="(max-width: 640px) 420px, (max-width: 768px) 520px, (max-width: 1024px) 650px, (max-width: 1280px) 820px, 924px"
-              placeholder="blur"
+              alt="Front cover of Uncork Solutions' Initiative Readiness Scan sample booklet."
+              width={760}
+              height={797}
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority="high"
-              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[820px] 2xl:max-w-[924px] h-auto drop-shadow-xl"
+              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
           {/* Hero text, right */}
