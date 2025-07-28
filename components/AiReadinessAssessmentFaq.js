@@ -42,7 +42,11 @@ const faqs = [
 
 export default function AiReadinessAssessmentFaq() {
   return (
-    <section id="faq" aria-labelledby="faq-title" className="w-full max-w-2xl mx-auto py-16 px-4">
+    <section
+      id="faq"
+      aria-labelledby="faq-title"
+      className="bg-white w-full max-w-2xl mx-auto py-16 md:px-16 px-4"
+    >
       <h2 id="faq-title" className="text-2xl md:text-3xl font-bold mb-8 text-center">
         Frequently Asked Questions
       </h2>

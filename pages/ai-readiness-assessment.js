@@ -57,6 +57,13 @@ const AiReadinessAssessmentFaq = dynamic(() => import('../components/AiReadiness
   ssr: false,
   loading: () => <Placeholder label="Frequently Asked Questions" />,
 });
+const AiReadinessAssessmentFinalCTASection = dynamic(
+  () => import('../components/AiReadinessAssessmentFinalCTASection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Final CTA" />,
+  },
+);
 const FounderSection = dynamic(() => import('../components/FounderSection'), {
   ssr: false,
   loading: () => <Placeholder label="Founder" />,
@@ -450,7 +457,7 @@ export default function AIReadinessAssessment() {
                 aria-haspopup="dialog"
                 data-gtm="cta-hero-primary"
                 className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
-                onClick={() => setShowModal(true)}
+                onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
                 tabIndex={0}
               >
                 Get My AI Readiness Assessment
@@ -509,69 +516,16 @@ export default function AIReadinessAssessment() {
           </div>
         </section>
 
-        {/* WHAT SETS THIS APART */}
         <AiReadinessAssessmentOutcomesSection />
-
-        {/* WHAT'S INSIDE */}
         <AiReadinessAssessmentWhatsInsideSection />
-
-        {/* DIFFERENCE TABLE */}
         <AiReadinessAssessmentDifferenceTableSection />
-
-        {/* WHO THIS IS FOR */}
         <AiReadinessAssessmentWhoThisIsForSection />
-
-        {/* HOW IT WORKS */}
         <AiReadinessAssessmentHowItWorksSection />
-
-        {/* FAQ */}
-        <section
-          id="ai-faq-section"
-          aria-labelledby="faq-title"
-          className="bg-white py-16 px-6 md:px-16"
-        >
-          <AiReadinessAssessmentFaq />
-        </section>
-
+        <AiReadinessAssessmentFaq />
         <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
-
-        {/* FINAL CTA */}
-        <section
-          id="ai-final-cta"
-          aria-labelledby="final-cta-title"
-          className="bg-white py-16 px-6 md:px-16"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="final-cta-title" className="text-2xl font-bold mb-4">
-              Don’t Leave Your Credibility (or Investment) to Chance
-            </h2>
-            <p className="mb-6 text-gray-700 text-lg">
-              This is the assessment your competitors will wish they’d done when AI hits the
-              boardroom agenda.
-              <br />
-              <br />
-              Priority access is limited to executives ready to deliver, not just discuss. If that’s
-              you—claim your boardroom-ready plan and join the leaders actually moving the needle
-              with AI.
-            </p>
-            <button
-              id="final-cta-button"
-              aria-label="Get My Boardroom Assessment – Priority Access"
-              aria-haspopup="dialog"
-              data-gtm="cta-final"
-              className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
-              onClick={() => setShowModal(true)}
-              tabIndex={0}
-            >
-              Get My AI Readiness Assessment – Priority Access
-            </button>
-          </div>
-        </section>
-
-        {/* FOUNDER SECTION */}
+        <AiReadinessAssessmentFinalCTASection />
         <FounderSection />
 
-        {/* Modal */}
         <AiReadinessAssessmentModal
           show={showModal}
           onClose={() => setShowModal(false)}

@@ -36,7 +36,7 @@ export default function AiReadinessAssessmentWhoThisIsForSection() {
           aria-haspopup="dialog"
           data-gtm="cta-who-primary"
           className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
           Get My AI Readiness Assessment
