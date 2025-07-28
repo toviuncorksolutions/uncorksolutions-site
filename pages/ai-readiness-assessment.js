@@ -104,7 +104,6 @@ export default function AIReadinessAssessment() {
         <link rel='canonical' href='https://www.uncorksolutions.com/ai-readiness-assessment' />
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
         <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='preload' as='image' fetchPriority='high' href='/ai-readiness-scan-1.png' />
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />
@@ -322,6 +321,7 @@ export default function AIReadinessAssessment() {
               width={924}
               height={970}
               sizes='(max-width: 640px) 420px, (max-width: 768px) 520px, (max-width: 1024px) 650px, (max-width: 1280px) 820px, 924px'
+              placeholder='blur'
               style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority='high'

@@ -124,8 +124,7 @@ export default function InitiativeReadinessScan() {
         <meta name='description' content='Expose hidden risks, benchmark 6 axes and get a boardroom-ready action plan in days—not quarters. Claim early access to the Initiative Readiness Scan.' />
         <link rel='canonical' href='https://www.uncorksolutions.com/initiative-readiness-scan' />
         <meta name='robots' content='index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1' />
-        <meta name='viewport' content='width=device-width,initial-scale=1' />
-        <link rel='preload' as='image' fetchPriority='high' href='/initiative-readiness-scan-1.png' />        
+        <meta name='viewport' content='width=device-width,initial-scale=1' />       
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:type' content='website' />
         <meta property='og:locale' content='en_CA' />
@@ -234,7 +233,8 @@ export default function InitiativeReadinessScan() {
               alt="Initiative Readiness Scan sample booklet"
               width={924}
               height={970}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 420px, (max-width: 768px) 520px, (max-width: 1024px) 650px, (max-width: 1280px) 820px, 924px"
+              placeholder="blur"
               style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority="high"
