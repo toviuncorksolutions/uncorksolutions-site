@@ -17,7 +17,7 @@ const Placeholder = ({ label, height = 300 }) => (
 const AiReadinessAssessmentModal = dynamic(() => import('../components/AiReadinessAssessmentModal'), { ssr: false });
 const AiReadinessAssessmentOutcomesSection = dynamic(() => import('../components/AiReadinessAssessmentOutcomesSection'), { 
   ssr: false,
-  loading: () => <Placeholder label="Outcomes" />
+  loading: () => <Placeholder label='Outcomes' />
 });
 const AiReadinessAssessmentWhatsInsideSection = dynamic(() => import('../components/AiReadinessAssessmentWhatsInsideSection'), { 
   ssr: false,

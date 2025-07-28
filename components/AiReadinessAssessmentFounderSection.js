@@ -25,7 +25,7 @@ export default function AiReadinessAssessmentFounderSection() {
           <p className='text-gray-700 leading-relaxed'>
             17+ years driving digital transformation and technology strategy for enterprise clients—turning complexity into measurable business outcomes across digital, product, and platform modernization.<br />
             <span className='block mt-2 text-gray-500 italic'>
-              "I believe every client deserves clear answers and practical direction—without the drag of drawn-out consulting engagements."
+              &quot;I believe every client deserves clear answers and practical direction—without the drag of drawn-out consulting engagements.&quot;
             </span>
           </p>
         </div>
