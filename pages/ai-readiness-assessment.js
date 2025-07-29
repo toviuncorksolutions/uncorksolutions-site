@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import heroImage from '../public//ai-readiness-scan-1a.png';
 import dynamic from 'next/dynamic';
 
 const Placeholder = ({ label, height = 300 }) => (
@@ -177,7 +176,6 @@ export default function AIReadinessAssessment() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        {/* <link rel="preload" as="image" href="/ai-readiness-scan-1a.png" />  */}
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -416,7 +414,7 @@ export default function AIReadinessAssessment() {
           >
             <Image
               id="hero-ai-booklet-img"
-              src={heroImage}
+              src="/ai-readiness-scan-1a.png"
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
               width={760}
               height={846}

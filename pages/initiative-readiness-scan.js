@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import heroImage from '../public/initiative-readiness-scan-1.png';
 import dynamic from 'next/dynamic';
 
 const Placeholder = ({ label, height = 300 }) => (
@@ -214,7 +213,7 @@ export default function InitiativeReadinessScan() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="preload" as="image" href="/initiative-readiness-scan-1.png" />
+        {/* <link rel="preload" as="image" href="/initiative-readiness-scan-1.png" /> */}
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -344,7 +343,7 @@ export default function InitiativeReadinessScan() {
           >
             <Image
               id="irs-hero-image"
-              src={heroImage}
+              src="/initiative-readiness-scan-1.png"
               alt="Front cover of Uncork Solutions' Initiative Readiness Scan sample booklet."
               width={760}
               height={797}
