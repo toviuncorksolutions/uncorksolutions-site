@@ -16,7 +16,7 @@ export default function AiReadinessAssessmentOutcomesSection() {
         <ul className="space-y-8 text-left max-w-2xl mx-auto">
           <li>
             <h3 className="font-semibold text-lg mb-1">
-              1. A 16-Page Custom Playbook—Not a &quot;Scorecard&quot;
+              1. A 16-Page Custom Playbook — Not a &quot;Scorecard&quot;
             </h3>
             <p className="text-gray-700">
               Instantly see your AI strengths, critical gaps, and &quot;unknown
@@ -25,22 +25,22 @@ export default function AiReadinessAssessmentOutcomesSection() {
           </li>
           <li>
             <h3 className="font-semibold text-lg mb-1">
-              2. Operator-Level Insight, Not Vendor Hype
+              2. Operator-Level Insight — Not Vendor Hype
             </h3>
             <p className="text-gray-700">
-              Each section includes the real questions top operators ask—challenging blind spots and
-              driving momentum.
+              Each section includes questions top operators reflect on—challenging blind spots and
+              keeping you aware of your momentum.
             </p>
           </li>
           <li>
-            <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness, Not Promises</h3>
+            <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness — Not Promises</h3>
             <p className="text-gray-700">
               Evidence for your board, your auditors, and your shareholders—delivered in a format
-              built to impress and to activate.
+              built to impress and granularity ready to activate.
             </p>
           </li>
           <li>
-            <h3 className="font-semibold text-lg mb-1">4. Enterprise-HOLISTIC, Not IT-SILOED</h3>
+            <h3 className="font-semibold text-lg mb-1">4. Enterprise-Holistic — Not IT-Siloed</h3>
             <p className="text-gray-700">
               Designed for the entire business: From product and compliance to data and operations.
             </p>

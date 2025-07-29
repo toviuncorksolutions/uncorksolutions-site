@@ -22,13 +22,13 @@ export default function AiReadinessAssessmentWhoThisIsForSection() {
           </li>
           <li>
             <span className="font-semibold text-blue-700">
-              Board-facing execs who know &quot;good&quot; isn’t good enough:
+              Executives in Retail, Manufacturing, and Regulated Sectors:
             </span>{' '}
-            You want to confidently prove readiness and unlock the next era.
+            Where credibility, not hype, matters.
           </li>
         </ul>
         <p className="mb-8 text-gray-700 text-lg">
-          If you&rsquo;re ready to move—not just research—priority access is open.
+          If you&rsquo;re ready to move—not just research—this playbook is your move.
         </p>
         <button
           id="hero-cta-who"
@@ -39,7 +39,7 @@ export default function AiReadinessAssessmentWhoThisIsForSection() {
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My AI Readiness Assessment
+          Get My Enterprise AI Playbook
         </button>
       </div>
     </section>

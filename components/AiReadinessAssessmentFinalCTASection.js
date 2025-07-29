@@ -10,7 +10,7 @@ export default function AiReadinessAssessmentFinalCTASection() {
           Don’t Leave Your Credibility (or Investment) to Chance
         </h2>
         <p className="mb-6 text-gray-700 text-lg">
-          This is the assessment your competitors will wish they’d done when AI hits the boardroom
+          This is the playbook your competitors will wish they had when AI hits the boardroom
           agenda.
           <br />
           <br />
@@ -27,7 +27,7 @@ export default function AiReadinessAssessmentFinalCTASection() {
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My AI Readiness Assessment – Priority Access
+          Get My Enterprise AI Playbook
         </button>
       </div>
     </section>

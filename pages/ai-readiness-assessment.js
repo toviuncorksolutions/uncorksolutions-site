@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import heroImage from '../public//ai-readiness-scan-1a.png';
 import dynamic from 'next/dynamic';
 
 const Placeholder = ({ label, height = 300 }) => (
@@ -80,8 +81,6 @@ const FREE_EMAIL_DOMAINS = [
   'mailinator.com',
   'msn.com',
 ];
-
-const SOFT_GREY_BG = 'bg-[#f1f2f4]';
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_AI_READINESS_ASSESSMENT_RESPONSES_WEBHOOK_URL;
 const REQUIRED_FIELDS = ['email'];
@@ -178,6 +177,7 @@ export default function AIReadinessAssessment() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="preload" as="image" href="/ai-readiness-scan-1a.png" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -408,11 +408,7 @@ export default function AIReadinessAssessment() {
         {/* HERO */}
         <section
           aria-labelledby="hero-title"
-          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto"
-          style={{
-            background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
-            backgroundColor: SOFT_GREY_BG,
-          }}
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto bg-[url('/dull-bg-compressed.png')] bg-cover bg-center bg-no-repeat bg-[#f1f2f4]"
         >
           <div
             className="flex-1 flex justify-center md:justify-end items-center md:items-start mb-10 md:mb-0 md:mr-12"
@@ -420,13 +416,14 @@ export default function AIReadinessAssessment() {
           >
             <Image
               id="hero-ai-booklet-img"
-              src="/ai-readiness-scan-1a.png"
+              src={heroImage}
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
               width={760}
               height={846}
               sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               priority
               fetchPriority="high"
+              placeholder="blur"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
@@ -436,20 +433,19 @@ export default function AIReadinessAssessment() {
               className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight min-h-[128px]"
             >
               Be the Boardroom Hero Who{' '}
-              <span className="text-blue-700">Delivers Enterprise AI</span>, Not Just Point
+              <span className="text-blue-700">Delivers Enterprise AI,</span> Not Just Point
               Solutions.
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little
-              action. The{' '}
-              <span className="font-semibold text-blue-700">AI Readiness Assessment</span> is your
-              unfair advantage: a 16-page, boardroom-grade playbook built to turn your company into
-              the market leader for enterprise-wide AI transformation.
+              action. The <span className="font-semibold text-blue-700">AI Readiness Playbook</span>{' '}
+              is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your
+              company into the market leader for enterprise-wide AI transformation.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
               This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>
-              —the first and only assessment treating AI as the next era of business model
-              innovation, not just another IT project.
+              —the first and only assessment treating AI as a catalyst for holistic, and durable
+              change to your business model, not just another IT project.
             </p>
             <div
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4"
@@ -466,7 +462,7 @@ export default function AIReadinessAssessment() {
                 onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
                 tabIndex={0}
               >
-                Get My AI Readiness Assessment
+                Get My AI Readiness Playbook
               </button>
               <button
                 id="hero-cta-secondary"

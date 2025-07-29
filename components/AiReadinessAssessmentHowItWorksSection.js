@@ -19,8 +19,8 @@ export default function AiReadinessAssessmentHowItWorksSection() {
               📝
             </span>
             <div>
-              <h3 className="font-semibold text-lg mb-1">Step 1: Take the Assessment</h3>
-              <p className="text-gray-700">20 minutes, fully confidential, enterprise-wide lens.</p>
+              <h3 className="font-semibold text-lg mb-1">Step 1: Take the 20-minute assessment</h3>
+              <p className="text-gray-700">Fully confidential, no prep required.</p>
             </div>
           </li>
           <li className="flex gap-4 items-start">
@@ -28,9 +28,9 @@ export default function AiReadinessAssessmentHowItWorksSection() {
               📊
             </span>
             <div>
-              <h3 className="font-semibold text-lg mb-1">Step 2: Get Your Instant Analysis</h3>
+              <h3 className="font-semibold text-lg mb-1">Step 2: Get your instant custom report</h3>
               <p className="text-gray-700">
-                Immediate radar chart, executive summary, risk profile.
+                16 pages of action—mapped to owners, deadlines and operator tips.
               </p>
             </div>
           </li>
@@ -39,9 +39,9 @@ export default function AiReadinessAssessmentHowItWorksSection() {
               🗺️
             </span>
             <div>
-              <h3 className="font-semibold text-lg mb-1">Step 3: Activate Your Playbook</h3>
+              <h3 className="font-semibold text-lg mb-1">Step 3: Lead with clarity</h3>
               <p className="text-gray-700">
-                16 pages of action—mapped to owners, deadlines and operator tips.
+                Use it in your next board, audit, or exec alignment meeting.
               </p>
             </div>
           </li>

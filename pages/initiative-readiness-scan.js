@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import heroImage from '../public/initiative-readiness-scan-1.png';
 import dynamic from 'next/dynamic';
 
 const Placeholder = ({ label, height = 300 }) => (
@@ -76,8 +77,6 @@ const FREE_EMAIL_DOMAINS = [
   'mailinator.com',
   'msn.com',
 ];
-
-const SOFT_GREY_BG = 'bg-[#f1f2f4]';
 
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_INITIATIVE_READINESS_SCAN_WAITLIST_WEBHOOK_URL;
 
@@ -215,6 +214,7 @@ export default function InitiativeReadinessScan() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="preload" as="image" href="/initiative-readiness-scan-1.png" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -335,11 +335,7 @@ export default function InitiativeReadinessScan() {
           id="irs-hero"
           data-gtm="irs-section-hero"
           aria-label="Initiative Readiness Scan Hero"
-          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto"
-          style={{
-            background: 'url("/dull-bg-compressed.png") center center / cover no-repeat',
-            backgroundColor: SOFT_GREY_BG,
-          }}
+          className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between py-8 md:py-8 px-4 md:px-8 lg:px-12 w-full max-w-screen-2xl mx-auto bg-[url('/dull-bg-compressed.png')] bg-cover bg-center bg-no-repeat bg-[#f1f2f4]"
         >
           {/* Booklet image, left */}
           <div
@@ -348,7 +344,7 @@ export default function InitiativeReadinessScan() {
           >
             <Image
               id="irs-hero-image"
-              src="/initiative-readiness-scan-1.png"
+              src={heroImage}
               alt="Front cover of Uncork Solutions' Initiative Readiness Scan sample booklet."
               width={760}
               height={797}
@@ -356,6 +352,7 @@ export default function InitiativeReadinessScan() {
               style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority="high"
+              placeholder="blur"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>

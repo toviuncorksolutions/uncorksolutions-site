@@ -8,13 +8,6 @@ body {
   overflow-x: hidden;
 }
 
-.bg-uncork-img {
-  background-image: url('/dull-bg-compressed.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .cta-btn {
   background-color: #2558bf;
   color: #fff;
@@ -59,25 +52,6 @@ body {
   flex-wrap: wrap;
 }
 
-.footer-policy-link {
-  color: #191919;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: text-decoration 0.2s;
-}
-.footer-policy-link:hover,
-.footer-policy-link:focus {
-  text-decoration: underline;
-}
-
-.footer-policies .footer-policy-link:not(:last-child)::after {
-  content: ' | ';
-  color: #bababa;
-  opacity: 0.7;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
-}
-
 .footer-copyright {
   color: #191919;
   font-size: 0.92rem;
@@ -97,9 +71,6 @@ body {
   .footer-policies {
     gap: 0.85rem;
     margin-bottom: 0.7rem;
-  }
-  .footer-policy-link {
-    font-size: 0.96rem;
   }
   .footer-copyright {
     font-size: 0.88rem;

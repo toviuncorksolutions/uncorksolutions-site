@@ -5,17 +5,18 @@ export default function AiReadinessAssessmentDifferenceTableSection() {
       className="bg-[#f1f2f4] py-16 px-6 md:px-16"
       aria-labelledby="diff-title"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 id="diff-title" className="text-2xl md:text-3xl font-bold mb-8">
-          Typical Assessment vs. The Boardroom-Ready Standard
+      <div className="max-w-4xl mx-auto">
+        <h2 id="diff-title" className="text-2xl md:text-3xl font-bold mb-8 text-center">
+          &quot;The Boardroom-Ready Standard&quot; vs. Typical AI Assessments
         </h2>
+
         <div className="overflow-x-auto">
           <table
             className="w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden"
             aria-describedby="diff-caption"
           >
             <caption id="diff-caption" className="sr-only">
-              Comparison of typical AI assessment vs. boardroom-ready playbook
+              Comparison of &quot;The Boardroom-Ready Standard&quot; vs. Typical AI Assessments
             </caption>
             <thead className="bg-[#e5eaf3]">
               <tr>
@@ -42,31 +43,29 @@ export default function AiReadinessAssessmentDifferenceTableSection() {
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Output
                 </th>
-                <td className="py-3 px-4">No actions, just “scores”</td>
-                <td className="py-3 px-4">16-page playbook, owners, real next steps</td>
+                <td className="py-3 px-4">No actions—just a scorecard</td>
+                <td className="py-3 px-4">16-page playbook with owners and deadlines</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Value
+                  Scope
                 </th>
-                <td className="py-3 px-4">Theoretical, IT-only</td>
-                <td className="py-3 px-4">Whole-business transformation</td>
+                <td className="py-3 px-4">IT-focused or single-function</td>
+                <td className="py-3 px-4">Whole-business, cross-functional, C-suite-ready</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Accountability
                 </th>
-                <td className="py-3 px-4">None</td>
-                <td className="py-3 px-4">Named owners, deadlines, clear support</td>
+                <td className="py-3 px-4">No owners, no follow-through</td>
+                <td className="py-3 px-4">Named owners, timelines, and structured support</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Credibility
                 </th>
-                <td className="py-3 px-4">Vendor slides</td>
-                <td className="py-3 px-4">
-                  Boardroom weapon you can use <em>tomorrow</em>
-                </td>
+                <td className="py-3 px-4">Vendor decks and maturity models</td>
+                <td className="py-3 px-4">Boardroom-grade asset you can activate tomorrow</td>
               </tr>
             </tbody>
           </table>

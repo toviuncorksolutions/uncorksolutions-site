@@ -36,7 +36,8 @@ const faqs = [
   },
   {
     question: 'Is this vendor-neutral?',
-    answer: '100%. There’s no pitch—just the truth about your real readiness.',
+    answer:
+      '100%. There’s no pitch—just the truth about your real readiness. This will give you speed and independence from vendors.',
   },
 ];
 

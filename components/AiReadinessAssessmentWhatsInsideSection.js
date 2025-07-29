@@ -7,7 +7,7 @@ export default function AiReadinessAssessmentWhatsInsideSection() {
     >
       <div className="max-w-4xl mx-auto text-center">
         <h2 id="whats-inside-title" className="text-2xl md:text-3xl font-bold mb-6">
-          What’s Inside Your Assessment
+          What You Get
         </h2>
         <p className="text-lg text-gray-700 mb-10">
           This isn’t a survey, nor a quiz. It’s your 16-page boardroom playbook, delivered in
