@@ -434,7 +434,7 @@ export default function EnterpriseAIPlaybook() {
               sizes="(max-width: 639px) 220px, (max-width: 767px) 360px, (max-width: 1023px) 420px, (max-width: 1279px) 520px, (max-width: 1535px) 760px, 760px"
               priority
               fetchPriority="high"
-              className="max-w-[220px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[760px] h-auto drop-shadow-xl"
+              className="w-[220px] sm:w-[360px] md:w-[420px] lg:w-[520px] xl:w-[760px] h-auto drop-shadow-xl"
             />
           </div>
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
