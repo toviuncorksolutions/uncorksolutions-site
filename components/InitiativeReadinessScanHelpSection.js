@@ -50,7 +50,7 @@ export default function InitiativeReadinessScanHelpSection() {
             alt="Initiative Readiness Scan sample booklet"
             width={270}
             height={340}
-            sizes="(max-width: 640px) 90vw, (max-width: 768px) 220px, 270px"
+            sizes="(max-width: 639px) 220px, (max-width: 767px) 220px, 270px"
             className="w-[220px] md:w-[270px] h-auto drop-shadow-xl"
           />
         </div>
