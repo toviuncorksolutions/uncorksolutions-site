@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentDifferenceTableSection() {
+export default function AIReadinessPlaybookDifferenceTableSection() {
   return (
     <section
       id="ai-difference"

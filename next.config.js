@@ -1,16 +1,17 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-module.exports = withBundleAnalyzer({
-  productionBrowserSourceMaps: true,
+// next.config.js
+module.exports = {
   async redirects() {
     return [
       {
         source: '/',
         destination: '/initiative-readiness-scan',
-        permanent: true,
+        permanent: true, // 301 redirect
+      },
+      {
+        source: '/ai-readiness-assessment',
+        destination: '/ai-readiness-playbook',
+        permanent: true, // 301 redirect
       },
     ];
   },
-});
+};

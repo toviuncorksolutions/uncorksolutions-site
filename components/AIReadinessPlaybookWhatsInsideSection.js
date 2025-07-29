@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentWhatsInsideSection() {
+export default function AIReadinessPlaybookWhatsInsideSection() {
   return (
     <section
       id="ai-whats-inside"

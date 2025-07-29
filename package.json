@@ -2,6 +2,9 @@
   "name": "uncorksolutions-site",
   "version": "1.0.0",
   "main": "index.js",
+  "sideEffects": [
+    "./styles/globals.css"
+  ],
   "scripts": {
     "dev": "next lint && next dev",
     "build": "next build",

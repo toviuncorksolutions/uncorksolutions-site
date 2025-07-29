@@ -43,7 +43,7 @@ export default function FooterSection() {
                 href="/ai-readiness-assessment"
                 className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
               >
-                AI Readiness Assessment
+                Enterprise AI Playbook
               </Link>
             </li>
           </ul>

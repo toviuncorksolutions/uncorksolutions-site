@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentHowItWorksSection() {
+export default function AIReadinessPlaybookHowItWorksSection() {
   return (
     <section
       id="ai-how"

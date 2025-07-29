@@ -41,7 +41,7 @@ const faqs = [
   },
 ];
 
-export default function AiReadinessAssessmentFaq() {
+export default function AIReadinessPlaybookFaq() {
   return (
     <section
       id="faq"

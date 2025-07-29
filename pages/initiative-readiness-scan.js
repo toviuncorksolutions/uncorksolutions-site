@@ -351,7 +351,6 @@ export default function InitiativeReadinessScan() {
               style={{ height: 'auto', width: '100%' }}
               priority
               fetchPriority="high"
-              placeholder="blur"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>

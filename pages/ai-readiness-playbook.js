@@ -14,51 +14,50 @@ const Placeholder = ({ label, height = 300 }) => (
     Loading {label} section…
   </div>
 );
-const AiReadinessAssessmentModal = dynamic(
-  () => import('../components/AiReadinessAssessmentModal'),
-  { ssr: false },
-);
-const AiReadinessAssessmentOutcomesSection = dynamic(
-  () => import('../components/AiReadinessAssessmentOutcomesSection'),
+const AIReadinessPlaybookModal = dynamic(() => import('../components/AIReadinessPlaybookModal'), {
+  ssr: false,
+});
+const AIReadinessPlaybookOutcomesSection = dynamic(
+  () => import('../components/AIReadinessPlaybookOutcomesSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Outcomes" />,
   },
 );
-const AiReadinessAssessmentWhatsInsideSection = dynamic(
-  () => import('../components/AiReadinessAssessmentWhatsInsideSection'),
+const AIReadinessPlaybookWhatsInsideSection = dynamic(
+  () => import('../components/AIReadinessPlaybookWhatsInsideSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="What's Inside" />,
   },
 );
-const AiReadinessAssessmentDifferenceTableSection = dynamic(
-  () => import('../components/AiReadinessAssessmentDifferenceTableSection'),
+const AIReadinessPlaybookDifferenceTableSection = dynamic(
+  () => import('../components/AIReadinessPlaybookDifferenceTableSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Comparison Table" />,
   },
 );
-const AiReadinessAssessmentWhoThisIsForSection = dynamic(
-  () => import('../components/AiReadinessAssessmentWhoThisIsForSection'),
+const AIReadinessPlaybookWhoThisIsForSection = dynamic(
+  () => import('../components/AIReadinessPlaybookWhoThisIsForSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Who This Is For" />,
   },
 );
-const AiReadinessAssessmentHowItWorksSection = dynamic(
-  () => import('../components/AiReadinessAssessmentHowItWorksSection'),
+const AIReadinessPlaybookHowItWorksSection = dynamic(
+  () => import('../components/AIReadinessPlaybookHowItWorksSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="How It Works" />,
   },
 );
-const AiReadinessAssessmentFaq = dynamic(() => import('../components/AiReadinessAssessmentFaq'), {
+const AIReadinessPlaybookFaq = dynamic(() => import('../components/AIReadinessPlaybookFaq'), {
   ssr: false,
   loading: () => <Placeholder label="Frequently Asked Questions" />,
 });
-const AiReadinessAssessmentFinalCTASection = dynamic(
-  () => import('../components/AiReadinessAssessmentFinalCTASection'),
+const AIReadinessPlaybookFinalCTASection = dynamic(
+  () => import('../components/AIReadinessPlaybookFinalCTASection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Final CTA" />,
@@ -84,7 +83,7 @@ const FREE_EMAIL_DOMAINS = [
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_AI_READINESS_ASSESSMENT_RESPONSES_WEBHOOK_URL;
 const REQUIRED_FIELDS = ['email'];
 
-export default function AIReadinessAssessment() {
+export default function AIReadinessPlaybook() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ email: '' });
@@ -143,7 +142,7 @@ export default function AIReadinessAssessment() {
       if (typeof window !== 'undefined') {
         if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
         window.dataLayer.push({
-          event: 'aiReadinessAssessmentWaitlistFormSubmitted',
+          event: 'AIReadinessPlaybookWaitlistFormSubmitted',
           category: 'AI Readiness Assessment Waitlist Form',
           action: 'Submit',
           label: normalizedEmail,
@@ -152,7 +151,7 @@ export default function AIReadinessAssessment() {
       }
       setShowModal(false);
       setFormData({ email: '' });
-      await router.push('/ai-readiness-assessment-waitlist-confirmation');
+      await router.push('/ai-readiness-playbook-waitlist-confirmation');
     } catch {
       setError('There was a problem submitting the form. Please try again.');
     } finally {
@@ -163,12 +162,10 @@ export default function AIReadinessAssessment() {
   return (
     <>
       <Head>
-        <title>
-          AI Readiness Assessment – Boardroom-Ready Enterprise AI Plan | Uncork Solutions
-        </title>
+        <title>AI Readiness Assessment & Playbook | Uncork Solutions</title>
         <meta
           name="description"
-          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation. Boardroom-grade, enterprise-wide assessment."
+          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
         <link rel="canonical" href="https://www.uncorksolutions.com/ai-readiness-assessment" />
         <meta
@@ -187,7 +184,7 @@ export default function AIReadinessAssessment() {
         />
         <meta
           property="og:description"
-          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation."
+          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
         <meta property="og:url" content="https://www.uncorksolutions.com/ai-readiness-assessment" />
         <meta
@@ -207,7 +204,7 @@ export default function AIReadinessAssessment() {
         />
         <meta
           name="twitter:description"
-          content="Give your board something no consultant, vendor, or AI guru can: a boardroom weapon, not a checkbox. Diagnose your entire business for AI transformation."
+          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
         <meta
           name="twitter:image"
@@ -421,7 +418,6 @@ export default function AIReadinessAssessment() {
               sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               priority
               fetchPriority="high"
-              placeholder="blur"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
@@ -516,17 +512,17 @@ export default function AIReadinessAssessment() {
           </div>
         </section>
 
-        <AiReadinessAssessmentOutcomesSection />
-        <AiReadinessAssessmentWhatsInsideSection />
-        <AiReadinessAssessmentDifferenceTableSection />
-        <AiReadinessAssessmentWhoThisIsForSection />
-        <AiReadinessAssessmentHowItWorksSection />
-        <AiReadinessAssessmentFaq />
+        <AIReadinessPlaybookOutcomesSection />
+        <AIReadinessPlaybookWhatsInsideSection />
+        <AIReadinessPlaybookDifferenceTableSection />
+        <AIReadinessPlaybookWhoThisIsForSection />
+        <AIReadinessPlaybookHowItWorksSection />
+        <AIReadinessPlaybookFaq />
         <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
-        <AiReadinessAssessmentFinalCTASection />
+        <AIReadinessPlaybookFinalCTASection />
         <FounderSection />
 
-        <AiReadinessAssessmentModal
+        <AIReadinessPlaybookModal
           show={showModal}
           onClose={() => setShowModal(false)}
           onSubmit={handleSubmit}

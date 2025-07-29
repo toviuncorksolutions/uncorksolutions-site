@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentOutcomesSection() {
+export default function AIReadinessPlaybookOutcomesSection() {
   return (
     <section
       id="ai-outcomes"
@@ -36,7 +36,7 @@ export default function AiReadinessAssessmentOutcomesSection() {
             <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness — Not Promises</h3>
             <p className="text-gray-700">
               Evidence for your board, your auditors, and your shareholders—delivered in a format
-              built to impress and granularity ready to activate.
+              built to impress and specificity ready to activate.
             </p>
           </li>
           <li>

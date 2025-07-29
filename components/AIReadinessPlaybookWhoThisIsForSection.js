@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentWhoThisIsForSection() {
+export default function AIReadinessPlaybookWhoThisIsForSection() {
   return (
     <section id="ai-who" aria-labelledby="who-title" className="bg-white py-16 px-6 md:px-16">
       <div className="max-w-3xl mx-auto text-center">
@@ -39,7 +39,7 @@ export default function AiReadinessAssessmentWhoThisIsForSection() {
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My Enterprise AI Playbook
+          Get My AI Readiness Playbook
         </button>
       </div>
     </section>

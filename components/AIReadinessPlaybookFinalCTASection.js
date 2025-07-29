@@ -1,4 +1,4 @@
-export default function AiReadinessAssessmentFinalCTASection() {
+export default function AIReadinessPlaybookFinalCTASection() {
   return (
     <section
       id="ai-final-cta"
@@ -27,7 +27,7 @@ export default function AiReadinessAssessmentFinalCTASection() {
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My Enterprise AI Playbook
+          Get My AI Readiness Playbook
         </button>
       </div>
     </section>
