@@ -431,10 +431,10 @@ export default function EnterpriseAIPlaybook() {
               height={846}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVwEQA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVw/8IAEQgAFgAUAwEiAAIRAQMRAf/EACkAAQEBAQAAAAAAAAAAAAAAAAAEAwIBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAKdpKzFQILA7B//EAB4QAAEEAwADAAAAAAAAAAAAAAIAAQQRAxAzIUFR/9oACAEBAAE/AI3AEz+fSyxceYrK1C5Km1DFwYkxWIl9a9f/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
+              sizes="(max-width: 479px) 90vw, (max-width: 639px) 220px, (max-width: 767px) 360px, (max-width: 1023px) 420px, (max-width: 1279px) 520px, 760px"
               priority
               fetchPriority="high"
-              className="w-full max-w-[360px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
+              className="w-full max-w-[220px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
           <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
