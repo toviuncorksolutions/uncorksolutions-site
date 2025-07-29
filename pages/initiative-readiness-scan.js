@@ -216,7 +216,7 @@ export default function InitiativeReadinessScan() {
         <link
           rel="preload"
           as="image"
-          href="/_next/image?url=%2Finitiative-readiness-scan-1.png&w=760&q=75"
+          href="/_next/image?url=%2Finitiative-readiness-scan-1.png&w=360&q=75"
           type="image/png"
         />
         <link rel="icon" href="/favicon.ico" />
