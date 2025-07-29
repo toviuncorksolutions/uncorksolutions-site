@@ -1,4 +1,4 @@
-export default function AIReadinessPlaybookDifferenceTableSection() {
+export default function EnterpriseAIPlaybookDifferenceTableSection() {
   return (
     <section
       id="ai-difference"

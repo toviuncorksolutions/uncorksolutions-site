@@ -1,4 +1,4 @@
-export default function AIReadinessPlaybookFinalCTASection() {
+export default function EnterpriseAIPlaybookFinalCTASection() {
   return (
     <section
       id="ai-final-cta"
@@ -20,14 +20,14 @@ export default function AIReadinessPlaybookFinalCTASection() {
         </p>
         <button
           id="final-cta-button"
-          aria-label="Get My Boardroom Assessment – Priority Access"
+          aria-label="Get My Enterprise AI Playbook – Priority Access"
           aria-haspopup="dialog"
           data-gtm="cta-final"
           className="px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My AI Readiness Playbook
+          Get My Enterprise AI Playbook
         </button>
       </div>
     </section>

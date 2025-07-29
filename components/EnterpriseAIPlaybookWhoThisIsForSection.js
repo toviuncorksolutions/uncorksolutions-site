@@ -1,4 +1,4 @@
-export default function AIReadinessPlaybookWhoThisIsForSection() {
+export default function EnterpriseAIPlaybookWhoThisIsForSection() {
   return (
     <section id="ai-who" aria-labelledby="who-title" className="bg-white py-16 px-6 md:px-16">
       <div className="max-w-3xl mx-auto text-center">
@@ -32,14 +32,14 @@ export default function AIReadinessPlaybookWhoThisIsForSection() {
         </p>
         <button
           id="hero-cta-who"
-          aria-label="Get My AI Readiness Assessment"
+          aria-label="Get My Enterprise AI Playbook"
           aria-haspopup="dialog"
           data-gtm="cta-who-primary"
           className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My AI Readiness Playbook
+          Get My Enterprise AI Playbook
         </button>
       </div>
     </section>

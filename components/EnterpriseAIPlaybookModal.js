@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function AIReadinessPlaybookModal({
+export default function EnterpriseAIPlaybookModal({
   show,
   onClose,
   onSubmit,

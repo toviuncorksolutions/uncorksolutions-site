@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         source: '/ai-readiness-assessment',
-        destination: '/ai-readiness-playbook',
+        destination: '/enterprise-ai-playbook',
         permanent: true, // 301 redirect
       },
     ];

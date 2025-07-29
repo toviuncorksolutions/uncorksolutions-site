@@ -1,4 +1,4 @@
-export default function AIReadinessPlaybookWhatsInsideSection() {
+export default function EnterpriseAIPlaybookWhatsInsideSection() {
   return (
     <section
       id="ai-whats-inside"

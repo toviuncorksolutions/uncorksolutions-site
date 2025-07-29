@@ -1,4 +1,4 @@
-export default function AIReadinessPlaybookOutcomesSection() {
+export default function EnterpriseAIPlaybookOutcomesSection() {
   return (
     <section
       id="ai-outcomes"

@@ -14,50 +14,50 @@ const Placeholder = ({ label, height = 300 }) => (
     Loading {label} section…
   </div>
 );
-const AIReadinessPlaybookModal = dynamic(() => import('../components/AIReadinessPlaybookModal'), {
+const EnterpriseAIPlaybookModal = dynamic(() => import('../components/EnterpriseAIPlaybookModal'), {
   ssr: false,
 });
-const AIReadinessPlaybookOutcomesSection = dynamic(
-  () => import('../components/AIReadinessPlaybookOutcomesSection'),
+const EnterpriseAIPlaybookOutcomesSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookOutcomesSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Outcomes" />,
   },
 );
-const AIReadinessPlaybookWhatsInsideSection = dynamic(
-  () => import('../components/AIReadinessPlaybookWhatsInsideSection'),
+const EnterpriseAIPlaybookWhatsInsideSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookWhatsInsideSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="What's Inside" />,
   },
 );
-const AIReadinessPlaybookDifferenceTableSection = dynamic(
-  () => import('../components/AIReadinessPlaybookDifferenceTableSection'),
+const EnterpriseAIPlaybookDifferenceTableSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookDifferenceTableSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Comparison Table" />,
   },
 );
-const AIReadinessPlaybookWhoThisIsForSection = dynamic(
-  () => import('../components/AIReadinessPlaybookWhoThisIsForSection'),
+const EnterpriseAIPlaybookWhoThisIsForSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookWhoThisIsForSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Who This Is For" />,
   },
 );
-const AIReadinessPlaybookHowItWorksSection = dynamic(
-  () => import('../components/AIReadinessPlaybookHowItWorksSection'),
+const EnterpriseAIPlaybookHowItWorksSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookHowItWorksSection'),
   {
     ssr: false,
     loading: () => <Placeholder label="How It Works" />,
   },
 );
-const AIReadinessPlaybookFaq = dynamic(() => import('../components/AIReadinessPlaybookFaq'), {
+const EnterpriseAIPlaybookFaq = dynamic(() => import('../components/EnterpriseAIPlaybookFaq'), {
   ssr: false,
   loading: () => <Placeholder label="Frequently Asked Questions" />,
 });
-const AIReadinessPlaybookFinalCTASection = dynamic(
-  () => import('../components/AIReadinessPlaybookFinalCTASection'),
+const EnterpriseAIPlaybookFinalCTASection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookFinalCTASection'),
   {
     ssr: false,
     loading: () => <Placeholder label="Final CTA" />,
@@ -83,7 +83,7 @@ const FREE_EMAIL_DOMAINS = [
 const WEBHOOK_URL = process.env.NEXT_PUBLIC_AI_READINESS_ASSESSMENT_RESPONSES_WEBHOOK_URL;
 const REQUIRED_FIELDS = ['email'];
 
-export default function AIReadinessPlaybook() {
+export default function EnterpriseAIPlaybook() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({ email: '' });
@@ -142,7 +142,7 @@ export default function AIReadinessPlaybook() {
       if (typeof window !== 'undefined') {
         if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
         window.dataLayer.push({
-          event: 'AIReadinessPlaybookWaitlistFormSubmitted',
+          event: 'EnterpriseAIPlaybookWaitlistFormSubmitted',
           category: 'AI Readiness Assessment Waitlist Form',
           action: 'Submit',
           label: normalizedEmail,
@@ -151,7 +151,7 @@ export default function AIReadinessPlaybook() {
       }
       setShowModal(false);
       setFormData({ email: '' });
-      await router.push('/ai-readiness-playbook-waitlist-confirmation');
+      await router.push('/enterprise-ai-playbook-waitlist-confirmation');
     } catch {
       setError('There was a problem submitting the form. Please try again.');
     } finally {
@@ -162,12 +162,12 @@ export default function AIReadinessPlaybook() {
   return (
     <>
       <Head>
-        <title>AI Readiness Assessment & Playbook | Uncork Solutions</title>
+        <title>Enterprise AI Playbook & Readiness Assessment | Uncork Solutions</title>
         <meta
           name="description"
-          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
+          content="Get a boardroom-ready Enterprise AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
-        <link rel="canonical" href="https://www.uncorksolutions.com/ai-readiness-assessment" />
+        <link rel="canonical" href="https://www.uncorksolutions.com/enterprise-ai-playbook" />
         <meta
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
@@ -180,13 +180,13 @@ export default function AIReadinessPlaybook() {
         <meta property="og:site_name" content="Uncork Solutions" />
         <meta
           property="og:title"
-          content="AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions"
+          content="Enterprise AI Playbook & Readiness Assessment – Uncork Solutions"
         />
         <meta
           property="og:description"
-          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
+          content="Get a boardroom-ready Enterprise AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
-        <meta property="og:url" content="https://www.uncorksolutions.com/ai-readiness-assessment" />
+        <meta property="og:url" content="https://www.uncorksolutions.com/enterprise-ai-playbook" />
         <meta
           property="og:image"
           content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
@@ -200,11 +200,11 @@ export default function AIReadinessPlaybook() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="AI Readiness Assessment & Enterprise AI Action Plan – Uncork Solutions"
+          content="Enterprise AI Playbook & Readiness Assessment – Uncork Solutions"
         />
         <meta
           name="twitter:description"
-          content="Get a boardroom-ready AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
+          content="Get a boardroom-ready Enterprise AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
         <meta
           name="twitter:image"
@@ -242,7 +242,7 @@ export default function AIReadinessPlaybook() {
               makesOffer: [
                 {
                   '@type': 'ConsultingService',
-                  name: 'AI Readiness Assessment',
+                  name: 'Enterprise AI Playbook & Readiness Assessment',
                   serviceType:
                     'AI Transformation, Boardroom AI Assessment, Digital Transformation Consulting, Organizational Assessment',
                   description:
@@ -292,10 +292,18 @@ export default function AIReadinessPlaybook() {
               mainEntity: [
                 {
                   '@type': 'Question',
-                  name: 'What exactly is the AI Readiness Assessment?',
+                  name: 'What is an AI Readiness Assessment?',
                   acceptedAnswer: {
                     '@type': 'Answer',
-                    text: 'The AI Readiness Assessment is a 16-page, boardroom-grade diagnostic playbook that evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
+                    text: "An AI Readiness Assessment evaluates your organization's ability to adopt and scale AI. Uncork’s version powers the Enterprise AI Playbook—your 16-page, boardroom-ready transformation plan.",
+                  },
+                },
+                {
+                  '@type': 'Question',
+                  name: 'What is the Enterprise AI Playbook?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The Enterprise AI Playbook is a confidential 16-page, boardroom-grade diagnostic playbook personalized to your organization. It evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
                   },
                 },
                 {
@@ -449,18 +457,18 @@ export default function AIReadinessPlaybook() {
               <button
                 id="hero-cta-primary"
                 ref={emailRef}
-                aria-label="Get My AI Readiness Assessment"
+                aria-label="Get My AI Enterprise AI Playbook"
                 aria-haspopup="dialog"
                 data-gtm="cta-hero-primary"
                 className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
                 onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
                 tabIndex={0}
               >
-                Get My AI Readiness Playbook
+                Get My Enterprise AI Playbook
               </button>
               <button
                 id="hero-cta-secondary"
-                aria-label="Learn how the AI Readiness Assessment works"
+                aria-label="Learn how the Enterprise AI Playbook works"
                 data-gtm="cta-hero-secondary"
                 className="w-full sm:w-auto px-8 py-3 rounded-xl bg-gray-50 border border-gray-300 text-gray-700 font-medium text-lg shadow hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-gray-200"
                 onClick={() => {
@@ -512,17 +520,17 @@ export default function AIReadinessPlaybook() {
           </div>
         </section>
 
-        <AIReadinessPlaybookOutcomesSection />
-        <AIReadinessPlaybookWhatsInsideSection />
-        <AIReadinessPlaybookDifferenceTableSection />
-        <AIReadinessPlaybookWhoThisIsForSection />
-        <AIReadinessPlaybookHowItWorksSection />
-        <AIReadinessPlaybookFaq />
+        <EnterpriseAIPlaybookOutcomesSection />
+        <EnterpriseAIPlaybookWhatsInsideSection />
+        <EnterpriseAIPlaybookDifferenceTableSection />
+        <EnterpriseAIPlaybookWhoThisIsForSection />
+        <EnterpriseAIPlaybookHowItWorksSection />
+        <EnterpriseAIPlaybookFaq />
         <hr className="border-t border-gray-600 my-0 mx-auto w-full max-w-4xl" />
-        <AIReadinessPlaybookFinalCTASection />
+        <EnterpriseAIPlaybookFinalCTASection />
         <FounderSection />
 
-        <AIReadinessPlaybookModal
+        <EnterpriseAIPlaybookModal
           show={showModal}
           onClose={() => setShowModal(false)}
           onSubmit={handleSubmit}
