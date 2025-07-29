@@ -354,7 +354,7 @@ export default function InitiativeReadinessScan() {
               height={797}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVwEQA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVw/8IAEQgAFQAUAwEiAAIRAQMRAf/EACkAAQEBAQAAAAAAAAAAAAAAAAAEAQMBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAL2aSqxN1AD/xAAeEAACAgICAwAAAAAAAAAAAAABAgARAxIEExBRYv/aAAgBAQABPwC4DM/E7n23gUVVVKHhXK4d/i6mV+tWPqMxBn//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
-              sizes="(max-width: 479px) 90vw, (max-width: 639px) 220px, (max-width: 767px) 360px, (max-width: 1023px) 420px, (max-width: 1279px) 520px, 760px"
+              sizes="(max-width: 639px) 220px, (max-width: 767px) 360px, (max-width: 1023px) 420px, (max-width: 1279px) 520px, (max-width: 1535px) 760px, 760px"
               priority
               fetchPriority="high"
               className="w-full max-w-[220px] sm:max-w-[360px] md:max-w-[420px] lg:max-w-[520px] xl:max-w-[760px] h-auto drop-shadow-xl"
