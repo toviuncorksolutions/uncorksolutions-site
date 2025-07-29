@@ -213,6 +213,12 @@ export default function InitiativeReadinessScan() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link
+          rel="preload"
+          as="image"
+          href="/_next/image?url=%2Finitiative-readiness-scan-1.png&w=760&q=75"
+          type="image/png"
+        />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
@@ -348,11 +354,10 @@ export default function InitiativeReadinessScan() {
               height={797}
               placeholder="blur"
               blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVwEQA1ADUANQA1ADkANQA8AEMAQwA8AFMAWgBQAFoAUwB7AHEAZwBnAHEAewC6AIUAjwCFAI8AhQC6ARsAsADOALAAsADOALABGwD6AS8A9gDmAPYBLwD6AcIBYQE5ATkBYQHCAgcBtAGdAbQCBwJ1AjMCMwJ1AxkC8QMZBAwEDAVw/8IAEQgAFQAUAwEiAAIRAQMRAf/EACkAAQEBAQAAAAAAAAAAAAAAAAAEAQMBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAL2aSqxN1AD/xAAeEAACAgICAwAAAAAAAAAAAAABAgARAxIEExBRYv/aAAgBAQABPwC4DM/E7n23gUVVVKHhXK4d/i6mV+tWPqMxBn//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AB//2Q=="
-              sizes="(max-width: 767px) 90vw, (max-width: 1023px) 520px, (max-width: 1279px) 650px, 760px"
+              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               priority
               fetchPriority="high"
-              style={{ height: 'auto', width: '100%' }}
-              className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
+              className="w-full max-w-[360px] sm:max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>
           {/* Hero text, right */}
