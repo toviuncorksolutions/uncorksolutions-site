@@ -177,7 +177,7 @@ export default function AIReadinessAssessment() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link rel="preload" as="image" href="/ai-readiness-scan-1a.png" />
+        {/* <link rel="preload" as="image" href="/ai-readiness-scan-1a.png" />  */}
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_CA" />
