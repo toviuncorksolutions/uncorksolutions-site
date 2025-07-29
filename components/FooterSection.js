@@ -40,10 +40,10 @@ export default function FooterSection() {
             </li>
             <li>
               <Link
-                href="/ai-readiness-assessment"
+                href="/ai-readiness-playbook"
                 className="hover:underline hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded"
               >
-                Enterprise AI Playbook
+                AI Readiness Playbook
               </Link>
             </li>
           </ul>
