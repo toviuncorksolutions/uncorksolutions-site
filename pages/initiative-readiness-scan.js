@@ -347,10 +347,10 @@ export default function InitiativeReadinessScan() {
               alt="Front cover of Uncork Solutions' Initiative Readiness Scan sample booklet."
               width={760}
               height={797}
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
-              style={{ height: 'auto', width: '100%' }}
+              sizes="(max-width: 767px) 90vw, (max-width: 1023px) 520px, (max-width: 1279px) 650px, 760px"
               priority
               fetchPriority="high"
+              style={{ height: 'auto', width: '100%' }}
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
             />
           </div>

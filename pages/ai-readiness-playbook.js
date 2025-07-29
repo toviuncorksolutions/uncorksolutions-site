@@ -415,7 +415,7 @@ export default function AIReadinessPlaybook() {
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
               width={760}
               height={846}
-              sizes="(max-width: 640px) 90vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 420px, (max-width: 1024px) 520px, (max-width: 1280px) 650px, 760px"
               priority
               fetchPriority="high"
               className="w-full max-w-[420px] md:max-w-[520px] lg:max-w-[650px] xl:max-w-[760px] h-auto drop-shadow-xl"
