@@ -11,8 +11,8 @@ export default function EnterpriseAIPlaybookFinalCTASection() {
         </h2>
 
         <p className="mb-4 text-gray-700 text-lg">
-          AI is shifting how your business operates, competes, and delivers value. And whether you
-          asked for it or not &mdash; <strong>you’re the one expected to lead that shift</strong>.
+          AI is redefining how your business operates, competes, and delivers value. Like it or not,{' '}
+          <strong>you&rsquo;re the one expected to lead that shift—with credibility.</strong>.
         </p>
 
         <p className="mb-4 text-gray-700 text-lg">
@@ -20,14 +20,14 @@ export default function EnterpriseAIPlaybookFinalCTASection() {
         </p>
 
         <p className="mb-4 text-gray-700 text-lg">
-          The Enterprise AI Playbook is your 16-page, boardroom-ready strategy — designed to help
+          The Enterprise AI Playbook is your boardroom-ready transition strategy — built to help
           you:
         </p>
 
         <ul className="mb-4 text-gray-700 text-lg text-left list-disc list-inside md:list-outside md:px-8 inline-block text-left">
           <li>Align your exec team without delay</li>
           <li>Diagnose readiness across 8 business-critical axes</li>
-          <li>Name owners, quick wins, and what’s truly at stake</li>
+          <li>Name owners, quick wins, and what&rsquo;s truly at stake</li>
         </ul>
 
         <p className="mb-6 text-gray-700 text-lg">

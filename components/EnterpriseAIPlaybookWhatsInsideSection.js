@@ -14,8 +14,7 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
           <br />
           <br />
           Delivered instantly after a 20-minute diagnostic&mdash;no prep, no follow-up
-          required&mdash;the Enterprise AI Playbook gives you a 16-page, personalized strategy
-          asset.
+          required&mdash;the Enterprise AI Playbook gives you a personalized, strategic asset.
           <span className="block mt-2 font-semibold">It includes:</span>
         </p>
         <div className="flex justify-center" aria-label="What You Get - Details">
