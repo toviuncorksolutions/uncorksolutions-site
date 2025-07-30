@@ -12,24 +12,24 @@ export default function EnterpriseAIPlaybookWhoThisIsForSection() {
         <ul className="text-left space-y-4 text-base md:text-lg text-gray-800 mb-7 mx-auto max-w-xl list-none">
           <li>
             <span className="font-semibold text-blue-700">CIOs, CTOs, CDOs:</span> You&rsquo;re
-            being asked to lead AI—but without alignment or clarity. This gives you both.
+            being tasked to lead AI—but without alignment or clarity. This gives you both.
           </li>
           <li>
             <span className="font-semibold text-blue-700">
               Product, Data, Ops, and Compliance Leaders:
             </span>{' '}
-            You need to know where your domain fits—and what it needs—to support AI systemically.
+            You need clear lines of ownership&mdash;and what's needed to support AI systemically.
           </li>
           <li>
             <span className="font-semibold text-blue-700">
               Executives in Retail, Manufacturing, and Regulated Sectors:
             </span>{' '}
-            Where credibility, defensibility, and cross-functional readiness are non-negotiable.
+            Where accountability, credibility, and defensible action plans are non-negotiable
           </li>
         </ul>
         <p className="mb-8 text-gray-700 text-lg">
-          If you&rsquo;re serious about leading AI like it&rsquo;s a business model shift&mdash;not
-          a tech project&mdash;this is where you start.
+          If you&rsquo;re ready to lead AI like a business model shift&mdash;not a tech
+          project&mdash;this is where you start.
         </p>
         <button
           id="hero-cta-who"

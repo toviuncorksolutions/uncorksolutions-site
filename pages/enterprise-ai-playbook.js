@@ -531,7 +531,9 @@ export default function EnterpriseAIPlaybook() {
             <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">
               Why This Matters
             </h2>
-            <p className="text-lg text-gray-700 mb-8">AI is a fault line, not a feature.</p>
+            <p className="text-lg text-gray-700 mb-8">
+              AI is a business model fault line, not a feature.
+            </p>
             <p className="text-lg text-gray-700 mb-8">
               Yet most companies are rushing to automate tasks, run pilots, buy tools and collect
               vendor decks full of promises&mdash;without aligning their leadership team around a

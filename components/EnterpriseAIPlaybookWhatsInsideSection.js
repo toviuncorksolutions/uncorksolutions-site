@@ -27,7 +27,7 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
               <div>
                 <div className="font-semibold text-lg mb-1">Executive Summary</div>
                 <div className="text-gray-700">
-                  A high-level narrative for your board and ELT—what&rsquo;s at stake, where you
+                  A ready-to-share narrative for your board and ELT—what&rsquo;s at stake, where you
                   stand, and why it matters now.
                 </div>
               </div>
@@ -41,8 +41,8 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                   Risk Radar Across 8 Structural Axes
                 </div>
                 <div className="text-gray-700">
-                  Identify your strengths, blind spots, and &quot;unknown unknowns&quot; across
-                  vision, data, governance, talent, product, compliance, and more.
+                  Pinpoints strengths, blind spots, and &quot;unknown unknowns&quot; across vision,
+                  data, governance, talent, product, compliance, and more.
                 </div>
               </div>
             </li>
@@ -55,8 +55,8 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                   Action Plan with Owners and Deadlines
                 </div>
                 <div className="text-gray-700">
-                  Not just observations&mdash;specific next steps, accountabilities, and
-                  business-critical decisions.
+                  Not just observations&mdash;accountable next steps, mapped to owners, deadlines,
+                  and business-critical decisions.
                 </div>
               </div>
             </li>
@@ -68,15 +68,15 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                 <div className="font-semibold text-lg mb-1">Exportable Briefings</div>
                 <div className="text-gray-700">
                   PDF-ready summaries tailored for board, audit, and operational alignment. No
-                  fluff. No rework. Ready for Monday&rsquo;s meeting.
+                  fluff, rework or follow-up needed. Ready for Monday&rsquo;s meeting.
                 </div>
               </div>
             </li>
           </ol>
         </div>
         <p className="italic text-lg text-gray-700 my-10">
-          A boardroom asset you&rsquo;ll reference again and again—when budgets are reviewed, when
-          stakeholders push back, and when the question comes: are we actually ready for AI?
+          A boardroom asset you&rsquo;ll reference when budgets are reviewed, when stakeholders push
+          back, when audits are called, and when the question comes: are we actually ready for AI?
         </p>
       </div>
     </section>
