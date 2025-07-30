@@ -44,7 +44,7 @@ export default function EnterpriseAIPlaybookFinalCTASection() {
           onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
           tabIndex={0}
         >
-          Get My Enterprise AI Playbook
+          Claim My Enterprise AI Playbook Now
         </button>
       </div>
     </section>
