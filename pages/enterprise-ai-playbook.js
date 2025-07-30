@@ -476,13 +476,13 @@ export default function EnterpriseAIPlaybook() {
               tech pilot.
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
-              Most execs are under pressure to &quot;do something with AI&quot;&mdash;but without
-              alignment, ownership, or a credible path forward.
+              Most execs under pressure to &quot;do something with AI&quot; lack alignment,
+              ownership, or a credible path forward.
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
-              your 16-page, boardroom-grade readiness plan to guide your organization through AI
-              transformation—with stability, credibility, and control.
+              your 16-page readiness plan, for senior leaders who see AI as a structural shift to
+              the business—not just another tech initiative.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
               In just 20 minutes, get a confidential, organization-wide view of:
