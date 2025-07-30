@@ -17,6 +17,13 @@ const Placeholder = ({ label, height = 300 }) => (
 const EnterpriseAIPlaybookModal = dynamic(() => import('../components/EnterpriseAIPlaybookModal'), {
   ssr: false,
 });
+const EnterpriseAIPlaybookWhyThisMattersSection = dynamic(
+  () => import('../components/EnterpriseAIPlaybookWhyThisMattersSection'),
+  {
+    ssr: false,
+    loading: () => <Placeholder label="Why This Matters" />,
+  },
+);
 const EnterpriseAIPlaybookOutcomesSection = dynamic(
   () => import('../components/EnterpriseAIPlaybookOutcomesSection'),
   {
@@ -469,9 +476,9 @@ export default function EnterpriseAIPlaybook() {
               tech pilot.
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
-              If AI is a structural shift to your business model&mdash;not just a new
-              tool&mdash;then your first move shouldn&rsquo;t be a chatbot, a pilot, or a vendor
-              demo. It should be a <strong>plan.</strong>
+              If AI is a structural shift to your business&mdash;not just a new tool&mdash;then your
+              first move shouldn&rsquo;t be a chatbot, a pilot, or a vendor demo. It should be a{' '}
+              <strong>plan.</strong>
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
@@ -544,72 +551,7 @@ export default function EnterpriseAIPlaybook() {
           </div>
         </section>
 
-        {/* WHY THIS MATTERS */}
-        <section
-          className="bg-white py-14 px-6 md:px-16"
-          id="ai-why-matters"
-          aria-labelledby="why-title"
-        >
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">
-              Why does AI demand a structural plan?
-            </h2>
-            <p className="text-lg text-gray-700 mb-8">
-              AI is a business model fault line, not a feature.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              While most companies chase hype, pilots, and vendor promises, real leaders bring
-              structure to ambiguity.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              If AI truly is a structural shift, then acting tactically first is a mistake.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">The risk?</p>
-            <p className="text-lg text-gray-700 mb-8">
-              Those who treat AI as a &quot;side project&quot; lose. Those who lead with structure,
-              win board confidence&mdash;and market share.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              <strong>
-                Leaders don&rsquo;t respond to structural change with tools and tactics. They
-                respond with structure.
-              </strong>
-            </p>{' '}
-            <p className="text-lg text-gray-700 mb-8">
-              The Enterprise AI Playbook is built for this exact moment.
-            </p>
-            <p className="text-lg text-gray-700 mb-8">
-              It&rsquo;s not a framework, not a scorecard, and not a vendor checklist. It&rsquo;s
-              your boardroom-grade transition plan—designed to help senior executives:
-            </p>
-            <div className="flex justify-center">
-              <ul
-                className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6"
-                aria-label="Why Outcomes"
-              >
-                <li>Win the board&rsquo;s confidence (and budget)</li>
-                <li>Prove real readiness—not just intent</li>
-                <li>Act with stability in a moment of hype</li>
-                <li>Align the business across silos</li>
-                <li>Avoid dependence on vendors or consultants</li>
-                <li>Move fast to unlock value and future-proof your business</li>
-              </ul>
-            </div>
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-lg text-gray-700 mb-8">
-                When AI hits the boardroom agenda, will you have a defensible, enterprise-wide
-                plan—or just a handful of use cases and hope?
-              </p>
-              <p className="text-lg text-gray-700 mb-8">
-                This is the leadership move before the line-item investments.
-              </p>
-              <p className="text-lg text-gray-700 mb-8">
-                Not another pilot. Not another sprint. <strong>A plan.</strong>
-              </p>
-            </div>
-          </div>
-        </section>
-
+        <EnterpriseAIPlaybookWhyThisMattersSection />
         <EnterpriseAIPlaybookOutcomesSection />
         <EnterpriseAIPlaybookWhatsInsideSection />
         <EnterpriseAIPlaybookDifferenceTableSection />
