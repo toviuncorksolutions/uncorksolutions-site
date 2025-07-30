@@ -535,12 +535,16 @@ export default function EnterpriseAIPlaybook() {
               AI is a business model fault line, not a feature.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              Yet most companies are rushing to automate tasks, run pilots, buy tools and collect
-              vendor decks full of promises&mdash;without aligning their leadership team around a
-              shared direction.
+              While most companies chase hype, pilots, and vendor promises, real leaders bring
+              structure to ambiguity.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              But if AI truly is a structural shift, then acting tactically first is a mistake.
+              If AI truly is a structural shift, then acting tactically first is a mistake.
+            </p>
+            <p className="text-lg text-gray-700 mb-8">The risk?</p>
+            <p className="text-lg text-gray-700 mb-8">
+              Those who treat AI as a &quot;side project&quot; lose. Those who lead with structure,
+              win board confidence&mdash;and market share.
             </p>
             <p className="text-lg text-gray-700 mb-8">
               <strong>
