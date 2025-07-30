@@ -452,7 +452,7 @@ export default function EnterpriseAIPlaybook() {
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
-              your 16-page, boardroom-grade strategy to gracefully guide your organization through
+              your 16-page, boardroom-grade strategy to guide your organization gracefully through
               AI transformation—with stability, credibility, and control.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
