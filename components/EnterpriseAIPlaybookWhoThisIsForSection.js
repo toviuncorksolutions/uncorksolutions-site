@@ -18,7 +18,8 @@ export default function EnterpriseAIPlaybookWhoThisIsForSection() {
             <span className="font-semibold text-blue-700">
               Product, Data, Ops, and Compliance Leaders:
             </span>{' '}
-            You need clear lines of ownership&mdash;and what's needed to support AI systemically.
+            You need clear lines of ownership&mdash;and what&rsquo;s needed to support AI
+            systemically.
           </li>
           <li>
             <span className="font-semibold text-blue-700">
