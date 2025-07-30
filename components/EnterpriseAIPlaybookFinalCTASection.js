@@ -20,8 +20,8 @@ export default function EnterpriseAIPlaybookFinalCTASection() {
         </p>
 
         <p className="mb-4 text-gray-700 text-lg">
-          The <strong>Enterprise AI Playbook</strong> is your 16-page, boardroom-ready strategy —
-          designed to help you:
+          The Enterprise AI Playbook is your 16-page, boardroom-ready strategy — designed to help
+          you:
         </p>
 
         <ul className="mb-4 text-gray-700 text-lg text-left list-disc list-inside md:list-outside md:px-8 inline-block text-left">
