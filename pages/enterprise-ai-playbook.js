@@ -162,7 +162,9 @@ export default function EnterpriseAIPlaybook() {
   return (
     <>
       <Head>
-        <title>Enterprise AI Playbook & Readiness Assessment | Uncork Solutions</title>
+        <title>
+          Enterprise AI Playbook & Boardroom-Grade Transformation Plan | Uncork Solutions
+        </title>
         <meta
           name="description"
           content="Get a boardroom-ready Enterprise AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
@@ -180,13 +182,13 @@ export default function EnterpriseAIPlaybook() {
           type="image/png"
         />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:site_name" content="Uncork Solutions" />
         <meta
           property="og:title"
-          content="Enterprise AI Playbook & Readiness Assessment – Uncork Solutions"
+          content="Enterprise AI Playbook & Boardroom-Grade Transformation Plan – Uncork Solutions"
         />
         <meta
           property="og:description"
@@ -201,7 +203,7 @@ export default function EnterpriseAIPlaybook() {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Front cover of Uncork Solutions’ AI Readiness Assessment booklet"
+          content="Front cover of Uncork Solutions’ AI Readiness Playbook booklet"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -217,167 +219,186 @@ export default function EnterpriseAIPlaybook() {
           content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
         />
 
-        {/* SCHEMA MARKUP: Organization & Service */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              '@id': 'https://www.uncorksolutions.com#organization',
-              name: 'Uncork Solutions',
-              legalName: 'Uncork Solutions',
-              url: 'https://www.uncorksolutions.com',
-              logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
-              description:
-                'Technology strategy and digital transformation consulting for mid-market and enterprise businesses in B2C retail or B2B manufacturing.',
-              sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
-              areaServed: [
-                { '@type': 'Country', name: 'Canada' },
-                { '@type': 'Country', name: 'United States' },
-                { '@type': 'Country', name: 'United Kingdom' },
-                { '@type': 'Country', name: 'Mexico' },
-                { '@type': 'AdministrativeArea', name: 'European Union' },
-                { '@type': 'AdministrativeArea', name: 'Latin America' },
-              ],
-              founder: {
-                '@type': 'Person',
-                name: 'Tovi Heilbronn',
-              },
-              foundingDate: '2025-06-25',
-              makesOffer: [
-                {
-                  '@type': 'ConsultingService',
-                  name: 'Enterprise AI Playbook & Readiness Assessment',
-                  serviceType:
-                    'AI Transformation, Boardroom AI Assessment, Digital Transformation Consulting, Organizational Assessment',
-                  description:
-                    'Boardroom-grade, enterprise-wide AI Readiness Assessment. Diagnose your entire business for AI transformation. Clear, actionable roadmap for leaders. Exportable, audit-ready results. Confidential, vendor-neutral.',
-                  provider: {
+            __html: JSON.stringify(
+              {
+                '@context': 'https://schema.org',
+                '@graph': [
+                  /* ---------- 1. Consultancy ---------- */
+                  {
                     '@type': 'ProfessionalService',
+                    '@id': 'https://www.uncorksolutions.com#organization',
                     name: 'Uncork Solutions',
+                    legalName: 'Uncork Solutions',
+                    url: 'https://www.uncorksolutions.com',
+                    logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                    description:
+                      'Technology strategy and digital transformation consulting for mid‑market and enterprise businesses in B2C retail or B2B manufacturing.',
+                    sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
+                    founder: { '@type': 'Person', name: 'Tovi Heilbronn' },
+                    foundingDate: '2025-06-25',
+                    areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
+                    makesOffer: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'ConsultingService',
+                          name: 'Enterprise AI Playbook & Boardroom-Grade Transformation Plan',
+                          serviceType: [
+                            'AI Transformation',
+                            'Boardroom AI Assessment',
+                            'Digital Transformation Consulting',
+                            'Organizational Assessment',
+                          ],
+                          description:
+                            'Boardroom‑grade, enterprise‑wide AI readiness assessment with a clear roadmap for executive leaders—confidential, vendor‑neutral, audit‑ready.',
+                          areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
+                          audience: { '@type': 'Audience', name: 'C-suite & Board-facing Execs' },
+                          provider: {
+                            '@type': 'ProfessionalService',
+                            name: 'Uncork Solutions',
+                            '@id': 'https://www.uncorksolutions.com#organization',
+                          },
+                        },
+                      },
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'ProfessionalService',
+                          name: 'Initiative Readiness Scan',
+                          serviceType: [
+                            'Digital Transformation Consulting',
+                            'Organizational Assessment',
+                          ],
+                          provider: {
+                            '@type': 'ProfessionalService',
+                            name: 'Uncork Solutions',
+                            '@id': 'https://www.uncorksolutions.com#organization',
+                          },
+                          areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
+                          audience: { '@type': 'Audience', name: 'C-suite & Board-facing Execs' },
+                        },
+                      },
+                    ],
                   },
-                  areaServed: [
-                    { '@type': 'Country', name: 'Canada' },
-                    { '@type': 'Country', name: 'United States' },
-                    { '@type': 'Country', name: 'United Kingdom' },
-                    { '@type': 'Country', name: 'Mexico' },
-                    { '@type': 'AdministrativeArea', name: 'European Union' },
-                    { '@type': 'AdministrativeArea', name: 'Latin America' },
-                  ],
-                },
-                {
-                  '@type': 'ConsultingService',
-                  name: 'Initiative Readiness Scan',
-                  serviceType: 'Digital Transformation Consulting, Organizational Assessment',
-                  provider: {
-                    '@type': 'ProfessionalService',
-                    name: 'Uncork Solutions',
-                  },
-                  areaServed: [
-                    { '@type': 'Country', name: 'Canada' },
-                    { '@type': 'Country', name: 'United States' },
-                    { '@type': 'Country', name: 'United Kingdom' },
-                    { '@type': 'Country', name: 'Mexico' },
-                    { '@type': 'AdministrativeArea', name: 'European Union' },
-                    { '@type': 'AdministrativeArea', name: 'Latin America' },
-                  ],
-                },
-              ],
-            }),
-          }}
-        />
 
-        {/* SCHEMA MARKUP: FAQPage */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'FAQPage',
-              mainEntity: [
-                {
-                  '@type': 'Question',
-                  name: 'What is an AI Readiness Assessment?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: "An AI Readiness Assessment evaluates your organization's ability to adopt and scale AI. Uncork’s version powers the Enterprise AI Playbook—your 16-page, boardroom-ready transformation plan.",
+                  /* ---------- 2. Landing page ---------- */
+                  {
+                    '@type': 'WebPage',
+                    '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook',
+                    url: 'https://www.uncorksolutions.com/enterprise-ai-playbook',
+                    name: 'Enterprise AI Playbook & Boardroom-Grade Transformation Plan | Uncork Solutions',
+                    isPartOf: { '@id': 'https://www.uncorksolutions.com#organization' },
+                    primaryImageOfPage: {
+                      '@type': 'ImageObject',
+                      url: 'https://www.uncorksolutions.com/ai-readiness-scan-1a.png',
+                      width: 760,
+                      height: 846,
+                    },
+                    speakable: {
+                      '@type': 'SpeakableSpecification',
+                      cssSelector: ['#ai-playbook-speakable'],
+                    },
+                    hasPart: {
+                      '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#faq',
+                    },
                   },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What is the Enterprise AI Playbook?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The Enterprise AI Playbook is a confidential 16-page, boardroom-grade diagnostic playbook personalized to your organization. It evaluates your entire organization’s readiness for enterprise AI. Unlike typical maturity models, it delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
+
+                  /* ---------- 3. FAQPage ---------- */
+                  {
+                    '@type': 'FAQPage',
+                    '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#faq',
+                    url: 'https://www.uncorksolutions.com/enterprise-ai-playbook#faq',
+                    mainEntity: [
+                      {
+                        '@type': 'Question',
+                        name: 'What is an AI Readiness Assessment?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: "An AI Readiness Assessment evaluates your organization's ability to adopt and scale AI. Uncork’s version powers the Enterprise AI Playbook—your 16-page, boardroom-ready transformation plan.",
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'What is the Enterprise AI Playbook?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'The Enterprise AI Playbook is a confidential 16-page, boardroom-grade diagnostic playbook personalized to your organization. It evaluates your entire organization’s readiness for enterprise AI and delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'How is this different from other AI assessments or maturity models?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Most AI assessments are generic, IT-focused, or provide only a score. The AI Readiness Assessment is built for decision-makers: enterprise‑holistic, covering eight key business pillars, and delivering a tailored action plan with deadlines and accountability.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'How long does the assessment take to complete?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'The assessment takes approximately 20 minutes to complete—efficient for busy executives while still covering all critical dimensions of AI readiness.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'Who should participate in the assessment?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Senior executives and their direct reports responsible for AI, technology, product, data, operations, or compliance—ideally CIOs, CTOs, CDOs, and other board‑facing leaders.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'Is the assessment confidential?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Yes. All answers and the resulting report are strictly confidential and never shared with third parties.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'How and when do I receive my results?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Your personalized, 16‑page playbook is typically delivered to your inbox the same day you complete the assessment—ready to share with your board or leadership team immediately.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'Is this a vendor pitch or truly neutral?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'The AI Readiness Assessment is 100% vendor‑neutral: no sales pitches, no hidden agendas—just a clear‑eyed, operator‑grade assessment of your organization’s AI readiness.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'What does the final deliverable include?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'You receive a 16‑page PDF featuring an executive summary, radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'How much does the assessment cost?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Early access is free for qualifying executives in enterprise or mid‑market organizations. If you’re leading AI transformation at scale, request priority access to secure your complimentary assessment.',
+                        },
+                      },
+                    ],
                   },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How is this different from other AI assessments or maturity models?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Most AI assessments are generic, IT-focused, or provide only a “score.” The AI Readiness Assessment is built for decision-makers. It’s enterprise-holistic, covers eight key business pillars, and provides a tailored action plan with deadlines and accountability—not just a checkbox exercise.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How long does the assessment take to complete?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The assessment takes approximately 20 minutes to complete. It’s designed to be efficient for busy executives, while still covering all critical dimensions of AI readiness.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Who should participate in the assessment?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The assessment is intended for senior executives and their direct reports who are responsible for AI, technology, product, data, operations, or compliance. It’s ideal for CIOs, CTOs, CDOs, and other board-facing leaders.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is the assessment confidential?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Yes, absolutely. All answers and the resulting report are strictly confidential. Your information is never shared with any third parties—no exceptions.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How and when do I receive my results?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Your personalized, 16-page playbook is typically delivered to your inbox the same day you complete the assessment. It’s ready to share with your board or leadership team immediately.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'Is this a vendor pitch or truly neutral?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'The AI Readiness Assessment is 100% vendor-neutral. There are no sales pitches or hidden agendas—just a clear-eyed, operator-grade assessment of your organization’s AI readiness.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'What does the final deliverable include?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'You receive a 16-page PDF report featuring an executive summary, a radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.',
-                  },
-                },
-                {
-                  '@type': 'Question',
-                  name: 'How much does the assessment cost?',
-                  acceptedAnswer: {
-                    '@type': 'Answer',
-                    text: 'Early access to the AI Readiness Assessment is free for qualifying executives in enterprise or mid-market organizations. If you’re leading AI transformation at scale, request priority access to secure your complimentary assessment.',
-                  },
-                },
-              ],
-            }),
+                ],
+              },
+              null,
+              2,
+            ),
           }}
         />
       </Head>
@@ -445,6 +466,11 @@ export default function EnterpriseAIPlaybook() {
               Real AI leadership starts with <span className="text-blue-700">structure.</span> Not
               use cases.
             </h1>
+            <p id="ai-playbook-speakable" class="sr-only">
+              The Enterprise AI Playbook gives executives a confidential, 16‑page plan that maps
+              owners, deadlines and blind spots—so you can lead AI as a business‑model shift, not a
+              tech pilot.
+            </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               If AI is a structural shift to your business model&mdash;not just a new
               tool&mdash;then your first move shouldn&rsquo;t be a chatbot, a pilot, or a vendor
@@ -529,7 +555,7 @@ export default function EnterpriseAIPlaybook() {
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">
-              Why This Matters
+              Why does AI demand a structural plan?
             </h2>
             <p className="text-lg text-gray-700 mb-8">
               AI is a business model fault line, not a feature.

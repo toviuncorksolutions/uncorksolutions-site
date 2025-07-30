@@ -10,64 +10,62 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
           Typical &quot;AI Assessment&quot; vs. The Enterprise AI Playbook
         </h2>
 
-        <div className="overflow-x-auto">
-          <table
-            className="w-full text-left text-base text-gray-700 border border-gray-200 rounded-xl overflow-hidden"
-            aria-describedby="diff-caption"
-          >
-            <caption id="diff-caption" className="sr-only">
-              Typical AI Assessment vs. The Enterprise AI Playbook
-            </caption>
-            <thead className="bg-[#e5eaf3]">
-              <tr>
-                <th className="py-3 px-4" scope="col" />
-                <th className="py-3 px-4 font-semibold" scope="col">
-                  Typical Assessment
-                </th>
-                <th className="py-3 px-4 font-semibold" scope="col">
-                  Uncork’s Enterprise AI Playbook
-                </th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              <tr>
-                <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Approach
-                </th>
-                <td className="py-3 px-4">Generic, high-level, and vague</td>
-                <td className="py-3 px-4">Enterprise-holistic, practical, and defensible</td>
-              </tr>
-              <tr>
-                <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Output
-                </th>
-                <td className="py-3 px-4">No actions—just a scorecard</td>
-                <td className="py-3 px-4">16-page transition plan mapped to outcomes</td>
-              </tr>
-              <tr>
-                <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Scope
-                </th>
-                <td className="py-3 px-4">IT-focused or single-function</td>
-                <td className="py-3 px-4">Cross-functional, owned by leadership</td>
-              </tr>
-              <tr>
-                <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Accountability
-                </th>
-                <td className="py-3 px-4">No owners, no follow-through</td>
-                <td className="py-3 px-4">Named owners, timelines, and structured support</td>
-              </tr>
-              <tr>
-                <th className="py-3 px-4 font-medium text-gray-800" scope="row">
-                  Credibility
-                </th>
-                <td className="py-3 px-4">Vendor decks and theory</td>
-                <td className="py-3 px-4">Boardroom-ready asset ready to activate tomorrow</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <table
+          className="w-full overflow-x-auto text-left text-base text-gray-700 border-gray-200"
+          aria-describedby="diff-caption"
+        >
+          <caption id="diff-caption" className="sr-only">
+            Typical AI Assessment vs. The Enterprise AI Playbook
+          </caption>
+          <thead className="bg-[#e5eaf3]">
+            <tr>
+              <th className="py-3 px-4 rounded-tl-xl" scope="col" />
+              <th className="py-3 px-4 font-semibold" scope="col">
+                Typical Assessment
+              </th>
+              <th className="py-3 px-4 font-semibold rounded-tr-xl" scope="col">
+                Uncork’s Enterprise AI Playbook
+              </th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200">
+            <tr>
+              <th className="py-3 px-4 font-medium text-gray-800" scope="row">
+                Approach
+              </th>
+              <td className="py-3 px-4">Generic, high-level, and vague</td>
+              <td className="py-3 px-4">Enterprise-holistic, practical, and defensible</td>
+            </tr>
+            <tr>
+              <th className="py-3 px-4 font-medium text-gray-800" scope="row">
+                Output
+              </th>
+              <td className="py-3 px-4">No actions—just a scorecard</td>
+              <td className="py-3 px-4">16-page transition plan mapped to outcomes</td>
+            </tr>
+            <tr>
+              <th className="py-3 px-4 font-medium text-gray-800" scope="row">
+                Scope
+              </th>
+              <td className="py-3 px-4">IT-focused or single-function</td>
+              <td className="py-3 px-4">Cross-functional, owned by leadership</td>
+            </tr>
+            <tr>
+              <th className="py-3 px-4 font-medium text-gray-800" scope="row">
+                Accountability
+              </th>
+              <td className="py-3 px-4">No owners, no follow-through</td>
+              <td className="py-3 px-4">Named owners, timelines, and structured support</td>
+            </tr>
+            <tr>
+              <th className="py-3 px-4 font-medium text-gray-800" scope="row">
+                Credibility
+              </th>
+              <td className="py-3 px-4">Vendor decks and theory</td>
+              <td className="py-3 px-4">Boardroom-ready asset ready to activate tomorrow</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   );
