@@ -451,9 +451,9 @@ export default function EnterpriseAIPlaybook() {
               demo. It should be a <strong>plan.</strong>
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
-              The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> gives
-              you a 16-page, boardroom-grade strategy to gracefully guide your organization through
-              AI transformation—with specificity, credibility, and control.
+              The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
+              your 16-page, boardroom-grade strategy to gracefully guide your organization through
+              AI transformation—with stability, credibility, and control.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
               In just 20 minutes, get a confidential, organization-wide view of:
@@ -533,20 +533,21 @@ export default function EnterpriseAIPlaybook() {
             </h2>
             <p className="text-lg text-gray-700 mb-8">
               Most companies are rushing into AI point solutions.
-              <br />
-              <br />
+            </p>
+            <p className="text-lg text-gray-700 mb-8">
               They&rsquo;re automating tasks, running pilots, and buying tools—without aligning
               their leadership team around a shared direction.
-              <br />
-              <br />
-              But if AI truly is a <strong>structural shift,</strong> then acting tactically first
-              is a mistake. Leaders don&rsquo;t respond to structural change with tools. They
-              respond with structure.
-              <br />
-              <br />
+            </p>
+            <p className="text-lg text-gray-700 mb-8">
+              <strong>
+                Leaders don’t respond to structural change with tools and tactics. They respond with
+                structure.
+              </strong>
+            </p>{' '}
+            <p className="text-lg text-gray-700 mb-8">
               The Enterprise AI Playbook is built for this exact moment.
-              <br />
-              <br />
+            </p>
+            <p className="text-lg text-gray-700 mb-8">
               It&rsquo;s not a framework, not a scorecard, and not a vendor checklist. It&rsquo;s
               your boardroom-grade transition plan—designed to help senior executives:
             </p>
@@ -567,10 +568,13 @@ export default function EnterpriseAIPlaybook() {
                 When AI hits the boardroom agenda, will you have a defensible, enterprise-wide
                 plan—or just a handful of use cases and hope?
               </p>
+              <p className="text-lg text-gray-700 mb-8">
+                This is the leadership move before the line-item investments.
+              </p>
+              <p className="text-lg text-gray-700 mb-8">
+                Not another pilot. Not another sprint. <strong>A plan.</strong>
+              </p>
             </div>
-            <span className="font-semibold text-blue-700">This is how real AI leaders lead. </span>
-            Not with hype. Not with tech-first distractions.
-            <span className="font-semibold text-blue-700"> But with structure.</span>
           </div>
         </section>
 
