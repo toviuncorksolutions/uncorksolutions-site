@@ -481,8 +481,8 @@ export default function EnterpriseAIPlaybook() {
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
-              your 16-page readiness plan&mdash;built for senior leaders treating AI as a structural
-              shift, not a tech initiative.
+              your 16-page readiness plan&mdash;built for senior leaders treating AI as a
+              business-model transformation, not a tech initiative.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
               In just 20 minutes, get a confidential, organization-wide view of:
