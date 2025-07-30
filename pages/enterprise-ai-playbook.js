@@ -447,8 +447,8 @@ export default function EnterpriseAIPlaybook() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               If AI is a structural shift to your business model&mdash;not just a new
-              tool&mdash;then your first move shouldn’t be a chatbot, a pilot, or a vendor demo. It
-              should be a <strong>plan.</strong>
+              tool&mdash;then your first move shouldn&rsquo;t be a chatbot, a pilot, or a vendor
+              demo. It should be a <strong>plan.</strong>
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> gives
@@ -466,13 +466,15 @@ export default function EnterpriseAIPlaybook() {
                 <span aria-hidden="true" className="text-blue-700 text-lg">
                   &#10003;
                 </span>
-                <span>Where you're structurally ready&mdash;and where you're exposed</span>
+                <span>
+                  Where you&rsquo;re structurally ready&mdash;and where you&rsquo;re exposed
+                </span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">
                   &#10003;
                 </span>
-                <span>What’s missing to move from ambition to execution</span>
+                <span>What&rsquo;s missing to move from ambition to execution</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">
@@ -533,27 +535,27 @@ export default function EnterpriseAIPlaybook() {
               Most companies are rushing into AI point solutions.
               <br />
               <br />
-              They’re automating tasks, running pilots, and buying tools—without aligning their
-              leadership team around a shared direction.
+              They&rsquo;re automating tasks, running pilots, and buying tools—without aligning
+              their leadership team around a shared direction.
               <br />
               <br />
               But if AI truly is a <strong>structural shift,</strong> then acting tactically first
-              is a mistake. Leaders don’t respond to structural change with tools. They respond with
-              structure.
+              is a mistake. Leaders don&rsquo;t respond to structural change with tools. They
+              respond with structure.
               <br />
               <br />
               The Enterprise AI Playbook is built for this exact moment.
               <br />
               <br />
-              It’s not a framework, not a scorecard, and not a vendor checklist. It’s your
-              boardroom-grade transition plan—designed to help senior executives:
+              It&rsquo;s not a framework, not a scorecard, and not a vendor checklist. It&rsquo;s
+              your boardroom-grade transition plan—designed to help senior executives:
             </p>
             <div className="flex justify-center">
               <ul
                 className="list-disc text-left ml-6 text-base space-y-2 text-gray-700 mb-6"
                 aria-label="Why Outcomes"
               >
-                <li>Win the board’s confidence (and budget)</li>
+                <li>Win the board&rsquo;s confidence (and budget)</li>
                 <li>Prove real readiness—not just intent</li>
                 <li>Align the business across silos</li>
                 <li>Avoid dependence on vendors or consultants</li>

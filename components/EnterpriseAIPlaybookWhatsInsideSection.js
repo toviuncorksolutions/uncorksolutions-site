@@ -10,7 +10,7 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
           What You Get
         </h2>
         <p className="text-lg text-gray-700 mb-10">
-          This isn’t a scorecard or a survey&mdash;it’s your transition plan.
+          This isn&rsquo;t a scorecard or a survey&mdash;it&rsquo;s your transition plan.
           <br />
           <br />
           Delivered instantly after a 20-minute diagnostic&mdash;no prep, no follow-up
@@ -27,8 +27,8 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
               <div>
                 <div className="font-semibold text-lg mb-1">Executive Summary</div>
                 <div className="text-gray-700">
-                  A high-level narrative for your board and ELT—what’s at stake, where you stand,
-                  and why it matters now.
+                  A high-level narrative for your board and ELT—what&rsquo;s at stake, where you
+                  stand, and why it matters now.
                 </div>
               </div>
             </li>
@@ -68,14 +68,14 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                 <div className="font-semibold text-lg mb-1">Exportable Briefings</div>
                 <div className="text-gray-700">
                   PDF-ready summaries tailored for board, audit, and operational alignment. No
-                  fluff. No rework. Ready for Monday’s meeting.
+                  fluff. No rework. Ready for Monday&rsquo;s meeting.
                 </div>
               </div>
             </li>
           </ol>
         </div>
         <p className="italic text-lg text-gray-700 my-10">
-          A boardroom asset you'll reference again and again—when budgets are reviewed, when
+          A boardroom asset you&rsquo;ll reference again and again—when budgets are reviewed, when
           stakeholders push back, and when the question comes: are we actually ready for AI?
         </p>
       </div>
