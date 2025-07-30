@@ -226,7 +226,6 @@ export default function EnterpriseAIPlaybook() {
               {
                 '@context': 'https://schema.org',
                 '@graph': [
-                  /* ---------- 1. Consultancy ---------- */
                   {
                     '@type': 'ProfessionalService',
                     '@id': 'https://www.uncorksolutions.com#organization',
@@ -284,7 +283,6 @@ export default function EnterpriseAIPlaybook() {
                     ],
                   },
 
-                  /* ---------- 2. Landing page ---------- */
                   {
                     '@type': 'WebPage',
                     '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook',
@@ -306,7 +304,6 @@ export default function EnterpriseAIPlaybook() {
                     },
                   },
 
-                  /* ---------- 3. FAQPage ---------- */
                   {
                     '@type': 'FAQPage',
                     '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#faq',
