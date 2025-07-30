@@ -531,17 +531,19 @@ export default function EnterpriseAIPlaybook() {
             <h2 id="why-title" className="text-2xl md:text-3xl font-bold mb-6">
               Why This Matters
             </h2>
+            <p className="text-lg text-gray-700 mb-8">AI is a fault line, not a feature.</p>
             <p className="text-lg text-gray-700 mb-8">
-              Most companies are rushing into AI point solutions.
+              Yet most companies are rushing to automate tasks, run pilots, buy tools and collect
+              vendor decks full of promises&mdash;without aligning their leadership team around a
+              shared direction.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              They&rsquo;re automating tasks, running pilots, and buying tools—without aligning
-              their leadership team around a shared direction.
+              But if AI truly is a structural shift, then acting tactically first is a mistake.
             </p>
             <p className="text-lg text-gray-700 mb-8">
               <strong>
-                Leaders don’t respond to structural change with tools and tactics. They respond with
-                structure.
+                Leaders don&rsquo;t respond to structural change with tools and tactics. They
+                respond with structure.
               </strong>
             </p>{' '}
             <p className="text-lg text-gray-700 mb-8">
@@ -558,6 +560,7 @@ export default function EnterpriseAIPlaybook() {
               >
                 <li>Win the board&rsquo;s confidence (and budget)</li>
                 <li>Prove real readiness—not just intent</li>
+                <li>Act with stability in a moment of hype</li>
                 <li>Align the business across silos</li>
                 <li>Avoid dependence on vendors or consultants</li>
                 <li>Move fast to unlock value and future-proof your business</li>
