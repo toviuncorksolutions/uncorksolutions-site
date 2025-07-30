@@ -10,23 +10,73 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
           What You Get
         </h2>
         <p className="text-lg text-gray-700 mb-10">
-          This isn’t a survey, nor a quiz. It’s your 16-page boardroom playbook, delivered in
-          minutes.
+          This isn’t a scorecard or a survey&mdash;it’s your transition plan.
           <br />
-          <span className="block mt-2 font-semibold">Here’s exactly what you get:</span>
+          <br />
+          Delivered instantly after a 20-minute diagnostic&mdash;no prep, no follow-up
+          required&mdash;the Enterprise AI Playbook gives you a 16-page, personalized strategy
+          asset.
+          <span className="block mt-2 font-semibold">It includes:</span>
         </p>
         <div className="flex justify-center" aria-label="What You Get - Details">
-          <ul className="list-disc text-left ml-6 text-base space-y-1">
-            <li>Executive summary for immediate board alignment</li>
-            <li>Eight-pillar deep dive: Strengths, critical risks, and “unknown unknowns”</li>
-            <li>Action plan: Owners, deadlines, quick wins, and “what’s at stake”</li>
-            <li>Exportable summaries for board, audit, and compliance</li>
-            <li>Confidential, immediate delivery—ready for your next leadership meeting</li>
-          </ul>
+          <ol className="text-left space-y-8 max-w-2xl mx-auto">
+            <li className="flex gap-4 items-start">
+              <span className="text-3xl mt-1" aria-hidden="true">
+                📌
+              </span>
+              <div>
+                <div className="font-semibold text-lg mb-1">Executive Summary</div>
+                <div className="text-gray-700">
+                  A high-level narrative for your board and ELT—what’s at stake, where you stand,
+                  and why it matters now.
+                </div>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="text-3xl mt-1" aria-hidden="true">
+                🧭
+              </span>
+              <div>
+                <div className="font-semibold text-lg mb-1">
+                  Risk Radar Across 8 Structural Axes
+                </div>
+                <div className="text-gray-700">
+                  Identify your strengths, blind spots, and &quot;unknown unknowns&quot; across
+                  vision, data, governance, talent, product, compliance, and more.
+                </div>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="text-3xl mt-1" aria-hidden="true">
+                🛠️
+              </span>
+              <div>
+                <div className="font-semibold text-lg mb-1">
+                  Action Plan with Owners and Deadlines
+                </div>
+                <div className="text-gray-700">
+                  Not just observations&mdash;specific next steps, accountabilities, and
+                  business-critical decisions.
+                </div>
+              </div>
+            </li>
+            <li className="flex gap-4 items-start">
+              <span className="text-3xl mt-1" aria-hidden="true">
+                🧩
+              </span>
+              <div>
+                <div className="font-semibold text-lg mb-1">Exportable Briefings</div>
+                <div className="text-gray-700">
+                  PDF-ready summaries tailored for board, audit, and operational alignment. No
+                  fluff. No rework. Ready for Monday’s meeting.
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
-        <p className="text-lg text-gray-700 my-10">
-          While everyone else is guessing, you’ll have the only assessment that shows exactly where
-          you stand, what to do, and who owns the next move.
+        <p className="italic text-lg text-gray-700 my-10">
+          A boardroom asset you'll reference again and again—when budgets are reviewed, when
+          stakeholders push back, and when the question comes: are we actually ready for AI?
         </p>
       </div>
     </section>

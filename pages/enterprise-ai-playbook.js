@@ -442,21 +442,45 @@ export default function EnterpriseAIPlaybook() {
               id="hero-title"
               className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight min-h-[128px]"
             >
-              Be the Boardroom Hero Who{' '}
-              <span className="text-blue-700">Delivers Enterprise AI,</span> Not Just Point
-              Solutions.
+              Real AI leadership starts with <span className="text-blue-700">structure.</span> Not
+              use cases.
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
-              Right now, most AI initiatives are stuck in &quot;theatre&quot;—big talk, little
-              action. The <span className="font-semibold text-blue-700">AI Readiness Playbook</span>{' '}
-              is your unfair advantage: a 16-page, boardroom-grade playbook built to turn your
-              company into the market leader for enterprise-wide AI transformation.
+              If AI is a structural shift to your business model&mdash;not just a new
+              tool&mdash;then your first move shouldn’t be a chatbot, a pilot, or a vendor demo. It
+              should be a <strong>plan.</strong>
+            </p>
+            <p className="text-lg md:text-xl text-gray-700 mb-6">
+              The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> gives
+              you a 16-page, boardroom-grade strategy to gracefully guide your organization through
+              AI transformation—with specificity, credibility, and control.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
-              This isn’t a toolkit or a quick fix. It’s your <em>category-defining diagnostic</em>
-              —the first and only assessment treating AI as a catalyst for holistic, and durable
-              change to your business model, not just another IT project.
+              In just 20 minutes, get a confidential, organization-wide view of:
             </p>
+            <ul
+              className="text-base text-gray-700 mb-7 space-y-2 list-none"
+              aria-label="Initiative Readiness Scan Benefits"
+            >
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">
+                  &#10003;
+                </span>
+                <span>Where you're structurally ready&mdash;and where you're exposed</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">
+                  &#10003;
+                </span>
+                <span>What’s missing to move from ambition to execution</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span aria-hidden="true" className="text-blue-700 text-lg">
+                  &#10003;
+                </span>
+                <span>Who owns what&mdash;so you can lead with clarity, not guesswork</span>
+              </li>
+            </ul>
             <div
               className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center md:justify-start mb-4"
               role="group"
@@ -489,8 +513,8 @@ export default function EnterpriseAIPlaybook() {
             </div>
             <div className="text-sm text-gray-500 mt-2" id="ai-early-access-label">
               Priority access is limited to executives ready to deliver, not just discuss. If
-              that&#8217;s you&#8212;get your boardroom-ready plan and join the ranks of leaders who
-              are actually moving the needle with AI.
+              that&#8217;s you&#8212;claim your boardroom-ready plan and join the ranks of leaders
+              actually moving the needle with AI.
             </div>
           </div>
         </section>
@@ -506,13 +530,23 @@ export default function EnterpriseAIPlaybook() {
               Why This Matters
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              AI isn’t a bolt-on tool—it’s rewriting business models, shifting markets, and
-              redrawing the competitive landscape.
+              Most companies are rushing into AI point solutions.
               <br />
               <br />
-              While everyone else is busy plugging in chatbots or dabbling with point-solution
-              automations, you’ll have the first enterprise-holistic assessment that defines what
-              ‘AI-ready’ means for your entire company.
+              They’re automating tasks, running pilots, and buying tools—without aligning their
+              leadership team around a shared direction.
+              <br />
+              <br />
+              But if AI truly is a <strong>structural shift,</strong> then acting tactically first
+              is a mistake. Leaders don’t respond to structural change with tools. They respond with
+              structure.
+              <br />
+              <br />
+              The Enterprise AI Playbook is built for this exact moment.
+              <br />
+              <br />
+              It’s not a framework, not a scorecard, and not a vendor checklist. It’s your
+              boardroom-grade transition plan—designed to help senior executives:
             </p>
             <div className="flex justify-center">
               <ul
@@ -521,10 +555,20 @@ export default function EnterpriseAIPlaybook() {
               >
                 <li>Win the board’s confidence (and budget)</li>
                 <li>Prove real readiness—not just intent</li>
-                <li>Unlock millions in value and future-proof your business</li>
+                <li>Align the business across silos</li>
+                <li>Avoid dependence on vendors or consultants</li>
+                <li>Move fast to unlock value and future-proof your business</li>
               </ul>
             </div>
-            <span className="font-semibold text-blue-700">Don’t guess. Diagnose.</span>
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-lg text-gray-700 mb-8">
+                When AI hits the boardroom agenda, will you have a defensible, enterprise-wide
+                plan—or just a handful of use cases and hope?
+              </p>
+            </div>
+            <span className="font-semibold text-blue-700">This is how real AI leaders lead. </span>
+            Not with hype. Not with tech-first distractions.
+            <span className="font-semibold text-blue-700"> But with structure.</span>
           </div>
         </section>
 

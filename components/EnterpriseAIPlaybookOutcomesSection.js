@@ -20,29 +20,28 @@ export default function EnterpriseAIPlaybookOutcomesSection() {
             </h3>
             <p className="text-gray-700">
               Instantly see your AI strengths, critical gaps, and &quot;unknown
-              unknowns&quot;—across 8 axes that matter.
+              unknowns&quot;—across 8 structural pillars.
             </p>
           </li>
           <li>
-            <h3 className="font-semibold text-lg mb-1">
-              2. Operator-Level Insight — Not Vendor Hype
-            </h3>
+            <h3 className="font-semibold text-lg mb-1">2. Built by Operators, Not Vendors</h3>
             <p className="text-gray-700">
-              Each section includes questions top operators reflect on—challenging blind spots and
-              keeping you aware of your momentum.
+              Each section includes pressure-tested questions elite teams use to challenge bias,
+              expose blind spots, and drive real momentum.
             </p>
           </li>
           <li>
             <h3 className="font-semibold text-lg mb-1">3. Proof of Readiness — Not Promises</h3>
             <p className="text-gray-700">
-              Evidence for your board, your auditors, and your shareholders—delivered in a format
-              built to impress and specificity ready to activate.
+              Boardroom-grade evidence and specificity that stands up to scrutiny—ready for your
+              CFO, CIO, and auditors alike.
             </p>
           </li>
           <li>
             <h3 className="font-semibold text-lg mb-1">4. Enterprise-Holistic — Not IT-Siloed</h3>
             <p className="text-gray-700">
-              Designed for the entire business: From product and compliance to data and operations.
+              Built for cross-functional leadership: from product and compliance to data, risk, and
+              operations.
             </p>
           </li>
         </ul>

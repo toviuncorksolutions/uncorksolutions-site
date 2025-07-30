@@ -7,7 +7,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
     >
       <div className="max-w-4xl mx-auto">
         <h2 id="diff-title" className="text-2xl md:text-3xl font-bold mb-8 text-center">
-          &quot;The Boardroom-Ready Standard&quot; vs. Typical AI Assessments
+          Comparison: Typical Assessment vs. Enterprise AI Playbook
         </h2>
 
         <div className="overflow-x-auto">
@@ -16,7 +16,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
             aria-describedby="diff-caption"
           >
             <caption id="diff-caption" className="sr-only">
-              Comparison of &quot;The Boardroom-Ready Standard&quot; vs. Typical AI Assessments
+              Comparison: Typical Assessment vs. Enterprise AI Playbook
             </caption>
             <thead className="bg-[#e5eaf3]">
               <tr>
@@ -25,7 +25,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
                   Typical AI Assessment
                 </th>
                 <th className="py-3 px-4 font-semibold" scope="col">
-                  Uncork’s Boardroom-Ready Playbook
+                  Uncork’s Enterprise AI Playbook
                 </th>
               </tr>
             </thead>
@@ -35,23 +35,21 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
                   Approach
                 </th>
                 <td className="py-3 px-4">Generic, high-level, and vague</td>
-                <td className="py-3 px-4">
-                  Enterprise-holistic, specific, practical, and defensible
-                </td>
+                <td className="py-3 px-4">Enterprise-holistic, specific, and defensible</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Output
                 </th>
                 <td className="py-3 px-4">No actions—just a scorecard</td>
-                <td className="py-3 px-4">16-page playbook with owners and deadlines</td>
+                <td className="py-3 px-4">16-page transition plan with real next steps</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Scope
                 </th>
                 <td className="py-3 px-4">IT-focused or single-function</td>
-                <td className="py-3 px-4">Whole-business, cross-functional, C-suite-ready</td>
+                <td className="py-3 px-4">Cross-functional and leadership-owned</td>
               </tr>
               <tr>
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
@@ -64,8 +62,8 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
                 <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                   Credibility
                 </th>
-                <td className="py-3 px-4">Vendor decks and maturity models</td>
-                <td className="py-3 px-4">Boardroom-grade asset you can activate tomorrow</td>
+                <td className="py-3 px-4">Vendor decks and theory</td>
+                <td className="py-3 px-4">Boardroom-ready asset you can activate tomorrow</td>
               </tr>
             </tbody>
           </table>
