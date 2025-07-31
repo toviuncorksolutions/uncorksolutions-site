@@ -185,7 +185,7 @@ export default function EnterpriseAIPlaybook() {
         <link
           rel="preload"
           as="image"
-          href="/_next/image?url=%2Fai-readiness-scan-1a.png&w=760&q=75"
+          href="/_next/image?url=%2Fai-readiness-scan-1a.png&w=220&q=75"
           type="image/png"
         />
         <link rel="icon" href="/favicon.ico" />
