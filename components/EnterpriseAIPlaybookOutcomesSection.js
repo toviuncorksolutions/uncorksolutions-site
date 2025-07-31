@@ -19,15 +19,15 @@ export default function EnterpriseAIPlaybookOutcomesSection() {
               1. A 16-Page Custom Playbook — Not a &quot;Scorecard&quot;
             </h3>
             <p className="text-gray-700">
-              Instantly see your AI strengths, critical gaps, and &quot;unknown
-              unknowns&quot;—across 8 structural pillars.
+              Instantly see your AI strengths, critical gaps, and blind spots—across 8 structural
+              pillars.
             </p>
           </li>
           <li>
             <h3 className="font-semibold text-lg mb-1">2. Built by Operators, Not Vendors</h3>
             <p className="text-gray-700">
-              Each section includes pressure-tested questions elite teams use to challenge bias,
-              expose blind spots, and drive real momentum.
+              Each section includes pressure-tested questions used by elite teams to challenge bias,
+              expose blind spots, and pulse-check real momentum.
             </p>
           </li>
           <li>
@@ -40,8 +40,8 @@ export default function EnterpriseAIPlaybookOutcomesSection() {
           <li>
             <h3 className="font-semibold text-lg mb-1">4. Enterprise-Holistic — Not IT-Siloed</h3>
             <p className="text-gray-700">
-              Built for cross-functional leadership: from product and compliance to data, risk, and
-              operations.
+              Built for cross-functional leadership: spanning product, compliance, data, risk,
+              operations and more.
             </p>
           </li>
         </ul>

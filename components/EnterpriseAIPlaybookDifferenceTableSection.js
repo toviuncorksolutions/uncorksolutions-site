@@ -47,7 +47,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
               <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                 Scope
               </th>
-              <td className="py-3 px-4">IT-focused or single-function</td>
+              <td className="py-3 px-4">IT-centric or single-function</td>
               <td className="py-3 px-4">Cross-functional, owned by leadership</td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
               <th className="py-3 px-4 font-medium text-gray-800" scope="row">
                 Credibility
               </th>
-              <td className="py-3 px-4">Vendor decks and theory</td>
+              <td className="py-3 px-4">Vendor-speak, abstract</td>
               <td className="py-3 px-4">Boardroom-ready asset ready to activate tomorrow</td>
             </tr>
           </tbody>

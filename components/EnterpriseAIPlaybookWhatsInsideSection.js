@@ -10,7 +10,7 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
           What You Get
         </h2>
         <p className="text-lg text-gray-700 mb-10">
-          This isn&rsquo;t a scorecard or a survey&mdash;it&rsquo;s your transition plan.
+          This isn&rsquo;t a scorecard or a survey. It&rsquo;s your transition plan.
           <br />
           <br />
           Delivered instantly after a 20-minute diagnostic&mdash;no prep, no follow-up
@@ -27,7 +27,7 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                 <div className="font-semibold text-lg mb-1">Executive Summary</div>
                 <div className="text-gray-700">
                   A ready-to-share narrative for your board and ELT—what&rsquo;s at stake, where you
-                  stand, and why it matters now.
+                  stand, and the case for why it matters now.
                 </div>
               </div>
             </li>
@@ -54,8 +54,8 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
                   Action Plan with Owners and Deadlines
                 </div>
                 <div className="text-gray-700">
-                  Not just observations&mdash;accountable next steps, mapped to owners, deadlines,
-                  and business-critical decisions.
+                  Move from observations to accountable next steps, mapped to owners, deadlines, and
+                  business-critical decisions.
                 </div>
               </div>
             </li>
