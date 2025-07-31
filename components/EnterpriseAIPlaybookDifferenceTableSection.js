@@ -41,7 +41,7 @@ export default function EnterpriseAIPlaybookDifferenceTableSection() {
                 Output
               </th>
               <td className="py-3 px-4">No actions—just a scorecard</td>
-              <td className="py-3 px-4">16-page transition plan mapped to outcomes</td>
+              <td className="py-3 px-4">25-page transition plan mapped to outcomes</td>
             </tr>
             <tr>
               <th className="py-3 px-4 font-medium text-gray-800" scope="row">
