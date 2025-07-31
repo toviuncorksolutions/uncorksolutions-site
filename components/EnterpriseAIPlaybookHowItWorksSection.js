@@ -30,7 +30,7 @@ export default function EnterpriseAIPlaybookHowItWorksSection() {
             <div>
               <h3 className="font-semibold text-lg mb-1">Step 2: Get your instant custom report</h3>
               <p className="text-gray-700">
-                16 pages of action—mapped to owners, deadlines and operator tips.
+                25 pages of action—mapped to owners, deadlines and operator tips.
               </p>
             </div>
           </li>

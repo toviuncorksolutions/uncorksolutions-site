@@ -315,7 +315,7 @@ export default function EnterpriseAIPlaybook() {
                         name: 'What is an AI Readiness Assessment?',
                         acceptedAnswer: {
                           '@type': 'Answer',
-                          text: "An AI Readiness Assessment evaluates your organization's ability to adopt and scale AI. Uncork’s version powers the Enterprise AI Playbook—your 16-page, boardroom-ready transformation plan.",
+                          text: "An AI Readiness Assessment evaluates your organization's ability to adopt and scale AI. Uncork’s version powers the Enterprise AI Playbook—your 25-page, boardroom-ready transformation plan.",
                         },
                       },
                       {
@@ -323,7 +323,7 @@ export default function EnterpriseAIPlaybook() {
                         name: 'What is the Enterprise AI Playbook?',
                         acceptedAnswer: {
                           '@type': 'Answer',
-                          text: 'The Enterprise AI Playbook is a confidential 16-page, boardroom-grade diagnostic playbook personalized to your organization. It evaluates your entire organization’s readiness for enterprise AI and delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
+                          text: 'The Enterprise AI Playbook is a confidential 25-page, boardroom-grade diagnostic playbook personalized to your organization. It evaluates your entire organization’s readiness for enterprise AI and delivers actionable insights, clear next steps, and named owners—giving you a strategic advantage in AI transformation.',
                         },
                       },
                       {
@@ -363,7 +363,7 @@ export default function EnterpriseAIPlaybook() {
                         name: 'How and when do I receive my results?',
                         acceptedAnswer: {
                           '@type': 'Answer',
-                          text: 'Your personalized, 16‑page playbook is typically delivered to your inbox the same day you complete the assessment—ready to share with your board or leadership team immediately.',
+                          text: 'Your personalized, 25‑page playbook is typically delivered to your inbox the same day you complete the assessment—ready to share with your board or leadership team immediately.',
                         },
                       },
                       {
@@ -379,7 +379,7 @@ export default function EnterpriseAIPlaybook() {
                         name: 'What does the final deliverable include?',
                         acceptedAnswer: {
                           '@type': 'Answer',
-                          text: 'You receive a 16‑page PDF featuring an executive summary, radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.',
+                          text: 'You receive a 25‑page PDF featuring an executive summary, radar chart, deep dives across eight business dimensions, prioritized action plans, and exportable content for board, audit, and compliance needs.',
                         },
                       },
                       {
@@ -465,7 +465,7 @@ export default function EnterpriseAIPlaybook() {
               use cases.
             </h1>
             <p id="ai-playbook-speakable" class="sr-only">
-              The Enterprise AI Playbook gives executives a confidential, 16‑page plan that maps
+              The Enterprise AI Playbook gives executives a confidential, 25‑page plan that maps
               owners, deadlines and blind spots—so you can lead AI as a business‑model shift, not a
               tech experiment.
             </p>
@@ -475,7 +475,7 @@ export default function EnterpriseAIPlaybook() {
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
-              your 16-page readiness plan&mdash;built for senior leaders treating AI as a
+              your 25-page readiness plan&mdash;built for senior leaders treating AI as a
               business-model transformation, not a tech experiment.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
