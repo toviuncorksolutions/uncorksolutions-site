@@ -73,7 +73,7 @@ export default function EnterpriseAIPlaybookModal({
           className="text-base font-normal text-gray-600 mb-6 text-center"
         >
           Early access is prioritized for organizations ready to move. Your responses remain 100%
-          confidential and help us deliver an assessment that’s sharply focused on <em>your</em>{' '}
+          confidential and help us deliver a playbook that’s sharply focused on <em>your</em>{' '}
           goals&mdash;so you get a clear action plan, not just generic advice.
         </h3>
         <form
