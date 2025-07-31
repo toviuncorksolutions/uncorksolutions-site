@@ -473,7 +473,7 @@ export default function EnterpriseAIPlaybook() {
             <p id="ai-playbook-speakable" class="sr-only">
               The Enterprise AI Playbook gives executives a confidential, 16‑page plan that maps
               owners, deadlines and blind spots—so you can lead AI as a business‑model shift, not a
-              tech pilot.
+              tech experiment.
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               Most execs under pressure to &quot;do something with AI&quot; lack alignment,
@@ -482,10 +482,10 @@ export default function EnterpriseAIPlaybook() {
             <p className="text-lg md:text-xl text-gray-700 mb-6">
               The <span className="font-semibold text-blue-700">Enterprise AI Playbook</span> is
               your 16-page readiness plan&mdash;built for senior leaders treating AI as a
-              business-model transformation, not a tech initiative.
+              business-model transformation, not a tech experiment.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-6">
-              In just 20 minutes, get a confidential, organization-wide view of:
+              In just 20 minutes, gain a clear, organization-wide view of:
             </p>
             <ul
               className="text-base text-gray-700 mb-7 space-y-2 list-none"
@@ -503,13 +503,13 @@ export default function EnterpriseAIPlaybook() {
                 <span aria-hidden="true" className="text-blue-700 text-lg">
                   &#10003;
                 </span>
-                <span>What&rsquo;s missing to go from ambition to execution</span>
+                <span>What&rsquo;s missing to move from ambition to execution</span>
               </li>
               <li className="flex items-center gap-2">
                 <span aria-hidden="true" className="text-blue-700 text-lg">
                   &#10003;
                 </span>
-                <span>Who owns what&mdash;so you can lead with clarity, not guesswork</span>
+                <span>Who owns what&mdash;so you can lead with confidence, not guesswork</span>
               </li>
             </ul>
             <div
