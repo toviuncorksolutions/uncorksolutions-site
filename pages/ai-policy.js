@@ -4,6 +4,7 @@ export default function AiPolicy() {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
         <title>AI Usage Policy & Responsible-AI Commitment | Uncork Solutions</title>
         <meta
           name="description"
@@ -13,11 +14,10 @@ export default function AiPolicy() {
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
         <link rel="canonical" href="https://www.uncorksolutions.com/ai-policy" />
-        <link rel="preload" as="image" fetchPriority="high" href="/uncork-solutions-logo.png" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:site_name" content="Uncork Solutions" />
@@ -78,6 +78,9 @@ export default function AiPolicy() {
                 {
                   "@type": "FAQPage",
                   "@id": "https://www.uncorksolutions.com/ai-policy#faq",
+                  "about": {
+  "@id": "https://www.uncorksolutions.com/ai-policy#web"
+}
                   "mainEntity": [
                     {
                       "@type": "Question",

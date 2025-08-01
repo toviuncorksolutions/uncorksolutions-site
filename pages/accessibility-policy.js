@@ -4,6 +4,7 @@ export default function AccessibilityPolicy() {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
         <title>Accessibility Policy & WCAG-AA Commitment | Uncork Solutions</title>
         <meta
           name="description"
@@ -13,11 +14,10 @@ export default function AccessibilityPolicy() {
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
         <link rel="canonical" href="https://www.uncorksolutions.com/accessibility-policy" />
-        <link rel="preload" as="image" fetchPriority="high" href="/uncork-solutions-logo.png" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:site_name" content="Uncork Solutions" />
@@ -50,53 +50,56 @@ export default function AccessibilityPolicy() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-              "@context": "https://schema.org",
-              "@graph": [
+              '@context': 'https://schema.org',
+              '@graph': [
                 {
-                  "@type": "Organization",
-                  "@id": "https://www.uncorksolutions.com#org",
-                  "name": "Uncork Solutions",
-                  "url": "https://www.uncorksolutions.com",
-                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
-                  "sameAs": ["https://www.linkedin.com/company/uncorksolutions"]
+                  '@type': 'Organization',
+                  '@id': 'https://www.uncorksolutions.com#org',
+                  'name': 'Uncork Solutions',
+                  'url': 'https://www.uncorksolutions.com',
+                  'logo': 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                  'sameAs': ['https://www.linkedin.com/company/uncorksolutions']
                 },
                 {
-                  "@type": "WebPage",
-                  "@id": "https://www.uncorksolutions.com/accessibility-policy#web",
-                  "url": "https://www.uncorksolutions.com/accessibility-policy",
-                  "name": "Accessibility Policy & WCAG-AA Commitment",
-                  "description": "Uncork Solutions’ commitment to WCAG 2.1 AA compliance and ongoing accessibility improvement.",
-                  "dateModified": "2025-07-27",
-                  "inLanguage": "en",
-                  "isPartOf": { "@id": "https://www.uncorksolutions.com#org" },
-                  "accessibilitySummary": "The site supports screen-readers, keyboard navigation, alt-text and high-contrast modes."
+                  '@type': 'WebPage',
+                  '@id': 'https://www.uncorksolutions.com/accessibility-policy#web',
+                  'url': 'https://www.uncorksolutions.com/accessibility-policy',
+                  'name': 'Accessibility Policy & WCAG-AA Commitment',
+                  'description': 'Uncork Solutions’ commitment to WCAG 2.1 AA compliance and ongoing accessibility improvement.',
+                  'dateModified': '2025-07-27',
+                  'inLanguage': 'en',
+                  'isPartOf': { '@id': 'https://www.uncorksolutions.com#org' },
+                  'accessibilitySummary': 'The site supports screen-readers, keyboard navigation, alt-text and high-contrast modes.'
                 },
                 {
-                  "@type": "FAQPage",
-                  "@id": "https://www.uncorksolutions.com/accessibility-policy#faq",
-                  "mainEntity": [
+                  '@type': 'FAQPage',
+                  '@id': 'https://www.uncorksolutions.com/accessibility-policy#faq',
+                  'about': {
+                    '@id': 'https://www.uncorksolutions.com/accessibility-policy#web'
+                  },
+                  'mainEntity': [
                     {
-                      "@type": "Question",
-                      "name": "Which accessibility standard does Uncork Solutions follow?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We aim for WCAG 2.1 Level AA compliance across all pages and continually monitor for improvements."
+                      '@type': 'Question',
+                      'name': 'Which accessibility standard does Uncork Solutions follow?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'We aim for WCAG 2.1 Level AA compliance across all pages and continually monitor for improvements.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "How can I report an accessibility barrier?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Email hello@uncorksolutions.com or call +1-555-123-4567. We respond within two business days."
+                      '@type': 'Question',
+                      'name': 'How can I report an accessibility barrier?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Email hello@uncorksolutions.com or call +1-555-123-4567. We respond within two business days.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "Does your site support screen readers?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. Landmarks, ARIA labels and semantic HTML are implemented site-wide for NVDA, JAWS and VoiceOver compatibility."
+                      '@type': 'Question',
+                      'name': 'Does your site support screen readers?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Yes. Landmarks, ARIA labels and semantic HTML are implemented site-wide for NVDA, JAWS and VoiceOver compatibility.'
                       }
                     }
                   ]

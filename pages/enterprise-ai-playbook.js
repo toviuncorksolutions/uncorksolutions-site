@@ -169,6 +169,7 @@ export default function EnterpriseAIPlaybook() {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
         <title>
           Enterprise AI Playbook & Boardroom-Grade Transformation Plan | Uncork Solutions
         </title>
@@ -177,11 +178,17 @@ export default function EnterpriseAIPlaybook() {
           content="Get a boardroom-ready Enterprise AI Readiness Playbook based on your company’s unique assessment. Fast, confidential, and built for executive leaders."
         />
         <link rel="canonical" href="https://www.uncorksolutions.com/enterprise-ai-playbook" />
+        <link
+          rel="alternate"
+          hreflang="en-ca"
+          href="https://www.uncorksolutions.com/enterprise-ai-playbook"
+        />
         <meta
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+        <meta name="theme-color" content="#0f52ba" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
@@ -254,6 +261,9 @@ export default function EnterpriseAIPlaybook() {
                           ],
                           description:
                             'Boardroom‑grade, enterprise‑wide AI readiness assessment with a clear roadmap for executive leaders—confidential, vendor‑neutral, audit‑ready.',
+                          about: {
+                            '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#report',
+                          },
                           areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
                           audience: { '@type': 'Audience', name: 'C-suite & Board-facing Execs' },
                           provider: {
@@ -303,6 +313,18 @@ export default function EnterpriseAIPlaybook() {
                     hasPart: {
                       '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#faq',
                     },
+                  },
+
+                  {
+                    '@type': 'Report',
+                    '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook#report',
+                    name: 'Enterprise AI Playbook – 25-page Readiness Plan',
+                    url: 'https://www.uncorksolutions.com/enterprise-ai-playbook',
+                    inLanguage: 'en',
+                    encodingFormat: 'application/pdf',
+                    isAccessibleForFree: true,
+                    description:
+                      'Boardroom-grade, 25-page diagnostic playbook that maps owners, deadlines, and blind spots so executives can lead AI as a business-model shift, not a tech experiment.',
                   },
 
                   {
@@ -464,7 +486,7 @@ export default function EnterpriseAIPlaybook() {
               Real AI leadership starts with <span className="text-blue-700">structure.</span> Not
               use cases.
             </h1>
-            <p id="ai-playbook-speakable" class="sr-only">
+            <p id="ai-playbook-speakable" className="sr-only">
               The Enterprise AI Playbook gives executives a confidential, 25‑page plan that maps
               owners, deadlines and blind spots—so you can lead AI as a business‑model shift, not a
               tech experiment.

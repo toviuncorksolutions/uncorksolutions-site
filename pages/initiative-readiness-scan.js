@@ -202,26 +202,37 @@ export default function InitiativeReadinessScan() {
   return (
     <>
       <Head>
-        <title>Initiative Readiness Scan: De-Risk Transformation | Solutions</title>
+        <meta charSet="utf-8" />
+        <title>
+          Initiative Readiness Scan & Transformation-Risk Diagnostic&nbsp;| Uncork Solutions
+        </title>
         <meta
           name="description"
-          content="Expose hidden risks, benchmark 6 axes and get a boardroom-ready action plan in days—not quarters. Claim early access to the Initiative Readiness Scan."
+          content="Diagnose, de-risk, and accelerate high-stakes change with Uncork’s operator-built Initiative Readiness Scan—confidential, boardroom-ready, and delivered in days."
         />
         <link rel="canonical" href="https://www.uncorksolutions.com/initiative-readiness-scan" />
+        <link
+          rel="alternate"
+          hreflang="en-ca"
+          href="https://www.uncorksolutions.com/initiative-readiness-scan"
+        />
         <meta
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
         <meta property="og:locale:alternate" content="en_US" />
         <meta property="og:site_name" content="Uncork Solutions" />
-        <meta property="og:title" content="Initiative Readiness Scan – Uncork Solutions" />
+        <meta
+          property="og:title"
+          content="Initiative Readiness Scan & Transformation-Risk Diagnostic – Uncork Solutions"
+        />
         <meta
           property="og:description"
-          content="Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives."
+          content="Get an operator-built, boardroom-ready scan that surfaces blind spots, aligns teams, and delivers an actionable roadmap in days—not quarters."
         />
         <meta
           property="og:url"
@@ -235,63 +246,161 @@ export default function InitiativeReadinessScan() {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="Front cover of Uncork Solutions’ Initiative Readiness Scan booklet"
+          content="Front cover of Uncork Solutions’ Initiative Readiness Scan sample booklet"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Initiative Readiness Scan – Uncork Solutions" />
+        <meta
+          name="twitter:title"
+          content="Initiative Readiness Scan & Boardroom-Ready Action Plan – Uncork Solutions"
+        />
         <meta
           name="twitter:description"
-          content="Get early access to the Initiative Readiness Scan — a proven tool to de-risk and accelerate your change initiatives."
+          content="Confidential, operator-built assessment that reveals hidden risks and delivers a prioritized action plan—ideal for CIOs, CTOs, CDOs, and product leaders."
         />
         <meta
           name="twitter:image"
           content="https://www.uncorksolutions.com/initiative-readiness-scan-1.png"
         />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'ProfessionalService',
-              '@id': 'https://www.uncorksolutions.com#organization',
-              name: 'Uncork Solutions',
-              legalName: 'Uncork Solutions',
-              url: 'https://www.uncorksolutions.com',
-              logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
-              description:
-                'Technology strategy and digital transformation consulting for mid-market and enterprise businesses in B2C retail or B2B manufacturing.',
-              sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
-              areaServed: [
-                { '@type': 'Country', name: 'Canada' },
-                { '@type': 'Country', name: 'United States' },
-                { '@type': 'Country', name: 'United Kingdom' },
-                { '@type': 'Country', name: 'Mexico' },
-                { '@type': 'AdministrativeArea', name: 'European Union' },
-                { '@type': 'AdministrativeArea', name: 'Latin America' },
-              ],
-              founder: {
-                '@type': 'Person',
-                name: 'Tovi Heilbronn',
-              },
-              foundingDate: '2025-06-25',
-              makesOffer: {
-                '@type': 'ConsultingService',
-                name: 'Initiative Readiness Scan',
-                serviceType: 'Digital Transformation Consulting, Organizational Assessment',
-                provider: {
-                  '@type': 'ProfessionalService',
-                  name: 'Uncork Solutions',
-                },
-                areaServed: [
-                  { '@type': 'Country', name: 'Canada' },
-                  { '@type': 'Country', name: 'United States' },
-                  { '@type': 'Country', name: 'United Kingdom' },
-                  { '@type': 'Country', name: 'Mexico' },
-                  { '@type': 'AdministrativeArea', name: 'European Union' },
-                  { '@type': 'AdministrativeArea', name: 'Latin America' },
+            __html: JSON.stringify(
+              {
+                '@context': 'https://schema.org',
+                '@graph': [
+                  {
+                    '@type': 'ProfessionalService',
+                    '@id': 'https://www.uncorksolutions.com#organization',
+                    name: 'Uncork Solutions',
+                    legalName: 'Uncork Solutions',
+                    url: 'https://www.uncorksolutions.com',
+                    logo: 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                    description:
+                      'Technology strategy and digital-transformation consulting for mid-market and enterprise businesses in B2C retail or B2B manufacturing.',
+                    sameAs: ['https://www.linkedin.com/company/uncorksolutions'],
+                    founder: { '@type': 'Person', name: 'Tovi Heilbronn' },
+                    foundingDate: '2025-06-25',
+                    areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
+                    makesOffer: [
+                      {
+                        '@type': 'Offer',
+                        itemOffered: {
+                          '@type': 'ConsultingService',
+                          name: 'Initiative Readiness Scan',
+                          serviceType: [
+                            'Transformation Risk Assessment',
+                            'Digital Transformation Consulting',
+                            'Organizational Assessment',
+                          ],
+                          description:
+                            'Operator-built, boardroom-grade readiness scan that diagnoses risks, aligns stakeholders, and delivers an actionable roadmap—confidential and vendor-neutral.',
+                          about: {
+                            '@id':
+                              'https://www.uncorksolutions.com/initiative-readiness-scan#report',
+                          },
+                          areaServed: ['CA', 'US', 'GB', 'MX', 'EU', 'LATAM'],
+                          audience: {
+                            '@type': 'Audience',
+                            name: 'C-suite & Board-facing Execs',
+                          },
+                          provider: {
+                            '@type': 'ProfessionalService',
+                            name: 'Uncork Solutions',
+                            '@id': 'https://www.uncorksolutions.com#organization',
+                          },
+                        },
+                      },
+                    ],
+                  },
+
+                  {
+                    '@type': 'WebPage',
+                    '@id': 'https://www.uncorksolutions.com/initiative-readiness-scan',
+                    url: 'https://www.uncorksolutions.com/initiative-readiness-scan',
+                    name: 'Initiative Readiness Scan & Boardroom-Ready Diagnostic | Uncork Solutions',
+                    isPartOf: {
+                      '@id': 'https://www.uncorksolutions.com#organization',
+                    },
+                    primaryImageOfPage: {
+                      '@type': 'ImageObject',
+                      url: 'https://www.uncorksolutions.com/initiative-readiness-scan-1a.png',
+                      width: 760,
+                      height: 797,
+                    },
+                    speakable: {
+                      '@type': 'SpeakableSpecification',
+                      cssSelector: ['#readiness-scan-speakable'],
+                    },
+                    hasPart: {
+                      '@id': 'https://www.uncorksolutions.com/initiative-readiness-scan#faq',
+                    },
+                  },
+
+                  {
+                    '@type': 'Report',
+                    '@id': 'https://www.uncorksolutions.com/initiative-readiness-scan#report',
+                    name: 'Initiative Readiness Scan & Boardroom-Ready Diagnostic',
+                    url: 'https://www.uncorksolutions.com/initiative-readiness-scan',
+                    inLanguage: 'en',
+                    encodingFormat: 'application/pdf',
+                    isAccessibleForFree: true,
+                    description:
+                      'Confidential, operator-built diagnostic that benchmarks your initiative across six readiness axes, visualizes risk in a radar chart, and delivers an 8–10-page, boardroom-ready action roadmap in days—giving CIOs, CTOs, and product leaders the clarity to de-risk and accelerate transformation before momentum stalls.',
+                  },
+
+                  {
+                    '@type': 'FAQPage',
+                    '@id': 'https://www.uncorksolutions.com/initiative-readiness-scan#faq',
+                    url: 'https://www.uncorksolutions.com/initiative-readiness-scan#faq',
+                    mainEntity: [
+                      {
+                        '@type': 'Question',
+                        name: 'What is the Initiative Readiness Scan?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'It’s a confidential, operator-built assessment that benchmarks your initiative across six axes, surfaces hidden risks, and delivers a boardroom-ready action plan in days.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'Who should use the Initiative Readiness Scan?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Ideal for CIOs, CTOs, CDOs, digital executives, and product, engineering, or operations leaders accountable for high-stakes transformation outcomes.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'How long does it take to complete?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'The online assessment takes 30-45 minutes, and your radar chart plus action roadmap are typically delivered within a few days.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'What deliverables do I receive?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'You’ll get a visual readiness dashboard, prioritized gap list, peer benchmarks, and an 8-10 page action plan—plus a boardroom-ready one-pager outlining your next three moves.',
+                        },
+                      },
+                      {
+                        '@type': 'Question',
+                        name: 'Is the scan really confidential?',
+                        acceptedAnswer: {
+                          '@type': 'Answer',
+                          text: 'Yes. All responses and results are strictly confidential and never shared with third parties.',
+                        },
+                      },
+                    ],
+                  },
                 ],
               },
-            }),
+              null,
+              2,
+            ),
           }}
         />
       </Head>
@@ -368,6 +477,10 @@ export default function InitiativeReadinessScan() {
               Most transformations fail.{' '}
               <span className="text-blue-700">Will yours be different?</span>
             </h1>
+            <p id="readiness-scan-speakable" className="sr-only">
+              Diagnose, de-risk, and accelerate high-stakes change in days with an operator-built
+              Initiative Readiness Scan.
+            </p>
             <p id="irs-hero-subtitle" className="text-lg md:text-xl text-gray-700 mb-6">
               Don’t Gamble. Get Clarity.
               <br />
