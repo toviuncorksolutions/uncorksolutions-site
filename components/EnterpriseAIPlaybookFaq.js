@@ -44,7 +44,7 @@ export default function EnterpriseAIPlaybookFaq() {
       aria-labelledby="faq-title"
       className="bg-white w-full max-w-2xl mx-auto py-16 md:px-16 px-4"
     >
-      <h2 id="faq-title" className="text-lg md:text-xl font-bold mb-1 text-center">
+      <h2 id="faq-title" className="text-2xl md:text-3xl font-bold mb-4 text-center">
         Frequently Asked Questions
       </h2>
       <div className="space-y-0 divide-y divide-gray-200">
