@@ -51,60 +51,60 @@ export default function PrivacyPolicy() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-              "@context": "https://schema.org",
-              "@graph": [
+              '@context': 'https://schema.org',
+              '@graph': [
                 {
-                  "@type": "Organization",
-                  "@id": "https://www.uncorksolutions.com#org",
-                  "name": "Uncork Solutions",
-                  "url": "https://www.uncorksolutions.com",
-                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
-                  "sameAs": [
-                    "https://www.linkedin.com/company/uncorksolutions"
+                  '@type': 'Organization',
+                  '@id': 'https://www.uncorksolutions.com#org',
+                  'name': 'Uncork Solutions',
+                  'url': 'https://www.uncorksolutions.com',
+                  'logo': 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                  'sameAs': [
+                    'https://www.linkedin.com/company/uncorksolutions'
                   ]
                 },
                 {
-                  "@type": "WebPage",
-                  "@id": "https://www.uncorksolutions.com/privacy-policy#web",
-                  "url": "https://www.uncorksolutions.com/privacy-policy",
-                  "name": "Privacy Policy | GDPR- & CPRA-Ready Data Practices",
-                  "description": "How Uncork Solutions collects, uses and protects data—no marketing pixels, GA4 only, full user rights.",
-                  "dateModified": "2025-07-27",
-                  "inLanguage": "en",
-                  "isPartOf": {
-                    "@id": "https://www.uncorksolutions.com#org"
+                  '@type': 'WebPage',
+                  '@id': 'https://www.uncorksolutions.com/privacy-policy#web',
+                  'url': 'https://www.uncorksolutions.com/privacy-policy',
+                  'name': 'Privacy Policy | GDPR- & CPRA-Ready Data Practices',
+                  'description': 'How Uncork Solutions collects, uses and protects data—no marketing pixels, GA4 only, full user rights.',
+                  'dateModified': '2025-07-27',
+                  'inLanguage': 'en',
+                  'isPartOf': {
+                    '@id': 'https://www.uncorksolutions.com#org'
                   },
-                  "accessibilitySummary": "Policy page describing data collection, analytics and user rights."
+                  'accessibilitySummary': 'Policy page describing data collection, analytics and user rights.'
                 },
                 {
-                  "@type": "FAQPage",
-                  "@id": "https://www.uncorksolutions.com/privacy-policy#faq",
-                  "about": {
-  "@id": "https://www.uncorksolutions.com/privacy-policy#web"
-}
-                  "mainEntity": [
+                  '@type': 'FAQPage',
+                  '@id': 'https://www.uncorksolutions.com/privacy-policy#faq',
+                  'about': {
+                    '@id': 'https://www.uncorksolutions.com/privacy-policy#web'
+                  },
+                  'mainEntity': [
                     {
-                      "@type": "Question",
-                      "name": "Do you share my data with advertisers?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No. We do not run ads, remarketing pixels or sell personal data to third-party marketers."
+                      '@type': 'Question',
+                      'name': 'Do you share my data with advertisers?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'No. We do not run ads, remarketing pixels or sell personal data to third-party marketers.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "Which analytics tool do you use?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We use Google Analytics 4 in anonymous, aggregated mode to understand site usage. No personal identifiers are stored."
+                      '@type': 'Question',
+                      'name': 'Which analytics tool do you use?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'We use Google Analytics 4 in anonymous, aggregated mode to understand site usage. No personal identifiers are stored.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "How can I request data deletion?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Email hello@uncorksolutions.com. We respond within 30 days to access, correction or deletion requests."
+                      '@type': 'Question',
+                      'name': 'How can I request data deletion?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Email hello@uncorksolutions.com. We respond within 30 days to access, correction or deletion requests.'
                       }
                     }
                   ]

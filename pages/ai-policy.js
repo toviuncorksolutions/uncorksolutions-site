@@ -50,60 +50,60 @@ export default function AiPolicy() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: `{
-              "@context": "https://schema.org",
-              "@graph": [
+              '@context': 'https://schema.org',
+              '@graph': [
                 {
-                  "@type": "Organization",
-                  "@id": "https://www.uncorksolutions.com#org",
-                  "name": "Uncork Solutions",
-                  "url": "https://www.uncorksolutions.com",
-                  "logo": "https://www.uncorksolutions.com/uncork-solutions-logo.png",
-                  "sameAs": [
-                    "https://www.linkedin.com/company/uncorksolutions"
+                  '@type': 'Organization',
+                  '@id': 'https://www.uncorksolutions.com#org',
+                  'name': 'Uncork Solutions',
+                  'url': 'https://www.uncorksolutions.com',
+                  'logo': 'https://www.uncorksolutions.com/uncork-solutions-logo.png',
+                  'sameAs': [
+                    'https://www.linkedin.com/company/uncorksolutions'
                   ]
                 },
                 {
-                  "@type": "WebPage",
-                  "@id": "https://www.uncorksolutions.com/ai-policy#web",
-                  "url": "https://www.uncorksolutions.com/ai-policy",
-                  "name": "AI Usage Policy & Responsible-AI Commitment",
-                  "description": "Uncork Solutions’ principles for ethical, secure and transparent use of AI tools.",
-                  "dateModified": "2025-07-27",
-                  "inLanguage": "en",
-                  "isPartOf": {
-                    "@id": "https://www.uncorksolutions.com#org"
+                  '@type': 'WebPage',
+                  '@id': 'https://www.uncorksolutions.com/ai-policy#web',
+                  'url': 'https://www.uncorksolutions.com/ai-policy',
+                  'name': 'AI Usage Policy & Responsible-AI Commitment',
+                  'description': 'Uncork Solutions’ principles for ethical, secure and transparent use of AI tools.',
+                  'dateModified': '2025-07-27',
+                  'inLanguage': 'en',
+                  'isPartOf': {
+                    '@id': 'https://www.uncorksolutions.com#org'
                   },
-                  "accessibilitySummary": "Policy page outlining responsible and transparent use of AI."
+                  'accessibilitySummary': 'Policy page outlining responsible and transparent use of AI.'
                 },
                 {
-                  "@type": "FAQPage",
-                  "@id": "https://www.uncorksolutions.com/ai-policy#faq",
-                  "about": {
-  "@id": "https://www.uncorksolutions.com/ai-policy#web"
-}
-                  "mainEntity": [
+                  '@type': 'FAQPage',
+                  '@id': 'https://www.uncorksolutions.com/ai-policy#faq',
+                  'about': {
+                    '@id': 'https://www.uncorksolutions.com/ai-policy#web'
+                  },
+                  'mainEntity': [
                     {
-                      "@type": "Question",
-                      "name": "Which AI tools does Uncork Solutions use?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "We use leading models such as OpenAI GPT-4-o, Gemini 2 and Microsoft Copilot for research, code generation and content drafting—always under human review."
+                      '@type': 'Question',
+                      'name': 'Which AI tools does Uncork Solutions use?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'We use leading models such as OpenAI GPT-4-o, Gemini 2 and Microsoft Copilot for research, code generation and content drafting—always under human review.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "How do you protect client data when using AI?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "No confidential client data is fed into public models. We use private, SOC-2 compliant endpoints or internal deployments and enforce strict access controls."
+                      '@type': 'Question',
+                      'name': 'How do you protect client data when using AI?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'No confidential client data is fed into public models. We use private, SOC-2 compliant endpoints or internal deployments and enforce strict access controls.'
                       }
                     },
                     {
-                      "@type": "Question",
-                      "name": "Do you disclose AI-generated content to clients?",
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": "Yes. We flag AI-assisted sections in deliverables and remain accountable for accuracy, bias checks and human validation."
+                      '@type': 'Question',
+                      'name': 'Do you disclose AI-generated content to clients?',
+                      'acceptedAnswer': {
+                        '@type': 'Answer',
+                        'text': 'Yes. We flag AI-assisted sections in deliverables and remain accountable for accuracy, bias checks and human validation.'
                       }
                     }
                   ]
