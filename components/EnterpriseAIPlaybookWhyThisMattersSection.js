@@ -68,17 +68,6 @@ export default function EnterpriseAIPlaybookWhyThisMattersSection() {
             Not another pilot. Not another sprint. <strong>A plan.</strong>
           </p>
         </div>
-        <button
-          id="cta-why-matters"
-          aria-label="Get My Enterprise AI Playbook"
-          aria-haspopup="dialog"
-          data-gtm="cta-why-matters"
-          className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
-          onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
-          tabIndex={0}
-        >
-          Get My Enterprise AI Playbook
-        </button>
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export default function EnterpriseAIPlaybookOutcomesSection() {
         <ul className="space-y-8 text-left max-w-2xl mx-auto">
           <li>
             <h3 className="font-semibold text-lg mb-1">
-              1. A 16-Page Custom Playbook — Not a &quot;Scorecard&quot;
+              1. A 25-Page Custom Playbook — Not a &quot;Scorecard&quot;
             </h3>
             <p className="text-gray-700">
               Instantly see your AI strengths, critical gaps, and blind spots—across 8 structural

@@ -29,17 +29,6 @@ export default function EnterpriseAIPlaybookWhoThisIsForSection() {
           If you&rsquo;re ready to lead AI like a business model shift&mdash;not a tech
           project&mdash;this is where you start.
         </p>
-        <button
-          id="hero-cta-who"
-          aria-label="Get My Enterprise AI Playbook"
-          aria-haspopup="dialog"
-          data-gtm="cta-who-primary"
-          className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
-          onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
-          tabIndex={0}
-        >
-          Get My Enterprise AI Playbook
-        </button>
       </div>
     </section>
   );

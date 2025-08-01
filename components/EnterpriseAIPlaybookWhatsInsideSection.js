@@ -77,6 +77,17 @@ export default function EnterpriseAIPlaybookWhatsInsideSection() {
           A boardroom asset you&rsquo;ll reference when budgets are reviewed, when stakeholders push
           back, when audits are called, and when the question comes: are we actually ready for AI?
         </p>
+        <button
+          id="cta-whats-inside"
+          aria-label="Get My Enterprise AI Playbook"
+          aria-haspopup="dialog"
+          data-gtm="cta-whats-inside"
+          className="w-full sm:w-auto px-8 py-3 rounded-xl bg-blue-700 text-white font-bold text-lg shadow hover:bg-blue-800 transition focus:outline-none focus:ring-4 focus:ring-blue-400"
+          onClick={() => document.dispatchEvent(new CustomEvent('openModal'))}
+          tabIndex={0}
+        >
+          Get My Enterprise AI Playbook
+        </button>
       </div>
     </section>
   );
