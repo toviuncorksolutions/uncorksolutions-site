@@ -3,9 +3,9 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
 const faqs = [
   {
-    question: 'What is the AI Readiness Assessment?',
+    question: 'What is the Enterprise AI Playbook?',
     answer:
-      'It’s an operator-built, boardroom-ready assessment to diagnose, de-risk, and accelerate your organization’s AI adoption.',
+      'It’s an operator-built, boardroom-ready asset to diagnose, de-risk, and accelerate your organization’s AI adoption.',
   },
   {
     question: 'Who is this for?',
