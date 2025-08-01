@@ -27,7 +27,8 @@ const faqs = [
   },
   {
     question: 'When do I get my results?',
-    answer: 'Playbook is delivered to your inbox—often same day.',
+    answer:
+      'Playbook is delivered to your inbox, wthin a few minutes of completing your 20min diagnostic.',
   },
   {
     question: 'Is this vendor-neutral?',
