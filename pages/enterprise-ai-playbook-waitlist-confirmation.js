@@ -7,13 +7,32 @@ export default function Confirmation() {
       {/* Skip to main content link for accessibility */}
       <a
         href="#main-content"
+        id="skip-link"
         className="sr-only focus:not-sr-only absolute left-0 top-0 bg-white text-blue-700 p-2 z-50"
         tabIndex={0}
+        style={{
+          outline: '2px solid #2364e0',
+          outlineOffset: '2px',
+        }}
+        onClick={(e) => {
+          // Move focus to main content after skip link is activated
+          e.preventDefault();
+          const main = document.getElementById('main-content');
+          if (main) main.focus();
+        }}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const main = document.getElementById('main-content');
+            if (main) main.focus();
+          }
+        }}
       >
         Skip to main content
       </a>
       <main
         id="main-content"
+        tabIndex={-1}
         role="main"
         className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4"
       >
