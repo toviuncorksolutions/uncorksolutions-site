@@ -205,7 +205,7 @@ export default function EnterpriseAIPlaybook() {
         <meta property="og:url" content="https://www.uncorksolutions.com/enterprise-ai-playbook" />
         <meta
           property="og:image"
-          content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
+          content="https://www.uncorksolutions.com/ai-readiness-playbook-1b.png"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -224,7 +224,7 @@ export default function EnterpriseAIPlaybook() {
         />
         <meta
           name="twitter:image"
-          content="https://www.uncorksolutions.com/ai-readiness-scan-1.png"
+          content="https://www.uncorksolutions.com/ai-readiness-playbook-1b.png"
         />
 
         <script
@@ -302,7 +302,7 @@ export default function EnterpriseAIPlaybook() {
                     isPartOf: { '@id': 'https://www.uncorksolutions.com#organization' },
                     primaryImageOfPage: {
                       '@type': 'ImageObject',
-                      url: 'https://www.uncorksolutions.com/ai-readiness-scan-1a.png',
+                      url: 'https://www.uncorksolutions.com/ai-readiness-playbook-1b.png',
                       width: 760,
                       height: 846,
                     },
@@ -466,7 +466,7 @@ export default function EnterpriseAIPlaybook() {
           >
             <Image
               id="hero-ai-booklet-img"
-              src="/ai-readiness-scan-1a.png"
+              src="ai-readiness-playbook-1b.png"
               alt="Front cover of Uncork Solutions' AI Readiness Assessment sample booklet."
               width={760}
               height={846}
