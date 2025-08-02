@@ -15,6 +15,7 @@ export default function AiPolicy() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+        <meta name="theme-color" content="#0f52ba" />
         <link rel="canonical" href="https://www.uncorksolutions.com/ai-policy" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="article" />

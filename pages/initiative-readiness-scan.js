@@ -221,6 +221,7 @@ export default function InitiativeReadinessScan() {
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
         />
         <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+        <meta name="theme-color" content="#0f52ba" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="en_CA" />
