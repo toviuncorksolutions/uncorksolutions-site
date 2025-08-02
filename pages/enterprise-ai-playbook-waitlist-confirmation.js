@@ -28,7 +28,7 @@ export default function Confirmation() {
           <h1 className="mt-4 text-2xl font-bold text-center">Thank you for singing up!</h1>
           <p className="mt-2 text-center text-gray-700">
             You&apos;re on the list. We&apos;ll send you an email very soon with your link to
-            complete the 20-minute AI Readiness Assessment, after which you'll receive your
+            complete the 20-minute AI Readiness Assessment, after which you&apos;ll receive your
             personalized Enterprise AI Playbook.
           </p>
           <Link href="/" passHref legacyBehavior>
