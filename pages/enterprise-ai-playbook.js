@@ -171,7 +171,7 @@ export default function EnterpriseAIPlaybook() {
       <Head>
         <meta charSet="utf-8" />
         <title>
-          Enterprise AI Playbook & Boardroom-Grade Transformation Plan | Uncork Solutions
+          Enterprise AI Playbook & Strategic Integration Plan for Executives | Uncork Solutions
         </title>
         <meta
           name="description"
@@ -196,7 +196,7 @@ export default function EnterpriseAIPlaybook() {
         <meta property="og:site_name" content="Uncork Solutions" />
         <meta
           property="og:title"
-          content="Enterprise AI Playbook & Boardroom-Grade Transformation Plan – Uncork Solutions"
+          content="Enterprise AI Playbook & Strategic Integration Plan for Executives – Uncork Solutions"
         />
         <meta
           property="og:description"
@@ -216,7 +216,7 @@ export default function EnterpriseAIPlaybook() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Enterprise AI Playbook & Readiness Assessment – Uncork Solutions"
+          content="Enterprise AI Playbook & Strategic Integration Plan for Executives – Uncork Solutions"
         />
         <meta
           name="twitter:description"
@@ -252,7 +252,7 @@ export default function EnterpriseAIPlaybook() {
                         '@type': 'Offer',
                         itemOffered: {
                           '@type': 'ConsultingService',
-                          name: 'Enterprise AI Playbook & Boardroom-Grade Transformation Plan',
+                          name: 'Enterprise AI Playbook & Strategic Integration Plan for Executives',
                           serviceType: [
                             'AI Transformation',
                             'Boardroom AI Assessment',
@@ -298,7 +298,7 @@ export default function EnterpriseAIPlaybook() {
                     '@type': 'WebPage',
                     '@id': 'https://www.uncorksolutions.com/enterprise-ai-playbook',
                     url: 'https://www.uncorksolutions.com/enterprise-ai-playbook',
-                    name: 'Enterprise AI Playbook & Boardroom-Grade Transformation Plan | Uncork Solutions',
+                    name: 'Enterprise AI Playbook & Strategic Integration Plan for Executives | Uncork Solutions',
                     isPartOf: { '@id': 'https://www.uncorksolutions.com#organization' },
                     primaryImageOfPage: {
                       '@type': 'ImageObject',

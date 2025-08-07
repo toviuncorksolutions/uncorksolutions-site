@@ -35,7 +35,7 @@ export default function EnterpriseAIPlaybookWhyThisMattersSection() {
         </p>
         <p className="text-lg text-gray-700 mb-8">
           <strong>
-            It&rsquo;s your boardroom-ready blueprint to lead AI transformation with control,
+            It&rsquo;s your boardroom-ready blueprint to lead AI integration with control,
             credibility, and speed.
           </strong>
         </p>
