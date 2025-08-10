@@ -129,6 +129,7 @@ export default function InitiativeReadinessScan() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (submitting) return;
+
     setError('');
 
     if (!WEBHOOK_URL) {
@@ -136,50 +137,79 @@ export default function InitiativeReadinessScan() {
       return;
     }
 
-    const normalizedEmail = formData.email.trim().toLowerCase();
+    // Trim + normalize
+    const normalized = {
+      ...formData,
+      firstName: String(formData.firstName || '').trim(),
+      lastName: String(formData.lastName || '').trim(),
+      email: String(formData.email || '')
+        .trim()
+        .toLowerCase(),
+      challenge: String(formData.challenge || '').trim(),
+      outcome: String(formData.outcome || '').trim(),
+      obstacle: String(formData.obstacle || '').trim(),
+      decisionAuthority: String(formData.decisionAuthority || '').trim(),
+      timeline: String(formData.timeline || '').trim(),
+    };
 
+    // Required fields
     for (const key of REQUIRED_FIELDS) {
-      if (!String(formData[key]).trim()) {
+      if (!normalized[key]) {
         setError('Please complete all required fields.');
         return;
       }
     }
 
-    if (!normalizedEmail.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+    // Email format + domain policy
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalized.email)) {
       setError('Please enter a valid email address.');
       return;
     }
-
-    if (isFreeEmail(getDomain(normalizedEmail))) {
+    if (isFreeEmail(getDomain(normalized.email))) {
       setError('Please use your work email address (not a free email provider).');
       return;
     }
 
     setSubmitting(true);
 
+    // Timeout guard (prevents hanging forever on fetch)
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 15000); // 15s timeout
+
     try {
       const res = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, email: normalizedEmail }),
+        body: JSON.stringify({
+          ...normalized,
+          source: 'initiative-readiness-scan',
+          ts: new Date().toISOString(),
+        }),
+        signal: ctrl.signal,
       });
 
       if (!res.ok) {
-        const message = await res.text();
-        throw new Error(message || 'Submission failed');
+        // Try to get useful error details
+        let detail = '';
+        try {
+          detail = await res.text();
+        } catch {}
+        throw new Error(detail || `Submission failed (HTTP ${res.status})`);
       }
 
+      // Fire GTM before we navigate away
       if (typeof window !== 'undefined') {
-        if (!Array.isArray(window.dataLayer)) window.dataLayer = [];
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'initiativeReadinessScanWaitlistFormSubmitted',
           category: 'Initiative Readiness Scan Waitlist Form',
           action: 'Submit',
-          label: normalizedEmail,
-          formData: { ...formData, email: normalizedEmail },
+          label: normalized.email,
+          formData: normalized,
         });
       }
 
+      // Close + reset, then navigate
       setShowModal(false);
       setFormData({
         firstName: '',
@@ -191,10 +221,17 @@ export default function InitiativeReadinessScan() {
         decisionAuthority: '',
         timeline: '',
       });
+
       await router.push('/initiative-readiness-scan-waitlist-confirmation');
-    } catch {
-      setError('There was a problem submitting the form. Please try again.');
+    } catch (err) {
+      // Customize message for aborts vs server errors
+      const msg =
+        err?.name === 'AbortError'
+          ? 'Network is slow right now; please try again.'
+          : err?.message || 'There was a problem submitting the form. Please try again.';
+      setError(msg);
     } finally {
+      clearTimeout(t);
       setSubmitting(false);
     }
   };

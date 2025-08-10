@@ -12,37 +12,55 @@ export default function InitiativeReadinessScanModal({
   firstNameRef,
   modalRef,
 }) {
-  // Focus trap and Escape key
+  // Focus on first field once when opening; trap Tab; close on Escape
   useEffect(() => {
     if (!show) return;
-    setTimeout(() => firstNameRef.current?.focus(), 50);
 
-    const handleFocusTrap = (e) => {
+    const raf = requestAnimationFrame(() => {
+      // Focus the first name input once the modal is in the DOM
+      firstNameRef?.current?.focus?.();
+    });
+
+    const handleKeyDown = (e) => {
+      if (!modalRef?.current) return;
+
       if (e.key === 'Tab') {
-        const focusable = modalRef.current.querySelectorAll(
-          'input, textarea, select, button, [tabindex]:not([tabindex="-1"])',
+        const focusables = modalRef.current.querySelectorAll(
+          'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex]:not([tabindex="-1"])',
         );
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
+        if (!focusables || focusables.length === 0) return;
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
         if (!e.shiftKey && document.activeElement === last) {
           e.preventDefault();
           first.focus();
-        }
-        if (e.shiftKey && document.activeElement === first) {
+        } else if (e.shiftKey && document.activeElement === first) {
           e.preventDefault();
           last.focus();
         }
+      } else if (e.key === 'Escape') {
+        e.stopPropagation();
+        onClose();
       }
-      if (e.key === 'Escape') onClose();
     };
 
-    const modal = modalRef.current;
-    modal?.addEventListener('keydown', handleFocusTrap);
+    const modalEl = modalRef.current;
+    modalEl?.addEventListener('keydown', handleKeyDown);
+
+    // Optional: prevent background scroll while open
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
     return () => {
-      modal?.removeEventListener('keydown', handleFocusTrap);
+      cancelAnimationFrame(raf);
+      modalEl?.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = prevOverflow;
     };
-  }, [show, modalRef, firstNameRef, onClose]);
+  }, [show]); // ⬅️ run only when open/close toggles
 
+  // Clear any prior error on open
   useEffect(() => {
     if (show && typeof setError === 'function') setError('');
   }, [show, setError]);
@@ -80,6 +98,7 @@ export default function InitiativeReadinessScanModal({
           confidential and help us deliver a scan that’s sharply focused on <em>your</em>{' '}
           goals&mdash;so you get a clear action plan, not just generic advice.
         </h3>
+
         <form
           id="waitlist-form"
           aria-label="Initiative Readiness Scan Waitlist"
@@ -124,6 +143,7 @@ export default function InitiativeReadinessScanModal({
               />
             </div>
           </div>
+
           <div>
             <label htmlFor="email" className="sr-only">
               Email
@@ -144,6 +164,7 @@ export default function InitiativeReadinessScanModal({
               data-gtm="input-email"
             />
           </div>
+
           <div>
             <label htmlFor="challenge" className="sr-only">
               Main Challenge
@@ -160,6 +181,7 @@ export default function InitiativeReadinessScanModal({
               data-gtm="input-challenge"
             />
           </div>
+
           <div>
             <label htmlFor="outcome" className="sr-only">
               Desired Outcome
@@ -176,6 +198,7 @@ export default function InitiativeReadinessScanModal({
               data-gtm="input-outcome"
             />
           </div>
+
           <div>
             <label htmlFor="obstacle" className="sr-only">
               Obstacles
@@ -192,6 +215,7 @@ export default function InitiativeReadinessScanModal({
               data-gtm="input-obstacle"
             />
           </div>
+
           <div>
             <label htmlFor="decisionAuthority" className="sr-only">
               Who will lead the decision for this?
@@ -213,6 +237,7 @@ export default function InitiativeReadinessScanModal({
               <option value="Someone else">Someone else</option>
             </select>
           </div>
+
           <div>
             <label htmlFor="timeline" className="sr-only">
               How soon will you move forward with a solution? *
@@ -235,11 +260,13 @@ export default function InitiativeReadinessScanModal({
               <option value="Just exploring">Just exploring</option>
             </select>
           </div>
+
           {error && (
             <div className="text-red-600 text-sm" role="alert" id="email-error">
               {error}
             </div>
           )}
+
           <div className="flex justify-between gap-4" role="group" aria-label="Modal actions">
             <button
               id="waitlist-submit"
