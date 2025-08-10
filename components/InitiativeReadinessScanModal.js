@@ -58,7 +58,7 @@ export default function InitiativeReadinessScanModal({
       modalEl?.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = prevOverflow;
     };
-  }, [show]); // ⬅️ run only when open/close toggles
+  }, [show, firstNameRef, modalRef, onClose]);
 
   // Clear any prior error on open
   useEffect(() => {
