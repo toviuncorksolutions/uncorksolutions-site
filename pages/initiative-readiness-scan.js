@@ -126,6 +126,8 @@ export default function InitiativeReadinessScan() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleClose = useCallback(() => setShowModal(false), []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (submitting) return;
@@ -193,7 +195,10 @@ export default function InitiativeReadinessScan() {
         let detail = '';
         try {
           detail = await res.text();
-        } catch {}
+        } catch (e) {
+          // couldn’t read body; keep empty detail
+          detail = '';
+        }
         throw new Error(detail || `Submission failed (HTTP ${res.status})`);
       }
 
@@ -607,7 +612,7 @@ export default function InitiativeReadinessScan() {
 
         <InitiativeReadinessScanModal
           show={showModal}
-          onClose={() => setShowModal(false)}
+          onClose={handleClose}
           onSubmit={handleSubmit}
           formData={formData}
           onChange={handleChange}
